@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9mUFNUc6jnMeoRCpdwKmtmN3iiZkoGTdvh7KDqjd8Pt+Y4uN7Ezjn2FTAjeJrLCq7+i7jv52P8MKtJ/YkOsgOg==",
+  "success": true,
+  "projectFilePath": "D:\\_Projects\\WarframeProgressTracker\\Server\\ProgressTracker_Server\\ProgressTracker_Server\\ProgressTracker_Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

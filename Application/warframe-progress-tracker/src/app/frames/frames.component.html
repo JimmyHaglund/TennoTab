@@ -1,0 +1,16 @@
+<h2>Frames</h2>
+<ul class="frames">
+  <li *ngFor="let frame of frames" 
+  [class.selected]="frame === selectedFrame"
+  (click)="onSelect(frame)">
+    {{frame.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedFrame">
+  <h2>{{selectedFrame.name | uppercase}} Details</h2>
+  <div>
+    <label for="frame-name">Frame name: </label>
+    <input id="frame-name" [(ngModel)]="selectedFrame.name" placeholder="name">
+  </div>
+</div>

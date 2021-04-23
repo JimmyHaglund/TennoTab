@@ -1,0 +1,1 @@
+Host locally: ng serve --open

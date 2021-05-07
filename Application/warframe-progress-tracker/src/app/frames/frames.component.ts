@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Frame } from '../frame';
-import { FRAMES } from '../mock-frames';
+import { FrameService } from '../frame.service';
+import { MessageService} from '../message.service';
 
 @Component({
   selector: 'app-frames',
@@ -8,14 +9,22 @@ import { FRAMES } from '../mock-frames';
   styleUrls: ['./frames.component.scss']
 })
 export class FramesComponent implements OnInit {
-  frames = FRAMES;
+  frames: Frame[] = [];
   selectedFrame?: Frame;
 
-  constructor() { }
+  constructor(private frameService: FrameService, private messageService: MessageService) { }
+
+  getFrames(): void {
+    this.frameService.getFrames()
+    .subscribe(frames => this.frames = frames);
+  }
 
   onSelect(frame: Frame): void {
     this.selectedFrame = frame;
+    this.messageService.add(`FramesComponent: Selected frame: ${frame.name}`);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.getFrames();
+  }
 }

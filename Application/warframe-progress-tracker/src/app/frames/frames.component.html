@@ -1,12 +1,22 @@
 <h2>Frames</h2>
 <ul class="frames">
+  <li *ngFor="let frame of frames">
+    <a routerLink="/frame-details/{{frame.name}}">
+      {{frame.name}}
+    </a>
+  </li>
+</ul>
+
+<!-- On click = call method example:
+<ul class="frames">
   <li *ngFor="let frame of frames" 
   [class.selected]="frame === selectedFrame"
   (click)="onSelect(frame)">
     {{frame.name}}
   </li>
 </ul>
-
+-->
+<!--
 <div *ngIf="selectedFrame">
   <h2>{{selectedFrame.name | uppercase}} Details</h2>
   <div>
@@ -14,3 +24,4 @@
     <input id="frame-name" [(ngModel)]="selectedFrame.name" placeholder="name">
   </div>
 </div>
+-->

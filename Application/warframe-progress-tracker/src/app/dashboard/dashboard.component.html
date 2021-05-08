@@ -1,0 +1,7 @@
+<h2>Top Frames</h2>
+<div class="frames-menu">
+  <a *ngFor="let frame of frames"
+  routerLink="/frame-details/{{frame.name}}">
+    {{frame.name}}
+  </a>
+</div>

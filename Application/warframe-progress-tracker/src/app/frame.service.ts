@@ -12,19 +12,25 @@ Registering the provider in the @Injectable metadata also allows Angular to
 optimize an application by removing the service if it turns out not to be used after all.
 /**/
 @Injectable({
-  providedIn: 'root'
+   providedIn: 'root'
 })
 
 export class FrameService {
-  /*
-  This is a typical "service-in-service" scenario: you inject the 
-  MessageService into the HeroService which is injected into the HeroesComponent.
-  /**/
-  constructor(private messageService: MessageService) { }
+   /*
+   This is a typical "service-in-service" scenario: you inject the 
+   MessageService into the HeroService which is injected into the HeroesComponent.
+   /**/
+   constructor(private messageService: MessageService) { }
 
-  getFrames(): Observable<Frame[]> {
-    const frames = of(FRAMES);
-    this.messageService.add('FrameService: Fetched frames');
-    return frames;
-  }
+   getFrames(): Observable<Frame[]> {
+      const frames = of(FRAMES);
+      this.messageService.add('FrameService: Fetched frames');
+      return frames;
+   }
+
+   getFrame(name: string): Observable<Frame> {
+      const frame = FRAMES.find(frame => frame.name === name) as Frame;
+      this.messageService.add(`FrameService: Fetched frame ${name}`);
+      return of(frame);
+   }
 }

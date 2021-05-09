@@ -5,11 +5,11 @@ import { Location } from '@angular/common';
 import { FrameService } from '../frame.service';
 
 @Component({
-   selector: 'app-warframe-detail',
-   templateUrl: './warframe-detail.component.html',
-   styleUrls: ['./warframe-detail.component.scss']
+   selector: 'app-frame-detail',
+   templateUrl: './frame-detail.component.html',
+   styleUrls: ['./frame-detail.component.scss']
 })
-export class WarframeDetailComponent implements OnInit {
+export class FrameDetailComponent implements OnInit {
    @Input() frame?: Frame;
 
    constructor(
@@ -23,12 +23,18 @@ export class WarframeDetailComponent implements OnInit {
    }
 
    getFrame(): void {
-      const name = String(this.route.snapshot.paramMap.get('name'));
-      this.frameService.getFrame(name)
+      const id = Number(this.route.snapshot.paramMap.get('id'));
+      this.frameService.getFrame(id)
          .subscribe(frame => this.frame = frame);
    }
 
    goBack(): void {
       this.location.back();
+   }
+
+   save(): void {
+      if (this.frame == null) return;
+      this.frameService.updateFrame(this.frame)
+         .subscribe(() => this.goBack());
    }
 }

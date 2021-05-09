@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WarframeDetailComponent } from './warframe-detail.component';
+import { FrameDetailComponent } from './frame-detail.component';
 
 describe('WarframeDetailComponent', () => {
-  let component: WarframeDetailComponent;
-  let fixture: ComponentFixture<WarframeDetailComponent>;
+  let component: FrameDetailComponent;
+  let fixture: ComponentFixture<FrameDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WarframeDetailComponent ]
+      declarations: [ FrameDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WarframeDetailComponent);
+    fixture = TestBed.createComponent(FrameDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

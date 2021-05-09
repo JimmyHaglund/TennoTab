@@ -1,11 +1,25 @@
 <h2>Frames</h2>
 <ul class="frames">
   <li *ngFor="let frame of frames">
-    <a routerLink="/frame-details/{{frame.name}}">
+    <a routerLink="/frame-details/{{frame.id}}">
       {{frame.name}}
     </a>
+    <button 
+      class="delete" title="delete frame"
+      (click)="delete(frame)">x
+    </button>
   </li>
 </ul>
+
+<div>
+  <label for="new-frame">Frame name: </label>
+  <input id="new-frame" #frameName/>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(frameName.value); frameName.value=''">
+    Add frame
+  </button>
+</div>
 
 <!-- On click = call method example:
 <ul class="frames">

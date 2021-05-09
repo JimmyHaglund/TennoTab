@@ -3,21 +3,21 @@ import { Frame } from '../frame';
 import { FrameService } from '../frame.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.scss' ]
+   selector: 'app-dashboard',
+   templateUrl: './dashboard.component.html',
+   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  frames: Frame[] = [];
+   frames: Frame[] = [];
 
-  constructor(private frameService: FrameService) { }
+   constructor(private frameService: FrameService) { }
 
-  ngOnInit() {
-    this.getFrames();
-  }
+   ngOnInit() {
+      this.getFrames();
+   }
 
-  getFrames(): void {
-    this.frameService.getFrames()
-      .subscribe(frames => this.frames = frames.slice(1, 5));
-  }
+   getFrames(): void {
+      this.frameService.getFrames()
+         .subscribe(frames => this.frames = frames.slice(1, 5));
+   }
 }

@@ -1,0 +1,12 @@
+<button (click)="goBack()">Back</button>
+<div *ngIf="frame">
+
+  <h2>{{frame.name | uppercase}}</h2>
+  <div>
+    <label for="frame-name">Name: </label>
+    <input id="frame-name" [(ngModel)]="frame.name" placeholder="name">
+  </div>
+
+</div>
+
+<button (click)="save()">Save</button>

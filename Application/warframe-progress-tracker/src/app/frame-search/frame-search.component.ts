@@ -8,7 +8,7 @@ import { FrameService } from '../frame.service';
 @Component({
   selector: 'app-frame-search',
   templateUrl: './frame-search.component.html',
-  styleUrls: [ './frame-search.component.css' ]
+  styleUrls: [ './frame-search.component.scss' ]
 })
 export class FrameSearchComponent implements OnInit {
   frames$?: Observable<Frame[]>;

@@ -1,4 +1,4 @@
-import { Frame } from './frame';
+import { Frame } from '../frame';
 
 export const FRAMES: Frame[] = [
   {id : 11, name: 'Excalibur' },

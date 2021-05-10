@@ -1,4 +1,4 @@
-import { Frame } from '../frame';
+import { Frame } from '../warframes/frame';
 
 export const FRAMES: Frame[] = [
   {

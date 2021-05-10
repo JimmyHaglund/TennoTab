@@ -6,27 +6,24 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
+import { WarframesModule } from './warframes/warframes.module';
+
 import { AppComponent } from './app.component';
-import { FramesComponent } from './frames/frames.component';
-import { FrameDetailComponent } from './frame-detail/frame-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FrameSearchComponent } from './frame-search/frame-search.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      FramesComponent,
-      FrameDetailComponent,
       MessagesComponent,
-      DashboardComponent,
-      FrameSearchComponent
+      DashboardComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
       FormsModule,
       HttpClientModule,
+      WarframesModule,
       // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
       // and returns simulated server responses.
       // Remove it when a real server is ready to receive requests.

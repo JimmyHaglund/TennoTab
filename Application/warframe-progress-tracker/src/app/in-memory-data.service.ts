@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Frame } from './frame';
+import { Frame } from './warframes/frame';
 import { FRAMES } from './mocks/mock-frames';
 
 @Injectable({

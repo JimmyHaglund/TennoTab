@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Frame } from '../frame';
-import { FrameService } from '../frame.service';
+import { Frame } from '../warframes/frame';
+import { FrameService } from '../warframes/frame.service';
 
 @Component({
    selector: 'app-dashboard',

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Frame } from './warframes/frame';
 import { FRAMES } from './mocks/mock-frames';
+import {GUNS} from './mocks/mock-guns';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,8 @@ import { FRAMES } from './mocks/mock-frames';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const frames = FRAMES;
-    return { frames };
+    const guns = GUNS;
+    return { frames, guns };
   }
 
   genId(frames: Frame[]): number {

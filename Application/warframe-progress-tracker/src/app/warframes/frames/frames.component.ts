@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Frame } from '../frame';
 import { FrameService } from '../frame.service';
-import { MessageService } from '../../message.service';
 
 @Component({
    selector: 'app-frames',

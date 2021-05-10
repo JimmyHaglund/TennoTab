@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FrameService } from '../frame.service';
+import { FrameService } from './frame.service';
 
 describe('FrameService', () => {
   let service: FrameService;

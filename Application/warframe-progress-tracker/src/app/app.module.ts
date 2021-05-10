@@ -11,6 +11,7 @@ import { WarframesModule } from './warframes/warframes.module';
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GunsModule } from './guns/guns.module';
 
 @NgModule({
    declarations: [
@@ -24,6 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       FormsModule,
       HttpClientModule,
       WarframesModule,
+      GunsModule,
       // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
       // and returns simulated server responses.
       // Remove it when a real server is ready to receive requests.

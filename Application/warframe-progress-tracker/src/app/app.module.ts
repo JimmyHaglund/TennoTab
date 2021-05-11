@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GunsModule } from './guns/guns.module';
+import { MeleeWeaponModule} from './melee-weapon/melee-weapon.module';
 
 @NgModule({
    declarations: [
@@ -26,6 +27,7 @@ import { GunsModule } from './guns/guns.module';
       HttpClientModule,
       WarframesModule,
       GunsModule,
+      MeleeWeaponModule,
       // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
       // and returns simulated server responses.
       // Remove it when a real server is ready to receive requests.

@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { PrimaryWeaponsListComponent } from './primary-weapons-list/primary-weapons-list.component';
 import { SecondaryWeaponsListComponent } from './secondary-weapons-list/secondary-weapons-list.component';
 
-
-
 @NgModule({
   declarations: [
     PrimaryWeaponsListComponent,
@@ -14,7 +12,8 @@ import { SecondaryWeaponsListComponent } from './secondary-weapons-list/secondar
     CommonModule
   ],
   exports: [
-    PrimaryWeaponsListComponent
+    PrimaryWeaponsListComponent,
+    SecondaryWeaponsListComponent
   ]
 })
 export class GunsModule { }

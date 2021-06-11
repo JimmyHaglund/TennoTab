@@ -13,12 +13,14 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GunsModule } from './guns/guns.module';
 import { MeleeWeaponModule} from './melee-weapon/melee-weapon.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       MessagesComponent,
-      DashboardComponent
+      DashboardComponent,
+      LoginComponent
    ],
    imports: [
       BrowserModule,

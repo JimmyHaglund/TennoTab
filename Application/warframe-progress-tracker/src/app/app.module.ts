@@ -15,13 +15,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GunsModule } from './guns/guns.module';
 import { MeleeWeaponModule} from './melee-weapon/melee-weapon.module';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       MessagesComponent,
       DashboardComponent,
-      LoginComponent
+      LoginComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,

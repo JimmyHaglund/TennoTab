@@ -6,8 +6,7 @@ import { FrameDetailComponent } from './warframes/frame-detail/frame-detail.comp
 import { PrimaryWeaponsListComponent } from './guns/primary-weapons-list/primary-weapons-list.component';
 import { SecondaryWeaponsListComponent } from './guns/secondary-weapons-list/secondary-weapons-list.component';
 import { MeleeWeaponsListComponent } from './melee-weapon/melee-weapons-list/melee-weapons-list.component';
-import { LoginComponent } from './login/login.component';
-
+import {LoginComponent } from './login';
 
 const routes: Routes = [
   { path: 'frames', component: FramesComponent },

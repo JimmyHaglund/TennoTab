@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Frame } from './warframes/frame';
-import { FRAMES, GUNS, MELEEWEAPONS } from './mocks';
+import { FRAMES, GUNS, MELEEWEAPONS, USERS } from './mocks';
+import { HttpInterceptor } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -11,10 +12,14 @@ export class InMemoryDataService implements InMemoryDbService {
     const frames = FRAMES;
     const guns = GUNS;
     const melee = MELEEWEAPONS;
-    return { frames, guns, melee};
+    const users = USERS;
+    return { frames, guns, melee, users };
   }
 
   genId(frames: Frame[]): number {
     return 11 + frames.length;
   }
+
+  // authenticate(interceptorArgs: HttpInterceptor)
+
 }

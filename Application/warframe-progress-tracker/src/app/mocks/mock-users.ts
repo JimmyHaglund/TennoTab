@@ -1,6 +1,6 @@
 export const USERS: User[] = [
    {
       userName: "jimmy",
-      email: "j@mail.com"
+      password: "asd123"
    }
 ];

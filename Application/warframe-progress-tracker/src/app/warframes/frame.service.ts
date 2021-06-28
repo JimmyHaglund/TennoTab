@@ -4,6 +4,7 @@ import { Frame } from './frame';
 import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 /*
 From: https://angular.io/tutorial/toh-pt4
@@ -18,10 +19,12 @@ optimize an application by removing the service if it turns out not to be used a
 
 export class FrameService {
    httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({ 
+      })
    };
-   private framesUrl = 'api/frames';  // URL to web api
-   
+   private framesUrl = environment.apiUrl;  // URL to web api
+
+
    constructor(
       private http: HttpClient,
       private messageService: MessageService) { }
@@ -78,12 +81,22 @@ export class FrameService {
       // if not search term, return empty hero array.
       return of([]);
       }
-      return this.http.get<Frame[]>(`${this.framesUrl}/?name=${term}`).pipe(
-      tap(x => x.length ?
+      return this.http.get<Frame[]>(`${this.framesUrl}/?name=${term}`)
+      .pipe(tap(x => x.length ?
          this.log(`found frames matching "${term}"`) :
          this.log(`no frames matching "${term}"`)),
       catchError(this.handleError<Frame[]>('searchFrames', []))
       );
+   }
+
+   getWeatherForecast(): Observable<any> {
+      console.log("Getting weather");
+      return this.http.get<any>(`http://localhost:49157/weatherforecast`, this.httpOptions)
+      .pipe(tap(_ => _.length ?
+            this.log(`found weather forecast`) : 
+            this.log(`couldn't find weather forecast`),
+         catchError(this.handleError<any>('getWeatherForecast', null))
+         ));
    }
 
    private log(message: string) {

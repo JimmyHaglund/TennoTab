@@ -9,15 +9,21 @@ import { FrameService } from '../warframes/frame.service';
 })
 export class DashboardComponent implements OnInit {
    frames: Frame[] = [];
-
+   weather: any;
    constructor(private frameService: FrameService) { }
 
    ngOnInit() {
-      this.getFrames();
+      this.getWeather();
+      //this.getFrames();
    }
 
    getFrames(): void {
       this.frameService.getFrames()
          .subscribe(frames => this.frames = frames.slice(1, 5));
+   }
+
+   getWeather(): void {
+      this.frameService.getWeatherForecast()
+         .subscribe(weather => this.weather = weather.slice(1, 2));
    }
 }

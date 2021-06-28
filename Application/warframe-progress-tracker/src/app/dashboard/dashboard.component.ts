@@ -14,20 +14,26 @@ export class DashboardComponent implements OnInit {
 
    ngOnInit() {
       this.getWeather();
-      console.log(this.weather);
-      //this.getFrames();
+      this.getFrames();
    }
 
    getFrames(): void {
       this.frameService.getFrames()
-         .subscribe(frames => this.frames = frames.slice(1, 5));
+         .subscribe(frames => {
+            this.frames = frames.slice(0, this.max(frames.length, 5));
+            console.log(frames);
+            console.log(this.frames);
+         });
    }
 
    getWeather(): void {
       this.frameService.getWeatherForecast()
          .subscribe(weather => {
             this.weather = weather.slice(0, weather.length);
-            console.log(weather);
          });
+   }
+
+   private max(a: number, b: number):number {
+      return a > b ? a : b;
    }
 }

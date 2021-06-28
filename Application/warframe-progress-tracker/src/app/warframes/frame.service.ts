@@ -22,7 +22,8 @@ export class FrameService {
       headers: new HttpHeaders({ 
       })
    };
-   private framesUrl = environment.apiUrl;  // URL to web api
+   private apiUrl = environment.apiUrl;
+   private framesUrl = environment.apiUrl + "/frame";  // URL to web api
 
 
    constructor(

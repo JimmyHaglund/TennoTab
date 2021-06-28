@@ -89,7 +89,7 @@ export class FrameService {
       );
    }
 
-   getWeatherForecast(): Observable<any> {
+   getWeatherForecast(): Observable<Weather[]> {
       console.log("Getting weather");
       return this.http.get<any>(`http://localhost:49157/weatherforecast`, this.httpOptions)
       .pipe(tap(_ => _.length ?

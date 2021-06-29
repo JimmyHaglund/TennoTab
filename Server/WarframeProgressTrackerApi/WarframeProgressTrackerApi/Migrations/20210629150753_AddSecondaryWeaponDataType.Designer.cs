@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210629150753_AddSecondaryWeaponDataType")]
+    partial class AddSecondaryWeaponDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -791,56 +793,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SecondaryWeapons");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Accuracy = 33.33f,
-                            AmmoType = "Pistol",
-                            Disposition = 1.52f,
-                            FireRate = 8.33f,
-                            MagazineSize = 60,
-                            MasteryRankRequired = 4,
-                            MaxAmmo = 420,
-                            Name = "Cestra",
-                            ProjectileType = "Projectile",
-                            ReloadSeconds = 2f,
-                            TriggerType = "Auto",
-                            WeaponType = "Pistol"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Accuracy = 16f,
-                            AmmoType = "Pistol",
-                            Disposition = 1.25f,
-                            FireRate = 1.08f,
-                            MagazineSize = 6,
-                            MasteryRankRequired = 3,
-                            MaxAmmo = 210,
-                            Name = "Lex",
-                            ProjectileType = "Hit Scan",
-                            ReloadSeconds = 2.35f,
-                            TriggerType = "Semi-Auto",
-                            WeaponType = "Pistol"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Accuracy = 5f,
-                            AmmoType = "Shotgun Sidearm",
-                            Disposition = 0.95f,
-                            FireRate = 4.17f,
-                            MagazineSize = 10,
-                            MasteryRankRequired = 12,
-                            MaxAmmo = 210,
-                            Name = "Pyrana",
-                            ProjectileType = "Hit Scan",
-                            ReloadSeconds = 2f,
-                            TriggerType = "Auto",
-                            WeaponType = "Shotgun Sidearm"
-                        });
                 });
 #pragma warning restore 612, 618
         }

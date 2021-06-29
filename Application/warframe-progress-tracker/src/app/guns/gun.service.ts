@@ -22,7 +22,11 @@ export class GunService {
 
    getPrimaryWeapons(): Observable<Gun[]> {
       return this.http.get<Gun[]>(this.apiUrl+"/primaryweapon").
-      pipe(catchError(this.handleError<Gun[]>('getGuns', [])));
+      pipe(catchError(this.handleError<Gun[]>('getPrimaryWeapons', [])));
+   }
+   getSecondaryWeapons(): Observable<Gun[]> {
+      return this.http.get<Gun[]>(this.apiUrl+"/secondaryweapon").
+      pipe(catchError(this.handleError<Gun[]>('getSecondaryWeapons', [])));
    }
 
    private handleError<T>(operation = 'operation', result?: T) {

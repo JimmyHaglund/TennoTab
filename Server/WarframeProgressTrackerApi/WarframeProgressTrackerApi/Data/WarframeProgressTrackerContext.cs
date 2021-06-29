@@ -11,11 +11,13 @@ namespace WarframeProgressTrackerApi.Data {
 
         public DbSet<Frame> Frames { get; set; }
         public DbSet<PrimaryWeapon> PrimaryWeapons { get; set; }
+        public DbSet<SecondaryWeapon> SecondaryWeapons { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
             SeedFrames(modelBuilder);
             SeedPrimaryWeapons(modelBuilder);
+            SeedSecondaryWeapons(modelBuilder);
         }
 
         private void SeedFrames(ModelBuilder builder) {
@@ -25,8 +27,14 @@ namespace WarframeProgressTrackerApi.Data {
         }
 
         private void SeedPrimaryWeapons(ModelBuilder builder) {
-            foreach(var primaryWeapon in SeededPrimaryWeapons) {
+            foreach(var primaryWeapon in PrimaryWeaponSeed.Get) {
                 builder.Entity<PrimaryWeapon>().HasData(primaryWeapon);
+            }
+        }
+
+        private void SeedSecondaryWeapons(ModelBuilder builder) {
+            foreach(var secondaryWeapon in SecondaryWeaponSeed.Get) {
+                builder.Entity<SecondaryWeapon>().HasData(secondaryWeapon);
             }
         }
 
@@ -503,59 +511,5 @@ namespace WarframeProgressTrackerApi.Data {
                 SubsumedAbility = 0
             }
         };
-
-        private IEnumerable<PrimaryWeapon> SeededPrimaryWeapons => new List<PrimaryWeapon>() {
-            new PrimaryWeapon() {
-                Id = 1,
-                Name = "Bubunico",
-                WeaponType = "Arm Cannon",
-                AmmoType = "Arm Cannon",
-                TriggerType = Auto,
-                ProjectileType = Projectile,
-                FireRate = 3.83f,
-                Accuracy = 25.0f,
-                MagazineSize = 27,
-                MaxAmmo = 0,
-                ReloadSeconds = 16.875f,
-                Disposition = 0.7f
-            },
-            new PrimaryWeapon() {
-                Id = 2,
-                Name = "Acceltra",
-                MasteryRankRequired = 8,
-                WeaponType = Rifle,
-                AmmoType = Rifle,
-                TriggerType = Auto,
-                ProjectileType = Projectile,
-                FireRate = 12.0f,
-                Accuracy = 23.5f,
-                MagazineSize = 48,
-                MaxAmmo = 96,
-                ReloadSeconds = 2.0f,
-                Disposition = 0.6f
-            },
-            new PrimaryWeapon() {
-                Id = 3,
-                Name = "Corinth",
-                MasteryRankRequired = 14,
-                WeaponType = Shotgun,
-                AmmoType = Shotgun,
-                TriggerType = Semi,
-                ProjectileType = HitScan,
-                FireRate = 1.42f,
-                Accuracy = 9.1f,
-                MagazineSize = 20,
-                MaxAmmo = 120,
-                ReloadSeconds = 3.0f,
-                Disposition = 0.9f
-            },
-        };
-
-        private string Auto => "Auto";
-        private string Semi => "Semi-Auto";
-        private string Rifle => "Rifle";
-        private string Shotgun => "Shotgun";
-        private string Projectile => "Projectile";
-        private string HitScan => "Hit Scan";
     }
 }

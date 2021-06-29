@@ -17,7 +17,7 @@ export class SecondaryWeaponsListComponent implements OnInit {
   }
 
   private loadWeapons(): void {
-    this.gunService.getPrimaryWeapons()
+    this.gunService.getSecondaryWeapons()
       .subscribe(guns => this.weapons = guns);
   }
 }

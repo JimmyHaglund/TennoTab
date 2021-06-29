@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
    getFrames(): void {
       this.frameService.getFrames()
          .subscribe(frames => {
-            this.frames = frames.slice(0, this.max(frames.length, 5));
+            this.frames = frames.slice(0, this.min(frames.length, 5));
             console.log(frames);
             console.log(this.frames);
          });
@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
          });
    }
 
-   private max(a: number, b: number):number {
-      return a > b ? a : b;
+   private min(a: number, b: number):number {
+      return a < b ? a : b;
    }
 }

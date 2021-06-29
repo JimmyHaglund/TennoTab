@@ -17,7 +17,7 @@ export class PrimaryWeaponsListComponent implements OnInit {
   }
 
   private loadWeapons(): void {
-    this.gunService.getGuns()
-      .subscribe(guns => this.weapons = guns.filter(gun => gun.primary));
+    this.gunService.getPrimaryWeapons()
+      .subscribe(guns => this.weapons = guns);
   }
 }

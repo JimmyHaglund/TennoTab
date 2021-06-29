@@ -11,22 +11,22 @@ using WarframeProgressTrackerApi.Data;
 namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
     [Route("[Controller]")]
-    public class FrameController : ControllerBase {
-        public FrameController(WarframeProgressTrackerContext context) =>
+    public class PrimaryWeaponController : Controller {
+        public PrimaryWeaponController(WarframeProgressTrackerContext context) =>
             _context = context;
 
         private WarframeProgressTrackerContext _context;
 
         [HttpGet]
         [EnableCors]
-        public IEnumerable<Frame> Get() {
-            return _context.Frames;
+        public IEnumerable<PrimaryWeapon> Get() {
+            return _context.PrimaryWeapons;
         }
 
         [HttpGet("{id:int}")]
         [EnableCors]
-        public Frame Get(int id) {
-            return _context.Frames.Find(id);
-        } 
+        public PrimaryWeapon Get(int id) {
+            return _context.PrimaryWeapons.Find(id);
+        }
     }
 }

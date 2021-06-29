@@ -4,6 +4,7 @@ import { Gun } from './gun';
 import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
    providedIn: 'root'
@@ -12,18 +13,16 @@ export class GunService {
    httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
    };
-   private gunsUrl = 'api/guns';
+   private apiUrl = environment.apiUrl;
 
    constructor(
       private http: HttpClient,
       private messageService: MessageService
    ) { }
 
-   getGuns(): Observable<Gun[]> {
-      return this.http.get<Gun[]>(this.gunsUrl).
-      pipe(
-         catchError(this.handleError<Gun[]>('getGuns', []))
-      );
+   getPrimaryWeapons(): Observable<Gun[]> {
+      return this.http.get<Gun[]>(this.apiUrl+"/primaryweapon").
+      pipe(catchError(this.handleError<Gun[]>('getGuns', [])));
    }
 
    private handleError<T>(operation = 'operation', result?: T) {

@@ -4,6 +4,7 @@ import { MeleeWeapon } from './melee-weapon';
 import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
    providedIn: 'root'
@@ -12,7 +13,7 @@ export class MeleeService {
    httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
    };
-   private gunsUrl = 'api/melee';
+   private apiUrl = environment.apiUrl;
 
    constructor(
       private http: HttpClient,
@@ -20,7 +21,7 @@ export class MeleeService {
    ) { }
 
    getWeapons(): Observable<MeleeWeapon[]> {
-      return this.http.get<MeleeWeapon[]>(this.gunsUrl).
+      return this.http.get<MeleeWeapon[]>(this.apiUrl + "/meleeweapon").
       pipe(
          catchError(this.handleError<MeleeWeapon[]>('getWeapons', []))
       );

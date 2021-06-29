@@ -35,11 +35,6 @@ export class FrameService {
       pipe(
          catchError(this.handleError<Frame[]>('getFrames', []))
       );
-      
-      // Using RxJs to get mock frames
-      // const frames = of(FRAMES);
-      // this.messageService.add('FrameService: Fetched frames');
-      // return frames;
    }
 
    getFrame(id: number): Observable<Frame> {
@@ -76,23 +71,20 @@ export class FrameService {
       );
    }
 
-   /* GET heroes whose name contains search term */
-   searchFrames(term: string): Observable<Frame[]> {
-      if (!term.trim()) {
-      // if not search term, return empty hero array.
-      return of([]);
-      }
-      return this.http.get<Frame[]>(`${this.framesUrl}/?name=${term}`)
+   findFramesWithName(name: string): Observable<Frame[]> {
+      if (!name.trim()) return of([]);
+
+      return this.http.get<Frame[]>(`${this.framesUrl}/?name=${name}`)
       .pipe(tap(x => x.length ?
-         this.log(`found frames matching "${term}"`) :
-         this.log(`no frames matching "${term}"`)),
+         this.log(`found ${x.length} frames with names containing "${name}"`) :
+         this.log(`no frames found with name containing "${name}"`)),
       catchError(this.handleError<Frame[]>('searchFrames', []))
       );
    }
 
    getWeatherForecast(): Observable<Weather[]> {
       console.log("Getting weather");
-      return this.http.get<any>(`http://localhost:49157/weatherforecast`, this.httpOptions)
+      return this.http.get<any>(`${this.apiUrl}/weatherforecast`, this.httpOptions)
       .pipe(tap(_ => _.length ?
             this.log(`found weather forecast`) : 
             this.log(`couldn't find weather forecast`),

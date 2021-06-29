@@ -24,7 +24,7 @@ export class FrameSearchComponent implements OnInit {
     this.frames$ = this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
-      switchMap((term: string) => this.frameService.searchFrames(term)),
+      switchMap((term: string) => this.frameService.findFramesWithName(term)),
     );
   }
 }

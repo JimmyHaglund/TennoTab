@@ -9,6 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WarframeProgressTrackerApi.Models;
+using WarframeProgressTrackerApi.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace WarframeProgressTrackerApi {
     public class Startup {
@@ -22,12 +25,13 @@ namespace WarframeProgressTrackerApi {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddCors(options => {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
-                    builder => {
-                        builder.WithOrigins("http://localhost:4200");
-                    });
-            });
+            services.AddDbContext<WarframeProgressTrackerContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddCors(options => 
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
+                    builder.WithOrigins("http://localhost:4200"))
+            );
 
             services.AddControllers();
         }

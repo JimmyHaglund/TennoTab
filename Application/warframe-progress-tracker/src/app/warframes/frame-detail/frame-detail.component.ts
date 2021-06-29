@@ -24,6 +24,8 @@ export class FrameDetailComponent implements OnInit {
 
    getFrame(): void {
       const id = Number(this.route.snapshot.paramMap.get('id'));
+      console.log(id);
+      console.log(this.route);
       this.frameService.getFrame(id)
          .subscribe(frame => this.frame = frame);
    }

@@ -6,28 +6,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WarframeProgressTrackerApi.Models;
+using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
     [Route("[Controller]")]
     public class FrameController : ControllerBase {
+        public FrameController(WarframeProgressTrackerContext context) =>
+            _context = context;
+
+        private WarframeProgressTrackerContext _context;
+
         [HttpGet]
         [EnableCors]
         public IEnumerable<Frame> Get() {
-            var frame = new Frame() {
-                Id = 0,
-                Name = "Excalibur",
-                Health = 110,
-                Shield = 50,
-                Armor = 100,
-                Energy = 100,
-                SprintSpeed = 1,
-                Polarities = "UAF",
-                ExilusPolarity = "E",
-                AuraPolarity = "A",
-                SubsumedAbility = 0
-            };
-            return new Frame[] { frame };
+            return _context.Frames;
+
         }
+
+        [HttpGet("{id:int}")]
+        [EnableCors]
+        public Frame Get(int id) {
+            return _context.Frames.Find(id);
+        } 
     }
 }

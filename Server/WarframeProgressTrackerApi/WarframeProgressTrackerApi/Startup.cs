@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using WarframeProgressTrackerApi.Models;
 using WarframeProgressTrackerApi.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace WarframeProgressTrackerApi {
     public class Startup {
@@ -25,15 +26,26 @@ namespace WarframeProgressTrackerApi {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddDbContext<WarframeProgressTrackerContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            ConfigureIdentity(services);
 
             services.AddCors(options => 
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
-                    builder.WithOrigins("http://localhost:4200"))
-            );
+                    builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyHeader()));
 
             services.AddControllers();
+            services.AddScoped<UserManager<User>>();
+            services.AddScoped<SignInManager<User>>();
+            
+        }
+
+        private void ConfigureIdentity(IServiceCollection services) {
+            services.AddDbContext<WarframeProgressTrackerContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<WarframeProgressTrackerContext>()
+                .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

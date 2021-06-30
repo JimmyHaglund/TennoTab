@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using WarframeProgressTrackerApi.Models;
 
 namespace WarframeProgressTrackerApi.Data {
-    public class WarframeProgressTrackerContext : DbContext {
+    public class WarframeProgressTrackerContext : IdentityDbContext<User> {
         public WarframeProgressTrackerContext(DbContextOptions<WarframeProgressTrackerContext> options) : base(options) { }
 
         public DbSet<Frame> Frames { get; set; }

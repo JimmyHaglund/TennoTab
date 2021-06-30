@@ -11,7 +11,7 @@ using WarframeProgressTrackerApi.Data;
 namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
     [Route("[Controller]")]
-    public class SecondaryWeaponController : Controller {
+    public class SecondaryWeaponController : ControllerBase {
         public SecondaryWeaponController(WarframeProgressTrackerContext context) =>
             _context = context;
 

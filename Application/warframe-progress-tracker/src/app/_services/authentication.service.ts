@@ -21,16 +21,25 @@ export class AuthenticationService {
    }
 
    public login(userName: string, password: string): Observable<any> {
-      console.log("Login attempt: ", userName, ", ", password);
-      let login = {userName, password};
-      console.log(this.authenticateUrl);
-      console.log(login);
-      return this.http.post<string>(`${this.authenticateUrl}`, { userName, password })
+      var url = environment.apiUrl + "/user/login";
+      return this.http.post<string>(url, { userName, password })
          .pipe(map(user => {
             console.log(user);
             localStorage.setItem('currentUser', JSON.stringify(user));
             this.currentUserSubject.next(user);
             return user;
          }));
+   }
+
+   public register(userName: string, password: string): Observable<any> {
+      console.log("Registering", userName);
+      var url = environment.apiUrl + "/user/register";
+      return this.http.post<string>(url, {userName, password})
+      .pipe(map(user => {
+         console.log(user);
+         localStorage.setItem('currentUser', JSON.stringify(user));
+         this.currentUserSubject.next(user);
+         return user;
+      }));
    }
 }

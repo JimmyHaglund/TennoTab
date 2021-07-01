@@ -14,31 +14,42 @@ using Microsoft.AspNetCore.Cors;
 
 namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
-    [Route("[Controller]")]
+    [Route("[Controller]/[Action]")]
     [EnableCors]
     public class UserController : ControllerBase {
         private WarframeProgressTrackerContext _dataContext;
         private SignInManager<User> _signInManager;
+        private UserManager<User> _userManager;
 
         public UserController(
             WarframeProgressTrackerContext databaseContext,
-            SignInManager<User> signInManager) {
+            SignInManager<User> signInManager,
+            UserManager<User> userManager) {
             _dataContext = databaseContext;
             _signInManager = signInManager;
+            _userManager = userManager;
         }
 
 
         [HttpPost]
         [AllowAnonymous]
-        public Frame Post(Login login) {
-            return _dataContext.Frames.FirstOrDefault();
-            /*
-            var result = await _signInManager.PasswordSignInAsync(login.UserName, login.Password, false, false);
-            if (result.Succeeded) {
-                return "OK";
-            }
-            return "NO";
-            */
+        public async Task<Microsoft.AspNetCore.Identity.SignInResult> Login(Login login) {
+            var user = await _userManager.FindByNameAsync(login.UserName);
+            if (user == null) return null;
+            var result = await _signInManager
+                .PasswordSignInAsync(user, login.Password, false, false);
+            return result;
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IdentityResult> Register(Login login) {
+            var user = new User() { UserName = login.UserName };
+            var createUserResult = await _userManager.CreateAsync(user, login.Password);
+            // return _dataContext.Frames.FirstOrDefault();
+            return createUserResult;
+        }
+
+
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OkHsXJz8EHh2/sx2eWCSeuSQvUP2D8kFMVce+jbizCqqM2C33YQv1jYmmbvbxFUFQGaMV1zS4lcCKY3+ni4ggQ==",
+  "dgSpecHash": "k4te0L8mIWfKQUSGmKVBpBqhOewgINlmge1+m1gv2DPxHF0Kj0xzGXRIbFwKbWFc0FmCKtUPR3jd92zwboEhyQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\WarframeProgressTracker\\Managed\\Server\\WarframeProgressTrackerApi\\WarframeProgressTrackerApi\\WarframeProgressTrackerApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.16\\microsoft.aspnetcore.authentication.jwtbearer.3.1.16.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.16\\microsoft.aspnetcore.cryptography.internal.3.1.16.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.16\\microsoft.aspnetcore.cryptography.keyderivation.3.1.16.nupkg.sha512",

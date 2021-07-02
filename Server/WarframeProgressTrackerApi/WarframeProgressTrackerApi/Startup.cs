@@ -13,6 +13,9 @@ using WarframeProgressTrackerApi.Models;
 using WarframeProgressTrackerApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WarframeProgressTrackerApi {
     public class Startup {
@@ -28,13 +31,28 @@ namespace WarframeProgressTrackerApi {
         public void ConfigureServices(IServiceCollection services) {
             ConfigureIdentity(services);
 
-            services.AddCors(options => 
-                options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
+            services.ConfigureApplicationCookie(cookieOptions => {
+                cookieOptions.Cookie.SameSite = SameSiteMode.Lax;
+                cookieOptions.Cookie.Name = "auth_cookie";
+
+                cookieOptions.Events = new CookieAuthenticationEvents {
+                    OnRedirectToLogin = redirectContext => {
+                        redirectContext.HttpContext.Response.StatusCode = 401;
+                        return Task.CompletedTask;
+                    }
+                };
+            });
+
+            services.AddCors(options =>
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
                     builder.WithOrigins("http://localhost:4200")
                     .AllowCredentials()
                     .AllowAnyHeader()
-                    .WithExposedHeaders("Set-Cookie")
+                    .AllowAnyMethod()
                     ));
+
+            // services.AddMvc(options => options.Filters.Add(new ValidateAntiForgeryTokenAttribute()));
+            // services.AddAntiforgery(antiForgeryOptions => antiForgeryOptions.HeaderName = "X-XSRF-TOKEN");
 
             services.AddControllers();
             services.AddScoped<UserManager<User>>();
@@ -49,6 +67,7 @@ namespace WarframeProgressTrackerApi {
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarframeProgressTrackerContext>()
                 .AddDefaultTokenProviders();
+
             services.Configure<IdentityOptions>(options => {
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 6;
@@ -74,9 +93,6 @@ namespace WarframeProgressTrackerApi {
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{ controller=User}/{action=Login}");
                 endpoints.MapControllers()
                     .RequireCors(MyAllowSpecificOrigins);
             });

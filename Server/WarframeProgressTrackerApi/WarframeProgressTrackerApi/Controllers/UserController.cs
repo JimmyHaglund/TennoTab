@@ -16,7 +16,6 @@ namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
     [Route("[Controller]/[Action]")]
     [EnableCors]
-    [Authorize]
     public class UserController : ControllerBase {
         private WarframeProgressTrackerContext _dataContext;
         private SignInManager<User> _signInManager;
@@ -33,16 +32,14 @@ namespace WarframeProgressTrackerApi.Controllers {
 
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<User> Login(Login login) {
             var user = await _userManager.FindByNameAsync(login.UserName);
             if (user == null) return null;
             var result = await _signInManager
-                .PasswordSignInAsync(user, login.Password, false, false);
+                .PasswordSignInAsync(user, login.Password, true, false);
             return result.Succeeded ? user : null;
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public async Task<User> Register(Login login) {
             var user = new User() { UserName = login.UserName };

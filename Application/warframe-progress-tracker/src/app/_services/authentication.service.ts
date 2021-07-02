@@ -27,35 +27,14 @@ export class AuthenticationService {
 
    public login(userName: string, password: string): void {
       var url = environment.apiUrl + "/user/login";
-      this.http.post(url, { userName, password }, {observe: 'response' })
-      .subscribe(response => {
-         console.log("Response");
-         console.log(response);
-         console.log("Headers via map")
-         let keys = response.headers.keys();
-         keys.map(key => console.log(`${key}: ${response.headers.get(key)}`));
-         console.log("Headers get('set-cookie')");
-         console.log(response.headers.get('Set-Cookie'));
-      });
-      /*
-         .pipe(map(response => {
-               console.log(`${response}`)
-               console.log(response.headers);
-            }
-            )).subscribe(response => console.log(response));
-            /*map(user => {
-            console.log(user);
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            this.currentUserSubject.next(user);
-         }), tap(response => { 
-            console.log(response.headers);
-         }));/**/
+      this.http.post(url, { userName, password }, {withCredentials: true} )
+      .subscribe(response => {});
    }
 
    public register(userName: string, password: string): Observable<any> {
       console.log("Registering", userName);
       var url = environment.apiUrl + "/user/register";
-      return this.http.post<string>(url, {userName, password})
+      return this.http.post<string>(url, {userName, password}, {withCredentials: true})
       .pipe(map(user => {
          console.log(user);
          localStorage.setItem('currentUser', JSON.stringify(user));

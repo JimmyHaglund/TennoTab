@@ -31,7 +31,10 @@ namespace WarframeProgressTrackerApi {
             services.AddCors(options => 
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder => 
                     builder.WithOrigins("http://localhost:4200")
-                    .AllowAnyHeader()));
+                    .AllowCredentials()
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("Set-Cookie")
+                    ));
 
             services.AddControllers();
             services.AddScoped<UserManager<User>>();
@@ -67,9 +70,13 @@ namespace WarframeProgressTrackerApi {
 
             app.UseCors(MyAllowSpecificOrigins);
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{ controller=User}/{action=Login}");
                 endpoints.MapControllers()
                     .RequireCors(MyAllowSpecificOrigins);
             });

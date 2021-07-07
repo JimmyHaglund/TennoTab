@@ -18,5 +18,6 @@ namespace WarframeProgressTrackerApi.Models {
         public int MaxAmmo { get; set; }
         public float ReloadSeconds { get; set; }
         public float Disposition { get; set; }
+        public string HowToGet { get; set; } = "";
     }
 }

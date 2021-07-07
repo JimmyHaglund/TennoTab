@@ -1,5 +1,6 @@
 export interface Frame {
     id: number,
+    masteryRankRequired: number,
     name: string;
     health: number;
     shield: number;
@@ -10,4 +11,7 @@ export interface Frame {
     exilusPolarity: string;
     auraPolarity: string;
     subsumedAbility: number;
+    howToGet: string;
+    masteryRank: number,
+    obtained: boolean
 }

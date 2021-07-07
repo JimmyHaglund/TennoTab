@@ -31,7 +31,7 @@ export class FrameService {
       private messageService: MessageService) { }
 
    getFrames(): Observable<Frame[]> {
-      return this.http.get<Frame[]>(this.framesUrl).
+      return this.http.get<Frame[]>(this.framesUrl, {withCredentials: true}).
       pipe(
          catchError(this.handleError<Frame[]>('getFrames', []))
       );

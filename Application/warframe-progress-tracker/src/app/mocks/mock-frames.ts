@@ -12,7 +12,11 @@ export const FRAMES: Frame[] = [
     polarities: "DV",
     exilusPolarity: "",
     auraPolarity: "",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 12, 
@@ -25,7 +29,11 @@ export const FRAMES: Frame[] = [
     polarities: "VD",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 13, 
@@ -38,7 +46,11 @@ export const FRAMES: Frame[] = [
     polarities: "DV",
     exilusPolarity: "",
     auraPolarity: "B",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 14, 
@@ -51,7 +63,11 @@ export const FRAMES: Frame[] = [
     polarities: "VUUU",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0 
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 15, 
@@ -64,7 +80,11 @@ export const FRAMES: Frame[] = [
     polarities: "VV",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   
   },
   {
@@ -78,7 +98,11 @@ export const FRAMES: Frame[] = [
     polarities: "BDV",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   
   },
   {
@@ -92,7 +116,11 @@ export const FRAMES: Frame[] = [
     polarities: "VV",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 18, 
@@ -105,7 +133,11 @@ export const FRAMES: Frame[] = [
     polarities: "DD",
     exilusPolarity: "B",
     auraPolarity: "B",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 19,
@@ -118,7 +150,11 @@ export const FRAMES: Frame[] = [
     polarities: "BV",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   },
   {
     id : 20, 
@@ -131,6 +167,10 @@ export const FRAMES: Frame[] = [
     polarities: "BB",
     exilusPolarity: "",
     auraPolarity: "V",
-    subsumedAbility: 0
+    subsumedAbility: 0,
+    howToGet: "Unknown",
+    masteryRankRequired: 0,
+    masteryRank: 0,
+    obtained: false
   }
 ];

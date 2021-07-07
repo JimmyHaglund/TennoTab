@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WarframeProgressTrackerApi.Models {
+﻿namespace WarframeProgressTrackerApi.Models {
     public class Frame {
         public int Id { get; set; }
         public int MasteryRankRequired { get; set; } = 0;
@@ -21,5 +16,6 @@ namespace WarframeProgressTrackerApi.Models {
         public string ExilusPolarity { get; set; } = "";
         public string AuraPolarity { get; set; }
         public int SubsumedAbility { get; set; }
+        public string HowToGet { get; set; } = "";
     }
 }

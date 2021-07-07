@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using WarframeProgressTrackerApi.Data;
 using WarframeProgressTrackerApi.Models;
 using Microsoft.AspNetCore.Cors;
+using WarframeProgressTrackerApi.Services;
 
 namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
@@ -20,14 +21,17 @@ namespace WarframeProgressTrackerApi.Controllers {
         private WarframeProgressTrackerContext _dataContext;
         private SignInManager<User> _signInManager;
         private UserManager<User> _userManager;
+        private SessionUser _sessionUser;
 
         public UserController(
             WarframeProgressTrackerContext databaseContext,
             SignInManager<User> signInManager,
-            UserManager<User> userManager) {
+            UserManager<User> userManager,
+            SessionUser sessionUser) {
             _dataContext = databaseContext;
             _signInManager = signInManager;
             _userManager = userManager;
+            _sessionUser = sessionUser;
         }
 
 
@@ -35,9 +39,23 @@ namespace WarframeProgressTrackerApi.Controllers {
         public async Task<User> Login(Login login) {
             var user = await _userManager.FindByNameAsync(login.UserName);
             if (user == null) return null;
+
             var result = await _signInManager
                 .PasswordSignInAsync(user, login.Password, true, false);
-            return result.Succeeded ? user : null;
+            if (!result.Succeeded) return null;
+            
+            var headers = Response.Headers;
+            if (headers.TryGetValue("Set-Cookie", out var cookie)) {
+                cookie = ExtractResponseCookie(cookie);
+                _sessionUser.Add(cookie, user.Id);
+            }
+
+            return user;    
+        }
+
+        private string ExtractResponseCookie(string cookieRaw) {
+            var result = cookieRaw.Substring(cookieRaw.IndexOf("=") + 1);
+            return result.Substring(0, result.IndexOf(";"));
         }
 
         [HttpPost]

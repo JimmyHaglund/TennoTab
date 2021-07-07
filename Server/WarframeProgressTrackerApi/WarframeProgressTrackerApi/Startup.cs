@@ -9,13 +9,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WarframeProgressTrackerApi.Models;
-using WarframeProgressTrackerApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using WarframeProgressTrackerApi.Data;
+using WarframeProgressTrackerApi.Models;
+using WarframeProgressTrackerApi.Services;
 
 namespace WarframeProgressTrackerApi {
     public class Startup {
@@ -57,6 +58,7 @@ namespace WarframeProgressTrackerApi {
             services.AddControllers();
             services.AddScoped<UserManager<User>>();
             services.AddScoped<SignInManager<User>>();
+            services.AddSingleton<SessionUser>();
             
         }
 

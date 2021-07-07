@@ -15,5 +15,6 @@ namespace WarframeProgressTrackerApi.Models {
         public float ComboSeconds { get; set; }
         public float FollowThrough { get; set; }
         public float Disposition { get; set; }
+        public string HowToGet { get; set; } = "";
     }
 }

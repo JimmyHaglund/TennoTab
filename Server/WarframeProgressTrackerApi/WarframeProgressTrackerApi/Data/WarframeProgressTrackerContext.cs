@@ -15,16 +15,15 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<SecondaryWeapon> SecondaryWeapons { get; set; }
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; }
         public DbSet<UserFrame> UserFrames { get; set; }
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
-
+            
             modelBuilder.Entity<UserFrame>()
                 .HasKey(userFrame => new {
                     userFrame.UserId,
                     userFrame.FrameId
                 });
-
             SeedFrames(modelBuilder);
             SeedPrimaryWeapons(modelBuilder);
             SeedSecondaryWeapons(modelBuilder);

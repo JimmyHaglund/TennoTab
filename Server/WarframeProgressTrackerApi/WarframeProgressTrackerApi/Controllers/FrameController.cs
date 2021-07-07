@@ -28,7 +28,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         [HttpGet]
         [EnableCors]
         public IEnumerable<UserFrameData> Get() {
-            var frames = _context.Frames.Select(frame => new UserFrameData(frame));
+            var frames = _context.Frames.Select(frame => new UserFrameData(frame)).ToArray();
             var userId = GetRequestId(Request);
             if (!string.IsNullOrEmpty(userId)) {
                 PopulateWithUserData(frames, userId);

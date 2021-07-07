@@ -45,7 +45,6 @@ namespace WarframeProgressTrackerApi.ViewModels {
         public int SubsumedAbility { get; set; }
         public string HowToGet { get; set; } = "";
 
-
         public int MasteryRank { get; set; } = 0;
         public bool Obtained { get; set; } = false;
     }

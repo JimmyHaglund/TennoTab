@@ -9,6 +9,7 @@ import { FrameService } from '../frame.service';
 })
 export class FramesComponent implements OnInit {
    frames: Frame[] = [];
+   displayedColumns = ['name', 'obtained'];
 
    constructor(private frameService: FrameService) { }
 

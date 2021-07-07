@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class PrimaryWeapon {
+    public class ArchGun {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string HowToGet { get; set; } = "";
         public int MasteryRankRequired { get; set; } = 0;
+        public string HowToGet { get; set; } = "";
 
         public string WeaponType { get; set; }
         public string AmmoType { get; set; }

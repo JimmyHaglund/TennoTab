@@ -1,5 +1,10 @@
-﻿namespace WarframeProgressTrackerApi.Models {
-    public class Frame {
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WarframeProgressTrackerApi.Models {
+    public class Archwing {
         public int Id { get; set; }
         public string Name { get; set; }
         public string HowToGet { get; set; } = "";
@@ -12,12 +17,9 @@
         public int Armor { get; set; }
         public float ArmorMaxFactor { get; set; } = 1.0f;
         public int Energy { get; set; }
-        public float EnergyMaxFactor { get; set; } = 1.5f;
+        public float EnergyMaxFactor { get; set; } = 1.8f;
 
-        public float SprintSpeed { get; set; }
+        public float FlightSpeed { get; set; }
         public string Polarities { get; set; }
-        public string ExilusPolarity { get; set; } = "";
-        public string AuraPolarity { get; set; }
-        public int SubsumedAbility { get; set; }
     }
 }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WarframeProgressTrackerApi.Models {
-    public class PrimaryWeapon {
+﻿namespace WarframeProgressTrackerApi.Models {
+    public class RoboWeapon {
         public int Id { get; set; }
         public string Name { get; set; }
         public string HowToGet { get; set; } = "";

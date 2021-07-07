@@ -36,6 +36,12 @@ namespace WarframeProgressTrackerApi.Controllers {
             return frames;
         }
 
+        [HttpGet("{id:int}")]
+        [EnableCors]
+        public Frame Get(int id) {
+            return _context.Frames.Find(id);
+        }
+
         private void PopulateWithUserData(IEnumerable<UserFrameData> frames, string userId) {
             var userFrames = _context.UserFrames
                     .Where(userFrame => userFrame.UserId == userId);
@@ -57,10 +63,6 @@ namespace WarframeProgressTrackerApi.Controllers {
             return "";
         }
 
-        [HttpGet("{id:int}")]
-        [EnableCors]
-        public Frame Get(int id) {
-            return _context.Frames.Find(id);
-        }
+        
     }
 }

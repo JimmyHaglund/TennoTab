@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Frame } from './frame';
+import { Frame, UserFrame } from './frame';
 import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -45,7 +45,7 @@ export class FrameService {
       );
    }
 
-   /** PUT: update the hero on the server */
+   /** PUT: update the frame on the server */
    updateFrame(frame: Frame): Observable<any> {
       return this.http.put(this.framesUrl, frame, this.httpOptions).pipe(
       tap(_ => this.log(`updated frame ${frame.name}`)),
@@ -53,12 +53,30 @@ export class FrameService {
       );
    }
 
-   /** POST: add a new hero to the server */
    addFrame(frame: Frame): Observable<Frame> {
       return this.http.post<Frame>(this.framesUrl, frame, this.httpOptions).pipe(
       tap((newFrame: Frame) => this.log(`added new frame:${newFrame.name}`)),
       catchError(this.handleError<Frame>('addFrame'))
       );
+   }
+
+   obtainFrame(frame: Frame): Observable<Frame> {
+      var userFrame = {
+         frameId: frame.id,
+         obtained: frame.obtained,
+         masteryRank: frame.masteryRank
+      };
+      return this.http.post<Frame>(
+         this.apiUrl + "/userframe", userFrame, {withCredentials: true})
+      .pipe(tap((newFrame: Frame) => 
+            this.log(`added new userFrame:${newFrame.name}`)),
+      catchError(this.handleError<Frame>('addFrame')));
+      /*
+      return this.http.post<Frame>(this.framesUrl, frame, this.httpOptions).pipe(
+      tap((newFrame: Frame) => this.log(`added new frame:${newFrame.name}`)),
+      catchError(this.handleError<Frame>('addFrame'))
+      );
+      */
    }
 
    /** DELETE: delete the hero from the server */
@@ -80,16 +98,6 @@ export class FrameService {
          this.log(`no frames found with name containing "${name}"`)),
       catchError(this.handleError<Frame[]>('searchFrames', []))
       );
-   }
-
-   getWeatherForecast(): Observable<Weather[]> {
-      console.log("Getting weather");
-      return this.http.get<any>(`${this.apiUrl}/weatherforecast`, this.httpOptions)
-      .pipe(tap(_ => _.length ?
-            this.log(`found weather forecast`) : 
-            this.log(`couldn't find weather forecast`),
-         catchError(this.handleError<any>('getWeatherForecast', null))
-         ));
    }
 
    private log(message: string) {

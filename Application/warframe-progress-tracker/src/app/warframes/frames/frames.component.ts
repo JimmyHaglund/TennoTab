@@ -35,4 +35,10 @@ export class FramesComponent implements OnInit {
             this.frames.push(frame);
          });
    }
+
+   addObtained(frame: Frame): void {
+      frame.obtained = true;
+      this.frameService.obtainFrame(frame)
+         .subscribe(result => frame = result);
+   }
 }

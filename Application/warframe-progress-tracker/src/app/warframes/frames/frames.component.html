@@ -3,12 +3,19 @@
   <thead>
     <th>Name</th>
     <th>Obtained</th>
+    <th></th>
   </thead>
   
   <tbody>
     <tr *ngFor='let frame of frames'>
       <td>{{frame.name}}</td>
       <td>{{frame.obtained}}</td>
+      <td>
+        <button 
+        class="btn btn-normal" 
+        title="add obtained" 
+        (click) = "addObtained(frame)">Add Obtained</button>
+      </td>
     </tr>
   </tbody>
 

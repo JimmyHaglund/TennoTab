@@ -12,7 +12,6 @@ using WarframeProgressTrackerApi.Services;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
-    [EnableCors]
     [ApiController]
     [Route("[Controller]")]
     [Authorize]
@@ -27,6 +26,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             _sessionUser = sessionUser;
         }
 
+        [EnableCors]
         [HttpGet]
         public IEnumerable<UserFrame> Get() {
             var userId = _sessionUser.IdFromRequest(Request);
@@ -36,6 +36,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpPost]
+        [EnableCors]
         public UserFrame Create(UserFrameCreateModel frameForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             if (string.IsNullOrEmpty(userId)) return null;
@@ -49,6 +50,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 MasteryRank = frameForm.MasteryRank 
             };
             _context.Add(userFrame);
+            _context.SaveChanges();
 
             return userFrame;
         }

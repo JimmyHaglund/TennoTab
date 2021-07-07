@@ -15,3 +15,9 @@ export interface Frame {
     masteryRank: number,
     obtained: boolean
 }
+
+export interface UserFrame {
+    frameId: number,
+    masteryRank: number,
+    obtained: boolean
+}

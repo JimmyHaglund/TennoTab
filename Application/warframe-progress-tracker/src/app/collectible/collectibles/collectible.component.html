@@ -1,1 +1,14 @@
-<p>collectible works!</p>
+<h2>Collectibles</h2>
+
+<table class="table">
+   <thead>
+     <th>Obtained</th>
+   </thead>
+   
+   <tbody>
+     <tr *ngFor='let collectible of collectibles'>
+       <td>{{collectible.obtained}}</td>
+     </tr>
+   </tbody>
+ 
+ </table>

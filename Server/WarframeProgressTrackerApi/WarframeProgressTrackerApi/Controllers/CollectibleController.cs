@@ -25,7 +25,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             _sessionUser = sessionUser;
         }
 
-        [HttpGet]
+        [HttpPut]
         public IEnumerable<Collectible> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             if (searchForm == null) searchForm = new CollectibleSearchForm();

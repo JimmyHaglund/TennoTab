@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Collectible, CollectibleSearchForm, CollectibleService } from '..';
 
 @Component({
   selector: 'app-collectible',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./collectible.component.scss']
 })
 export class CollectibleComponent implements OnInit {
-
-  constructor() { }
+  collectibles: Collectible[] = [];
+  
+  constructor(private collectibleService: CollectibleService) { }
 
   ngOnInit(): void {
+    this.getCollectibles();
+  }
+
+  private getCollectibles() {
+    this.collectibleService.getCollectibles()
+      .subscribe(collectibles => this.collectibles = collectibles);
   }
 
 }

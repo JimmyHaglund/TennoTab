@@ -12,14 +12,14 @@ export class FramesComponent implements OnInit {
    displayedColumns = ['name', 'obtained'];
 
    constructor(private frameService: FrameService) { }
+   
+   ngOnInit(): void {
+      this.getFrames();
+   }
 
    getFrames(): void {
       this.frameService.getFrames()
          .subscribe(frames => this.frames = frames);
-   }
-
-   ngOnInit(): void {
-      this.getFrames();
    }
 
    delete(frame: Frame): void {

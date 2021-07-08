@@ -8,6 +8,7 @@ import { SecondaryWeaponsListComponent } from './guns/secondary-weapons-list/sec
 import { MeleeWeaponsListComponent } from './melee-weapon/melee-weapons-list/melee-weapons-list.component';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { CollectibleComponent } from './collectible';
 
 const routes: Routes = [
   { path: 'frames', component: FramesComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'secondary-weapons', component: SecondaryWeaponsListComponent },
   { path: 'melee-weapons', component: MeleeWeaponsListComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'collectible', component: CollectibleComponent }
 ];
 
 @NgModule({

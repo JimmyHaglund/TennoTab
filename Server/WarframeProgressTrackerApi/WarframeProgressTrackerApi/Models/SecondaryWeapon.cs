@@ -4,9 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class SecondaryWeapon {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    public class SecondaryWeapon : WarframeItem {
         public int MasteryRankRequired { get; set; } = 0;
         public string WeaponType { get; set; }
         public string AmmoType { get; set; }

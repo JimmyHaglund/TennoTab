@@ -47,7 +47,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                     .Where(userFrame => userFrame.UserId == userId);
             foreach (var frame in frames) {
                 var userFrame = userFrames
-                    .FirstOrDefault(userFrame => userFrame.FrameId == frame.Id);
+                    .FirstOrDefault(userFrame => userFrame.ItemId == frame.Id);
                 if (userFrame != null) {
                     frame.Obtained = userFrame.Obtained;
                     frame.MasteryRank = userFrame.MasteryRank;

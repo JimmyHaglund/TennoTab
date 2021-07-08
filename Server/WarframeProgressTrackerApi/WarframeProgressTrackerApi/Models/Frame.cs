@@ -1,7 +1,5 @@
 ﻿namespace WarframeProgressTrackerApi.Models {
-    public class Frame {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    public class Frame : WarframeItem {
         public string HowToGet { get; set; } = "";
         public int MasteryRankRequired { get; set; } = 0;
 

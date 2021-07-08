@@ -20,4 +20,9 @@ export class CollectibleComponent implements OnInit {
       .subscribe(collectibles => this.collectibles = collectibles);
   }
 
+  public collectedValue(collectible: Collectible ): string {
+    return !collectible.obtained ? "Not obtained" :
+      collectible.mastered ? "Mastered" : "Obtained";
+  }
+
 }

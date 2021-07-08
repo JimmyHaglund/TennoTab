@@ -1,5 +1,7 @@
 export interface Collectible {
-   detilsLink: string,
+   name: string,
+   category: string,
+   detailsLink: string,
    mastered: boolean,
    obtained: boolean
 };

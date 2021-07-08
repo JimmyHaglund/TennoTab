@@ -4,9 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class ArchMelee {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    public class ArchMelee : WarframeItem {
         public int MasteryRankRequired { get; set; }
         public string HowToGet { get; set; } = "";
 

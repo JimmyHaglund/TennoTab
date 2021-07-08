@@ -1,14 +1,16 @@
 <h2>Collectibles</h2>
 
 <table class="table">
-   <thead>
-     <th>Obtained</th>
-   </thead>
-   
-   <tbody>
-     <tr *ngFor='let collectible of collectibles'>
-       <td>{{collectible.obtained}}</td>
-     </tr>
-   </tbody>
- 
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Link</th>
+  </tr>
+  <tr *ngFor='let collectible of collectibles' class="m-3">
+    <td>{{collectible.category}}</td>
+    <td>{{collectible.name}}</td>
+    <td>{{collectedValue(collectible)}}</td>
+    <td>{{collectible.detailsLink}}</td>
+  </tr>
  </table>

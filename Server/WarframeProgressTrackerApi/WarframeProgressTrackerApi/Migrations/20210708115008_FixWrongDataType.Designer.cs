@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210708115008_FixWrongDataType")]
+    partial class FixWrongDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2010,12 +2012,12 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserItem", b =>
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchGun", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("ItemId")
+                    b.Property<int>("WeaponId")
                         .HasColumnType("int");
 
                     b.Property<int>("MasteryRank")
@@ -2024,9 +2026,161 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.HasKey("UserId", "ItemId");
+                    b.HasKey("UserId", "WeaponId");
 
-                    b.ToTable("UserItem");
+                    b.ToTable("UserArchGuns");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchMelee", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "WeaponId");
+
+                    b.ToTable("UserArchMeleeWeapons");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchwing", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ArchwingId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "ArchwingId");
+
+                    b.ToTable("UserArchwings");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserFrame", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("FrameId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "FrameId");
+
+                    b.ToTable("UserFrames");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserMeleeWeapon", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "WeaponId");
+
+                    b.ToTable("UserMeleeWeapons");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserPet", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("PetId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "PetId");
+
+                    b.ToTable("UserPets");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserPrimaryWeapon", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "WeaponId");
+
+                    b.ToTable("UserPrimaryWeapons");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserRoboWeapon", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "WeaponId");
+
+                    b.ToTable("UserRoboWeapons");
+                });
+
+            modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserSecondaryWeapon", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasteryRank")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Obtained")
+                        .HasColumnType("bit");
+
+                    b.HasKey("UserId", "WeaponId");
+
+                    b.ToTable("UserSecondaryWeapons");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

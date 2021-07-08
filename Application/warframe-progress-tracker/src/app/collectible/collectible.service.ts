@@ -21,7 +21,7 @@ export class CollectibleService {
   getCollectibles(): Observable<Collectible[]> {
     var searchForm: CollectibleSearchForm = {
       includeFrames: true,
-      inludePrimaryWeapons: true,
+      includePrimaryWeapons: true,
       includeSecondaryWeapons: true,
       includeMeleeWeapons: true,
       includePets: true,

@@ -1,7 +1,7 @@
 ﻿namespace WarframeProgressTrackerApi.ViewModels {
     public class CollectibleSearchForm {
         public bool IncludeFrames { get; set; }
-        public bool InludePrimaryWeapons { get; set; }
+        public bool IncludePrimaryWeapons { get; set; }
         public bool IncludeSecondaryWeapons { get; set; }
         public bool IncludeMeleeWeapons { get; set; }
         public bool IncludePets { get; set; }

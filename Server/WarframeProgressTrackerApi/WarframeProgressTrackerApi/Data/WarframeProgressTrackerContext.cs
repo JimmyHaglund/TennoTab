@@ -22,15 +22,15 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<ArchMelee> ArchMeleeWeapons { get; set; }
         public DbSet<RoboWeapon> RoboWeapons { get; set; }
 
-        public DbSet<UserFrame> UserFrames { get; set; }
-        public DbSet<UserPrimaryWeapon> UserPrimaryWeapons { get; set; }
-        public DbSet<UserSecondaryWeapon> UserSecondaryWeapons { get; set; }
-        public DbSet<MeleeWeapon> UserMeleeWeapons { get; set; }
-        public DbSet<UserPet> UserPets { get; set; }
-        public DbSet<UserArchwing> UserArchwings { get; set; }
-        public DbSet<UserArchGun> UserArchGuns { get; set; }
-        public DbSet<UserArchMelee> UserArchMeleeWeapons { get; set; }
-        public DbSet<UserRoboWeapon> UserRoboWeapons { get; set; }
+        public DbSet<UserItem> UserFrames { get; set; }
+        public DbSet<UserItem> UserPrimaryWeapons { get; set; }
+        public DbSet<UserItem> UserSecondaryWeapons { get; set; }
+        public DbSet<UserItem> UserMeleeWeapons { get; set; }
+        public DbSet<UserItem> UserPets { get; set; }
+        public DbSet<UserItem> UserArchwings { get; set; }
+        public DbSet<UserItem> UserArchGuns { get; set; }
+        public DbSet<UserItem> UserArchMeleeWeapons { get; set; }
+        public DbSet<UserItem> UserRoboWeapons { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
@@ -49,50 +49,10 @@ namespace WarframeProgressTrackerApi.Data {
         }
 
         private void SetupCompositeKeys(ModelBuilder builder) {
-            builder.Entity<UserFrame>()
+            builder.Entity<UserItem>()
                 .HasKey(userFrame => new {
                     userFrame.UserId,
-                    userFrame.FrameId
-                });
-            builder.Entity<UserPrimaryWeapon>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
-                });
-            builder.Entity<UserSecondaryWeapon>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
-                });
-            builder.Entity<UserMeleeWeapon>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
-                });
-            builder.Entity<UserPet>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.PetId
-                });
-            builder.Entity<UserArchwing>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.ArchwingId
-                });
-            builder.Entity<UserArchGun>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
-                });
-            builder.Entity<UserArchMelee>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
-                });
-            builder.Entity<UserRoboWeapon>()
-                .HasKey(userPrimaryWeapon => new {
-                    userPrimaryWeapon.UserId,
-                    userPrimaryWeapon.WeaponId
+                    userFrame.ItemId
                 });
         }
 

@@ -1,6 +1,6 @@
 export interface CollectibleSearchForm {
    includeFrames: boolean,
-   inludePrimaryWeapons: boolean,
+   includePrimaryWeapons: boolean,
    includeSecondaryWeapons: boolean,
    includeMeleeWeapons: boolean,
    includePets: boolean

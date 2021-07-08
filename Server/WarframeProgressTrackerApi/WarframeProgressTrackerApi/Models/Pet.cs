@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class Pet {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    public class Pet : WarframeItem {
         public string Category { get; set; }
         public int MasteryRankRequired { get; set; } = 0;
         public string HowToGet { get; set; } = "";

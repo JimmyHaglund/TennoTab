@@ -1,7 +1,5 @@
 ﻿namespace WarframeProgressTrackerApi.Models {
-    public class RoboWeapon {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    public class RoboWeapon : WarframeItem {
         public string HowToGet { get; set; } = "";
         public int MasteryRankRequired { get; set; } = 0;
 

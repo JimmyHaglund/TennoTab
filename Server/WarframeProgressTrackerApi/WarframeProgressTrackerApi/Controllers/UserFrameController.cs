@@ -28,7 +28,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         [EnableCors]
         [HttpGet]
-        public IEnumerable<UserFrame> Get() {
+        public IEnumerable<UserItem> Get() {
             var userId = _sessionUser.IdFromRequest(Request);
             if (string.IsNullOrEmpty(userId)) return null;
             return _context.UserFrames.Where(userFrame =>
@@ -37,15 +37,15 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         [HttpPost]
         [EnableCors]
-        public UserFrame Create(UserFrameCreateModel frameForm) {
+        public UserItem Create(UserFrameCreateModel frameForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             if (string.IsNullOrEmpty(userId)) return null;
             var frame = _context.Frames.FirstOrDefault(dbFrame => dbFrame.Id == frameForm.FrameId);
             if (frame == null) return null;
 
-            var userFrame = new UserFrame() {
+            var userFrame = new UserItem() {
                 UserId = userId,
-                FrameId = frameForm.FrameId,
+                ItemId = frameForm.FrameId,
                 Obtained = frameForm.Obtained, 
                 MasteryRank = frameForm.MasteryRank 
             };

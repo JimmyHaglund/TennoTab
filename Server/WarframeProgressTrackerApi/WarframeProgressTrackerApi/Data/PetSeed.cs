@@ -159,7 +159,7 @@ namespace WarframeProgressTrackerApi.Data {
                ShieldMaxFactor = 1.0f
             },
             new Pet() {
-               Id = 14,
+               Id = 35,
                Name = "Djinn",
                Category = "Sentinel",
 

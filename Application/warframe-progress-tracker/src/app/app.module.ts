@@ -16,6 +16,7 @@ import { GunsModule } from './guns/guns.module';
 import { MeleeWeaponModule} from './melee-weapon/melee-weapon.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CollectibleComponent } from './collectible';
 
 @NgModule({
    declarations: [
@@ -23,7 +24,8 @@ import { RegisterComponent } from './register/register.component';
       MessagesComponent,
       DashboardComponent,
       LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+      CollectibleComponent
    ],
    imports: [
       BrowserModule,

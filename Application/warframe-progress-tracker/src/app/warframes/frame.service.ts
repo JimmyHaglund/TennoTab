@@ -16,7 +16,6 @@ optimize an application by removing the service if it turns out not to be used a
 @Injectable({
    providedIn: 'root'
 })
-
 export class FrameService {
    httpOptions = {
       headers: new HttpHeaders({ 

@@ -40,10 +40,15 @@ namespace WarframeProgressTrackerApi.Controllers {
         public IEnumerable<Collectible> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             if (searchForm == null) searchForm = new CollectibleSearchForm();
-            var result = GrabFrames(searchForm, userId)
-                .Concat(GrabPrimaryWeapons(searchForm, userId));
-
-            return result;
+            return GrabFrames(searchForm, userId)
+                .Concat(GrabPrimaryWeapons(searchForm, userId))
+                .Concat(GrabSecondaryWeapons(searchForm, userId))
+                .Concat(GrabMeleeWeapons(searchForm, userId))
+                .Concat(GrabPets(searchForm, userId))
+                .Concat(GrabRoboWeapons(searchForm, userId))
+                .Concat(GrabArchwings(searchForm, userId))
+                .Concat(GrabArchguns(searchForm, userId))
+                .Concat(GrabArchMeleeWeapons(searchForm, userId));
         }
 
         private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
@@ -155,40 +160,48 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         private IEnumerable<Collectible> GrabArchwings(CollectibleSearchForm form, string userId) {
-            if (form.IncludePrimaryWeapons) {
-                var weapons = _context.PrimaryWeapons.ToArray();
-                var userWeapons = _context.UserPrimaryWeapons.Where(uw => uw.UserId == userId);
-                return weapons.Select(weapon => {
-                    var userWeapon = userWeapons.FirstOrDefault(uw => uw.ItemId == weapon.Id);
-                    return new Collectible() {
-                        Name = weapon.Name,
-                        Category = PRIMARY,
-                        DetailsLink = "primaryweapon/" + weapon.Id,
-                        Obtained = userWeapon != null ? userWeapon.Obtained : false,
-                        Mastered = userWeapon != null ? userWeapon.MasteryRank >= 30 : false
-                    };
-                });
+            if (form.IncludeArchwings) {
+                var wings = _context.Archwings.ToArray();
+                var userArchwings = _context.UserArchwings.Where(uw => uw.UserId == userId);
+                return Grab(wings, userArchwings, "Archwing", "archwing");
             }
             return new Collectible[0];
         }
-        /*
-        private IEnumerable<Collectible> Grab<T, U>(IEnumerable<T> items, IEnumerable<U>) where T : WarframeItem, U: UserItem {
-            if (form.IncludePrimaryWeapons) {
-                var weapons = _context.PrimaryWeapons.ToArray();
-                var userWeapons = _context.UserPrimaryWeapons.Where(uw => uw.UserId == userId);
-                return weapons.Select(weapon => {
-                    var userWeapon = userWeapons.FirstOrDefault(uw => uw.WeaponId == weapon.Id);
-                    return new Collectible() {
-                        Name = weapon.Name,
-                        Category = PRIMARY,
-                        DetailsLink = "primaryweapon/" + weapon.Id,
-                        Obtained = userWeapon != null ? userWeapon.Obtained : false,
-                        Mastered = userWeapon != null ? userWeapon.MasteryRank >= 30 : false
-                    };
-                });
+
+        private IEnumerable<Collectible> GrabArchguns(CollectibleSearchForm form, string userId) {
+            if (form.IncludeArchGuns) {
+                var guns = _context.ArchGuns.ToArray();
+                var userGuns = _context.UserArchGuns.Where(uw => uw.UserId == userId);
+                return Grab(guns, userGuns, "Archgun", "archgun");
             }
             return new Collectible[0];
-        }/**/
+        }
+
+        private IEnumerable<Collectible> GrabArchMeleeWeapons(CollectibleSearchForm form, string userId) {
+            if (form.IncludeArchMeleeWeapons) {
+                var weapons = _context.ArchMeleeWeapons.ToArray();
+                var userWeapons = _context.UserArchMeleeWeapons.Where(uw => uw.UserId == userId);
+                return Grab(weapons, userWeapons, ARCHMELEE, "archmelee");
+            }
+            return new Collectible[0];
+        }
+
+        private IEnumerable<Collectible> Grab<T>(
+            IEnumerable<T> items, 
+            IEnumerable<UserItem> userItems, 
+            string category, string link) 
+            where T : WarframeItem {
+            return items.Select(item => {
+                var userItem = userItems.FirstOrDefault(ui => ui.ItemId == item.Id);
+                return new Collectible() {
+                    Name = item.Name,
+                    Category = category,
+                    DetailsLink = link + "/" + item.Id,
+                    Obtained = userItem != null ? userItem.Obtained : false,
+                    Mastered = userItem != null ? userItem.MasteryRank >= 30 : false
+                };
+            });
+        }
 
     }
 }

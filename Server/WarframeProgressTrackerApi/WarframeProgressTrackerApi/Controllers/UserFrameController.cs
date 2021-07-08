@@ -43,13 +43,13 @@ namespace WarframeProgressTrackerApi.Controllers {
             var frame = _context.Frames.FirstOrDefault(dbFrame => dbFrame.Id == frameForm.FrameId);
             if (frame == null) return null;
 
-            var userFrame = new UserItem() {
+            var userFrame = new UserFrame() {
                 UserId = userId,
                 ItemId = frameForm.FrameId,
                 Obtained = frameForm.Obtained, 
                 MasteryRank = frameForm.MasteryRank 
             };
-            _context.Add(userFrame);
+            _context.UserFrames.Add(userFrame);
             _context.SaveChanges();
 
             return userFrame;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210709164131_SeedSecondaryWeaponsAndUpdateIds")]
+    partial class SeedSecondaryWeaponsAndUpdateIds
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,71 +183,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Amps");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 399,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Raplak",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 400,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Shwaak",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 401,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Granmu",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 402,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Rahn",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 403,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Cantic",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 404,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Lega",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 405,
-                            Accuracy = 0f,
-                            FireRate = 0f,
-                            MagazineSize = 0,
-                            Name = "Klamora",
-                            ReloadSeconds = 0f
-                        });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.ArchGun", b =>
@@ -297,216 +234,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ArchGuns");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 462,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 14,
-                            MaxAmmo = 0,
-                            Name = "Cortege",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 463,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 1,
-                            MaxAmmo = 0,
-                            Name = "Corvas",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 464,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 4,
-                            MaxAmmo = 0,
-                            Name = "Cyngas",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 465,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 1,
-                            MaxAmmo = 0,
-                            Name = "Dual Decurion",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 466,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 2,
-                            MaxAmmo = 0,
-                            Name = "Fluctus",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 467,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 4,
-                            MaxAmmo = 0,
-                            Name = "Grattler",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 468,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Imperator",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 469,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 5,
-                            MaxAmmo = 0,
-                            Name = "Imperator Vandal",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 470,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 13,
-                            MaxAmmo = 0,
-                            Name = "Kuva Ayanga",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 471,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 15,
-                            MaxAmmo = 0,
-                            Name = "Kuva Grattler",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 472,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 8,
-                            MaxAmmo = 0,
-                            Name = "Larkspur",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 473,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 14,
-                            MaxAmmo = 0,
-                            Name = "Mausolon",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 474,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 15,
-                            MaxAmmo = 0,
-                            Name = "Morgha",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 475,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 3,
-                            MaxAmmo = 0,
-                            Name = "Phaedra",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 476,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 10,
-                            MaxAmmo = 0,
-                            Name = "Prisma Dual Decurion",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 477,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 4,
-                            MaxAmmo = 0,
-                            Name = "Velocitus",
-                            ReloadSeconds = 0f
-                        });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.ArchMelee", b =>
@@ -534,89 +261,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ArchMeleeWeapons");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 478,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Agkuza",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 479,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Centaur",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 480,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Ironbridge",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 481,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Kaszas",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 482,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Knux",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 483,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Onorix",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 484,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Prisma Veritux",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 485,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Rathbone",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 486,
-                            AttackSpeed = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Veritux",
-                            RangeMetres = 0f
-                        });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.Archwing", b =>
@@ -672,82 +316,87 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 457,
-                            Armor = 0,
+                            Id = 1,
+                            Armor = 200,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Energy = 200,
                             EnergyMaxFactor = 1.8f,
-                            FlightSpeed = 0f,
-                            Health = 0,
+                            FlightSpeed = 1.1f,
+                            Health = 400,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Amesha",
-                            Shield = 0,
+                            Polarities = "BDV",
+                            Shield = 200,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 458,
-                            Armor = 0,
+                            Id = 2,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Energy = 125,
                             EnergyMaxFactor = 1.8f,
-                            FlightSpeed = 0f,
-                            Health = 0,
+                            FlightSpeed = 0.9f,
+                            Health = 450,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Elytron",
-                            Shield = 0,
+                            Polarities = "VV",
+                            Shield = 450,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 459,
-                            Armor = 0,
+                            Id = 3,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Energy = 200,
                             EnergyMaxFactor = 1.8f,
-                            FlightSpeed = 0f,
-                            Health = 0,
+                            FlightSpeed = 1.2f,
+                            Health = 200,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Itzal",
-                            Shield = 0,
+                            Polarities = "VDB",
+                            Shield = 200,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 460,
-                            Armor = 0,
+                            Id = 4,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Energy = 100,
                             EnergyMaxFactor = 1.8f,
-                            FlightSpeed = 0f,
-                            Health = 0,
+                            FlightSpeed = 1f,
+                            Health = 300,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Odonata",
-                            Shield = 0,
+                            Polarities = "VDB",
+                            Shield = 300,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 461,
-                            Armor = 0,
+                            Id = 5,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Energy = 100,
                             EnergyMaxFactor = 1.8f,
-                            FlightSpeed = 0f,
-                            Health = 0,
+                            FlightSpeed = 1.05f,
+                            Health = 400,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Odonata Prime",
-                            Shield = 0,
+                            Polarities = "VDBB",
+                            Shield = 400,
                             ShieldMaxFactor = 3f
                         });
                 });
@@ -814,1388 +463,1602 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 2,
-                            Armor = 0,
+                            Id = 1,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Excalibur",
-                            Shield = 0,
+                            Polarities = "DV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
+                            SubsumedAbility = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Armor = 100,
+                            ArmorMaxFactor = 1f,
+                            AuraPolarity = "V",
+                            Energy = 100,
+                            EnergyMaxFactor = 1.5f,
+                            ExilusPolarity = "",
+                            Health = 150,
+                            HealthMaxFactor = 3f,
+                            HowToGet = "",
+                            MasteryRankRequired = 0,
+                            Name = "Ash",
+                            Polarities = "VV",
+                            Shield = 100,
+                            ShieldMaxFactor = 3f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 3,
-                            Armor = 0,
+                            Armor = 450,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ash",
-                            Shield = 0,
+                            Name = "Atlas",
+                            Polarities = "BDV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.9f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 4,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Atlas",
-                            Shield = 0,
+                            Name = "Banshee",
+                            Polarities = "VV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 5,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
+                            ExilusPolarity = "B",
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Banshee",
-                            Shield = 0,
+                            Name = "Baruuk",
+                            Polarities = "DD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 6,
-                            Armor = 0,
+                            Armor = 350,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Baruuk",
-                            Shield = 0,
+                            Name = "Chroma",
+                            Polarities = "BV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 7,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Chroma",
-                            Shield = 0,
+                            Name = "Ember",
+                            Polarities = "BB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 8,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ember",
-                            Shield = 0,
+                            Name = "Equinox",
+                            Polarities = "DV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 9,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Equinox",
-                            Shield = 0,
+                            Name = "Frost",
+                            Polarities = "BD",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.9f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 10,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Frost",
-                            Shield = 0,
+                            Name = "Gara",
+                            Polarities = "VV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 11,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
-                            EnergyMaxFactor = 1.5f,
+                            AuraPolarity = "V",
+                            Energy = 120,
+                            EnergyMaxFactor = 2.25f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Gara",
-                            Shield = 0,
+                            Name = "Garuda",
+                            Polarities = "BD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 12,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
+                            ExilusPolarity = "B",
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Garuda",
-                            Shield = 0,
+                            Name = "Gauss",
+                            Polarities = "VD",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.4f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 13,
-                            Armor = 0,
+                            Armor = 350,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 350,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Gauss",
-                            Shield = 0,
+                            Name = "Grendel",
+                            Polarities = "BDD",
+                            Shield = 25,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.95f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 14,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Grendel",
-                            Shield = 0,
+                            Name = "Harrow",
+                            Polarities = "DB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 15,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
+                            AuraPolarity = "B",
                             Energy = 0,
-                            EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
+                            EnergyMaxFactor = 0f,
+                            ExilusPolarity = "D",
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Harrow",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            Name = "Hildryn",
+                            Polarities = "DD",
+                            Shield = 450,
+                            ShieldMaxFactor = 3.5f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 16,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Hildryn",
-                            Shield = 0,
+                            Name = "Hydroid",
+                            Polarities = "VB",
+                            Shield = 125,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 17,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            ExilusPolarity = "B",
+                            Health = 550,
+                            HealthMaxFactor = 4f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Hydroid",
+                            Name = "Inaros",
+                            Polarities = "DD",
                             Shield = 0,
-                            ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            ShieldMaxFactor = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 18,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Inaros",
-                            Shield = 0,
+                            Name = "Ivara",
+                            Polarities = "DB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 19,
-                            Armor = 0,
+                            Armor = 275,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
+                            ExilusPolarity = "B",
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ivara",
-                            Shield = 0,
+                            Name = "Khora",
+                            Polarities = "VB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 20,
-                            Armor = 0,
-                            ArmorMaxFactor = 1f,
+                            Armor = 450,
+                            ArmorMaxFactor = 1.5f,
+                            AuraPolarity = "B",
                             Energy = 0,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 200,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Khora",
-                            Shield = 0,
+                            Name = "Lavos",
+                            Polarities = "DB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 21,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Lavos",
-                            Shield = 0,
+                            Name = "Limbo",
+                            Polarities = "VV",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 22,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Limbo",
-                            Shield = 0,
+                            Name = "Loki",
+                            Polarities = "DV",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.25f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 23,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Loki",
-                            Shield = 0,
+                            Name = "Mag",
+                            Polarities = "BB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.25f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 24,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Mag",
-                            Shield = 0,
+                            Name = "Mesa",
+                            Polarities = "BB",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 25,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 80,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Mesa",
-                            Shield = 0,
+                            Name = "Mirage",
+                            Polarities = "DV",
+                            Shield = 80,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 26,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nekros",
-                            Shield = 0,
+                            Polarities = "BV",
+                            Shield = 90,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 27,
-                            Armor = 0,
+                            Armor = 190,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nezha",
-                            Shield = 0,
+                            Polarities = "DV",
+                            Shield = 50,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 28,
-                            Armor = 0,
-                            ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            Armor = 300,
+                            ArmorMaxFactor = 1.5f,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 150,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nidus",
+                            Polarities = "VD",
                             Shield = 0,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 29,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nova",
-                            Shield = 0,
+                            Polarities = "VV",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 30,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nyx",
-                            Shield = 0,
+                            Polarities = "VB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 31,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Oberon",
-                            Shield = 0,
+                            Polarities = "VV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 32,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Octavia",
-                            Shield = 0,
+                            Polarities = "BB",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 33,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "O",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Protea",
-                            Shield = 0,
+                            Polarities = "VB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 34,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Revenant",
-                            Shield = 0,
+                            Polarities = "VD",
+                            Shield = 225,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 35,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Saryn",
-                            Shield = 0,
+                            Name = "Rhino",
+                            Polarities = "DD",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.95f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 36,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Sevagoth",
-                            Shield = 0,
+                            Name = "Saryn",
+                            Polarities = "BD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.95f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 37,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Titania",
-                            Shield = 0,
+                            Name = "Sevagoth",
+                            Polarities = "DV",
+                            Shield = 90,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.95f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 38,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Trinity",
-                            Shield = 0,
+                            Name = "Titania",
+                            Polarities = "VD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 39,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Valkyr",
-                            Shield = 0,
+                            Name = "Trinity",
+                            Polarities = "DD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 40,
-                            Armor = 0,
+                            Armor = 600,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Vauban",
-                            Shield = 0,
+                            Name = "Valkyr",
+                            Polarities = "VV",
+                            Shield = 50,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 41,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Wisp",
-                            Shield = 0,
+                            Name = "Vauban",
+                            Polarities = "BV",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 42,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Wukong",
-                            Shield = 0,
+                            Name = "Volt",
+                            Polarities = "BV",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 43,
-                            Armor = 0,
+                            Armor = 200,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Yareli",
-                            Shield = 0,
+                            Name = "Wisp",
+                            Polarities = "VD",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 44,
-                            Armor = 0,
+                            Armor = 250,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 120,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 150,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Zephyr",
-                            Shield = 0,
+                            Name = "Wukong",
+                            Polarities = "BD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 45,
-                            Armor = 0,
+                            Armor = 137,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 153,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 97,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ash Prime",
-                            Shield = 0,
+                            Name = "Xaku",
+                            Polarities = "DD",
+                            Shield = 89,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.02f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 46,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Atlas Prime",
-                            Shield = 0,
+                            Name = "Yareli",
+                            Polarities = "VB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 47,
-                            Armor = 0,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 150,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Banshee Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Zephyr",
+                            Polarities = "VB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 48,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 150,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Chroma Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Ash Prime",
+                            Polarities = "BVV",
+                            Shield = 125,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 49,
-                            Armor = 0,
+                            Armor = 475,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 175,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ember Prime",
-                            Shield = 0,
+                            Name = "Atlas Prime",
+                            Polarities = "BDVV",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 50,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Equinox Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Banshee Prime",
+                            Polarities = "VVB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 51,
-                            Armor = 0,
+                            Armor = 475,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Excalibur Prime",
-                            Shield = 0,
+                            Name = "Chroma Prime",
+                            Polarities = "BDVB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 52,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Excalibur Umbra",
-                            Shield = 0,
+                            Name = "Ember Prime",
+                            Polarities = "VD",
+                            Shield = 125,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 53,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 165,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Frost Prime",
-                            Shield = 0,
+                            Name = "Equinox Prime",
+                            Polarities = "DDVV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 54,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Gara Prime",
-                            Shield = 0,
+                            Name = "Excalibur Prime",
+                            Polarities = "DVV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 55,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Hydroid Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Excalibur Umbra",
+                            Polarities = "VUUU",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 56,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Inaros Prime",
-                            Shield = 0,
+                            Name = "Frost Prime",
+                            Polarities = "BDD",
+                            Shield = 175,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 0.95f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 57,
-                            Armor = 0,
+                            Armor = 190,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 120,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Ivara Prime",
-                            Shield = 0,
+                            Name = "Gara Prime",
+                            Polarities = "VVB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 58,
-                            Armor = 0,
+                            Armor = 275,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Limbo Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Hydroid Prime",
+                            Polarities = "VDBB",
+                            Shield = 175,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 59,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
-                            ExilusPolarity = "",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            ExilusPolarity = "B",
+                            Health = 575,
+                            HealthMaxFactor = 4f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Loki Prime",
+                            Name = "Inaros Prime",
+                            Polarities = "VDD",
                             Shield = 0,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 60,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Mag Prime",
-                            Shield = 0,
+                            Name = "Ivara Prime",
+                            Polarities = "VDB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 61,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Mesa Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Limbo Prime",
+                            Polarities = "VVBD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.15f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 62,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Mirage Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Loki Prime",
+                            Polarities = "DDVB",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.25f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 63,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Nekros Prime",
-                            Shield = 0,
+                            Name = "Mag Prime",
+                            Polarities = "BBV",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 64,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 135,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Nezha Prime",
-                            Shield = 0,
+                            Name = "Mesa Prime",
+                            Polarities = "BBDV",
+                            Shield = 75,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 65,
-                            Armor = 0,
+                            Armor = 175,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 80,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Nova Prime",
-                            Shield = 0,
+                            Name = "Mirage Prime",
+                            Polarities = "DDBV",
+                            Shield = 110,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 66,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "",
+                            Energy = 125,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Nyx Prime",
-                            Shield = 0,
+                            Name = "Nekros Prime",
+                            Polarities = "VDB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 67,
-                            Armor = 0,
+                            Armor = 250,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Oberon Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Nezha Prime",
+                            Polarities = "DVB",
+                            Shield = 50,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 68,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Octavia Prime",
-                            Shield = 0,
+                            Name = "Nova Prime",
+                            Polarities = "VVV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 69,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Rhino Prime",
-                            Shield = 0,
+                            Name = "Nyx Prime",
+                            Polarities = "VBD",
+                            Shield = 125,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.125f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 70,
-                            Armor = 0,
+                            Armor = 225,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Saryn Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 8,
+                            Name = "Oberon Prime",
+                            Polarities = "BBVV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 71,
-                            Armor = 0,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Octavia Prime",
-                            Shield = 0,
+                            Polarities = "DBB",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.05f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 72,
-                            Armor = 0,
+                            Armor = 275,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 100,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Titania Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Rhino Prime",
+                            Polarities = "DDB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 73,
-                            Armor = 0,
+                            Armor = 300,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Trinity Prime",
-                            Shield = 0,
+                            Name = "Saryn Prime",
+                            Polarities = "BDV",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 74,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 175,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Valkyr Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 2,
+                            Name = "Octavia Prime",
+                            Polarities = "BVVD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 75,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "D",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Vauban Prime",
-                            Shield = 0,
+                            Name = "Trinity Prime",
+                            Polarities = "DDVB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 76,
-                            Armor = 0,
+                            Armor = 700,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
-                            Name = "Volt Prime",
-                            Shield = 0,
+                            Name = "Valkyr Prime",
+                            Polarities = "VVV",
+                            Shield = 50,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 77,
-                            Armor = 0,
+                            Armor = 200,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "B",
+                            Energy = 150,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Wukong Prime",
-                            Shield = 0,
+                            MasteryRankRequired = 0,
+                            Name = "Vauban Prime",
+                            Polarities = "BVD",
+                            Shield = 100,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1f,
                             SubsumedAbility = 0
                         },
                         new
                         {
                             Id = 78,
-                            Armor = 0,
+                            Armor = 125,
                             ArmorMaxFactor = 1f,
-                            Energy = 0,
+                            AuraPolarity = "V",
+                            Energy = 200,
                             EnergyMaxFactor = 1.5f,
                             ExilusPolarity = "",
-                            Health = 0,
+                            Health = 100,
+                            HealthMaxFactor = 3f,
+                            HowToGet = "",
+                            MasteryRankRequired = 0,
+                            Name = "Volt Prime",
+                            Polarities = "BVV",
+                            Shield = 150,
+                            ShieldMaxFactor = 3f,
+                            SprintSpeed = 1f,
+                            SubsumedAbility = 0
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Armor = 275,
+                            ArmorMaxFactor = 1f,
+                            AuraPolarity = "V",
+                            Energy = 130,
+                            EnergyMaxFactor = 1.5f,
+                            ExilusPolarity = "",
+                            Health = 150,
+                            HealthMaxFactor = 3f,
+                            HowToGet = "",
+                            MasteryRankRequired = 5,
+                            Name = "Wukong Prime",
+                            Polarities = "BDV",
+                            Shield = 120,
+                            ShieldMaxFactor = 3f,
+                            SprintSpeed = 1.05f,
+                            SubsumedAbility = 0
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Armor = 125,
+                            ArmorMaxFactor = 1f,
+                            AuraPolarity = "D",
+                            Energy = 150,
+                            EnergyMaxFactor = 1.5f,
+                            ExilusPolarity = "",
+                            Health = 150,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 6,
                             Name = "Zephyr Prime",
-                            Shield = 0,
+                            Polarities = "VVDB",
+                            Shield = 150,
                             ShieldMaxFactor = 3f,
-                            SprintSpeed = 0f,
+                            SprintSpeed = 1.2f,
                             SubsumedAbility = 0
                         });
                 });
@@ -2244,1290 +2107,45 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 300,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
+                            Id = 1,
+                            AttackSpeed = 0.833f,
+                            BlockAngleDegrees = 55,
+                            ComboSeconds = 5f,
+                            Disposition = 1.3f,
+                            FollowThrough = 0.6f,
                             HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Ack & Brunt",
-                            RangeMetres = 0f
+                            MasteryRankRequired = 0,
+                            Name = "Skana",
+                            RangeMetres = 2.5f,
+                            WeaponType = "Sword"
                         },
                         new
                         {
-                            Id = 301,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Amphis",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 302,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Anku",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 303,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
+                            Id = 2,
+                            AttackSpeed = 1.17f,
+                            BlockAngleDegrees = 50,
+                            ComboSeconds = 5f,
+                            Disposition = 1.45f,
+                            FollowThrough = 0.9f,
                             HowToGet = "",
                             MasteryRankRequired = 2,
                             Name = "Ankyros",
-                            RangeMetres = 0f
+                            RangeMetres = 1.25f,
+                            WeaponType = "Fist"
                         },
                         new
                         {
-                            Id = 304,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Ankyros Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 305,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Arca Titron",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 306,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 11,
-                            Name = "Arum Spinosa",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 307,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Atterax",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 308,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Bo",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 309,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Bo Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 310,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Boltace",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 311,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Broken Scepter",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 312,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Broken War",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 313,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Cadus",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 314,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Cassowar",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 315,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Cautacyst",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 316,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
+                            Id = 3,
+                            AttackSpeed = 1f,
+                            BlockAngleDegrees = 45,
+                            ComboSeconds = 5f,
+                            Disposition = 1.43f,
+                            FollowThrough = 0.9f,
                             HowToGet = "",
                             MasteryRankRequired = 3,
                             Name = "Ceramic Dagger",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 317,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Cerata",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 318,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 12,
-                            Name = "Ceti Lacera",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 319,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Cobra & Crane",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 320,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Cronus",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 321,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Dakra Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 322,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Dark Dagger",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 323,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Dark Split-Sword",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 324,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Dark Sword",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 325,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Desert Wind",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 326,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Destreza",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 327,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Destreza Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 328,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Dex Dakra",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 329,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Diwata",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 330,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Dragon Nikana",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 331,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Dual Cleavers",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 332,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Dual Ether",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 333,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Dual Heat Swords",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 334,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Dual Ichor",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 335,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Dual Kamas",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 336,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Dual Kamas Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 337,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Dual Keres",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 338,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Dual Raza",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 339,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Dual Skana",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 340,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Dual Zoren",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 341,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Endura",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 342,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Ether Daggers",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 343,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Ether Reaper",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 344,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Ether Sword",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 345,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Exalted Blade",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 346,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Falcor",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 347,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Fang",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 348,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Fang Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 349,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Fragor",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 350,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 12,
-                            Name = "Fragor Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 351,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Furax",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 352,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Furax Wraith",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 353,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Galatine",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 354,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 13,
-                            Name = "Galatine Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 355,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Galvacord",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 356,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Garuda�s Talons",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 357,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Gazal Machete",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 358,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Glaive",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 359,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Glaive Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 360,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Gram",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 361,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 14,
-                            Name = "Gram Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 362,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 4,
-                            Name = "Guandao",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 363,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 12,
-                            Name = "Guandao Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 364,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Gunsen",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 365,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Halikar",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 366,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 13,
-                            Name = "Halikar Wraith",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 367,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Hate",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 368,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Heat Dagger",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 369,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Heat Sword",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 370,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Heliocor",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 371,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Hirudo",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 372,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Iron Staff",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 373,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Jat Kittag",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 374,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 11,
-                            Name = "Jat Kusar",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 375,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Jaw Sword",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 376,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Kama",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 377,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Karyst",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 378,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 12,
-                            Name = "Karyst Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 379,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Keratinos",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 380,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Kesheg",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 381,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Kestrel",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 382,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 2,
-                            Name = "Kogake",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 383,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 10,
-                            Name = "Kogake Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 384,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Korrudo",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 385,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 6,
-                            Name = "Kreska",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 386,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Krohkur",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 387,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 3,
-                            Name = "Kronen",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 388,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 13,
-                            Name = "Kronen Prime",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 389,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 13,
-                            Name = "Kuva Shildeg",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 390,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 7,
-                            Name = "Lacera",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 391,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 0,
-                            Name = "Lecta",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 392,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 9,
-                            Name = "Lesion",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 393,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Machete",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 394,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 11,
-                            Name = "Machete Wraith",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 395,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 1,
-                            Name = "Magistar",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 396,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Masseter",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 397,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 8,
-                            Name = "Mios",
-                            RangeMetres = 0f
-                        },
-                        new
-                        {
-                            Id = 398,
-                            AttackSpeed = 0f,
-                            BlockAngleDegrees = 0,
-                            ComboSeconds = 0f,
-                            Disposition = 0f,
-                            FollowThrough = 0f,
-                            HowToGet = "",
-                            MasteryRankRequired = 5,
-                            Name = "Mire",
-                            RangeMetres = 0f
+                            RangeMetres = 1.8f,
+                            WeaponType = "Dagger"
                         });
                 });
 
@@ -3578,315 +2196,367 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 406,
-                            Armor = 0,
+                            Id = 1,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 75,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Huras",
-                            Shield = 0,
+                            Polarities = "SSV",
+                            Shield = 125,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 407,
-                            Armor = 0,
+                            Id = 2,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 100,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Raksa",
-                            Shield = 0,
+                            Polarities = "SSD",
+                            Shield = 105,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 408,
-                            Armor = 0,
+                            Id = 3,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Sahasa",
-                            Shield = 0,
+                            Polarities = "SSB",
+                            Shield = 75,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 409,
-                            Armor = 0,
+                            Id = 4,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 110,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Sunika",
-                            Shield = 0,
+                            Polarities = "SSV",
+                            Shield = 90,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 410,
-                            Armor = 0,
+                            Id = 5,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 125,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Chesa",
-                            Shield = 0,
+                            Polarities = "SSD",
+                            Shield = 75,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 411,
-                            Armor = 0,
+                            Id = 6,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 95,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Helminth Charger",
-                            Shield = 0,
+                            Polarities = "SSV",
+                            Shield = 85,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 412,
-                            Armor = 0,
+                            Id = 7,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 95,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Vizier Predasite",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 90,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 413,
-                            Armor = 0,
+                            Id = 8,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 95,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Pharaoh Predasite",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 90,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 414,
-                            Armor = 0,
+                            Id = 9,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kubrow",
-                            Health = 0,
+                            Health = 95,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Medjay Predasite",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 90,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 415,
-                            Armor = 0,
+                            Id = 10,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Carrier",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSD",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 416,
-                            Armor = 0,
+                            Id = 11,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 400,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Carrier Prime",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSDV",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 417,
-                            Armor = 0,
+                            Id = 12,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Dethcube",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSS",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 418,
-                            Armor = 0,
+                            Id = 13,
+                            Armor = 150,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 300,
+                            HealthMaxFactor = 1f,
+                            HowToGet = "",
+                            MasteryRankRequired = 0,
+                            Name = "Dethcube Prime",
+                            Polarities = "SSSSD",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Armor = 50,
+                            ArmorMaxFactor = 1f,
+                            Category = "Sentinel",
+                            Health = 350,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Diriga",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSS",
+                            Shield = 50,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 419,
-                            Armor = 0,
+                            Id = 35,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Djinn",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSB",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 420,
-                            Armor = 0,
+                            Id = 15,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Helios",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSD",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 421,
-                            Armor = 0,
+                            Id = 16,
+                            Armor = 100,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 250,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 8,
                             Name = "Helios Prime",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSD",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 422,
-                            Armor = 0,
+                            Id = 17,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nautilus",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSD",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 423,
-                            Armor = 0,
+                            Id = 18,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Oxylus",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 424,
-                            Armor = 0,
+                            Id = 19,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 350,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Shade",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSS",
+                            Shield = 50,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 425,
-                            Armor = 0,
+                            Id = 20,
+                            Armor = 75,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 350,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Prisma Shade",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSSB",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 426,
-                            Armor = 0,
+                            Id = 21,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Taxon",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 427,
-                            Armor = 0,
+                            Id = 22,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Sentinel",
-                            Health = 0,
-                            HealthMaxFactor = 3f,
+                            Health = 200,
+                            HealthMaxFactor = 1f,
+                            HowToGet = "",
+                            MasteryRankRequired = 0,
+                            Name = "Wyrm",
+                            Polarities = "SSSS",
+                            Shield = 100,
+                            ShieldMaxFactor = 1f
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Armor = 150,
+                            ArmorMaxFactor = 1f,
+                            Category = "Sentinel",
+                            Health = 225,
+                            HealthMaxFactor = 1f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Wyrm Prime",
-                            Shield = 0,
-                            ShieldMaxFactor = 3f
+                            Polarities = "SSSS",
+                            Shield = 300,
+                            ShieldMaxFactor = 1f
                         },
                         new
                         {
-                            Id = 428,
+                            Id = 24,
                             Armor = 0,
                             ArmorMaxFactor = 1f,
                             Category = "MOA",
@@ -3895,12 +2565,13 @@ namespace WarframeProgressTrackerApi.Migrations
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Para",
+                            Polarities = "",
                             Shield = 0,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 429,
+                            Id = 25,
                             Armor = 0,
                             ArmorMaxFactor = 1f,
                             Category = "MOA",
@@ -3909,12 +2580,13 @@ namespace WarframeProgressTrackerApi.Migrations
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Lambeo",
+                            Polarities = "",
                             Shield = 0,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 430,
+                            Id = 26,
                             Armor = 0,
                             ArmorMaxFactor = 1f,
                             Category = "MOA",
@@ -3923,12 +2595,13 @@ namespace WarframeProgressTrackerApi.Migrations
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Oloro",
+                            Polarities = "",
                             Shield = 0,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 431,
+                            Id = 27,
                             Armor = 0,
                             ArmorMaxFactor = 1f,
                             Category = "MOA",
@@ -3937,105 +2610,113 @@ namespace WarframeProgressTrackerApi.Migrations
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Nychus",
+                            Polarities = "",
                             Shield = 0,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 432,
-                            Armor = 0,
+                            Id = 28,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 40,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Adarza",
-                            Shield = 0,
+                            Polarities = "SS",
+                            Shield = 70,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 433,
-                            Armor = 0,
+                            Id = 29,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 50,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Smeeta",
-                            Shield = 0,
+                            Polarities = "SS",
+                            Shield = 60,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 434,
-                            Armor = 0,
+                            Id = 30,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 80,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Vasca",
-                            Shield = 0,
+                            Polarities = "SS",
+                            Shield = 70,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 435,
-                            Armor = 0,
+                            Id = 31,
+                            Armor = 350,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 300,
                             HealthMaxFactor = 3f,
-                            HowToGet = "",
+                            HowToGet = "Khora's special companion",
                             MasteryRankRequired = 0,
                             Name = "Venari",
+                            Polarities = "SVDB",
                             Shield = 0,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 436,
-                            Armor = 0,
+                            Id = 32,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 90,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Sly Vulpaphyla",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 95,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 437,
-                            Armor = 0,
+                            Id = 33,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 90,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Crescent Vulpaphyla",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 95,
                             ShieldMaxFactor = 3f
                         },
                         new
                         {
-                            Id = 438,
-                            Armor = 0,
+                            Id = 34,
+                            Armor = 50,
                             ArmorMaxFactor = 1f,
                             Category = "Kavat",
-                            Health = 0,
+                            Health = 90,
                             HealthMaxFactor = 3f,
                             HowToGet = "",
                             MasteryRankRequired = 0,
                             Name = "Panzer Vulpaphyla",
-                            Shield = 0,
+                            Polarities = "S",
+                            Shield = 95,
                             ShieldMaxFactor = 3f
                         });
                 });
@@ -4093,7 +2774,7 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 79,
+                            Id = 2,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4106,7 +2787,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 80,
+                            Id = 3,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4119,7 +2800,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 81,
+                            Id = 4,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4132,7 +2813,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 82,
+                            Id = 5,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4145,7 +2826,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 83,
+                            Id = 6,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4158,7 +2839,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 84,
+                            Id = 7,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4171,7 +2852,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 85,
+                            Id = 8,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4184,7 +2865,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 86,
+                            Id = 9,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4197,7 +2878,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 87,
+                            Id = 10,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4210,7 +2891,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 88,
+                            Id = 11,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4223,7 +2904,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 89,
+                            Id = 12,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4236,7 +2917,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 90,
+                            Id = 13,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4249,7 +2930,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 91,
+                            Id = 14,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4262,7 +2943,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 92,
+                            Id = 15,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4275,7 +2956,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 93,
+                            Id = 16,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4288,7 +2969,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 94,
+                            Id = 17,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4301,7 +2982,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 95,
+                            Id = 18,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4314,7 +2995,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 96,
+                            Id = 19,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4327,7 +3008,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 97,
+                            Id = 20,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4340,7 +3021,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 98,
+                            Id = 21,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4353,7 +3034,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 99,
+                            Id = 22,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4366,7 +3047,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 100,
+                            Id = 23,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4379,7 +3060,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 101,
+                            Id = 24,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4392,7 +3073,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 102,
+                            Id = 25,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4405,7 +3086,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 103,
+                            Id = 26,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4418,7 +3099,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 104,
+                            Id = 27,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4431,7 +3112,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 105,
+                            Id = 28,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4444,7 +3125,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 106,
+                            Id = 29,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4457,7 +3138,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 107,
+                            Id = 30,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4470,7 +3151,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 108,
+                            Id = 31,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4483,7 +3164,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 109,
+                            Id = 32,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4496,7 +3177,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 110,
+                            Id = 33,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4509,7 +3190,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 111,
+                            Id = 34,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4522,7 +3203,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 112,
+                            Id = 35,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4535,7 +3216,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 113,
+                            Id = 36,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4548,7 +3229,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 114,
+                            Id = 37,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4561,7 +3242,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 115,
+                            Id = 38,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4574,7 +3255,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 116,
+                            Id = 39,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4587,7 +3268,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 117,
+                            Id = 40,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4600,7 +3281,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 118,
+                            Id = 41,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4613,7 +3294,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 119,
+                            Id = 42,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4626,7 +3307,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 120,
+                            Id = 43,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4639,7 +3320,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 121,
+                            Id = 44,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4652,7 +3333,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 122,
+                            Id = 45,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4665,7 +3346,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 123,
+                            Id = 46,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4678,7 +3359,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 124,
+                            Id = 47,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4691,7 +3372,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 125,
+                            Id = 48,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4704,7 +3385,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 126,
+                            Id = 49,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4717,7 +3398,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 127,
+                            Id = 50,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4730,7 +3411,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 128,
+                            Id = 51,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4743,7 +3424,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 129,
+                            Id = 52,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4756,7 +3437,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 130,
+                            Id = 53,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4769,7 +3450,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 131,
+                            Id = 54,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4782,7 +3463,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 132,
+                            Id = 55,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4795,7 +3476,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 133,
+                            Id = 56,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4808,7 +3489,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 134,
+                            Id = 57,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4821,7 +3502,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 135,
+                            Id = 58,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4834,7 +3515,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 136,
+                            Id = 59,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4847,7 +3528,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 137,
+                            Id = 60,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4860,7 +3541,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 138,
+                            Id = 61,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4873,7 +3554,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 139,
+                            Id = 62,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4886,7 +3567,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 140,
+                            Id = 63,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4899,7 +3580,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 141,
+                            Id = 64,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4912,7 +3593,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 142,
+                            Id = 65,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4925,7 +3606,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 143,
+                            Id = 66,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4938,7 +3619,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 144,
+                            Id = 67,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4951,7 +3632,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 145,
+                            Id = 68,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4964,7 +3645,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 146,
+                            Id = 69,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4977,7 +3658,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 147,
+                            Id = 70,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -4990,7 +3671,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 148,
+                            Id = 71,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5003,7 +3684,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 149,
+                            Id = 72,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5016,7 +3697,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 150,
+                            Id = 73,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5029,7 +3710,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 151,
+                            Id = 74,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5042,7 +3723,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 152,
+                            Id = 75,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5055,7 +3736,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 153,
+                            Id = 76,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5068,7 +3749,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 154,
+                            Id = 77,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5081,7 +3762,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 155,
+                            Id = 78,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5094,7 +3775,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 156,
+                            Id = 79,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5107,7 +3788,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 157,
+                            Id = 80,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5120,7 +3801,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 158,
+                            Id = 81,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5133,7 +3814,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 159,
+                            Id = 82,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5146,7 +3827,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 160,
+                            Id = 83,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5159,7 +3840,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 161,
+                            Id = 84,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5172,7 +3853,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 162,
+                            Id = 85,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5185,7 +3866,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 163,
+                            Id = 86,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5198,7 +3879,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 164,
+                            Id = 87,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5211,7 +3892,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 165,
+                            Id = 88,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5224,7 +3905,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 166,
+                            Id = 89,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5237,7 +3918,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 167,
+                            Id = 90,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5250,7 +3931,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 168,
+                            Id = 91,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5263,7 +3944,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 169,
+                            Id = 92,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5276,7 +3957,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 170,
+                            Id = 93,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5289,7 +3970,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 171,
+                            Id = 94,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5302,7 +3983,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 172,
+                            Id = 95,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5315,7 +3996,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 173,
+                            Id = 96,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5328,7 +4009,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 174,
+                            Id = 97,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5341,7 +4022,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 175,
+                            Id = 98,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5354,7 +4035,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 176,
+                            Id = 99,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5367,7 +4048,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 177,
+                            Id = 100,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5380,7 +4061,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 178,
+                            Id = 101,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5393,7 +4074,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 179,
+                            Id = 102,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5406,7 +4087,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 180,
+                            Id = 103,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5419,7 +4100,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 181,
+                            Id = 104,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5432,7 +4113,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 182,
+                            Id = 105,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5445,7 +4126,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 183,
+                            Id = 106,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5458,7 +4139,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 184,
+                            Id = 107,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5471,7 +4152,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 185,
+                            Id = 108,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5484,7 +4165,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 186,
+                            Id = 109,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5497,7 +4178,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 187,
+                            Id = 110,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5510,7 +4191,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 188,
+                            Id = 111,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5523,7 +4204,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 189,
+                            Id = 112,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5536,7 +4217,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 190,
+                            Id = 113,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5549,7 +4230,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 191,
+                            Id = 114,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5611,242 +4292,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("RoboWeapons");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 439,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Artax",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 440,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Burst Laser",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 441,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Cryotra",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 442,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Deconstructor",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 443,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 8,
-                            MaxAmmo = 0,
-                            Name = "Deconstructor Prime",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 444,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Deth Machine Rifle",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 445,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Helstrum",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 446,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 3,
-                            MaxAmmo = 0,
-                            Name = "Multron",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 447,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Prime Laser Rifle",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 448,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Prisma Burst Laser",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 449,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Stinger",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 450,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Sweeper",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 451,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Sweeper Prime",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 452,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 3,
-                            MaxAmmo = 0,
-                            Name = "Tazicor",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 453,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Verglas",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 454,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 14,
-                            MaxAmmo = 0,
-                            Name = "Vulcax",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 455,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Laser Rifle",
-                            ReloadSeconds = 0f
-                        },
-                        new
-                        {
-                            Id = 456,
-                            Accuracy = 0f,
-                            Disposition = 0f,
-                            FireRate = 0f,
-                            HowToGet = "",
-                            MagazineSize = 0,
-                            MasteryRankRequired = 0,
-                            MaxAmmo = 0,
-                            Name = "Vulklok",
-                            ReloadSeconds = 0f
-                        });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.SecondaryWeapon", b =>
@@ -5902,7 +4347,7 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 192,
+                            Id = 115,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5915,7 +4360,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 193,
+                            Id = 116,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5928,7 +4373,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 194,
+                            Id = 117,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5941,7 +4386,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 195,
+                            Id = 118,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5954,7 +4399,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 196,
+                            Id = 119,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5967,7 +4412,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 197,
+                            Id = 120,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5980,7 +4425,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 198,
+                            Id = 121,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -5993,7 +4438,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 199,
+                            Id = 122,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6006,7 +4451,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 200,
+                            Id = 123,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6019,7 +4464,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 201,
+                            Id = 124,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6032,7 +4477,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 202,
+                            Id = 125,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6045,7 +4490,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 203,
+                            Id = 126,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6058,7 +4503,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 204,
+                            Id = 127,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6071,7 +4516,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 205,
+                            Id = 128,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6084,7 +4529,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 206,
+                            Id = 129,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6097,7 +4542,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 207,
+                            Id = 130,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6110,7 +4555,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 208,
+                            Id = 131,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6123,7 +4568,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 209,
+                            Id = 132,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6136,7 +4581,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 210,
+                            Id = 133,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6149,7 +4594,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 211,
+                            Id = 134,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6162,7 +4607,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 212,
+                            Id = 135,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6175,7 +4620,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 213,
+                            Id = 136,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6188,7 +4633,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 214,
+                            Id = 137,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6201,7 +4646,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 215,
+                            Id = 138,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6214,7 +4659,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 216,
+                            Id = 139,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6227,7 +4672,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 217,
+                            Id = 140,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6240,7 +4685,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 218,
+                            Id = 141,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6253,7 +4698,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 219,
+                            Id = 142,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6266,7 +4711,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 220,
+                            Id = 143,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6279,7 +4724,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 221,
+                            Id = 144,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6292,7 +4737,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 222,
+                            Id = 145,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6305,7 +4750,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 223,
+                            Id = 146,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6318,7 +4763,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 224,
+                            Id = 147,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6331,7 +4776,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 225,
+                            Id = 148,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6344,7 +4789,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 226,
+                            Id = 149,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6357,7 +4802,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 227,
+                            Id = 150,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6370,7 +4815,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 228,
+                            Id = 151,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6383,7 +4828,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 229,
+                            Id = 152,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6396,7 +4841,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 230,
+                            Id = 153,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6409,7 +4854,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 231,
+                            Id = 154,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6422,7 +4867,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 232,
+                            Id = 155,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6435,7 +4880,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 233,
+                            Id = 156,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6448,7 +4893,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 234,
+                            Id = 157,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6461,7 +4906,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 235,
+                            Id = 158,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6474,7 +4919,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 236,
+                            Id = 159,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6487,7 +4932,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 237,
+                            Id = 160,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6500,7 +4945,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 238,
+                            Id = 161,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6513,7 +4958,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 239,
+                            Id = 162,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6526,7 +4971,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 240,
+                            Id = 163,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6539,7 +4984,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 241,
+                            Id = 164,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6552,7 +4997,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 242,
+                            Id = 165,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6565,7 +5010,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 243,
+                            Id = 166,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6578,7 +5023,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 244,
+                            Id = 167,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6591,7 +5036,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 245,
+                            Id = 168,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6604,7 +5049,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 246,
+                            Id = 169,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6617,7 +5062,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 247,
+                            Id = 170,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6630,7 +5075,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 248,
+                            Id = 171,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6643,7 +5088,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 249,
+                            Id = 172,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6656,7 +5101,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 250,
+                            Id = 173,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6669,7 +5114,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 251,
+                            Id = 174,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6682,7 +5127,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 252,
+                            Id = 175,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6695,7 +5140,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 253,
+                            Id = 176,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6708,7 +5153,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 254,
+                            Id = 177,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6721,7 +5166,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 255,
+                            Id = 178,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6734,7 +5179,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 256,
+                            Id = 179,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6747,7 +5192,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 257,
+                            Id = 180,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6760,7 +5205,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 258,
+                            Id = 181,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6773,7 +5218,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 259,
+                            Id = 182,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6786,7 +5231,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 260,
+                            Id = 183,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6799,7 +5244,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 261,
+                            Id = 184,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6812,7 +5257,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 262,
+                            Id = 185,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6825,7 +5270,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 263,
+                            Id = 186,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6838,7 +5283,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 264,
+                            Id = 187,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6851,7 +5296,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 265,
+                            Id = 188,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6864,7 +5309,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 266,
+                            Id = 189,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6877,7 +5322,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 267,
+                            Id = 190,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6890,7 +5335,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 268,
+                            Id = 191,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6903,7 +5348,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 269,
+                            Id = 192,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6916,7 +5361,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 270,
+                            Id = 193,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6929,7 +5374,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 271,
+                            Id = 194,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6942,7 +5387,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 272,
+                            Id = 195,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6955,7 +5400,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 273,
+                            Id = 196,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6968,7 +5413,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 274,
+                            Id = 197,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6981,7 +5426,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 275,
+                            Id = 198,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -6994,7 +5439,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 276,
+                            Id = 199,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7007,7 +5452,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 277,
+                            Id = 200,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7020,7 +5465,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 278,
+                            Id = 201,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7033,7 +5478,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 279,
+                            Id = 202,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7046,7 +5491,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 280,
+                            Id = 203,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7059,7 +5504,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 281,
+                            Id = 204,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7072,7 +5517,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 282,
+                            Id = 205,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7085,7 +5530,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 283,
+                            Id = 206,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7098,7 +5543,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 284,
+                            Id = 207,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7111,7 +5556,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 285,
+                            Id = 208,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7124,7 +5569,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 286,
+                            Id = 209,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7137,7 +5582,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 287,
+                            Id = 210,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7150,7 +5595,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 288,
+                            Id = 211,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7163,7 +5608,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 289,
+                            Id = 212,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7176,7 +5621,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 290,
+                            Id = 213,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7189,7 +5634,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 291,
+                            Id = 214,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7202,7 +5647,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 292,
+                            Id = 215,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7215,7 +5660,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 293,
+                            Id = 216,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7228,7 +5673,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 294,
+                            Id = 217,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7241,7 +5686,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 295,
+                            Id = 218,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7254,7 +5699,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 296,
+                            Id = 219,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7267,7 +5712,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 297,
+                            Id = 220,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7280,7 +5725,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 298,
+                            Id = 221,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,
@@ -7293,7 +5738,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            Id = 299,
+                            Id = 222,
                             Accuracy = 0f,
                             Disposition = 0f,
                             FireRate = 0f,

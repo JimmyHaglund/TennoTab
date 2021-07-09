@@ -144,3 +144,4 @@ D:\Projects\WarframeProgressTracker\Managed\Server\WarframeProgressTrackerApi\Wa
 D:\Projects\WarframeProgressTracker\Managed\Server\WarframeProgressTrackerApi\WarframeProgressTrackerApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projects\WarframeProgressTracker\Managed\Server\WarframeProgressTrackerApi\WarframeProgressTrackerApi\obj\Debug\netcoreapp3.1\WarframeProgressTrackerApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects\WarframeProgressTracker\Managed\Server\WarframeProgressTrackerApi\WarframeProgressTrackerApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\WarframeProgressTracker\Managed\Server\WarframeProgressTrackerApi\WarframeProgressTrackerApi\bin\Debug\netcoreapp3.1\CsvHelper.dll

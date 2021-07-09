@@ -39,16 +39,27 @@ namespace WarframeProgressTrackerApi.Data {
 
             SetupCompositeKeys(modelBuilder);
 
-            SeedFrames(modelBuilder);
-            SeedPrimaryWeapons(modelBuilder);
-            SeedSecondaryWeapons(modelBuilder);
-            SeedMeleeWeapons(modelBuilder);
-            SeedPets(modelBuilder);
-            SeedArchwings(modelBuilder);
-            SeedArchGuns(modelBuilder);
-            SeedArchMeleeWeapons(modelBuilder);
-            SeedRoboWeapons(modelBuilder);
-            SeedAmps(modelBuilder);
+            int id = 1;
+            id = SeedDataFromCsv<Frame>(modelBuilder, "Warframes", id);
+            id = SeedDataFromCsv<PrimaryWeapon>(modelBuilder, "PrimaryWeapons", id);
+            id = SeedDataFromCsv<SecondaryWeapon>(modelBuilder, "SecondaryWeapons", id);
+            id = SeedDataFromCsv<MeleeWeapon>(modelBuilder, "MeleeWeapons", id);
+            id = SeedDataFromCsv<AmpPrism>(modelBuilder, "Amps", id);
+            id = SeedDataFromCsv<Pet>(modelBuilder, "Pets", id);
+            id = SeedDataFromCsv<RoboWeapon>(modelBuilder, "RoboGuns", id);
+            id = SeedDataFromCsv<Archwing>(modelBuilder, "Archwings", id);
+            id = SeedDataFromCsv<ArchGun>(modelBuilder, "ArchGuns", id);
+            id = SeedDataFromCsv<ArchMelee>(modelBuilder, "ArchMeleeWeapons", id);
+            // SeedFrames(modelBuilder);
+            // SeedPrimaryWeapons(modelBuilder);
+            // SeedSecondaryWeapons(modelBuilder);
+            // SeedMeleeWeapons(modelBuilder);
+            // SeedPets(modelBuilder);
+            // SeedArchwings(modelBuilder);
+            // SeedArchGuns(modelBuilder);
+            // SeedArchMeleeWeapons(modelBuilder);
+            // SeedRoboWeapons(modelBuilder);
+            // SeedAmps(modelBuilder);
         }
 
         private void SetupCompositeKeys(ModelBuilder builder) {
@@ -70,16 +81,21 @@ namespace WarframeProgressTrackerApi.Data {
             }
         }
 
-        private void SeedPrimaryWeapons(ModelBuilder builder) {
-            foreach (var primaryWeapon in PrimaryWeaponSeed.Get) {
-                builder.Entity<PrimaryWeapon>().HasData(primaryWeapon);
+        private int SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName, int lastId) 
+            where T : WarframeItem {
+            var seedData = CsvSeedHelper.GetDataFromSeed<T>(seedFileName, lastId);
+            foreach (var item in seedData) {
+                builder.Entity<T>().HasData(item);
             }
+            return lastId + seedData.Count();
         }
 
-        private void SeedSecondaryWeapons(ModelBuilder builder) {
-            foreach (var secondaryWeapon in SecondaryWeaponSeed.Get) {
-                builder.Entity<SecondaryWeapon>().HasData(secondaryWeapon);
+        private int SeedPrimaryWeapons(ModelBuilder builder, int lastId) {
+            var seedData = CsvSeedHelper.GetDataFromSeed<PrimaryWeapon>("PrimaryWeapons", lastId);
+            foreach (var primaryWeapon in seedData) {
+                builder.Entity<PrimaryWeapon>().HasData(primaryWeapon);
             }
+            return lastId + seedData.Count();
         }
 
         private void SeedMeleeWeapons(ModelBuilder builder) {

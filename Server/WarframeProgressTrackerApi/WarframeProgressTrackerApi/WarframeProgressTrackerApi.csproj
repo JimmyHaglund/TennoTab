@@ -11,6 +11,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Data\Seed\Amps.csv" />
+    <None Remove="Data\Seed\ArchGuns.csv" />
+    <None Remove="Data\Seed\ArchMeleeWeapons.csv" />
+    <None Remove="Data\Seed\Archwings.csv" />
+    <None Remove="Data\Seed\MeleeWeapons.csv" />
+    <None Remove="Data\Seed\Pets.csv" />
+    <None Remove="Data\Seed\PrimaryWeapons.csv" />
+    <None Remove="Data\Seed\RoboGuns.csv" />
+    <None Remove="Data\Seed\SecondaryWeapons.csv" />
+    <None Remove="Data\Seed\Warframes.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Seed\Amps.csv" />
+    <EmbeddedResource Include="Data\Seed\ArchGuns.csv" />
+    <EmbeddedResource Include="Data\Seed\ArchMeleeWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\Archwings.csv" />
+    <EmbeddedResource Include="Data\Seed\MeleeWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\Pets.csv" />
+    <EmbeddedResource Include="Data\Seed\PrimaryWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\RoboGuns.csv" />
+    <EmbeddedResource Include="Data\Seed\SecondaryWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\Warframes.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.16" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "k4te0L8mIWfKQUSGmKVBpBqhOewgINlmge1+m1gv2DPxHF0Kj0xzGXRIbFwKbWFc0FmCKtUPR3jd92zwboEhyQ==",
+  "dgSpecHash": "Ff8bvP/41t6244RgaB5QbXMLhQg5ylIXRF0nSiriJ4KpmsmArIS74Rrtz8TSfJUYf+KRUedipx1wN6OcnY1HMw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\WarframeProgressTracker\\Managed\\Server\\WarframeProgressTrackerApi\\WarframeProgressTrackerApi\\WarframeProgressTrackerApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jimmy\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

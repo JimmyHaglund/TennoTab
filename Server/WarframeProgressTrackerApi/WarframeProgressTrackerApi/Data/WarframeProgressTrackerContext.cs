@@ -50,16 +50,6 @@ namespace WarframeProgressTrackerApi.Data {
             id = SeedDataFromCsv<Archwing>(modelBuilder, "Archwings", id);
             id = SeedDataFromCsv<ArchGun>(modelBuilder, "ArchGuns", id);
             id = SeedDataFromCsv<ArchMelee>(modelBuilder, "ArchMeleeWeapons", id);
-            // SeedFrames(modelBuilder);
-            // SeedPrimaryWeapons(modelBuilder);
-            // SeedSecondaryWeapons(modelBuilder);
-            // SeedMeleeWeapons(modelBuilder);
-            // SeedPets(modelBuilder);
-            // SeedArchwings(modelBuilder);
-            // SeedArchGuns(modelBuilder);
-            // SeedArchMeleeWeapons(modelBuilder);
-            // SeedRoboWeapons(modelBuilder);
-            // SeedAmps(modelBuilder);
         }
 
         private void SetupCompositeKeys(ModelBuilder builder) {
@@ -75,12 +65,6 @@ namespace WarframeProgressTrackerApi.Data {
             builder.Entity<UserAmp>().HasKey(userAmp => new { userAmp.UserId, userAmp.ItemId });
         }
 
-        private void SeedFrames(ModelBuilder builder) {
-            foreach (var frame in FrameSeed.Get) {
-                builder.Entity<Frame>().HasData(frame);
-            }
-        }
-
         private int SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName, int lastId) 
             where T : WarframeItem {
             var seedData = CsvSeedHelper.GetDataFromSeed<T>(seedFileName, lastId);
@@ -88,56 +72,6 @@ namespace WarframeProgressTrackerApi.Data {
                 builder.Entity<T>().HasData(item);
             }
             return lastId + seedData.Count();
-        }
-
-        private int SeedPrimaryWeapons(ModelBuilder builder, int lastId) {
-            var seedData = CsvSeedHelper.GetDataFromSeed<PrimaryWeapon>("PrimaryWeapons", lastId);
-            foreach (var primaryWeapon in seedData) {
-                builder.Entity<PrimaryWeapon>().HasData(primaryWeapon);
-            }
-            return lastId + seedData.Count();
-        }
-
-        private void SeedMeleeWeapons(ModelBuilder builder) {
-            foreach (var meleeWeapon in MeleeWeaponSeed.Get) {
-                builder.Entity<MeleeWeapon>().HasData(meleeWeapon);
-            }
-        }
-
-        private void SeedPets(ModelBuilder builder) {
-            foreach(var pet in PetSeed.Get) {
-                builder.Entity<Pet>().HasData(pet);
-            }
-        }
-
-        private void SeedArchwings(ModelBuilder builder) {
-            foreach (var archwing in ArchwingSeed.Get) {
-                builder.Entity<Archwing>().HasData(archwing);
-            }
-        }
-
-        private void SeedArchGuns(ModelBuilder builder) {
-            foreach (var archGun in ArchGunSeed.Get) {
-                builder.Entity<ArchGun>().HasData(archGun);
-            }
-        }
-
-        private void SeedArchMeleeWeapons(ModelBuilder builder) {
-            foreach (var archMelee in ArchMeleeSeed.Get) {
-                builder.Entity<ArchMelee>().HasData(archMelee);
-            }
-        }
-
-        private void SeedRoboWeapons(ModelBuilder builder) {
-            foreach (var roboWeapon in RoboWeaponSeed.Get) {
-                builder.Entity<RoboWeapon>().HasData(roboWeapon);
-            }
-        }
-
-        private void SeedAmps(ModelBuilder builder) {
-            foreach (var amp in AmpSeed.Get) {
-                builder.Entity<AmpPrism>().HasData(amp);
-            }
         }
     }
 }

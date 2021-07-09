@@ -1,5 +1,7 @@
 <h2>Collectibles</h2>
 
+<i class="fa fa-bars"></i>
+<!--
 <table class="table">
   <tr>
     <th>Type</th>
@@ -14,3 +16,16 @@
     <td>{{collectible.detailsLink}}</td>
   </tr>
  </table>
+-->
+<div class = "container">
+  <div class = 
+  <div *ngFor='let collectible of collectibles' class='card m-1 w-25 {{collectedColor(collectible)}}'>
+    <div class="card-body p-1">
+      <a href={{collectible.detailsLink}} class="btn btn-primary w-100">
+        
+        <i class="{{collectibleIcon(collectible)}} position-icon" ></i>
+        <h5>{{collectible.name}}</h5>
+      </a>
+    </div>
+  </div>
+</div>

@@ -34,6 +34,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 .Concat(GrabPrimaryWeapons(searchForm, userId))
                 .Concat(GrabSecondaryWeapons(searchForm, userId))
                 .Concat(GrabMeleeWeapons(searchForm, userId))
+                .Concat(GrabAmps(searchForm, userId))
                 .Concat(GrabPets(searchForm, userId))
                 .Concat(GrabRoboWeapons(searchForm, userId))
                 .Concat(GrabArchwings(searchForm, userId))
@@ -44,8 +45,9 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
             if (form.IncludeFrames) {
                 var frames = _context.Frames.ToArray();
-                var userFrames = _context.UserFrames.Where(userFrame => userFrame.UserId == userId);
-                return Grab(frames, userFrames, "Warframe", "frame");
+                var userItems = _context.UserFrames
+                    .Where(item => item.UserId == userId);
+                return Grab(frames, userItems, "Warframe", "frame");
             }
             return new Collectible[0];
         }
@@ -53,8 +55,9 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabPrimaryWeapons(CollectibleSearchForm form, string userId) {
             if (form.IncludePrimaryWeapons) {
                 var weapons = _context.PrimaryWeapons.ToArray();
-                var userWeapons = _context.UserPrimaryWeapons.Where(uw=> uw.UserId == userId);
-                return Grab(weapons, userWeapons, "Primary Weapon", "primaryweapon");
+                var userItems = _context.UserFrames
+                    .Where(item => item.UserId == userId);
+                return Grab(weapons, userItems, "Primary Weapon", "primaryweapon");
             }
             return new Collectible[0];
         }
@@ -62,7 +65,9 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabSecondaryWeapons(CollectibleSearchForm form, string userId) {
             if (form.IncludeSecondaryWeapons) {
                 var weapons = _context.SecondaryWeapons.ToArray();
-                var userWeapons = _context.UserSecondaryWeapons.Where(uw => uw.UserId == userId);
+                var userWeapons = _context.UserSecondaryWeapons
+                    .Where(uw => uw.UserId == userId)
+                    .Cast<UserItem>();
                 return Grab(weapons, userWeapons, "Secondary Weapon", "secondaryweapon");
             }
             return new Collectible[0];
@@ -71,7 +76,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabMeleeWeapons(CollectibleSearchForm form, string userId) {
             if (form.IncludeMeleeWeapons) {
                 var weapons = _context.MeleeWeapons.ToArray();
-                var userWeapons = _context.UserMeleeWeapons.Where(item => item.UserId == userId);
+                var userWeapons = _context.UserMeleeWeapons
+                    .Where(item => item.UserId == userId);
                 return Grab(weapons, userWeapons, "Melee Weapon", "meleeweapon");
             }
             return new Collectible[0];
@@ -80,7 +86,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabAmps(CollectibleSearchForm form, string userId) {
             if (form.IncludeOperatorAmps) {
                 var amps = _context.Amps.ToArray();
-                var userAmps = _context.UserAmps.Where(item => item.UserId == userId);
+                var userAmps = _context.UserAmps
+                    .Where(item => item.UserId == userId);
                 return Grab(amps, userAmps, "Amp Prism", "amp");
             }
             return new Collectible[0];
@@ -89,7 +96,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabPets(CollectibleSearchForm form, string userId) {
             if (form.IncludePets) {
                 var pets = _context.Pets.ToArray();
-                var userPets = _context.UserPets.Where(userItem => userItem.UserId == userId);
+                var userPets = _context.UserPets
+                    .Where(userItem => userItem.UserId == userId);
                 return Grab(pets, userPets, "Pet", "pet");
             }
             return new Collectible[0];
@@ -98,7 +106,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabRoboWeapons(CollectibleSearchForm form, string userId) {
             if (form.IncludeRoboWeapons) {
                 var weapons = _context.RoboWeapons.ToArray();
-                var userWeapons = _context.UserRoboWeapons.Where(userItem => userItem.UserId == userId);
+                var userWeapons = _context.UserRoboWeapons
+                    .Where(userItem => userItem.UserId == userId);
                 return Grab(weapons, userWeapons, "Robo-Gun", "robogun");
             }
             return new Collectible[0];
@@ -107,7 +116,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabArchwings(CollectibleSearchForm form, string userId) {
             if (form.IncludeArchwings) {
                 var wings = _context.Archwings.ToArray();
-                var userArchwings = _context.UserArchwings.Where(uw => uw.UserId == userId);
+                var userArchwings = _context.UserArchwings
+                    .Where(uw => uw.UserId == userId);
                 return Grab(wings, userArchwings, "Archwing", "archwing");
             }
             return new Collectible[0];
@@ -116,7 +126,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabArchguns(CollectibleSearchForm form, string userId) {
             if (form.IncludeArchGuns) {
                 var guns = _context.ArchGuns.ToArray();
-                var userGuns = _context.UserArchGuns.Where(uw => uw.UserId == userId);
+                var userGuns = _context.UserArchGuns
+                    .Where(uw => uw.UserId == userId);
                 return Grab(guns, userGuns, "Archgun", "archgun");
             }
             return new Collectible[0];
@@ -125,17 +136,17 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GrabArchMeleeWeapons(CollectibleSearchForm form, string userId) {
             if (form.IncludeArchMeleeWeapons) {
                 var weapons = _context.ArchMeleeWeapons.ToArray();
-                var userWeapons = _context.UserArchMeleeWeapons.Where(uw => uw.UserId == userId);
+                var userWeapons = _context.UserArchMeleeWeapons
+                    .Where(uw => uw.UserId == userId);
                 return Grab(weapons, userWeapons, "Arch-Melee", "archmelee");
             }
             return new Collectible[0];
         }
 
-        private IEnumerable<Collectible> Grab<T>(
-            IEnumerable<T> items, 
+        private IEnumerable<Collectible> Grab(
+            IEnumerable<WarframeItem> items, 
             IEnumerable<UserItem> userItems, 
-            string category, string link) 
-            where T : WarframeItem {
+            string category, string link) {
             return items.Select(item => {
                 var userItem = userItems.FirstOrDefault(ui => ui.ItemId == item.Id);
                 return new Collectible() {

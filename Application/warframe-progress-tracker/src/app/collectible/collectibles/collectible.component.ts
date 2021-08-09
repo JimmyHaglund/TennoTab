@@ -11,6 +11,7 @@ import { FrameDetailComponent } from 'src/app/warframes/frame-detail/frame-detai
 })
 export class CollectibleComponent implements OnInit {
   collectibles: Collectible[] = [];
+  collectibless: Collectible[][] = [];
   constructor(private collectibleService: CollectibleService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,13 @@ export class CollectibleComponent implements OnInit {
   private getCollectibles() {
     this.collectibleService.getCollectibles()
       .subscribe(collectibles => this.collectibles = collectibles);
+  }
+
+  private assignCollectibles(collectibles: Collectible[]): void {
+    for(let n = 0; n < collectibles.length; n++) {
+      let i = Math.floor(n % 3);
+
+    }
   }
 
   public collectedValue(collectible: Collectible): string {

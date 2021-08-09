@@ -40,6 +40,7 @@ namespace WarframeProgressTrackerApi.Data {
             SetupCompositeKeys(modelBuilder);
 
             int id = 1;
+
             id = SeedDataFromCsv<Frame>(modelBuilder, "Warframes", id);
             id = SeedDataFromCsv<PrimaryWeapon>(modelBuilder, "PrimaryWeapons", id);
             id = SeedDataFromCsv<SecondaryWeapon>(modelBuilder, "SecondaryWeapons", id);

@@ -17,14 +17,29 @@
   </tr>
  </table>
 -->
-<div class = "container">
-  <div *ngFor='let collectible of collectibles' class='card m-1 w-25 {{collectedColor(collectible)}}'>
-    <div class="card-body p-1">
-      <a href={{collectible.detailsLink}} class="btn btn-primary w-100">
-        
-        <i class="{{collectibleIcon(collectible)}} position-icon" ></i>
-        <h5>{{collectible.name}}</h5>
-      </a>
+
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Warframe')" checked>Include Frames</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Primary Weapon')" checked>Include Primary Weapons</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Secondary Weapon')" checked>Include Secondary Weapons</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Melee Weapon')" checked>Include Melee Weapons</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Amp Prism')" checked>Include Amps</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Pet')" checked>Include Pets</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Robo-Gun')" checked>Include Robo-Guns</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archwing')" checked>Include Archwings</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archgun')" checked>Include Archguns</h5>
+<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include Arch-Melee</h5>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor='let collectible of displayedCollectibles' class="col-2 p-0">
+      <div class='m-1 card {{collectedColor(collectible)}}'>
+        <div class="card-body p-1">
+          <a href={{collectible.detailsLink}} class="btn btn-primary w-100 p-0">
+            <i class="{{collectibleIcon(collectible)}} position-icon"></i>
+            <p class="collectible-text center">{{collectible.name}}</p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

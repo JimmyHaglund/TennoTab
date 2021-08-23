@@ -1,33 +1,21 @@
 <h2>Collectibles</h2>
 
-<i class="fa fa-bars"></i>
-<!--
-<table class="table">
-  <tr>
-    <th>Type</th>
-    <th>Name</th>
-    <th>Status</th>
-    <th>Link</th>
-  </tr>
-  <tr *ngFor='let collectible of collectibles' class="m-3">
-    <td>{{collectible.category}}</td>
-    <td>{{collectible.name}}</td>
-    <td>{{collectedValue(collectible)}}</td>
-    <td>{{collectible.detailsLink}}</td>
-  </tr>
- </table>
--->
+<!--<i class="fa fa-bars"></i>-->
 
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Warframe')" checked>Include Frames</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Primary Weapon')" checked>Include Primary Weapons</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Secondary Weapon')" checked>Include Secondary Weapons</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Melee Weapon')" checked>Include Melee Weapons</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Amp Prism')" checked>Include Amps</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Pet')" checked>Include Pets</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Robo-Gun')" checked>Include Robo-Guns</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archwing')" checked>Include Archwings</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archgun')" checked>Include Archguns</h5>
-<h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include Arch-Melee</h5>
+<div class="container">
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Warframe')" checked>Include Frames</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Primary Weapon')" checked>Include Primary Weapons</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Secondary Weapon')" checked>Include Secondary Weapons</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Melee Weapon')" checked>Include Melee Weapons</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Amp Prism')" checked>Include Amps</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Pet')" checked>Include Pets</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Robo-Gun')" checked>Include Robo-Guns</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archwing')" checked>Include Archwings</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archgun')" checked>Include Archguns</h5>
+  <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include Arch-Melee</h5>
+</div>
+
+<input #searchBox type="text" (input)="setFilterText(searchBox.value)"/>
 
 <div class="container">
   <div class="row">

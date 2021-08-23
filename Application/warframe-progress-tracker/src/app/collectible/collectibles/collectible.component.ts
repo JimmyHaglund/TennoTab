@@ -15,21 +15,9 @@ interface IDisplayedCategories {
 })
 export class CollectibleComponent implements OnInit {
   public collectibles: Collectible[] = [];
+  private _filterString: string = "Warframe Primary, Pet,  Gun  ";
 
-  private _showCategories: IDisplayedCategories = {
-    /*
-    Warframe: true, 
-    PrimaryWeapon: true, 
-    SecondaryWeapon: true,
-    MeleeWeapon: true,
-    Amp: true,
-    Pet: true,
-    RoboGun: true,
-    Archwing: true,
-    ArchGun: true,
-    ArchMelee: true
-    */
-  };
+  private _showCategories: IDisplayedCategories = {};
 
   constructor(private collectibleService: CollectibleService) { }
 
@@ -38,6 +26,7 @@ export class CollectibleComponent implements OnInit {
     for (let n = 0; n < this.collectibles.length; n++) {
       const collectible = this.collectibles[n];
       if (!this.showCollectible(collectible)) continue;
+      if (!this.containsString(collectible, this._filterString)) continue;
       result.push(collectible);
     }
     return result;
@@ -48,18 +37,8 @@ export class CollectibleComponent implements OnInit {
     this.initialiseShownCategories();
   }
 
-  private initialiseShownCategories() {
-    let showCategories = this._showCategories;
-    for(let key in collectibleCategories) {
-      let category = collectibleCategories[key]
-      showCategories[category] = true;
-    }
-    console.log(this._showCategories);
-  }
-
-  private getCollectibles() {
-    this.collectibleService.getCollectibles()
-      .subscribe(collectibles => this.collectibles = collectibles);
+  public setFilterText(value:string):void {
+    this._filterString=value;
   }
 
   public collectedValue(collectible: Collectible): string {
@@ -93,7 +72,43 @@ export class CollectibleComponent implements OnInit {
     }
   }
 
+  private initialiseShownCategories() {
+    let showCategories = this._showCategories;
+    for(let key in collectibleCategories) {
+      let category = collectibleCategories[key]
+      showCategories[category] = true;
+    }
+    console.log(this._showCategories);
+  }
+
+  private getCollectibles() {
+    this.collectibleService.getCollectibles()
+      .subscribe(collectibles => this.collectibles = collectibles);
+  }
+
   private showCollectible(collectible: Collectible): boolean {
     return this._showCategories[collectible.category];
+  }
+
+  private containsString(collectible: Collectible, value: string): boolean {
+    let collectibleName = collectible.name.toLowerCase();
+    let collectibleCategory = collectible.category.toLowerCase();
+    let filter = value.toLowerCase().trim();
+    const regularExpression = /,/
+    let targetValues = filter.split(regularExpression);
+    for(let n = 0; n < targetValues.length; n++) {
+      targetValues[n] = targetValues[n].trim();
+      let mustIncludes = targetValues[n].split(' ');
+      let containsAll = true;
+      for(let i = 0; i < mustIncludes.length; i++) {
+        if (!collectibleName.includes(mustIncludes[i]) 
+          && !collectibleCategory.includes(mustIncludes[i])) {
+            containsAll = false;
+            break;
+        }
+      }
+      if (containsAll) return true;
+    }
+    return false;
   }
 }

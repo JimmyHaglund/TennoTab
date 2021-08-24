@@ -3,9 +3,10 @@ import { Collectible, collectibleCategories } from '../collectible';
 import { CollectibleSearchForm } from '../collectibleSearchForm';
 import { CollectibleService } from '../collectible.service';
 import { FrameDetailComponent } from 'src/app/warframes/frame-detail/frame-detail.component';
+import { startWith } from 'rxjs/operators';
 
 interface IDisplayedCategories {
-  [key:string]:boolean;
+  [key: string]: boolean;
 }
 
 @Component({
@@ -15,9 +16,9 @@ interface IDisplayedCategories {
 })
 export class CollectibleComponent implements OnInit {
   public collectibles: Collectible[] = [];
-  private _filterString: string = "Warframe Primary, Pet,  Gun  ";
-
+  private _filterString: string = "";
   private _showCategories: IDisplayedCategories = {};
+  private _sortMethod: string = "CategoryAscending";
 
   constructor(private collectibleService: CollectibleService) { }
 
@@ -29,6 +30,8 @@ export class CollectibleComponent implements OnInit {
       if (!this.containsString(collectible, this._filterString)) continue;
       result.push(collectible);
     }
+    this.sortCollectibles(result);
+
     return result;
   }
 
@@ -37,8 +40,8 @@ export class CollectibleComponent implements OnInit {
     this.initialiseShownCategories();
   }
 
-  public setFilterText(value:string):void {
-    this._filterString=value;
+  public setFilterText(value: string): void {
+    this._filterString = value;
   }
 
   public collectedValue(collectible: Collectible): string {
@@ -51,9 +54,13 @@ export class CollectibleComponent implements OnInit {
       collectible.mastered ? "bg-success" : "bg-light";
   }
 
-  public toggleShowCategory(categoryName:string): void {
+  public toggleShowCategory(categoryName: string): void {
     this._showCategories[categoryName] = !this._showCategories[categoryName];
-    console.log(this._showCategories[categoryName])
+    // console.log(this._showCategories[categoryName])
+  }
+
+  public setSortingMethod(method: string): void {
+    this._sortMethod = method;
   }
 
   public collectibleIcon(collectible: Collectible): string {
@@ -74,11 +81,10 @@ export class CollectibleComponent implements OnInit {
 
   private initialiseShownCategories() {
     let showCategories = this._showCategories;
-    for(let key in collectibleCategories) {
+    for (let key in collectibleCategories) {
       let category = collectibleCategories[key]
       showCategories[category] = true;
     }
-    console.log(this._showCategories);
   }
 
   private getCollectibles() {
@@ -96,19 +102,84 @@ export class CollectibleComponent implements OnInit {
     let filter = value.toLowerCase().trim();
     const regularExpression = /,/
     let targetValues = filter.split(regularExpression);
-    for(let n = 0; n < targetValues.length; n++) {
+    for (let n = 0; n < targetValues.length; n++) {
       targetValues[n] = targetValues[n].trim();
       let mustIncludes = targetValues[n].split(' ');
       let containsAll = true;
-      for(let i = 0; i < mustIncludes.length; i++) {
-        if (!collectibleName.includes(mustIncludes[i]) 
+      for (let i = 0; i < mustIncludes.length; i++) {
+        if (!collectibleName.includes(mustIncludes[i])
           && !collectibleCategory.includes(mustIncludes[i])) {
-            containsAll = false;
-            break;
+          containsAll = false;
+          break;
         }
       }
       if (containsAll) return true;
     }
     return false;
+  }
+
+  private sortCollectibles(collectibles: Collectible[]): void {
+    switch (this._sortMethod) {
+      case 'NameAscending':
+        this.sortByNameAscending(collectibles);
+        break;
+      case 'NameDescending':
+        this.sortByNameDescending(collectibles);
+        break;
+      case 'CategoryDescending':
+        this.sortByCategoryDescending(collectibles);
+        break;
+      default:
+        this.sortByCategoryAscending(collectibles);
+        break;
+    };
+  }
+
+  private sortByNameAscending(collectibles: Collectible[]): void {
+    const charsOnlyUpperCase = this.charsOnlyUpperCase;
+    collectibles.sort((collectibleA, collectibleB) => {
+      const nameA = collectibleA.name;
+      const nameB = collectibleB.name;
+      return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+    });
+  }
+
+  private sortByNameDescending(collectibles: Collectible[]): void {
+    collectibles.sort((collectibleA, collectibleB) => {
+      const nameA = collectibleA.name;
+      const nameB = collectibleB.name;
+      return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
+    });
+  }
+
+  private sortByCategoryAscending(collectibles: Collectible[]): void {
+    const charsOnlyUpperCase = this.charsOnlyUpperCase;
+    collectibles.sort((collectibleA, collectibleB) => {
+      const categoryA = charsOnlyUpperCase(collectibleA.category);
+      const categoryB = charsOnlyUpperCase(collectibleB.category);
+      const nameA = collectibleA.name;
+      const nameB = collectibleB.name;
+    return categoryA < categoryB ? -1 : categoryA > categoryB ? 1 : 
+      nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+    });
+  }
+
+  private sortByCategoryDescending(collectibles: Collectible[]): void {
+    const charsOnlyUpperCase = this.charsOnlyUpperCase;
+    collectibles.sort((collectibleA, collectibleB) => {
+      const categoryA = charsOnlyUpperCase(collectibleA.category);
+      const categoryB = charsOnlyUpperCase(collectibleB.category);
+      const nameA = collectibleA.name;
+      const nameB = collectibleB.name;
+      return categoryA > categoryB ? -1 : categoryA < categoryB ? 1 : 
+        nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+    });
+  }
+
+  private charsOnlyUpperCase(value: string) : string {
+    const nonAlphaNumeric = /\W/;
+    let match = value.toUpperCase().replace(nonAlphaNumeric, '');
+
+    return match === null ? "" : match;
   }
 }

@@ -13,9 +13,40 @@
   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archwing')" checked>Include Archwings</h5>
   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archgun')" checked>Include Archguns</h5>
   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include Arch-Melee</h5>
+  <div>
+  <h5>Search</h5>
+    <input #searchBox type="text" (input)="setFilterText(searchBox.value)"/>
+  </div>
 </div>
 
-<input #searchBox type="text" (input)="setFilterText(searchBox.value)"/>
+<div class="container">
+  <h5>Sort</h5>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="sortingMethod" id="sortByCategoryAscending" value="categoryascending" checked (click)="setSortingMethod('CategoryAscending')">
+    <label class="form-check-label" for="sortByCategoryAscending">
+      Category Ascending
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="sortingMethod" id="sortByCategoryDescending" value="categorydescending" (click)="setSortingMethod('CategoryDescending')">
+    <label class="form-check-label" for="sortByCategoryDescending">
+      Category Descending
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="sortingMethod" id="sortByNameAscending" value="nameascending" (click)="setSortingMethod('NameAscending')">
+    <label class="form-check-label" for="sortByNameAscending">
+      Name Ascending
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="sortingMethod" id="sortByNameDescending" value="namedescending" (click)="setSortingMethod('NameDescending')">
+    <label class="form-check-label" for="sortByNameDescending">
+      Name Descending
+    </label>
+  </div>
+</div>
+
 
 <div class="container">
   <div class="row">

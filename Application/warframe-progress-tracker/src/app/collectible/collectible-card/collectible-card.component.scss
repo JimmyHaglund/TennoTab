@@ -1,0 +1,96 @@
+.card-part {   
+   border-radius: 0;
+   padding: 0;
+}
+
+.hide {
+   display: none;
+}
+
+.status-icon {
+   animation-name: addIcon;
+   animation-duration: 0.35s;
+   animation-timing-function: ease;
+   color: darkgreen;
+   font-size: 0.75em;
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+.status-icon-container {
+   top: 5px;
+   right: 10px;
+   text-align: right;
+   position: absolute;
+}
+
+@keyframes addIcon {
+   0%  {color:transparent; font-size: 0em;}
+  50%  { font-size:1.25em;}
+  100% {color:darkgreen; font-size: 0.75em;}
+}
+/*
+@keyframes addIcon {
+   0%  {color:transparent; top:-10px;}
+  75%  { top:20px;}
+  100% {color:darkgreen; top:10px;}
+}/**/
+
+.component-container {
+   width: 100%;
+   border-radius: 0 0 5px 5px;
+}
+
+.card-part > i {
+   font-size: 2em;
+}
+
+.part-center {
+   width: 34.5%;
+   border-radius: 0;
+}
+
+.part-left {
+   border-radius: 0 0 0 5px;
+   width: 33%;
+}
+
+.part-right {
+   border-radius: 0 0 5px 0;
+   width: 33%;
+}
+
+.collectible-card {
+   min-height: 2em;
+}
+
+.card-icon {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+.card-body {
+   background-color: gainsboro;
+   border-radius: 5px;
+}
+
+.bg-frame-nonobtained {
+   color: darkgray;
+}
+
+.card-title {
+   font-size: 1.25em;
+   text-align: center;
+   vertical-align: center;
+}
+
+.noselect {
+   -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+         -ms-user-select: none; /* Internet Explorer/Edge */
+             user-select: none; /* Non-prefixed version, currently
+                                   supported by Chrome, Edge, Opera and Firefox */
+ }

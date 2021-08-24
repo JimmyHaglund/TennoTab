@@ -17,6 +17,7 @@ import { MeleeWeaponModule} from './melee-weapon/melee-weapon.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CollectibleComponent } from './collectible';
+import { CollectibleCardComponent } from './collectible/collectible-card/collectible-card.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +26,8 @@ import { CollectibleComponent } from './collectible';
       DashboardComponent,
       LoginComponent,
       RegisterComponent,
-      CollectibleComponent
+      CollectibleComponent,
+      CollectibleCardComponent
    ],
    imports: [
       BrowserModule,

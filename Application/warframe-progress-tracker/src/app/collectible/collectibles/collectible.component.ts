@@ -18,7 +18,8 @@ export class CollectibleComponent implements OnInit {
   public collectibles: Collectible[] = [];
   private _filterString: string = "";
   private _showCategories: IDisplayedCategories = {};
-  private _sortMethod: string = "CategoryAscending";
+  private _sortMethod: string = "CategoryDescending";
+  private _filterObtained = "NonObtained"; // All | NonMastered NonObtained
 
   constructor(private collectibleService: CollectibleService) { }
 
@@ -27,6 +28,7 @@ export class CollectibleComponent implements OnInit {
     for (let n = 0; n < this.collectibles.length; n++) {
       const collectible = this.collectibles[n];
       if (!this.showCollectible(collectible)) continue;
+      if (!this.passesObtainedFilter(collectible)) continue;
       if (!this.containsString(collectible, this._filterString)) continue;
       result.push(collectible);
     }
@@ -57,6 +59,10 @@ export class CollectibleComponent implements OnInit {
   public toggleShowCategory(categoryName: string): void {
     this._showCategories[categoryName] = !this._showCategories[categoryName];
     // console.log(this._showCategories[categoryName])
+  }
+
+  public setObtainedFilter(filter:string): void {
+    this._filterObtained = filter;
   }
 
   public setSortingMethod(method: string): void {
@@ -94,6 +100,14 @@ export class CollectibleComponent implements OnInit {
 
   private showCollectible(collectible: Collectible): boolean {
     return this._showCategories[collectible.category];
+  }
+
+  private passesObtainedFilter(collectible: Collectible): boolean {
+    const filter = this._filterObtained;
+    return filter === 'All' || 
+      collectible.obtained && !collectible.mastered && filter === 'NonMastered' ||
+      !collectible.obtained && filter === 'NonObtained' ||
+      collectible.mastered && filter === 'Mastered';
   }
 
   private containsString(collectible: Collectible, value: string): boolean {

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WarframeProgressTrackerApi.ViewModels {
     public class Collectible {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public string DetailsLink { get; set; }

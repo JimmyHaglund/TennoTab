@@ -40,15 +40,12 @@ export class CollectibleCardComponent implements OnInit {
   public increaseRank(): void {
     if (!this.collectible.obtained) {
       this.collectible.obtained = true;
-      console.log("Increasing rank for collectible", this.collectible.name, "obtained");
-      return;
-    }
-
-    if (!this.collectible.mastered) {
+    } else if (!this.collectible.mastered) {
       this.collectible.mastered = true;
-      console.log("Increasing rank for collectible", this.collectible.name, "mastered");
-      return;
-    }
+    } else return;
+
+    this.collectibleService.updateCollectible(this.collectible)
+      .subscribe((collectible)=> this.collectible = collectible);
   }
 
   public reduceRank(): void {

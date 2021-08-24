@@ -11,8 +11,8 @@ import { Collectible, CollectibleSearchForm } from '.';
 })
 export class CollectibleService {
   private apiUrl = environment.apiUrl;
-  private collectibleApiUrl = environment.apiUrl + "/collectible";
-
+  private collectibleApiUrlGet = environment.apiUrl + "/collectible/get";
+  private collectibleApiSet = environment.apiUrl + "/collectible/set";
 
   constructor(
     private http: HttpClient,
@@ -36,21 +36,15 @@ export class CollectibleService {
 
       searchText: ""
     };
-    return this.http.put<Collectible[]>(this.collectibleApiUrl, searchForm, { withCredentials: true })
+    return this.http.put<Collectible[]>(this.collectibleApiUrlGet, searchForm, { withCredentials: true })
       .pipe(catchError(this.handleError<Collectible[]>('getCollectibles,', [])));
   }
 
-  upgradeCollectibleRank(collectible: Collectible): Observable<Collectible> {
-    var userCollectible = {
-      id: collectible.id,
-      obtained: collectible.obtained,
-      masteryRank: collectible.mastered ? 30 : 0
-    };
-
-    return this.http.post<Collectible>(
-      this.apiUrl + "/collectibles", userCollectible, { withCredentials: true })
-      .pipe(tap((newCollectible: Collectible) =>
-        this.log(`added new userCollectible:${newCollectible.name}`)),
+  updateCollectible(collectible: Collectible): Observable<Collectible> {
+    return this.http.put<Collectible>(
+      this.collectibleApiSet, collectible, { withCredentials: true })
+      .pipe(tap(() =>
+        this.log(`updated userCollectible:${collectible.name}`)),
         catchError(this.handleError<Collectible>('upgradeCollectibleRank')));
   }
 
@@ -58,9 +52,8 @@ export class CollectibleService {
     throw "add to wish list not implemented";
   }
 
-  
   removeFromWishlist(collectible: Collectible) : Observable<Collectible> {
-    throw "remove from wisthlist not implemented";
+    throw "remove from wish list not implemented";
   }
 
   private log(message: string) {

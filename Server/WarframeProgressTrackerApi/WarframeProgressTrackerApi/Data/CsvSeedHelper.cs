@@ -4,11 +4,9 @@ using System.Linq;
 using System.Reflection;
 using System.Globalization;
 using System.Collections.Generic;
-using System;
 using CsvHelper;
 using CsvHelper.Configuration;
 using WarframeProgressTrackerApi.Models;
-using System.Diagnostics;
 
 namespace WarframeProgressTrackerApi.Data {
     public static class CsvSeedHelper {

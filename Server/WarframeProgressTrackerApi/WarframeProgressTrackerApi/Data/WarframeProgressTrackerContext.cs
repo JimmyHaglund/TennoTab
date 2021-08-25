@@ -22,6 +22,7 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<Archwing> Archwings { get; set; }
         public DbSet<ArchGun> ArchGuns { get; set; }
         public DbSet<ArchMelee> ArchMeleeWeapons { get; set; }
+        public DbSet<Resource> Resources { get; set; }
 
         public DbSet<UserFrame> UserFrames { get; set; }
         public DbSet<UserPrimaryWeapon> UserPrimaryWeapons { get; set; }
@@ -33,6 +34,7 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<UserArchwing> UserArchwings { get; set; }
         public DbSet<UserArchGun> UserArchGuns { get; set; }
         public DbSet<UserArchMelee> UserArchMeleeWeapons { get; set; }
+        public DbSet<BlueprintResource> BlueprintResources { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
@@ -51,6 +53,42 @@ namespace WarframeProgressTrackerApi.Data {
             id = SeedDataFromCsv<Archwing>(modelBuilder, "Archwings", id);
             id = SeedDataFromCsv<ArchGun>(modelBuilder, "ArchGuns", id);
             id = SeedDataFromCsv<ArchMelee>(modelBuilder, "ArchMeleeWeapons", id);
+            id = SeedDataFromCsv<Resource>(modelBuilder, "Resources", id);
+
+            // BlueprintLoader.LoadBlueprints(modelBuilder, this);
+        }
+
+        public IQueryable<WarframeItem> GetDataSet(string categoryName) {
+            switch (categoryName) {
+                case "Warframe":
+                    return Frames;
+                case "PrimaryWeapon":
+                case "Primary Weapon":
+                    return PrimaryWeapons;
+                case "SecondaryWeapon":
+                case "Secondary Weapon":
+                    return SecondaryWeapons;
+                case "MeleeWeapon":
+                case "Melee Weapon":
+                    return MeleeWeapons;
+                case "Amp":
+                case "Amp Prism":
+                    return Amps;
+                case "Pet":
+                    return Pets;
+                case "RoboGun":
+                case "Robo-Gun":
+                    return RoboWeapons;
+                case "Archwing":
+                    return Archwings;
+                case "ArchGun":
+                case "Archgun":
+                    return ArchGuns;
+                case "ArchMelee":
+                case "Arch-Melee":
+                    return ArchMeleeWeapons;
+                default: return null;
+            }
         }
 
         private void SetupCompositeKeys(ModelBuilder builder) {
@@ -64,6 +102,7 @@ namespace WarframeProgressTrackerApi.Data {
             builder.Entity<UserArchMelee>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserRoboGun>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserAmp>().HasKey(userAmp => new { userAmp.UserId, userAmp.ItemId });
+            builder.Entity<BlueprintResource>().HasKey(blueprint => new { blueprint.ResultId, blueprint.ResultCategory });
         }
 
         private int SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName, int lastId) 

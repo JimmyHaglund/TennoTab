@@ -188,7 +188,8 @@ namespace WarframeProgressTrackerApi.Controllers {
                         .FirstOrDefault();
             if (userItem == null) return false;
             userItem.Obtained = collectible.Obtained;
-            userItem.MasteryRank = collectible.Obtained && collectible.Mastered ? 30 : 0;
+            userItem.MasteryRank = (collectible.Obtained && collectible.Mastered) ? 30 : 0;
+            _context.SaveChanges();
             return true;
         }
 

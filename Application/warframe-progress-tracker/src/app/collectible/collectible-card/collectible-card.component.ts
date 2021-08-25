@@ -45,7 +45,7 @@ export class CollectibleCardComponent implements OnInit {
     } else return;
 
     this.collectibleService.updateCollectible(this.collectible)
-      .subscribe((collectible)=> this.collectible = collectible);
+      .subscribe(()=>{});
   }
 
   public reduceRank(): void {

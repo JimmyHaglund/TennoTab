@@ -1,7 +1,7 @@
-ResultName;ResultCategory;ResourceName;ResourceCategory;Amount
-Ash;Warframe;Ash Neuroptics;Resource;1
-Ash;Warframe;Ash Chassis;Resource;1
-Ash;Warframe;Ash Systems;Resource;1
-Orokin Cell;Resource;Alloy Plate;Resource;50000
-Orokin Cell;Resource;Nano Spores;Resource;50000
-Orokin Cell;Resource;Salvage;Resource;25000
+ResultName,ResultCategory,ComponentName,ComponentCategory,ComponentCount
+Ash,Warframe,Ash Neuroptics,Resource,1
+Ash,Warframe,Ash Chassis,Resource,1
+Ash,Warframe,Ash Systems,Resource,1
+Orokin Cell,Resource,Alloy Plate,Resource,50000
+Orokin Cell,Resource,Nano Spores,Resource,50000
+Orokin Cell,Resource,Salvage,Resource,25000

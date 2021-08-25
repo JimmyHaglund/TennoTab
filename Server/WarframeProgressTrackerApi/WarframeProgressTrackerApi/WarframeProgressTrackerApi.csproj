@@ -8,6 +8,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20210707150917_AddUserFrameData.cs" />
     <Compile Remove="Migrations\20210707150917_AddUserFrameData.Designer.cs" />
+    <Compile Remove="Migrations\20210825052501_BreakThings.cs" />
+    <Compile Remove="Migrations\20210825052501_BreakThings.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,11 +17,14 @@
     <None Remove="Data\Seed\ArchGuns.csv" />
     <None Remove="Data\Seed\ArchMeleeWeapons.csv" />
     <None Remove="Data\Seed\Archwings.csv" />
+    <None Remove="Data\Seed\Blueprints.csv" />
     <None Remove="Data\Seed\MeleeWeapons.csv" />
     <None Remove="Data\Seed\Pets.csv" />
     <None Remove="Data\Seed\PrimaryWeapons.csv" />
+    <None Remove="Data\Seed\Resources.csv" />
     <None Remove="Data\Seed\RoboGuns.csv" />
     <None Remove="Data\Seed\SecondaryWeapons.csv" />
+    <None Remove="Data\Seed\Sources.csv" />
     <None Remove="Data\Seed\Warframes.csv" />
   </ItemGroup>
 
@@ -28,11 +33,14 @@
     <EmbeddedResource Include="Data\Seed\ArchGuns.csv" />
     <EmbeddedResource Include="Data\Seed\ArchMeleeWeapons.csv" />
     <EmbeddedResource Include="Data\Seed\Archwings.csv" />
+    <EmbeddedResource Include="Data\Seed\Blueprints.csv" />
     <EmbeddedResource Include="Data\Seed\MeleeWeapons.csv" />
     <EmbeddedResource Include="Data\Seed\Pets.csv" />
     <EmbeddedResource Include="Data\Seed\PrimaryWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\Resources.csv" />
     <EmbeddedResource Include="Data\Seed\RoboGuns.csv" />
     <EmbeddedResource Include="Data\Seed\SecondaryWeapons.csv" />
+    <EmbeddedResource Include="Data\Seed\Sources.csv" />
     <EmbeddedResource Include="Data\Seed\Warframes.csv" />
   </ItemGroup>
 

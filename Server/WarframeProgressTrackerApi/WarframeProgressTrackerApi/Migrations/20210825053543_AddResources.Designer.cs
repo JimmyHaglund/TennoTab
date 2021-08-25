@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210825053543_AddResources")]
+    partial class AddResources
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -754,10 +756,10 @@ namespace WarframeProgressTrackerApi.Migrations
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.BlueprintResource", b =>
                 {
-                    b.Property<string>("ResultName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ResultId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("ComponentName")
+                    b.Property<string>("ResultCategory")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ComponentCategory")
@@ -766,62 +768,12 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<int>("ComponentCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("ResultCategory")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ComponentId")
+                        .HasColumnType("int");
 
-                    b.HasKey("ResultName", "ComponentName");
+                    b.HasKey("ResultId", "ResultCategory");
 
                     b.ToTable("BlueprintResources");
-
-                    b.HasData(
-                        new
-                        {
-                            ResultName = "Ash",
-                            ComponentName = "Ash Neuroptics",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 1,
-                            ResultCategory = "Warframe"
-                        },
-                        new
-                        {
-                            ResultName = "Ash",
-                            ComponentName = "Ash Chassis",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 1,
-                            ResultCategory = "Warframe"
-                        },
-                        new
-                        {
-                            ResultName = "Ash",
-                            ComponentName = "Ash Systems",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 1,
-                            ResultCategory = "Warframe"
-                        },
-                        new
-                        {
-                            ResultName = "Orokin Cell",
-                            ComponentName = "Alloy Plate",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 50000,
-                            ResultCategory = "Resource"
-                        },
-                        new
-                        {
-                            ResultName = "Orokin Cell",
-                            ComponentName = "Nano Spores",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 50000,
-                            ResultCategory = "Resource"
-                        },
-                        new
-                        {
-                            ResultName = "Orokin Cell",
-                            ComponentName = "Salvage",
-                            ComponentCategory = "Resource",
-                            ComponentCount = 25000,
-                            ResultCategory = "Resource"
-                        });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.Frame", b =>

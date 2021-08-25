@@ -55,7 +55,7 @@ namespace WarframeProgressTrackerApi.Data {
             id = SeedDataFromCsv<ArchMelee>(modelBuilder, "ArchMeleeWeapons", id);
             id = SeedDataFromCsv<Resource>(modelBuilder, "Resources", id);
 
-            // BlueprintLoader.LoadBlueprints(modelBuilder, this);
+            BlueprintLoader.LoadBlueprints(modelBuilder, this);
         }
 
         public IQueryable<WarframeItem> GetDataSet(string categoryName) {
@@ -102,7 +102,7 @@ namespace WarframeProgressTrackerApi.Data {
             builder.Entity<UserArchMelee>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserRoboGun>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserAmp>().HasKey(userAmp => new { userAmp.UserId, userAmp.ItemId });
-            builder.Entity<BlueprintResource>().HasKey(blueprint => new { blueprint.ResultId, blueprint.ResultCategory });
+            builder.Entity<BlueprintResource>().HasKey(blueprint => new { blueprint.ResultName, blueprint.ComponentName });
         }
 
         private int SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName, int lastId) 

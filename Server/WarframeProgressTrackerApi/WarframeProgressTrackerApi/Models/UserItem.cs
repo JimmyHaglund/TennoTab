@@ -4,6 +4,7 @@
         public int ItemId { get; set; }
         public int MasteryRank { get; set; } = 0;
         public bool Obtained { get; set; } = false;
+        public bool OnWishlist { get; set; } = false;
     }
 
     public class UserFrame : UserItem { }

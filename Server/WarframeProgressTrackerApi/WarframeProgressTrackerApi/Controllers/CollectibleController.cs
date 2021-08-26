@@ -63,13 +63,12 @@ namespace WarframeProgressTrackerApi.Controllers {
             Create(collectible, userId);
         }
 
-
         private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
             if (form.IncludeFrames) {
                 var frames = _context.Frames.ToArray();
                 var userItems = _context.UserFrames
                     .Where(item => item.UserId == userId);
-                return Grab(frames, userItems, "Warframe", "frame");
+                return Grab(frames, userItems, "Warframe", "frame", form);
             }
             return new Collectible[0];
         }
@@ -79,7 +78,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var weapons = _context.PrimaryWeapons.ToArray();
                 var userItems = _context.UserFrames
                     .Where(item => item.UserId == userId);
-                return Grab(weapons, userItems, "Primary Weapon", "primaryweapon");
+                return Grab(weapons, userItems, "Primary Weapon", "primaryweapon", form);
             }
             return new Collectible[0];
         }
@@ -90,7 +89,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var userWeapons = _context.UserSecondaryWeapons
                     .Where(uw => uw.UserId == userId)
                     .Cast<UserItem>();
-                return Grab(weapons, userWeapons, "Secondary Weapon", "secondaryweapon");
+                return Grab(weapons, userWeapons, "Secondary Weapon", "secondaryweapon", form);
             }
             return new Collectible[0];
         }
@@ -100,7 +99,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var weapons = _context.MeleeWeapons.ToArray();
                 var userWeapons = _context.UserMeleeWeapons
                     .Where(item => item.UserId == userId);
-                return Grab(weapons, userWeapons, "Melee Weapon", "meleeweapon");
+                return Grab(weapons, userWeapons, "Melee Weapon", "meleeweapon", form);
             }
             return new Collectible[0];
         }
@@ -110,7 +109,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var amps = _context.Amps.ToArray();
                 var userAmps = _context.UserAmps
                     .Where(item => item.UserId == userId);
-                return Grab(amps, userAmps, "Amp Prism", "amp");
+                return Grab(amps, userAmps, "Amp Prism", "amp", form);
             }
             return new Collectible[0];
         }
@@ -120,7 +119,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var pets = _context.Pets.ToArray();
                 var userPets = _context.UserPets
                     .Where(userItem => userItem.UserId == userId);
-                return Grab(pets, userPets, "Pet", "pet");
+                return Grab(pets, userPets, "Pet", "pet", form);
             }
             return new Collectible[0];
         }
@@ -130,7 +129,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var weapons = _context.RoboWeapons.ToArray();
                 var userWeapons = _context.UserRoboWeapons
                     .Where(userItem => userItem.UserId == userId);
-                return Grab(weapons, userWeapons, "Robo-Gun", "robogun");
+                return Grab(weapons, userWeapons, "Robo-Gun", "robogun", form);
             }
             return new Collectible[0];
         }
@@ -140,7 +139,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var wings = _context.Archwings.ToArray();
                 var userArchwings = _context.UserArchwings
                     .Where(uw => uw.UserId == userId);
-                return Grab(wings, userArchwings, "Archwing", "archwing");
+                return Grab(wings, userArchwings, "Archwing", "archwing", form);
             }
             return new Collectible[0];
         }
@@ -150,7 +149,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var guns = _context.ArchGuns.ToArray();
                 var userGuns = _context.UserArchGuns
                     .Where(uw => uw.UserId == userId);
-                return Grab(guns, userGuns, "Archgun", "archgun");
+                return Grab(guns, userGuns, "Archgun", "archgun", form);
             }
             return new Collectible[0];
         }
@@ -160,7 +159,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var weapons = _context.ArchMeleeWeapons.ToArray();
                 var userWeapons = _context.UserArchMeleeWeapons
                     .Where(uw => uw.UserId == userId);
-                return Grab(weapons, userWeapons, "Arch-Melee", "archmelee");
+                return Grab(weapons, userWeapons, "Arch-Melee", "archmelee", form);
             }
             return new Collectible[0];
         }
@@ -168,27 +167,38 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> Grab(
             IEnumerable<WarframeItem> items,
             IEnumerable<UserItem> userItems,
-            string category, string link) {
-            return items.Select(item => {
-                var userItem = userItems.FirstOrDefault(ui => ui.ItemId == item.Id);
+            string category, string link,
+            CollectibleSearchForm form
+            ) {
+            return items.
+                Where(item => {
+                    if (!form.OnlyOnWishlist) return true;
+                    var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
+                    if (userItem != null && userItem.OnWishlist) return true;
+                    return false;
+                })
+                .Select(item => {
+                var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
                 return new Collectible() {
                     Id = item.Id,
                     Name = item.Name,
                     Category = category,
                     DetailsLink = link + "/" + item.Id,
                     Obtained = userItem != null ? userItem.Obtained : false,
-                    Mastered = userItem != null ? userItem.MasteryRank >= 30 : false
+                    Mastered = userItem != null ? userItem.MasteryRank >= 30 : false,
+                    OnWishlist = userItem != null ? userItem.OnWishlist : false
                 };
             });
         }
 
         private bool Update(IEnumerable<UserItem> items, Collectible collectible, string userId) {
             var userItem = items
-                        .Where(userItem=> userItem.ItemId == collectible.Id && userItem.UserId == userId)
+                        .Where(userItem => userItem.ItemId == collectible.Id && userItem.UserId == userId)
                         .FirstOrDefault();
             if (userItem == null) return false;
             userItem.Obtained = collectible.Obtained;
             userItem.MasteryRank = (collectible.Obtained && collectible.Mastered) ? 30 : 0;
+            userItem.OnWishlist = collectible.OnWishlist;
             _context.SaveChanges();
             return true;
         }
@@ -196,48 +206,58 @@ namespace WarframeProgressTrackerApi.Controllers {
         private void Create(Collectible collectible, string userId) {
             switch (collectible.Category) {
                 case Categories.Warframe:
-                    var newFrame = new UserFrame() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newFrame = CreateUserItem<UserFrame>(userId, collectible);
                     _context.UserFrames.Add(newFrame);
                     break;
                 case Categories.PrimaryWeapon:
-                    var newPrimary = new UserPrimaryWeapon() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newPrimary = CreateUserItem<UserPrimaryWeapon>(userId, collectible);
                     _context.UserPrimaryWeapons.Add(newPrimary);
                     break;
                 case Categories.SecondaryWeapon:
-                    var newSecondary = new UserSecondaryWeapon() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newSecondary = CreateUserItem<UserSecondaryWeapon>(userId, collectible);
                     _context.UserSecondaryWeapons.Add(newSecondary);
                     break;
                 case Categories.MeleeWeapon:
-                    var newMelee = new UserMeleeWeapon() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newMelee = CreateUserItem<UserMeleeWeapon>(userId, collectible);
                     _context.UserMeleeWeapons.Add(newMelee);
                     break;
                 case Categories.Amp:
-                    var newAmp = new UserAmp() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newAmp = CreateUserItem<UserAmp>(userId, collectible);
                     _context.UserAmps.Add(newAmp);
                     break;
                 case Categories.Pet:
-                    var newPet = new UserPet() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newPet = CreateUserItem<UserPet>(userId, collectible);
                     _context.UserPets.Add(newPet);
                     break;
                 case Categories.RoboGun:
-                    var newRoboGun = new UserRoboGun() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newRoboGun = CreateUserItem<UserRoboGun>(userId, collectible);
                     _context.UserRoboWeapons.Add(newRoboGun);
                     break;
                 case Categories.Archwing:
-                    var newArchwing = new UserArchwing() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newArchwing = CreateUserItem<UserArchwing>(userId, collectible);
                     _context.UserArchwings.Add(newArchwing);
                     break;
                 case Categories.ArchGun:
-                    var newArchGun = new UserArchGun() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newArchGun = CreateUserItem<UserArchGun>(userId, collectible);
                     _context.UserArchGuns.Add(newArchGun);
                     break;
                 case Categories.ArchMelee:
-                    var newArchMelee = new UserArchMelee() { UserId = userId, ItemId = collectible.Id, MasteryRank = collectible.Mastered ? 30 : 0, Obtained = collectible.Obtained };
+                    var newArchMelee = CreateUserItem<UserArchMelee>(userId, collectible);
                     _context.UserArchMeleeWeapons.Add(newArchMelee);
                     break;
             }
 
             _context.SaveChanges();
+        }
+
+        private T CreateUserItem<T>(string userId, Collectible collectbile) where T : UserItem, new() {
+            return new T() {
+                UserId = userId,
+                ItemId = collectbile.Id,
+                OnWishlist = collectbile.OnWishlist,
+                MasteryRank = collectbile.Mastered ? 30 : 0,
+                Obtained = collectbile.Obtained ? true : false
+            };
         }
 
         private IEnumerable<UserItem> GetCategoryCollection(string category) {

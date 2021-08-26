@@ -9,6 +9,7 @@ import { MeleeWeaponsListComponent } from './melee-weapon/melee-weapons-list/mel
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { CollectibleComponent } from './collectible';
+import { WishListComponent } from './collectible/wish-list/wish-list.component';
 
 const routes: Routes = [
   { path: 'frames', component: FramesComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'melee-weapons', component: MeleeWeaponsListComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'collectible', component: CollectibleComponent }
+  { path: 'collectible', component: CollectibleComponent },
+  { path: 'wishlist', component: WishListComponent }
 ];
 
 @NgModule({

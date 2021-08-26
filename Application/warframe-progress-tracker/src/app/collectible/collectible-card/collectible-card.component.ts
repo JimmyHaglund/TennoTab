@@ -10,11 +10,12 @@ import { CollectibleService } from '../collectible.service';
 export class CollectibleCardComponent implements OnInit {
   @Input() public collectible!: Collectible;
 
-  private _isWishlisted = false;
-
   constructor(private collectibleService: CollectibleService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+
+
+  }
 
   public collectedColor(collectible: Collectible): string {
     return !collectible.obtained ? "bg-dark" :
@@ -43,9 +44,7 @@ export class CollectibleCardComponent implements OnInit {
     } else if (!this.collectible.mastered) {
       this.collectible.mastered = true;
     } else return;
-
-    this.collectibleService.updateCollectible(this.collectible)
-      .subscribe(()=>{});
+    this.updateCollectible();
   }
 
   public reduceRank(): void {
@@ -54,20 +53,23 @@ export class CollectibleCardComponent implements OnInit {
 
   public addToWishlist(): void {
     console.log("Adding collectible", this.collectible.name, " to wishlist");
-    this._isWishlisted = true;
+    this.collectible.onWishlist = true;
+    this.updateCollectible();
   }
 
   public removeFromWishlist(): void {
     console.log("Removing collectible", this.collectible.name, " from wishlist");
-    this._isWishlisted = false;
+    this.collectible.onWishlist = false;
+    this.updateCollectible();
   }
 
   public toggleWishList(): void {
-    this._isWishlisted = !this._isWishlisted;
+    if (this.collectible.onWishlist) this.removeFromWishlist();
+    else this.addToWishlist();
   }
 
   public getWishListStyle(): string {
-    return this._isWishlisted ? "status-icon" : "hide";
+    return this.collectible.onWishlist ? "status-icon" : "hide";
   }
 
   public getRankIcon(): string {
@@ -77,5 +79,10 @@ export class CollectibleCardComponent implements OnInit {
 
   public getRankStyle(): string {
     return this.collectible.obtained ? "status-icon" : "hide";
+  }
+
+  private updateCollectible() {
+    this.collectibleService.updateCollectible(this.collectible)
+    .subscribe(()=>{});
   }
 }

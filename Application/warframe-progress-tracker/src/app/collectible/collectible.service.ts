@@ -13,13 +13,10 @@ export class CollectibleService {
   private apiUrl = environment.apiUrl;
   private collectibleApiUrlGet = environment.apiUrl + "/collectible/get";
   private collectibleApiSet = environment.apiUrl + "/collectible/set";
-
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
-
-  getCollectibles(): Observable<Collectible[]> {
-    var searchForm: CollectibleSearchForm = {
+    private _defaultSearchForm: CollectibleSearchForm = {
       includeFrames: true,
       includePrimaryWeapons: true,
       includeSecondaryWeapons: true,
@@ -31,11 +28,14 @@ export class CollectibleService {
       includeArchGuns: true,
       includeArchMeleeWeapons: true,
 
+      onlyOnWishlist: false,
       includeOwned: true,
       includeMastered: true,
-
-      searchText: ""
+      searchText: "" 
     };
+
+  getCollectibles(searchForm: CollectibleSearchForm = this._defaultSearchForm
+    ): Observable<Collectible[]> {
     return this.http.put<Collectible[]>(this.collectibleApiUrlGet, searchForm, { withCredentials: true })
       .pipe(catchError(this.handleError<Collectible[]>('getCollectibles,', [])));
   }
@@ -48,11 +48,11 @@ export class CollectibleService {
         catchError(this.handleError<Collectible>('upgradeCollectibleRank')));
   }
 
-  addToWishlist(collectible: Collectible) : Observable<Collectible> {
+  addToWishlist(collectible: Collectible): Observable<Collectible> {
     throw "add to wish list not implemented";
   }
 
-  removeFromWishlist(collectible: Collectible) : Observable<Collectible> {
+  removeFromWishlist(collectible: Collectible): Observable<Collectible> {
     throw "remove from wish list not implemented";
   }
 

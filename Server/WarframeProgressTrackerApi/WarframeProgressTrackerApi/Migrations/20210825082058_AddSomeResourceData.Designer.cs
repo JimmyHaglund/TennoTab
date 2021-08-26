@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20210825082058_AddSomeResourceData")]
+    partial class AddSomeResourceData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -8024,9 +8026,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "ItemId");
 
                     b.ToTable("UserAmps");
@@ -8044,9 +8043,6 @@ namespace WarframeProgressTrackerApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("OnWishlist")
                         .HasColumnType("bit");
 
                     b.HasKey("UserId", "ItemId");
@@ -8068,9 +8064,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "ItemId");
 
                     b.ToTable("UserArchMeleeWeapons");
@@ -8088,9 +8081,6 @@ namespace WarframeProgressTrackerApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("OnWishlist")
                         .HasColumnType("bit");
 
                     b.HasKey("UserId", "ItemId");
@@ -8112,9 +8102,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "ItemId");
 
                     b.ToTable("UserFrames");
@@ -8132,9 +8119,6 @@ namespace WarframeProgressTrackerApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("OnWishlist")
                         .HasColumnType("bit");
 
                     b.HasKey("UserId", "ItemId");
@@ -8156,9 +8140,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "ItemId");
 
                     b.ToTable("UserPets");
@@ -8176,9 +8157,6 @@ namespace WarframeProgressTrackerApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("OnWishlist")
                         .HasColumnType("bit");
 
                     b.HasKey("UserId", "ItemId");
@@ -8200,9 +8178,6 @@ namespace WarframeProgressTrackerApi.Migrations
                     b.Property<bool>("Obtained")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
-
                     b.HasKey("UserId", "ItemId");
 
                     b.ToTable("UserRoboWeapons");
@@ -8220,9 +8195,6 @@ namespace WarframeProgressTrackerApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("OnWishlist")
                         .HasColumnType("bit");
 
                     b.HasKey("UserId", "ItemId");

@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CollectibleComponent } from './collectible';
 import { CollectibleCardComponent } from './collectible/collectible-card/collectible-card.component';
+import { WishListComponent } from './collectible/wish-list/wish-list.component';
 
 @NgModule({
    declarations: [
@@ -27,7 +28,8 @@ import { CollectibleCardComponent } from './collectible/collectible-card/collect
       LoginComponent,
       RegisterComponent,
       CollectibleComponent,
-      CollectibleCardComponent
+      CollectibleCardComponent,
+      WishListComponent
    ],
    imports: [
       BrowserModule,

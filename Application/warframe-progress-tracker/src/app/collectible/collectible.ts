@@ -4,7 +4,8 @@ export interface Collectible {
    category: string,
    detailsLink: string,
    mastered: boolean,
-   obtained: boolean
+   obtained: boolean,
+   onWishlist: boolean
 };
 
 export interface ICollectibleCategories {

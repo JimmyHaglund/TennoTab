@@ -11,6 +11,7 @@
         public bool IncludeArchGuns { get; set; }
         public bool IncludeArchMeleeWeapons { get; set; }
 
+        public bool OnlyOnWishlist { get; set; } = false;
         public bool IncludeOwned { get; set; } = true;
         public bool IncludeMastered { get; set; } = true;
 

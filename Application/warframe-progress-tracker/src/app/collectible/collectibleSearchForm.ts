@@ -10,6 +10,7 @@ export interface CollectibleSearchForm {
    includeArchGuns: boolean,
    includeArchMeleeWeapons: boolean,
 
+   onlyOnWishlist: boolean,
    includeOwned: boolean,
    includeMastered: boolean,
 

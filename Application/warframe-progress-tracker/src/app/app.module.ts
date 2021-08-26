@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { CollectibleComponent } from './collectible';
 import { CollectibleCardComponent } from './collectible/collectible-card/collectible-card.component';
 import { WishListComponent } from './collectible/wish-list/wish-list.component';
+import { ItemCostCardComponent } from './collectible/item-cost-card/item-cost-card.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +30,8 @@ import { WishListComponent } from './collectible/wish-list/wish-list.component';
       RegisterComponent,
       CollectibleComponent,
       CollectibleCardComponent,
-      WishListComponent
+      WishListComponent,
+      ItemCostCardComponent
    ],
    imports: [
       BrowserModule,

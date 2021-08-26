@@ -55,7 +55,7 @@ export class CollectibleService {
   removeFromWishlist(collectible: Collectible): Observable<Collectible> {
     throw "remove from wish list not implemented";
   }
-
+  
   private log(message: string) {
     this.messageService.add(`FrameService: ${message}`);
   }

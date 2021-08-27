@@ -12,10 +12,7 @@ export class CollectibleCardComponent implements OnInit {
 
   constructor(private collectibleService: CollectibleService) { }
 
-  ngOnInit(): void { 
-
-
-  }
+  ngOnInit(): void { }
 
   public collectedColor(collectible: Collectible): string {
     return !collectible.obtained ? "bg-dark" :

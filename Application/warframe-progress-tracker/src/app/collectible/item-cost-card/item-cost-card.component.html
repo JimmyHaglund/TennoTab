@@ -1,1 +1,35 @@
-<p>item-cost-card works!</p>
+<div class="d-flex border-bottom justify-content-between">
+   <div class="d-flex">
+      <a routerLink="/details/{{collectible.id}}">
+         <div class="m-1">
+            <h4>{{collectible.name}}</h4>
+         </div>
+      </a>
+      <div class="m-1">
+         <h4>
+            Status: {{getStatusText()}}
+         </h4>
+      </div>
+   </div>
+   <div class="d-flex">
+      <button class="btn btn-primary m-1 fs-1" (click)="reduceRank()">-</button>
+      <button class="btn btn-primary m-1 fs-1" (click)="increaseRank()">+</button>
+      <button class="btn btn-warning m-1 fs-1" (click)="removeFromWishlist()">X</button>
+   </div>
+</div>
+<!--
+<div>
+   <h5>Components</h5>
+   <span *ngFor='let component of getBlueprintComponents()' class="component-box m-1">
+      {{component.name}} ({{component.componentCount}})
+   </span>
+</div>
+-->
+<div *ngIf='hasResourceCost()'>
+   <h5>Resource costs</h5>
+   <div>
+      <span *ngFor='let resource of getBlueprintResourceCost()' class="component-box m-1">
+         {{resource.name}} ({{resource.amount}})
+      </span>
+   </div>
+</div>

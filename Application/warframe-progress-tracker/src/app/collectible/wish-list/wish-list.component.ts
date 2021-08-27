@@ -34,7 +34,9 @@ export class WishListComponent implements OnInit {
   constructor(
     private collectibleService: CollectibleService,
     private blueprintService: BlueprintService
-  ) { }
+  ) { 
+    this.removeItem = this.removeItem.bind(this);
+  }
 
   ngOnInit(): void {
     this.getCollectibles();
@@ -45,9 +47,52 @@ export class WishListComponent implements OnInit {
     return blueprint === undefined ? [] : blueprint.components;
   }
 
-  getBlueprintResourceCost(name: string): ResourceStack[] {
-    let blueprint = this.resourceCosts.find(cost => cost.name === name);
-    return blueprint === undefined ? [] : blueprint.cost;
+  getBlueprint(resultName: string): Blueprint {
+    let result = this.blueprints.find(blueprint => blueprint.resultName === resultName);
+    return result === undefined ? {resultName: "Null", components: []} : result;
+  }
+
+  getBlueprintResourceCost(name: string): BlueprintCost {
+    let cost = this.resourceCosts.find(cost => cost.name === name);
+    return cost === undefined ? {name: name, cost: []} : cost;
+  }
+
+  removeItem(name: string): void {
+    let index = this.collectibles.findIndex(collectible => collectible.name === name);
+    if (index > -1) {
+      this.collectibles.splice(index, 1);
+    }
+    index = this.resourceCosts.findIndex(stack => stack.name === name);
+    if(index > -1) {
+      this.resourceCosts.splice(index, 1);
+    }
+  }
+
+  getTotalCost(): ResourceStack[] {
+    let result: ResourceStack[] = [];
+    for(let n = 0; n < this.resourceCosts.length; n++) {
+      for(let i = 0; i < this.resourceCosts[n].cost.length; i++) {
+        let stack = this.resourceCosts[n].cost[i];
+        let existingStack = result.findIndex(s => s.name === stack.name);
+        if (existingStack > -1) {
+          result[existingStack].amount += stack.amount;
+        }
+        else {
+          result.push({id: stack.id, name: stack.name, amount: stack.amount});
+        }
+      }
+    }
+    let creditsIndex = result.findIndex(stack => stack.name === "Credits");
+    if (creditsIndex > -1) {
+      let credits = result[creditsIndex];
+      result.splice(creditsIndex, 1);
+      result.splice(0, 0, credits);
+    }
+    return result;
+  }
+
+  hasResourceCost(): boolean {
+    return this.getTotalCost().length > 0;
   }
 
   private getCollectibles() {

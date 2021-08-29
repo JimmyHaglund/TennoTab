@@ -7,7 +7,7 @@
          <i class="{{getRankStyle()}} {{getRankIcon()}}"></i>
       </div>
       <div class="d-flex component-container bg-primary">
-         <a href={{collectible.detailsLink}} class="card-part part-left btn btn-primary">
+         <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}' class="card-part part-left btn btn-primary">
             <i class="fas fa-eye"></i>
          </a>
          <button class="card-part part-center btn btn-primary" (click)="toggleWishList()">

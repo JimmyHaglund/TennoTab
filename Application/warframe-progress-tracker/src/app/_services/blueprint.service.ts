@@ -5,7 +5,7 @@ import { MessageService } from '../message.service';
 import { environment } from 'src/environments/environment';
 import { catchError } from 'rxjs/operators';
 
-interface IBlueprintResource {
+export interface IBlueprintResource {
   resultName: string;
   resultCategory: string;
   componentName: string;
@@ -13,7 +13,7 @@ interface IBlueprintResource {
   componentCount: number;
 }
 
-interface IResource {
+export interface IResource {
   id: number;
   name: string;
   amount: number;

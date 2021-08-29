@@ -2,7 +2,6 @@ export interface Collectible {
    id: number,
    name: string,
    category: string,
-   detailsLink: string,
    mastered: boolean,
    obtained: boolean,
    onWishlist: boolean

@@ -20,6 +20,7 @@ import { CollectibleComponent } from './collectible';
 import { CollectibleCardComponent } from './collectible/collectible-card/collectible-card.component';
 import { WishListComponent } from './collectible/wish-list/wish-list.component';
 import { ItemCostCardComponent } from './collectible/item-cost-card/item-cost-card.component';
+import { DetailsComponent } from './collectible/details/details.component';
 
 @NgModule({
    declarations: [
@@ -31,7 +32,8 @@ import { ItemCostCardComponent } from './collectible/item-cost-card/item-cost-ca
       CollectibleComponent,
       CollectibleCardComponent,
       WishListComponent,
-      ItemCostCardComponent
+      ItemCostCardComponent,
+      DetailsComponent
    ],
    imports: [
       BrowserModule,

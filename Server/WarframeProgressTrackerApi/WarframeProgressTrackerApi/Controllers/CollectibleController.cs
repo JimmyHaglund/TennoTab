@@ -12,6 +12,11 @@ using WarframeProgressTrackerApi.Services;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
+    public class CollectibleInfo {
+        public string Name { get; set; }
+        public string Category { get; set; }
+    }
+
     [Route("[controller]/[action]")]
     [ApiController]
     [EnableCors]
@@ -62,6 +67,31 @@ namespace WarframeProgressTrackerApi.Controllers {
             if (Update(userItems, collectible, userId)) return;
             Create(collectible, userId);
         }
+
+        [HttpPut]
+        public Collectible GetWithName([FromBody] CollectibleInfo info) {
+            var dataSet = _context.GetDataSet(info.Category);
+            var item = dataSet
+                .Where(item => item.Name == info.Name)
+                .FirstOrDefault();
+            if (item == null) return null;
+            var userId = _sessionUser.IdFromRequest(Request);
+            var userItems = GetCategoryCollection(info.Category);
+            var userItem = userItems
+                        .Where(userItem => userItem.ItemId == item.Id && userItem.UserId == userId)
+                        .FirstOrDefault();
+            var collectible = new Collectible() {
+                Id = item.Id,
+                Name = item.Name,
+                Category = info.Category
+            };
+            if (userItem == null) userItem = Create(collectible, userId);
+            collectible.Mastered = userItem.MasteryRank >= 30 ? true : false;
+            collectible.Obtained = userItem.Obtained;
+            collectible.OnWishlist = userItem.OnWishlist;
+            return collectible;
+        }
+
 
         private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
             if (form.IncludeFrames) {
@@ -203,51 +233,63 @@ namespace WarframeProgressTrackerApi.Controllers {
             return true;
         }
 
-        private void Create(Collectible collectible, string userId) {
+        private UserItem Create(Collectible collectible, string userId) {
+            UserItem newItem = null;
             switch (collectible.Category) {
                 case Categories.Warframe:
                     var newFrame = CreateUserItem<UserFrame>(userId, collectible);
                     _context.UserFrames.Add(newFrame);
+                    newItem = newFrame;
                     break;
                 case Categories.PrimaryWeapon:
                     var newPrimary = CreateUserItem<UserPrimaryWeapon>(userId, collectible);
                     _context.UserPrimaryWeapons.Add(newPrimary);
+                    newItem = newPrimary;
                     break;
                 case Categories.SecondaryWeapon:
                     var newSecondary = CreateUserItem<UserSecondaryWeapon>(userId, collectible);
                     _context.UserSecondaryWeapons.Add(newSecondary);
+                    newItem = newSecondary;
                     break;
                 case Categories.MeleeWeapon:
                     var newMelee = CreateUserItem<UserMeleeWeapon>(userId, collectible);
                     _context.UserMeleeWeapons.Add(newMelee);
+                    newItem = newMelee;
                     break;
                 case Categories.Amp:
                     var newAmp = CreateUserItem<UserAmp>(userId, collectible);
                     _context.UserAmps.Add(newAmp);
+                    newItem = newAmp;
                     break;
                 case Categories.Pet:
                     var newPet = CreateUserItem<UserPet>(userId, collectible);
                     _context.UserPets.Add(newPet);
+                    newItem = newPet;
                     break;
                 case Categories.RoboGun:
                     var newRoboGun = CreateUserItem<UserRoboGun>(userId, collectible);
                     _context.UserRoboWeapons.Add(newRoboGun);
+                    newItem = newRoboGun;
                     break;
                 case Categories.Archwing:
                     var newArchwing = CreateUserItem<UserArchwing>(userId, collectible);
                     _context.UserArchwings.Add(newArchwing);
+                    newItem = newArchwing;
                     break;
                 case Categories.ArchGun:
                     var newArchGun = CreateUserItem<UserArchGun>(userId, collectible);
                     _context.UserArchGuns.Add(newArchGun);
+                    newItem = newArchGun;
                     break;
                 case Categories.ArchMelee:
                     var newArchMelee = CreateUserItem<UserArchMelee>(userId, collectible);
                     _context.UserArchMeleeWeapons.Add(newArchMelee);
+                    newItem = newArchMelee;
                     break;
             }
 
             _context.SaveChanges();
+            return newItem;
         }
 
         private T CreateUserItem<T>(string userId, Collectible collectbile) where T : UserItem, new() {

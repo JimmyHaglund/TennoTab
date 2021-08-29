@@ -12,6 +12,7 @@ import { Collectible, CollectibleSearchForm } from '.';
 export class CollectibleService {
   private apiUrl = environment.apiUrl;
   private collectibleApiUrlGet = environment.apiUrl + "/collectible/get";
+  private collectibleApiGetWithName = environment.apiUrl + "/collectible/getwithname";
   private collectibleApiSet = environment.apiUrl + "/collectible/set";
   constructor(
     private http: HttpClient,
@@ -40,6 +41,13 @@ export class CollectibleService {
       .pipe(catchError(this.handleError<Collectible[]>('getCollectibles,', [])));
   }
 
+  getCollectible(category: string, name: string): Observable<Collectible> {
+    let info = { category: category, name: name };
+    return this.http.put<Collectible>(
+      this.collectibleApiGetWithName,
+      info, { withCredentials: true });
+  }
+
   updateCollectible(collectible: Collectible): Observable<Collectible> {
     return this.http.put<Collectible>(
       this.collectibleApiSet, collectible, { withCredentials: true })
@@ -55,6 +63,7 @@ export class CollectibleService {
   removeFromWishlist(collectible: Collectible): Observable<Collectible> {
     throw "remove from wish list not implemented";
   }
+
   
   private log(message: string) {
     this.messageService.add(`FrameService: ${message}`);

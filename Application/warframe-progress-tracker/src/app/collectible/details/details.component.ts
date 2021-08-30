@@ -54,7 +54,6 @@ export class DetailsComponent implements OnInit {
       });
   }
 
-
   private getComponents(): void {
     const name = this.name;
     this.blueprintService.getBlueprintsWithResult(name)

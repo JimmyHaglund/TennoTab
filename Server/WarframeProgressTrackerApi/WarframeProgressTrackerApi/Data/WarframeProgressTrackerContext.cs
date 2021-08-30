@@ -8,6 +8,9 @@ using WarframeProgressTrackerApi.Models;
 using System.Text.Json;
 using System.IO;
 
+using static WarframeProgressTrackerApi.Data.SourceLoader;
+using static WarframeProgressTrackerApi.Data.BlueprintLoader;
+
 namespace WarframeProgressTrackerApi.Data {
     public class WarframeProgressTrackerContext : IdentityDbContext<User> {
         public WarframeProgressTrackerContext(DbContextOptions<WarframeProgressTrackerContext> options) : base(options) { }
@@ -35,6 +38,7 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<UserArchGun> UserArchGuns { get; set; }
         public DbSet<UserArchMelee> UserArchMeleeWeapons { get; set; }
         public DbSet<BlueprintResource> BlueprintResources { get; set; }
+        public DbSet<Source> Sources { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
@@ -55,7 +59,8 @@ namespace WarframeProgressTrackerApi.Data {
             id = SeedDataFromCsv<ArchMelee>(modelBuilder, "ArchMeleeWeapons", id);
             id = SeedDataFromCsv<Resource>(modelBuilder, "Resources", id);
 
-            BlueprintLoader.LoadBlueprints(modelBuilder, this);
+            LoadBlueprints(modelBuilder, this);
+            LoadSources(modelBuilder, this);
         }
 
         public IQueryable<WarframeItem> GetDataSet(string categoryName) {

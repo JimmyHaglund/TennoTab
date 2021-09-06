@@ -44,6 +44,34 @@ export class DetailsComponent implements OnInit {
       this.collectible.obtained ? "Obtained" : "Not obtained";
   }
 
+  public increaseRank(): void {
+    if (!this.collectible.obtained) {
+      this.collectible.obtained = true;
+    } else if (!this.collectible.mastered) {
+      this.collectible.mastered = true;
+    } else return;
+    this.updateCollectible();
+  }
+
+  public reduceRank(): void {
+    if (this.collectible.mastered) {
+      this.collectible.mastered = false;
+    } else if (this.collectible.obtained) {
+      this.collectible.obtained = false;
+    } else return;
+    this.updateCollectible();
+  }
+
+  public addToWishlist(): void {
+    this.collectible.onWishlist = true;
+    this.updateCollectible();
+  }
+
+  public removeFromWishlist(): void {
+    this.collectible.onWishlist = false;
+    this.updateCollectible();
+  }
+
   private getCollectible(): void {
     const category = this.category;
     const name = this.name;
@@ -86,5 +114,10 @@ export class DetailsComponent implements OnInit {
     this.blueprintService
       .getSource(component.resource.componentName + " Blueprint")
       .subscribe(source => component.source = source);
+  }
+
+  private updateCollectible(): void {
+    this.collectibleService.updateCollectible(this.collectible)
+    .subscribe(()=>{});
   }
 }

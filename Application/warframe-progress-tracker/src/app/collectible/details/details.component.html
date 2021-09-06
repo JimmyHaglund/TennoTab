@@ -1,7 +1,15 @@
 <div *ngIf = "initialisedCollectible">
    <h1>{{collectible.name}}</h1>
    <h2>{{collectible.category}}</h2>
+
+   <h3 *ngIf="collectible.onWishlist">On wishlist</h3>
+   <h3 *ngIf="!collectible.onWishlist">Not On wishlist</h3>
+   <button class="btn btn-warning m-1 fs-1" (click)="addToWishlist()">Add to wishlist</button>
+   <button class="btn btn-warning m-1 fs-1" (click)="removeFromWishlist()">Remove from wishlist</button>
+
    <h3>Status: {{getStatusText()}}</h3>
+   <button class="btn btn-primary m-1 fs-1" (click)="reduceRank()">-</button>
+   <button class="btn btn-primary m-1 fs-1" (click)="increaseRank()">+</button>
 </div>
 
 <div *ngIf="blueprint.length > 0" class="container">

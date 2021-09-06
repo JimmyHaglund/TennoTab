@@ -46,7 +46,7 @@ namespace WarframeProgressTrackerApi {
 
             services.AddCors(options =>
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
-                    builder.WithOrigins("http://localhost:4200")
+                    builder.WithOrigins("http://localhost:4200", "https://jimmyhaglund.github.io")
                     .AllowCredentials()
                     .AllowAnyHeader()
                     .AllowAnyMethod()
@@ -59,7 +59,6 @@ namespace WarframeProgressTrackerApi {
             services.AddScoped<UserManager<User>>();
             services.AddScoped<SignInManager<User>>();
             services.AddSingleton<SessionUser>();
-            
         }
 
         private void ConfigureIdentity(IServiceCollection services) {

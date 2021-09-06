@@ -3,9 +3,10 @@ import { Collectible } from '..';
 import { CollectibleService } from '../collectible.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { BlueprintService, IBlueprintResource, IResource } from 'src/app/_services';
+import { BlueprintService, IBlueprintResource, IResource, ISource } from 'src/app/_services';
 
 interface BlueprintComponent {
+  source: ISource[];
   resource: IBlueprintResource;
   cost: IResource[];
 }
@@ -60,10 +61,12 @@ export class DetailsComponent implements OnInit {
       .subscribe(blueprint => {
         this.blueprint = blueprint
         .map<BlueprintComponent>(component => {
-          return { resource: component, cost: []};
+          return { resource: component, cost: [], source: []};
         });
-        this.blueprint.forEach(component => 
-          this.getCostOfComponent(component));
+        this.blueprint.forEach(component => {
+          this.getCostOfComponent(component);
+          this.getComponentSource(component);
+        });
       });
   }
 
@@ -74,12 +77,14 @@ export class DetailsComponent implements OnInit {
   }
 
   private getCostOfComponent(component: BlueprintComponent):void {
-    
     this.blueprintService
       .getTotalResourceCost(component.resource.componentName)
-      .subscribe(cost => {
-        component.cost = cost;
-      });
+      .subscribe(cost => component.cost = cost);
   }
 
+  private getComponentSource(component: BlueprintComponent) {
+    this.blueprintService
+      .getSource(component.resource.componentName + " Blueprint")
+      .subscribe(source => component.source = source);
+  }
 }

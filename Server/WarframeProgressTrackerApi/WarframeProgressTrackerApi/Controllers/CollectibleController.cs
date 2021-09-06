@@ -17,6 +17,10 @@ namespace WarframeProgressTrackerApi.Controllers {
         public string Category { get; set; }
     }
 
+    public class Label {
+        public string Name { get; set; }
+    }
+
     [Route("[controller]/[action]")]
     [ApiController]
     [EnableCors]
@@ -91,8 +95,12 @@ namespace WarframeProgressTrackerApi.Controllers {
             collectible.OnWishlist = userItem.OnWishlist;
             return collectible;
         }
-
-
+        /**/
+        [HttpPut]
+        public IEnumerable<Source> GetSource([FromBody]Label label) {
+            return _context.Sources.Where(source => source.ItemName == label.Name);
+        }
+        /**/
         private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
             if (form.IncludeFrames) {
                 var frames = _context.Frames.ToArray();
@@ -208,17 +216,17 @@ namespace WarframeProgressTrackerApi.Controllers {
                     return false;
                 })
                 .Select(item => {
-                var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
-                return new Collectible() {
-                    Id = item.Id,
-                    Name = item.Name,
-                    Category = category,
-                    DetailsLink = link + "/" + item.Id,
-                    Obtained = userItem != null ? userItem.Obtained : false,
-                    Mastered = userItem != null ? userItem.MasteryRank >= 30 : false,
-                    OnWishlist = userItem != null ? userItem.OnWishlist : false
-                };
-            });
+                    var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
+                    return new Collectible() {
+                        Id = item.Id,
+                        Name = item.Name,
+                        Category = category,
+                        DetailsLink = link + "/" + item.Id,
+                        Obtained = userItem != null ? userItem.Obtained : false,
+                        Mastered = userItem != null ? userItem.MasteryRank >= 30 : false,
+                        OnWishlist = userItem != null ? userItem.OnWishlist : false
+                    };
+                });
         }
 
         private bool Update(IEnumerable<UserItem> items, Collectible collectible, string userId) {

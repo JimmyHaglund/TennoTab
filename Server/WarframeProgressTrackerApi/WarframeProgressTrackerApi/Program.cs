@@ -5,6 +5,7 @@ using System.IO;
 namespace WarframeProgressTrackerApi {
     public class Program {
         public static void Main(string[] args) {
+
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -13,5 +14,6 @@ namespace WarframeProgressTrackerApi {
                 .ConfigureWebHostDefaults(webBuilder => {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }

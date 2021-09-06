@@ -19,6 +19,15 @@ export interface IResource {
   amount: number;
 }
 
+export interface ISource {
+  id: number;
+  itemName: string;
+  itemCategory: string;
+  sourceName: string;
+  sourceType: string;
+  value: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,7 +39,11 @@ export class BlueprintService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
-  
+  getSource(itemName: string): Observable<ISource[]> {
+    let data =  { name: itemName };
+    return this.http.put<ISource[]>(environment.apiUrl + "/collectible/getsource", data)
+      .pipe(catchError(this.handleError<ISource[]>('getSource')));
+  }
     
   getBlueprintsWithResult(resultName: string): Observable<IBlueprintResource[]> {
     let data = {ResultName: resultName};

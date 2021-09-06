@@ -17,6 +17,15 @@
                </li>
             </ul>
          </div>
+         <div *ngIf="component.source.length > 0">
+            <h4>Blueprint Sources</h4>
+            <ul>
+               <li *ngFor="let source of component.source">
+                  <h5>{{source.sourceName}} ({{source.sourceType}}, {{source.value}})</h5>
+               </li>
+            </ul>
+         </div>
+         
       </li>
    </ul>
 </div>

@@ -15,6 +15,8 @@ import { CollectibleCardComponent } from './_components/collectibles/collectible
 import { WishListComponent } from './_components/wish-list/wish-list.component';
 import { ItemCostCardComponent } from './_components/wish-list/item-cost-card/item-cost-card.component';
 import { DetailsComponent } from './_components/details/details.component';
+import { CollectibleFilterComponent } from './_components/collectibles/collectible-filter/collectible-filter.component';
+import { CollectibleSortComponent } from './_components/collectibles/collectible-sort/collectible-sort.component';
 
 @NgModule({
    declarations: [
@@ -26,7 +28,9 @@ import { DetailsComponent } from './_components/details/details.component';
       CollectibleCardComponent,
       WishListComponent,
       ItemCostCardComponent,
-      DetailsComponent
+      DetailsComponent,
+      CollectibleFilterComponent,
+      CollectibleSortComponent
    ],
    imports: [
       BrowserModule,

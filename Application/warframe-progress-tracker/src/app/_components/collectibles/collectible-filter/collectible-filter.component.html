@@ -1,0 +1,77 @@
+<div class="container">
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Warframe')" checked>Include
+     Frames
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Primary Weapon')"
+       checked>Include Primary Weapons
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Secondary Weapon')"
+       checked>Include Secondary Weapons
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Melee Weapon')" checked>Include
+     Melee Weapons
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Amp Prism')" checked>Include
+     Amps
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Pet')" checked>Include Pets
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Robo-Gun')" checked>Include
+     Robo-Guns
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archwing')" checked>Include
+     Archwings
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Archgun')" checked>Include
+     Archguns
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include
+     Arch-Melee
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include
+     Arch-Melee
+   </h5>
+   <h5><input type="checkbox" class="btn btn-primary active" (click)="toggleShowCategory('Arch-Melee')" checked>Include
+     Arch-Melee
+   </h5>
+   <div>
+     <h5>Search</h5>
+     <input #searchBox type="text" (input)="setFilterText(searchBox.value)" />
+   </div>
+ </div>
+ <!--
+ 
+ <div class="container">
+   <h5>Obtained filter</h5>
+   <div class="form-check">
+     <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedAll"
+       value="obtainedall" (click)="setObtainedFilter('All')">
+     <label class="form-check-label" for="filterObtainedAll">
+       Show All
+     </label>
+   </div>
+   <div class="form-check">
+     <input checked class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNon" value="obtainednon"
+       (click)="setObtainedFilter('NonObtained')">
+     <label class="form-check-label" for="filterObtainedNon">
+       Show Non-Obtained
+     </label>
+   </div>
+   <div class="form-check">
+     <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNonMastered"
+       value="obtainednonmastered" (click)="setObtainedFilter('NonMastered')">
+     <label class="form-check-label" for="filterObtainedNonMastered">
+       Show Obtained Non-Mastered
+     </label>
+   </div>
+   
+   <div class="form-check">
+     <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedMastered" value="obtainedmastered"
+       (click)="setObtainedFilter('Mastered')">
+     <label class="form-check-label" for="filterObtainedMastered">
+       Show Mastered
+     </label>
+   </div>
+ </div>
+ </div>
+-->

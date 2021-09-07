@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Blueprint, BlueprintCost, BlueprintComponent, ResourceStack } from '../blueprint';
-import { Collectible } from '../../_interfaces';
-import { CollectibleService } from '../../_services';
+import { Blueprint, BlueprintCost, BlueprintComponent, ResourceStack } from '../../../_interfaces/blueprint';
+import { Collectible } from '../../../_interfaces';
+import { CollectibleService } from '../../../_services';
 
 @Component({
   selector: 'app-item-cost-card',

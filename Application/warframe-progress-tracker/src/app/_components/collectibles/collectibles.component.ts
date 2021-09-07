@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Collectible, collectibleCategories } from '../../_interfaces';
 import { CollectibleSearchForm } from '../../_interfaces';
 import { CollectibleService } from '../../_services';
-import { FrameDetailComponent } from 'src/app/warframes/frame-detail/frame-detail.component';
 import { startWith } from 'rxjs/operators';
 
 interface IDisplayedCategories {
@@ -11,10 +10,10 @@ interface IDisplayedCategories {
 
 @Component({
   selector: 'app-collectible',
-  templateUrl: './collectible.component.html',
-  styleUrls: ['./collectible.component.scss']
+  templateUrl: './collectibles.component.html',
+  styleUrls: ['./collectibles.component.scss']
 })
-export class CollectibleComponent implements OnInit {
+export class CollectiblesComponent implements OnInit {
   public collectibles: Collectible[] = [];
   private _filterString: string = "";
   private _showCategories: IDisplayedCategories = {};

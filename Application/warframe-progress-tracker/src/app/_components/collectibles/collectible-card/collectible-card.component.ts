@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Collectible, collectibleCategories } from '../../_interfaces';
-import { CollectibleService } from '../../_services';
+import { Collectible, collectibleCategories } from '../../../_interfaces';
+import { CollectibleService } from '../../../_services';
 
 @Component({
   selector: 'app-collectible-card',

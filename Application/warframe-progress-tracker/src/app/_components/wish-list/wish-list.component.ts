@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CollectibleService } from '../../_services';
 import { Collectible, CollectibleSearchForm } from '../../_interfaces';
 import { BlueprintService, } from 'src/app/_services';
-import { Blueprint, BlueprintComponent, ResourceStack, BlueprintCost } from '../blueprint';
+import { Blueprint, BlueprintComponent, ResourceStack, BlueprintCost } from '../../_interfaces/blueprint';
 
 @Component({
   selector: 'app-wish-list',

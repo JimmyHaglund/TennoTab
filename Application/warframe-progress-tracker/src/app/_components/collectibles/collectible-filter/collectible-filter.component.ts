@@ -12,6 +12,8 @@ import { DisplayedCategories } from '../displayedCategories';
 })
 export class CollectibleFilterComponent implements OnInit {
   @Input() public onUpdate!: Action;
+  @Input() public filter!: CollectibleFilter;
+
   private _filterState: CollectibleFilterState = {
     filterText: "",
     allowedObtainedState: obtainedState.NotObtained,
@@ -22,6 +24,11 @@ export class CollectibleFilterComponent implements OnInit {
 
   public ngOnInit(): void {
     this.initialiseShownCategories();
+  }
+
+  private update():void {
+    this.filter.filter = this._filterState;
+    // this.onUpdate.invoke(filter);
   }
 
   public toggleShowCategory(categoryName: string): void {
@@ -35,15 +42,12 @@ export class CollectibleFilterComponent implements OnInit {
     this.update();
   }
 
-  private update():void {
-    
-  }
-
   private initialiseShownCategories() {
     for (let key in collectibleCategories) {
       let category = collectibleCategories[key]
       this._filterState.includedCategories[category] = true;
     }
+    this.update();
   }
 
 }

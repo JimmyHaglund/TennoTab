@@ -3,6 +3,8 @@ import { Collectible, collectibleCategories } from '../../_interfaces';
 import { CollectibleSearchForm } from '../../_interfaces';
 import { CollectibleService } from '../../_services';
 import { startWith } from 'rxjs/operators';
+import { Action } from '../../_tools';
+import { CollectibleFilter } from './collectibleFilter';
 
 interface IDisplayedCategories {
   [key: string]: boolean;
@@ -14,6 +16,8 @@ interface IDisplayedCategories {
   styleUrls: ['./collectibles.component.scss']
 })
 export class CollectiblesComponent implements OnInit {
+  public update = new Action();
+  public collectibleFilter = new CollectibleFilter();
   public collectibles: Collectible[] = [];
   private _filterString: string = "";
   private _showCategories: IDisplayedCategories = {};
@@ -26,9 +30,10 @@ export class CollectiblesComponent implements OnInit {
     let result = [];
     for (let n = 0; n < this.collectibles.length; n++) {
       const collectible = this.collectibles[n];
-      if (!this.showCollectible(collectible)) continue;
-      if (!this.passesObtainedFilter(collectible)) continue;
-      if (!this.containsString(collectible, this._filterString)) continue;
+      if(!this.collectibleFilter.shouldShowCollectible(collectible)) continue;
+      // if (!this.showCollectible(collectible)) continue;
+      // if (!this.passesObtainedFilter(collectible)) continue;
+      // if (!this.containsString(collectible, this._filterString)) continue;
       result.push(collectible);
     }
     this.sortCollectibles(result);
@@ -39,6 +44,10 @@ export class CollectiblesComponent implements OnInit {
   ngOnInit(): void {
     this.getCollectibles();
     this.initialiseShownCategories();
+  }
+
+  public updateFilter(filter: CollectibleFilter) {
+    
   }
 
   public setFilterText(value: string): void {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Collectible, collectibleCategories } from '../collectible';
-import { CollectibleSearchForm } from '../collectibleSearchForm';
-import { CollectibleService } from '../collectible.service';
+import { Collectible, collectibleCategories } from '../../_interfaces';
+import { CollectibleSearchForm } from '../../_interfaces';
+import { CollectibleService } from '../../_services';
 import { FrameDetailComponent } from 'src/app/warframes/frame-detail/frame-detail.component';
 import { startWith } from 'rxjs/operators';
 

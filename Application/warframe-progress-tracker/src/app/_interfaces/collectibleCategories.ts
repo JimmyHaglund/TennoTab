@@ -1,13 +1,4 @@
-export interface Collectible {
-   id: number,
-   name: string,
-   category: string,
-   mastered: boolean,
-   obtained: boolean,
-   onWishlist: boolean
-};
-
-export interface ICollectibleCategories {
+export interface CollectibleCategories {
    Warframe: string;
    PrimaryWeapon: string;
    SecondaryWeapon: string;
@@ -21,6 +12,19 @@ export interface ICollectibleCategories {
    [key:string]: string;
 }
 
+export const collectibleCategories: CollectibleCategories = {
+   Warframe: "Warframe",
+   PrimaryWeapon: "Primary Weapon",
+   SecondaryWeapon: "Secondary Weapon",
+   MeleeWeapon: "Melee Weapon",
+   Amp: "Amp Prism",
+   Pet: "Pet",
+   RoboGun: "Robo-Gun",
+   Archwing: "Archwing",
+   ArchGun: "Archgun",
+   ArchMelee: "Arch-Melee"
+};
+
 export const collectibleCategoryKeys = {
    Warframe: "Warframe",
    PrimaryWeapon: "PrimaryWeapon",
@@ -32,17 +36,4 @@ export const collectibleCategoryKeys = {
    Archwing: "Archwing",
    ArchGun: "ArchGun",
    ArchMelee: "ArchMelee"
-};
-
-export const collectibleCategories: ICollectibleCategories = {
-   Warframe: "Warframe",
-   PrimaryWeapon: "Primary Weapon",
-   SecondaryWeapon: "Secondary Weapon",
-   MeleeWeapon: "Melee Weapon",
-   Amp: "Amp Prism",
-   Pet: "Pet",
-   RoboGun: "Robo-Gun",
-   Archwing: "Archwing",
-   ArchGun: "Archgun",
-   ArchMelee: "Arch-Melee"
 };

@@ -4,7 +4,7 @@ import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-import { Collectible, CollectibleSearchForm } from '.';
+import { Collectible, CollectibleSearchForm } from '../_interfaces';
 
 @Injectable({
   providedIn: 'root'

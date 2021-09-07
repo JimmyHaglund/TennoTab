@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collectible } from '..';
-import { CollectibleService } from '../collectible.service';
+import { Collectible } from '../../_interfaces';
+import { CollectibleService } from '../../_services';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BlueprintService, IBlueprintResource, IResource, ISource } from 'src/app/_services';

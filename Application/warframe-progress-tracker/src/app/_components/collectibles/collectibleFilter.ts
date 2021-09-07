@@ -1,6 +1,11 @@
-import { CollectibleFilterState } from './collectibleFilterState';
-import { Collectible, collectibleCategories, obtainedState } from '../../_interfaces';
+import { Collectible, obtainedState } from '../../_interfaces';
 import { DisplayedCategories } from './displayedCategories';
+
+export interface CollectibleFilterState {
+  filterText: string;
+  allowedObtainedState: string;
+  includedCategories: DisplayedCategories;
+}
 
 export class CollectibleFilter {
   private _filter: CollectibleFilterState = {

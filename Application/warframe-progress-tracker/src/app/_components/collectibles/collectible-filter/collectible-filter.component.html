@@ -39,27 +39,26 @@
      <input #searchBox type="text" (input)="setFilterText(searchBox.value)" />
    </div>
  </div>
- <!--
  
  <div class="container">
    <h5>Obtained filter</h5>
    <div class="form-check">
      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedAll"
-       value="obtainedall" (click)="setObtainedFilter('All')">
+       value="obtainedall" (click)="setObtainedFilterToAny()">
      <label class="form-check-label" for="filterObtainedAll">
        Show All
      </label>
    </div>
    <div class="form-check">
      <input checked class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNon" value="obtainednon"
-       (click)="setObtainedFilter('NonObtained')">
+       (click)="setObtainedFilterToNonObtained()">
      <label class="form-check-label" for="filterObtainedNon">
        Show Non-Obtained
      </label>
    </div>
    <div class="form-check">
      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNonMastered"
-       value="obtainednonmastered" (click)="setObtainedFilter('NonMastered')">
+       value="obtainednonmastered" (click)="setObtainedFilterToObtained()">
      <label class="form-check-label" for="filterObtainedNonMastered">
        Show Obtained Non-Mastered
      </label>
@@ -67,11 +66,9 @@
    
    <div class="form-check">
      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedMastered" value="obtainedmastered"
-       (click)="setObtainedFilter('Mastered')">
+       (click)="setObtainedFilterToMastered()">
      <label class="form-check-label" for="filterObtainedMastered">
        Show Mastered
      </label>
    </div>
  </div>
- </div>
--->

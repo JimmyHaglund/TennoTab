@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Action } from '../../../_tools';
 import { collectibleCategories, obtainedState } from '../../../_interfaces';
-import { CollectibleFilter } from '../collectibleFilter';
-import { CollectibleFilterState } from '../collectibleFilterState';
+import { CollectibleFilter, CollectibleFilterState } from '../collectibleFilter';
 import { DisplayedCategories } from '../displayedCategories';
 
 @Component({
@@ -50,4 +49,19 @@ export class CollectibleFilterComponent implements OnInit {
     this.update();
   }
 
+  public setObtainedFilterToAny(): void {
+    this._filterState.allowedObtainedState = obtainedState.Any;
+  }
+
+  public setObtainedFilterToNonObtained(): void {
+    this._filterState.allowedObtainedState = obtainedState.NotObtained;
+  }
+
+  public setObtainedFilterToObtained(): void {
+    this._filterState.allowedObtainedState = obtainedState.Obtained;
+  }
+
+  public setObtainedFilterToMastered(): void {
+    this._filterState.allowedObtainedState = obtainedState.Mastered;
+  }
 }

@@ -1,21 +1,43 @@
 <div class='m-1 card collectible-card {{collectedColor(collectible)}}'>
    <div class="card-body m-1 p-0">
-      <i class="{{collectibleIcon(collectible)}} card-icon noselect"></i>
-      <p class="center card-title noselect">{{collectible.name}}</p>
+
+      
+      
+      
+      <p class="font-weight-bold text-light card-title noselect">{{collectible.name}}</p>
+      <div class="bg-secondary">
+         <div class="card-top-container">
+            
+         </div>
+         <div class="card-bottom-container">
+            <button class="card-part part-left btn btn-secondary">
+               <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}'>
+                  <i class="fas fa-eye button-icon">
+                     <span class="tooltip-text">Go to details page</span>
+                  </i>
+               </a>
+            </button>
+
+            <button class="card-part part-center btn btn-secondary" (click)="toggleWishList()">
+               <i class="fa fa-bars button-icon">
+                  <span class="tooltip-text">Add to wishlist</span>
+               </i>
+            </button>
+
+            <button class="card-part part-right btn btn-secondary" (click)="increaseRank()">
+               <i class="fas fa-check button-icon">
+                  <span class="tooltip-text text-dark">Increase rank</span>
+               </i>
+            </button>
+         </div>
+
+      </div>
+
+      <i class="{{collectibleIcon(collectible)}} category-icon noselect"></i>
       <div class="status-icon-container m-0 p-0">
          <i class="{{getWishListStyle()}} fa fa-bars"></i>
          <i class="{{getRankStyle()}} {{getRankIcon()}}"></i>
       </div>
-      <div class="d-flex component-container bg-primary">
-         <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}' class="card-part part-left btn btn-primary">
-            <i class="fas fa-eye"></i>
-         </a>
-         <button class="card-part part-center btn btn-primary" (click)="toggleWishList()">
-            <i class=" fa fa-bars"></i>
-         </button>
-         <button class="card-part part-right btn btn-primary" (click)="increaseRank()">
-            <i class="fas fa-check"></i>
-         </button>
-      </div>
+
    </div>
 </div>

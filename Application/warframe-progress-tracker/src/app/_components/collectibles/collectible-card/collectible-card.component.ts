@@ -16,7 +16,7 @@ export class CollectibleCardComponent implements OnInit {
 
   public collectedColor(collectible: Collectible): string {
     return !collectible.obtained ? "bg-dark" :
-      collectible.mastered ? "bg-success" : "bg-light";
+      collectible.mastered ? "bg-warning" : "bg-light";
   }
 
   public collectibleIcon(collectible: Collectible): string {

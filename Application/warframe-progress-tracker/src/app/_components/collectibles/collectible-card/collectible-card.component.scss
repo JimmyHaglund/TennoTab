@@ -39,11 +39,8 @@
 .component-container {
    width: 100%;
    border-radius: 0 0 5px 5px;
-}
-
-.card-bottom-container {
-   display: flex;
    min-height: 4em;
+   display: flex;
 }
 
 .card-top-container {
@@ -133,6 +130,10 @@
  }
 
  @media only screen and (min-width: 992px) {
+   .card-part i {
+      visibility: hidden;
+      color: rgb(121, 121, 121);
+   }
    .card-part:hover i {
       visibility: visible;
    }
@@ -147,10 +148,11 @@
       min-height: 4em;
    }
 /**/
+
    .card-title {
       position:absolute;
       left: 50%;
-      top: 33%;
+      top: 50%;
       transform: translate(-50%, -50%);
       font-size: 1.25em;
       width: 80%;

@@ -1,15 +1,8 @@
 <div class='m-1 card collectible-card {{collectedColor(collectible)}}'>
    <div class="card-body m-1 p-0">
-
-      
-      
-      
       <p class="font-weight-bold text-light card-title noselect">{{collectible.name}}</p>
-      <div class="bg-secondary">
-         <div class="card-top-container">
-            
-         </div>
-         <div class="card-bottom-container">
+      <div class="bg-secondary component-container">
+
             <button class="card-part part-left btn btn-secondary">
                <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}'>
                   <i class="fas fa-eye button-icon">
@@ -30,8 +23,6 @@
                </i>
             </button>
          </div>
-
-      </div>
 
       <i class="{{collectibleIcon(collectible)}} category-icon noselect"></i>
       <div class="status-icon-container m-0 p-0">

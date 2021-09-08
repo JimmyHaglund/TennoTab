@@ -12,6 +12,7 @@ import { DisplayedCategories } from '../displayedCategories';
 export class CollectibleFilterComponent implements OnInit {
   @Input() public onUpdate!: Action;
   @Input() public filter!: CollectibleFilter;
+  public categories = collectibleCategories;
 
   private _filterState: CollectibleFilterState = {
     filterText: "",
@@ -63,5 +64,10 @@ export class CollectibleFilterComponent implements OnInit {
 
   public setObtainedFilterToMastered(): void {
     this._filterState.allowedObtainedState = obtainedState.Mastered;
+  }
+
+  public getCheckedValue(category:string):string {
+    return this._filterState.includedCategories[category] ?
+      "checked" : "";
   }
 }

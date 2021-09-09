@@ -1,32 +1,15 @@
-<!--
 <div class="container">
-   <h5>Sort</h5>
-   <div class="form-check">
-     <input class="form-check-input" type="radio" name="sortingMethod" id="sortByCategoryAscending"
-       value="categoryascending" (click)="setSortingMethod('CategoryAscending')">
-     <label class="form-check-label" for="sortByCategoryAscending">
-       Category Ascending
-     </label>
-   </div>
-   <div class="form-check">
-     <input checked class="form-check-input" type="radio" name="sortingMethod" id="sortByCategoryDescending"
-       value="categorydescending" (click)="setSortingMethod('CategoryDescending')">
-     <label class="form-check-label" for="sortByCategoryDescending">
-       Category Descending
-     </label>
-   </div>
-   <div class="form-check">
-     <input class="form-check-input" type="radio" name="sortingMethod" id="sortByNameAscending" value="nameascending"
-       (click)="setSortingMethod('NameAscending')">
-     <label class="form-check-label" for="sortByNameAscending">
-       Name Ascending
-     </label>
-   </div>
-   <div class="form-check">
-     <input class="form-check-input" type="radio" name="sortingMethod" id="sortByNameDescending" value="namedescending"
-       (click)="setSortingMethod('NameDescending')">
-     <label class="form-check-label" for="sortByNameDescending">
-       Name Descending
-     </label>
-   </div>
-  -->
+  <div class="row">
+    <h5>Sort by...</h5>
+
+    <div *ngFor="let method of sortingMethods | keyvalue" class="col-12 col-sm-6 col-lg-12">
+      <div class="btn btn-primary category-toggle-container" (click)="setSortingMethod(method.value)">
+        <div class="category-toggle nopointer">
+          <input type="radio" [checked]="getSortingValue(method.value)">
+          {{method.value}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

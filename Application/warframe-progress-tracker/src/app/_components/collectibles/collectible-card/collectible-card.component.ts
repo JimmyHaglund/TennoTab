@@ -45,17 +45,15 @@ export class CollectibleCardComponent implements OnInit {
   }
 
   public reduceRank(): void {
-    console.log("Reducing rank for collectible", this.collectible.name);
+    // console.log("Reducing rank for collectible", this.collectible.name);
   }
 
   public addToWishlist(): void {
-    console.log("Adding collectible", this.collectible.name, " to wishlist");
     this.collectible.onWishlist = true;
     this.updateCollectible();
   }
 
   public removeFromWishlist(): void {
-    console.log("Removing collectible", this.collectible.name, " from wishlist");
     this.collectible.onWishlist = false;
     this.updateCollectible();
   }

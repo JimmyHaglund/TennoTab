@@ -1,15 +1,19 @@
-<h2>Collectibles</h2>
-
 <!--<i class="fa fa-bars"></i>-->
 
+<div class="d-flex flex-column flex-lg-row">
 
-<app-collectible-filter [filter]='collectibleFilter'></app-collectible-filter>
-<app-collectible-sort></app-collectible-sort>
+  <div class="col-left sticky-column">
+    <app-collectible-filter [filter]='collectibleFilter'></app-collectible-filter>
+    <app-collectible-sort></app-collectible-sort>
+  </div>
 
-<div class="container">
-  <div class="row">
-    <div *ngFor='let collectible of displayedCollectibles' class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 p-0">
-      <app-collectible-card [collectible]="collectible"></app-collectible-card>
+  <div class="col-mid">
+    <h2>Collectibles</h2>
+    <div class="card-container">
+      <div *ngFor='let collectible of displayedCollectibles' class="col-12  col-md-6 col-lg-4 col-xl-3 p-0">
+        <app-collectible-card [collectible]="collectible"></app-collectible-card>
+      </div>
     </div>
   </div>
+
 </div>

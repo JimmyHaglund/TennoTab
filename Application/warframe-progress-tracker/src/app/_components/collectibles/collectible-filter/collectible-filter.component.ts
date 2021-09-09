@@ -76,4 +76,8 @@ export class CollectibleFilterComponent implements OnInit {
   public getObtainedFilterValue(rank:string):boolean {
     return this._filterState.allowedObtainedState === rank;
   }
+
+  public sortByDefinitionOrder = (a: any, b:any): number => {
+    return 0;
+  }
 }

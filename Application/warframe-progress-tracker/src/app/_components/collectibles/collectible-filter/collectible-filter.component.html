@@ -24,7 +24,7 @@
   <div class="row">
     <h5 class="center">Obtained filter</h5>
     
-    <div *ngFor="let state of obtainedStates | keyvalue" class="col-12 col-sm-6 col-lg-12">
+    <div *ngFor="let state of obtainedStates | keyvalue: sortByDefinitionOrder" class="col-12 col-sm-6 col-lg-12">
       <div class="btn btn-primary category-toggle-container" (click)="setObtainedFilter(state.value)">
         <div class="category-toggle nopointer">
           <input type="radio" [checked]="getObtainedFilterValue(state.value)">

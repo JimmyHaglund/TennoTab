@@ -1,5 +1,5 @@
 export const obtainedState = {
-   Any: "",
+   Any: "All",
    NotObtained: "Not Obtained",
    Obtained: "Obtained",
    Mastered: "Mastered"

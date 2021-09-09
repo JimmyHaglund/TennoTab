@@ -10,9 +10,9 @@ import { DisplayedCategories } from '../displayedCategories';
   styleUrls: ['./collectible-filter.component.scss']
 })
 export class CollectibleFilterComponent implements OnInit {
-  @Input() public onUpdate!: Action;
   @Input() public filter!: CollectibleFilter;
   public categories = collectibleCategories;
+  public obtainedStates = obtainedState;
 
   private _filterState: CollectibleFilterState = {
     filterText: "",
@@ -28,7 +28,6 @@ export class CollectibleFilterComponent implements OnInit {
 
   private update():void {
     this.filter.filter = this._filterState;
-    // this.onUpdate.invoke(filter);
   }
 
   public toggleShowCategory(categoryName: string): void {
@@ -66,8 +65,15 @@ export class CollectibleFilterComponent implements OnInit {
     this._filterState.allowedObtainedState = obtainedState.Mastered;
   }
 
-  public getCheckedValue(category:string):string {
-    return this._filterState.includedCategories[category] ?
-      "checked" : "";
+  public getCheckedValue(category:string):boolean {
+    return this._filterState.includedCategories[category];
+  }
+
+  public setObtainedFilter(value:string):void {
+    this._filterState.allowedObtainedState = value;
+  }
+
+  public getObtainedFilterValue(rank:string):boolean {
+    return this._filterState.allowedObtainedState === rank;
   }
 }

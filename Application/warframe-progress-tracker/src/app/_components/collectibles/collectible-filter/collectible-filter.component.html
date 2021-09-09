@@ -1,48 +1,38 @@
 <div class="container">
+
+  <div class="row">
+    <h5>Search</h5>
+    <div class = "col-12">
+      <input class="w-100" #searchBox type="text" (input)="setFilterText(searchBox.value)" />
+    </div>
+  </div>
+
   <div class="row">
     <h5>Included categories</h5>
+    
     <div *ngFor="let category of categories | keyvalue" class="col-12 col-sm-6 col-lg-12">
-      <div class="category-toggle-container noselect btn btn-primary" 
-        (click)="toggleShowCategory(category.value)">
-        <div class="category-toggle nopointer"><input type="checkbox" [checked]="getCheckedValue(category.value)">
+      <div class="category-toggle-container noselect btn btn-primary" (click)="toggleShowCategory(category.value)">
+        <div class="category-toggle nopointer">
+          <input type="checkbox" [checked]="getCheckedValue(category.value)">
           {{category.value}}s
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="row m-3">
-    <h5 class="center">Obtained filter</h5>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedAll" value="obtainedall"
-        (click)="setObtainedFilterToAny()">
-      <label class="form-check-label" for="filterObtainedAll">
-        Show All
-      </label>
-    </div>
     
-    <div class="form-check form-check-inline">
-      <input checked class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNon"
-        value="obtainednon" (click)="setObtainedFilterToNonObtained()">
-      <label class="form-check-label" for="filterObtainedNon">
-        Show Non-Obtained
-      </label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedNonMastered"
-        value="obtainednonmastered" (click)="setObtainedFilterToObtained()">
-      <label class="form-check-label" for="filterObtainedNonMastered">
-        Show Obtained Non-Mastered
-      </label>
-    </div>
-
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="filterObtained" id="filterObtainedMastered"
-        value="obtainedmastered" (click)="setObtainedFilterToMastered()">
-      <label class="form-check-label" for="filterObtainedMastered">
-        Show Mastered
-      </label>
-    </div>
   </div>
+
+  <div class="row">
+    <h5 class="center">Obtained filter</h5>
+    
+    <div *ngFor="let state of obtainedStates | keyvalue" class="col-12 col-sm-6 col-lg-12">
+      <div class="btn btn-primary category-toggle-container" (click)="setObtainedFilter(state.value)">
+        <div class="category-toggle nopointer">
+          <input type="radio" [checked]="getObtainedFilterValue(state.value)">
+          {{state.value}}
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+</div>

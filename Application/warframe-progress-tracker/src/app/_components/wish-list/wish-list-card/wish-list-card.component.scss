@@ -1,0 +1,49 @@
+.component-card {
+   padding: 0 5px 0 5px;
+}
+
+.horizontal-list {
+   margin: 10px 0 10px;
+}
+
+.title-section {
+   width: 10em;
+}
+
+.status-section {
+   position:relative;
+   display: inline-block;
+   width: 15em;
+   margin-left: 3em;
+   margin-right: 3em;
+}
+
+.status-section-buttons {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100%;
+}
+
+.status-section-button {
+   position: relative;
+   height: 90%;
+   width: 25px;
+   margin-left: 5px;
+}
+
+
+
+.status-section-button * {
+   font-size: 1.5em;
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%, -50%);
+}
+
+.remove-button {
+   position: absolute;
+   right: 5px;
+   top: 5px;
+}

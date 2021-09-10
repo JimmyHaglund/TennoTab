@@ -1,0 +1,30 @@
+
+<div class="d-flex horizontal-list">
+   <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}'>
+      <h4 class="title-section btn btn-primary">{{collectible.name}}</h4>
+   </a>
+   <span class="status-section d-flex">
+      <h5>Status:{{statusText}}</h5>
+      <div class="status-section-buttons">
+         <button class="status-section-button btn btn-secondary" (click)="reduceRank()"><span>-</span></button>
+         <button class="status-section-button btn btn-secondary" (click)="increaseRank()"><span>+</span></button>
+      </div>
+   </span>
+   
+   <button class="remove-button btn btn-danger" (click)="removeFromWishlist()">X</button>
+
+</div>
+
+<div class="d-flex horizontal-list">
+   <h5>Components:</h5>
+   <span *ngFor='let component of componentBlueprints' class="component-card">
+      <span class="card">{{component.resultName}}</span>
+   </span>
+</div>
+
+<div class="d-flex horizontal-list">
+   <h5>Construction cost:</h5>
+   <div *ngFor='let resource of getTotalCost()' class="component-card">
+      <span class="card">{{resource.name}}: {{resource.amount}}</span>
+   </div>
+</div>

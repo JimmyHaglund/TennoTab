@@ -83,11 +83,13 @@ export class WishListComponent implements OnInit {
       }
     }
     let creditsIndex = result.findIndex(stack => stack.name === "Credits");
+    
     if (creditsIndex > -1) {
       let credits = result[creditsIndex];
       result.splice(creditsIndex, 1);
       result.splice(0, 0, credits);
     }
+    
     return result;
   }
 

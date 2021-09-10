@@ -1,5 +1,22 @@
-
-<h1>Wish list</h1>
+<div>
+   <h1>Wish list</h1>
+   <ul class="list-group">
+      <li *ngFor='let collectible of collectibles' class="list-group-item wish-list-item">
+         <app-wish-list-card 
+            [collectible]="collectible"
+            [onDelete]="removeItem"
+            ></app-wish-list-card>
+         <!--
+         <app-item-cost-card 
+         [blueprint]="getBlueprint(collectible.name)" 
+         [collectible]="collectible"
+         [cost]="getBlueprintResourceCost(collectible.name)" 
+         [onDelete]="removeItem"></app-item-cost-card>
+         -->
+      </li>
+   </ul>
+</div>
+<!--
 <div class="container" *ngIf='hasResourceCost()'>
    <h2>Total forging costs:</h2>
    <ul class="list-group">
@@ -21,3 +38,4 @@
       </li>
    </ul>
 </div>
+-->

@@ -1,48 +1,42 @@
-<div *ngIf = "initialisedCollectible">
-   <h1>{{collectible.name}}</h1>
-   <h2>{{collectible.category}}</h2>
+<div class="d-flex info-box m-3" *ngIf="initialisedCollectible">
+   <div>
+      <h1>{{collectible.name}}</h1>
+      <h2>{{collectible.category}}</h2>
+   </div>
+   <div class="card">
+      <h5 class="card-title">Wishlist: {{wishlistText}}</h5>
+      <button class="btn btn-warning" (click)="toggleWishlist()">Toggle</button>
+   </div>
+   
+   <div class="card">
+      <h5 class="card-title">Status: {{statusText}}</h5>
+      <div class="d-flex">
+         <button class="btn btn-primary large-text" (click)="reduceRank()">-</button>
+         <button class="btn btn-primary large-text" (click)="increaseRank()">+</button>
+      </div>
+   </div>
 
-   <h3 *ngIf="collectible.onWishlist">On wishlist</h3>
-   <h3 *ngIf="!collectible.onWishlist">Not On wishlist</h3>
-   <button class="btn btn-warning m-1 fs-1" (click)="addToWishlist()">Add to wishlist</button>
-   <button class="btn btn-warning m-1 fs-1" (click)="removeFromWishlist()">Remove from wishlist</button>
-
-   <h3>Status: {{getStatusText()}}</h3>
-   <button class="btn btn-primary m-1 fs-1" (click)="reduceRank()">-</button>
-   <button class="btn btn-primary m-1 fs-1" (click)="increaseRank()">+</button>
+   <div class="card">
+      <h5>Build cost</h5>
+         <div *ngFor="let resource of cost">
+            {{resource.name}} ({{resource.amount}})
+         </div>
+   </div>
 </div>
 
-<div *ngIf="blueprint.length > 0" class="container">
-   <h2>Components</h2>
-   <ul>
-      <li *ngFor="let component of blueprint">
-         <h3>{{component.resource.componentName}}</h3>
-         <div *ngIf="component.cost.length > 0">
-            <h4>Cost</h4>
-            <ul>
-               <li *ngFor="let resource of component.cost">
-                  <h5>{{resource.name}} ({{resource.amount}})</h5>
-               </li>
-            </ul>
+<div class="card m-3">
+   <h2 class="card-title">Components</h2>
+   <ul class="list-group list-group-flush">
+      <div class="list-group-item" *ngFor="let component of blueprint">
+         <h4>{{component.resource.componentName}}</h4>
+         <h5>Build cost</h5>
+         <div *ngFor="let resource of component.cost">
+            {{resource.name}} ({{resource.amount}})
          </div>
-         <div *ngIf="component.source.length > 0">
-            <h4>Blueprint Sources</h4>
-            <ul>
-               <li *ngFor="let source of component.source">
-                  <h5>{{source.sourceName}} ({{source.sourceType}}, {{source.value}})</h5>
-               </li>
-            </ul>
+         <h5 *ngIf="component.source.length > 0">Location</h5>
+         <div *ngFor="let source of component.source">
+            {{source.sourceName}} ({{source.sourceType}}, {{source.value}})
          </div>
-         
-      </li>
-   </ul>
-</div>
-
-<div *ngIf="cost.length > 0" class="container">
-   <h2>Cost</h2>
-   <ul>
-      <li *ngFor="let resource of cost">
-         <h3>{{resource.name}} ({{resource.amount}})</h3>
-      </li>
+      </div>
    </ul>
 </div>

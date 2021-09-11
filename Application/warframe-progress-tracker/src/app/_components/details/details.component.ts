@@ -38,7 +38,7 @@ export class DetailsComponent implements OnInit {
     this.getCost();
   }
 
-  public getStatusText(): string {
+  public get statusText(): string {
     if (this.collectible == null) return "";
     return this.collectible.mastered ? "Mastered" :
       this.collectible.obtained ? "Obtained" : "Not obtained";
@@ -70,6 +70,16 @@ export class DetailsComponent implements OnInit {
   public removeFromWishlist(): void {
     this.collectible.onWishlist = false;
     this.updateCollectible();
+  }
+
+  public toggleWishlist():void {
+    let onWishlist = this.collectible.onWishlist;
+    if (onWishlist) this.removeFromWishlist();
+    else this.addToWishlist();
+  }
+
+  public get wishlistText(): string {
+    return this.collectible.onWishlist ? "Yes" : "No";
   }
 
   private getCollectible(): void {

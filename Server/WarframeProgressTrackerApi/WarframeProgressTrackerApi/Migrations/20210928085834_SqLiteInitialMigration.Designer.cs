@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
@@ -10,40 +9,37 @@ using WarframeProgressTrackerApi.Data;
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    [Migration("20210830062157_AddSourceSeeder")]
-    partial class AddSourceSeeder
+    [Migration("20210928085834_SqLiteInitialMigration")]
+    partial class SqLiteInitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.16")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "3.1.19");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
+                        .HasName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles");
                 });
@@ -52,18 +48,17 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -76,18 +71,17 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -99,17 +93,17 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -121,10 +115,10 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -136,16 +130,16 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
@@ -156,29 +150,28 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("Accuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FireRate")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<int>("MagazineSize")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProjectileType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("ReloadSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("TriggerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -254,47 +247,46 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("Accuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("AmmoType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("Disposition")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FireRate")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MagazineSize")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MaxAmmo")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProjectileType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("ReloadSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("TriggerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("WeaponType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -515,23 +507,22 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("AttackSpeed")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("RangeMetres")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
@@ -625,47 +616,46 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Armor")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ArmorMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<int>("Energy")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("EnergyMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FlightSpeed")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<int>("Health")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("HealthMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Polarities")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Shield")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ShieldMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
@@ -757,19 +747,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.BlueprintResource", b =>
                 {
                     b.Property<string>("ResultName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ComponentName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ComponentCategory")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ComponentCount")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ResultCategory")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ResultName", "ComponentName");
 
@@ -796,6 +786,22 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ResultName = "Ash",
                             ComponentName = "Ash Systems",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Ash",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 25000,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Ash",
+                            ComponentName = "Orokin Cell",
                             ComponentCategory = "Resource",
                             ComponentCount = 1,
                             ResultCategory = "Warframe"
@@ -863,6 +869,398 @@ namespace WarframeProgressTrackerApi.Migrations
                             ComponentCategory = "Resource",
                             ComponentCount = 500,
                             ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 30000,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas",
+                            ComponentName = "Atlas Neuroptics",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas",
+                            ComponentName = "Atlas Chassis",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas",
+                            ComponentName = "Atlas Systems",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas",
+                            ComponentName = "Orokin Cell",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Neuroptics",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Neuroptics",
+                            ComponentName = "Polymer Bundle",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1400,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1100,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Neuroptics",
+                            ComponentName = "Circuits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 800,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Neuroptics",
+                            ComponentName = "Neurodes",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 5,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Chassis",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1800,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Chassis",
+                            ComponentName = "Cryotic",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1300,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Chassis",
+                            ComponentName = "Rubedo",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 700,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Systems",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Systems",
+                            ComponentName = "Ferrite",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 4600,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Systems",
+                            ComponentName = "Polymer Bundle",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1700,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Systems",
+                            ComponentName = "Morphics",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 5,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Systems",
+                            ComponentName = "Orokin Cell",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 25000,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime",
+                            ComponentName = "Atlas Prime Neuroptics",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime",
+                            ComponentName = "Atlas Prime Chassis",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime",
+                            ComponentName = "Atlas Prime Systems",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime",
+                            ComponentName = "Orokin Cell",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 5,
+                            ResultCategory = "Warframe"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Neuroptics",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Neuroptics",
+                            ComponentName = "Neural Sensors",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Neuroptics",
+                            ComponentName = "Cryotic",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 525,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 4700,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Neuroptics",
+                            ComponentName = "Oxium",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 200,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Chassis",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Chassis",
+                            ComponentName = "Tellurium",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Chassis",
+                            ComponentName = "Nitain Extract",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Chassis",
+                            ComponentName = "Rubedo",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 725,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Chassis",
+                            ComponentName = "Ferrite",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 3600,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Systems",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15000,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Systems",
+                            ComponentName = "Argon Crystal",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Systems",
+                            ComponentName = "Gallium",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 4,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Systems",
+                            ComponentName = "Polymer Bundle",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 1200,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Atlas Prime Systems",
+                            ComponentName = "Alloy Plate",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 3200,
+                            ResultCategory = "Component"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 20000,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko",
+                            ComponentName = "Gallium",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 5,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko",
+                            ComponentName = "Rubedo",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 700,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko",
+                            ComponentName = "Polymer Bundle",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 3300,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko",
+                            ComponentName = "Ankyros",
+                            ComponentCategory = "Weapon",
+                            ComponentCount = 1,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko Prime",
+                            ComponentName = "Credits",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 20000,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko Prime",
+                            ComponentName = "Tekko Prime Blade",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko Prime",
+                            ComponentName = "Tekko Prime Gauntlet",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 2,
+                            ResultCategory = "Melee"
+                        },
+                        new
+                        {
+                            ResultName = "Tekko Prime",
+                            ComponentName = "Orokin Cell",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 15,
+                            ResultCategory = "Melee"
                         });
                 });
 
@@ -870,56 +1268,55 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Armor")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ArmorMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("AuraPolarity")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Energy")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("EnergyMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("ExilusPolarity")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Health")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("HealthMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Polarities")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Shield")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ShieldMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("SprintSpeed")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<int>("SubsumedAbility")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -2318,38 +2715,37 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("AttackSpeed")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<int>("BlockAngleDegrees")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ComboSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("Disposition")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FollowThrough")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("RangeMetres")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("WeaponType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -3649,41 +4045,40 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Armor")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ArmorMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Health")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("HealthMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Polarities")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Shield")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("ShieldMaxFactor")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
@@ -4158,47 +4553,46 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("Accuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("AmmoType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("Disposition")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FireRate")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MagazineSize")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MaxAmmo")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProjectileType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("ReloadSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("TriggerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("WeaponType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -5680,11 +6074,10 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -6207,47 +6600,46 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("Accuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("AmmoType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("Disposition")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FireRate")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MagazineSize")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MaxAmmo")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProjectileType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("ReloadSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("TriggerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("WeaponType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -6494,47 +6886,46 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<float>("Accuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("AmmoType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("Disposition")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<float>("FireRate")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("HowToGet")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("MagazineSize")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRankRequired")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MaxAmmo")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ProjectileType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<float>("ReloadSeconds")
-                        .HasColumnType("real");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("TriggerType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("WeaponType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -7951,23 +8342,22 @@ namespace WarframeProgressTrackerApi.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ItemCategory")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ItemName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SourceName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SourceType")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -8063,59 +8453,437 @@ namespace WarframeProgressTrackerApi.Migrations
                             SourceName = "Neo V4",
                             SourceType = "Relic",
                             Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Blueprint",
+                            SourceName = "Jordas Precept",
+                            SourceType = "Quest",
+                            Value = ""
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Blueprint",
+                            SourceName = "Cephalon Simaris",
+                            SourceType = "Standing-Simaris",
+                            Value = "50000"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Chassis Blueprint",
+                            SourceName = "Jordas Golem",
+                            SourceType = "Boss",
+                            Value = "38.72"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Neuroptics Blueprint",
+                            SourceName = "Jordas Golem",
+                            SourceType = "Boss",
+                            Value = "38.72"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Systems Blueprint",
+                            SourceName = "Jordas Golem",
+                            SourceType = "Boss",
+                            Value = "22.56"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Lith D1",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Lith K6",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Lith M5",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Lith P3",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Lith P5",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Atlas Prime Blueprint",
+                            SourceName = "Neo Z7",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Axi B3",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Lith B8",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Meso E3",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Neo E2",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Neo M3",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Chassis Blueprint",
+                            SourceName = "Neo T3",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Lith N4",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Meso C4",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Meso G2",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Meso I1",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Neo A3",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Systems Blueprint",
+                            SourceName = "Neo N15",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Neuroptics Blueprint",
+                            SourceName = "Axi A11",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Neuroptics Blueprint",
+                            SourceName = "Axi A6",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Neuroptics Blueprint",
+                            SourceName = "Axi A9",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Ash Prime Neuroptics Blueprint",
+                            SourceName = "Neo A5",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Blueprint",
+                            SourceName = "Market",
+                            SourceType = "Market",
+                            Value = "25000"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blueprint",
+                            SourceName = "Lith L2",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blueprint",
+                            SourceName = "Lith P5",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blueprint",
+                            SourceName = "Meso E4",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blueprint",
+                            SourceName = "Neo B7",
+                            SourceType = "Relic",
+                            Value = "Uncommon"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Axi C5",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Axi G4",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Axi W2",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Lith T4",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Meso N9",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Meso T5",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Gauntlet Blueprint",
+                            SourceName = "Meso W1",
+                            SourceType = "Relic",
+                            Value = "Common"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blade Blueprint",
+                            SourceName = "Axi T6",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blade Blueprint",
+                            SourceName = "Axi T7",
+                            SourceType = "Relic",
+                            Value = "Rare"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            ItemCategory = "Blueprint",
+                            ItemName = "Tekko Prime Blade Blueprint",
+                            SourceName = "Neo T2",
+                            SourceType = "Relic",
+                            Value = "Rare"
                         });
                 });
 
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.User", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(256)")
+                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
@@ -8125,8 +8893,7 @@ namespace WarframeProgressTrackerApi.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+                        .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
                 });
@@ -8134,19 +8901,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserAmp", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8156,19 +8923,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchGun", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8178,19 +8945,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchMelee", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8200,19 +8967,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserArchwing", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8222,19 +8989,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserFrame", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8244,19 +9011,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserMeleeWeapon", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8266,19 +9033,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserPet", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8288,19 +9055,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserPrimaryWeapon", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8310,19 +9077,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserRoboGun", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 
@@ -8332,19 +9099,19 @@ namespace WarframeProgressTrackerApi.Migrations
             modelBuilder.Entity("WarframeProgressTrackerApi.Models.UserSecondaryWeapon", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ItemId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("MasteryRank")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Obtained")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("OnWishlist")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "ItemId");
 

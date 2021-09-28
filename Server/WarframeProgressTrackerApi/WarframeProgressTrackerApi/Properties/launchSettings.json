@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost/WarframeProgressTrackerApi",
+      "applicationUrl": "http://82.196.109.92:12192",
       "sslPort": 0
     },
     "iisExpress": {
@@ -37,6 +37,10 @@
     },
     "IIS": {
       "commandName": "IIS",
+      "launchUrl": "http://localhost/WarframeProgressTrackerApi",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT ": "Development"
+      },
       "sqlDebugging": false,
       "jsWebView2Debugging": false
     }

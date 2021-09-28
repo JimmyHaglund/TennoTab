@@ -48,6 +48,44 @@ namespace WarframeProgressTrackerApi.Controllers {
             _sessionUser = sessionUser;
         }
 
+        [HttpGet]
+        public IEnumerable<Collectible> All() {
+
+            return new List<Collectible>() { new Collectible() {
+                Id = 1,
+                Name = "Debug Collectible",
+                Category = "Null Category"
+            }
+            };
+
+            var searchForm = new CollectibleSearchForm() {
+                IncludeFrames = true,
+                IncludePrimaryWeapons = true,
+                IncludeSecondaryWeapons = true,
+                IncludeMeleeWeapons = true,
+                IncludePets = true,
+                IncludeRoboWeapons = true,
+                IncludeOperatorAmps = true,
+                IncludeArchwings = true,
+                IncludeArchGuns = true,
+                IncludeArchMeleeWeapons = true,
+                OnlyOnWishlist = false,
+                IncludeOwned = true,
+                IncludeMastered = true
+            };
+            var userId = _sessionUser.IdFromRequest(Request);
+            return GrabFrames(searchForm, userId)
+                .Concat(GrabPrimaryWeapons(searchForm, userId))
+                .Concat(GrabSecondaryWeapons(searchForm, userId))
+                .Concat(GrabMeleeWeapons(searchForm, userId))
+                .Concat(GrabAmps(searchForm, userId))
+                .Concat(GrabPets(searchForm, userId))
+                .Concat(GrabRoboWeapons(searchForm, userId))
+                .Concat(GrabArchwings(searchForm, userId))
+                .Concat(GrabArchguns(searchForm, userId))
+                .Concat(GrabArchMeleeWeapons(searchForm, userId));
+        }
+
         [HttpPut]
         public IEnumerable<Collectible> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
@@ -97,7 +135,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
         /**/
         [HttpPut]
-        public IEnumerable<Source> GetSource([FromBody]Label label) {
+        public IEnumerable<Source> GetSource([FromBody] Label label) {
             return _context.Sources.Where(source => source.ItemName == label.Name);
         }
         /**/

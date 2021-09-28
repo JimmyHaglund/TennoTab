@@ -2,6 +2,8 @@ ResultName,ResultCategory,ComponentName,ComponentCategory,ComponentCount
 Ash,Warframe,Ash Neuroptics,Resource,1
 Ash,Warframe,Ash Chassis,Resource,1
 Ash,Warframe,Ash Systems,Resource,1
+Ash,Warframe,Credits,Resource,25000
+Ash,Warframe,Orokin Cell,Resource,1
 Orokin Cell,Resource,Alloy Plate,Resource,50000
 Orokin Cell,Resource,Nano Spores,Resource,50000
 Orokin Cell,Resource,Salvage,Resource,25000
@@ -10,3 +12,52 @@ Ash Neuroptics,Component,Alloy Plate,Resource,150
 Ash Neuroptics,Component,Neural Sensors,Resource,1
 Ash Neuroptics,Component,Polymer Bundle,Resource,150
 Ash Neuroptics,Component,Rubedo,Resource,500
+Atlas,Warframe,Credits,Resource,30000
+Atlas,Warframe,Atlas Neuroptics,Resource,1
+Atlas,Warframe,Atlas Chassis,Resource,1
+Atlas,Warframe,Atlas Systems,Resource,1
+Atlas,Warframe,Orokin Cell,Resource,1
+Atlas Neuroptics,Component,Credits,Resource,15000
+Atlas Neuroptics,Component,Polymer Bundle,Resource,1400
+Atlas Neuroptics,Component,Alloy Plate,Resource,1100
+Atlas Neuroptics,Component,Circuits,Resource,800
+Atlas Neuroptics,Component,Neurodes,Resource,5
+Atlas Chassis,Component,Credits,Resource,15000
+Atlas Chassis,Component,Nano Spores,Resource,1800
+Atlas Chassis,Component,Cryotic,Resource,1300
+Atlas Chassis,Component,Rubedo,Resource,700
+Atlas Chassis,Component,Argon Crystal,Resource,2
+Atlas Systems,Component,Credits,Resource,15000
+Atlas Systems,Component,Ferrite,Resource,4600
+Atlas Systems,Component,Polymer Bundle,Resource,1700
+Atlas Systems,Component,Morphics,Resource,5
+Atlas Systems,Component,Orokin Cell,Resource,1
+Atlas Prime,Warframe,Credits,Resource,25000
+Atlas Prime,Warframe,Atlas Prime Neuroptics,Resource,1
+Atlas Prime,Warframe,Atlas Prime Chassis,Resource,1
+Atlas Prime,Warframe,Atlas Prime Systems,Resource,1
+Atlas Prime,Warframe,Orokin Cell,Resource,5
+Atlas Prime Neuroptics,Component,Credits,Resource,15000
+Atlas Prime Neuroptics,Component,Neural Sensors,Resource,2
+Atlas Prime Neuroptics,Component,Cryotic,Resource,525
+Atlas Prime Neuroptics,Component,Salvage,Resource,4700
+Atlas Prime Neuroptics,Component,Oxium,Resource,200
+Atlas Prime Chassis,Component,Credits,Resource,15000
+Atlas Prime Chassis,Component,Tellurium,Resource,2
+Atlas Prime Chassis,Component,Nitain Extract,Resource,2
+Atlas Prime Chassis,Component,Rubedo,Resource,725
+Atlas Prime Chassis,Component,Ferrite,Resource,3600
+Atlas Prime Systems,Component,Credits,Resource,15000
+Atlas Prime Systems,Component,Argon Crystal,Resource,2
+Atlas Prime Systems,Component,Gallium,Resource,4
+Atlas Prime Systems,Component,Polymer Bundle,Resource,1200
+Atlas Prime Systems,Component,Alloy Plate,Resource,3200
+Tekko,Melee,Credits,Resource,20000
+Tekko,Melee,Gallium,Resource,5
+Tekko,Melee,Rubedo,Resource,700
+Tekko,Melee,Polymer Bundle,Resource,3300
+Tekko,Melee,Ankyros,Weapon,1
+Tekko Prime,Melee,Credits,Resource,20000
+Tekko Prime,Melee,Tekko Prime Blade,Resource,2
+Tekko Prime,Melee,Tekko Prime Gauntlet,Resource,2
+Tekko Prime,Melee,Orokin Cell,Resource,15

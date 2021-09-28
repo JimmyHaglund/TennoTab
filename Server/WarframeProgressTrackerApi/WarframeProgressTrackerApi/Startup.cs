@@ -46,7 +46,8 @@ namespace WarframeProgressTrackerApi {
 
             services.AddCors(options =>
                 options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
-                    builder.WithOrigins("http://localhost:4200", "https://jimmyhaglund.github.io")
+                    builder.WithOrigins("http://localhost:4200", "https://jimmyhaglund.github.io", "http://192.168.1.8")
+                    // builder.AllowAnyOrigin()
                     .AllowCredentials()
                     .AllowAnyHeader()
                     .AllowAnyMethod()
@@ -63,8 +64,8 @@ namespace WarframeProgressTrackerApi {
 
         private void ConfigureIdentity(IServiceCollection services) {
             services.AddDbContext<WarframeProgressTrackerContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+                // options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlite("Data Source=WarframeProgressTracker.db"));
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarframeProgressTrackerContext>()
                 .AddDefaultTokenProviders();

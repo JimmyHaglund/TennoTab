@@ -3,20 +3,20 @@
       <h1>{{collectible.name}}</h1>
       <h2>{{collectible.category}}</h2>
    </div>
-   <div class="card">
+   <div class="card p-2">
       <h5 class="card-title">Wishlist: {{wishlistText}}</h5>
       <button class="btn btn-warning" (click)="toggleWishlist()">Toggle</button>
    </div>
    
-   <div class="card">
+   <div class="card p-2">
       <h5 class="card-title">Status: {{statusText}}</h5>
       <div class="d-flex">
-         <button class="btn btn-primary large-text" (click)="reduceRank()">-</button>
-         <button class="btn btn-primary large-text" (click)="increaseRank()">+</button>
+         <button class="btn btn-primary large-text m-1" (click)="reduceRank()">-</button>
+         <button class="btn btn-primary large-text m-1" (click)="increaseRank()">+</button>
       </div>
    </div>
 
-   <div class="card">
+   <div class="card p-2">
       <h5>Build cost</h5>
          <div *ngFor="let resource of cost">
             {{resource.name}} ({{resource.amount}})
@@ -24,7 +24,7 @@
    </div>
 </div>
 
-<div class="card m-3">
+<div class="card p-2 m-3">
    <h2 class="card-title">Components</h2>
    <ul class="list-group list-group-flush">
       <div class="list-group-item" *ngFor="let component of blueprint">

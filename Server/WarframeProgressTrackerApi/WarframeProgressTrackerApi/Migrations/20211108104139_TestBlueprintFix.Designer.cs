@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20211108104139_TestBlueprintFix")]
+    partial class TestBlueprintFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -806,6 +808,30 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ResultName = "Orokin Cell",
+                            ComponentName = "Alloy Plate",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 50000,
+                            ResultCategory = "Resource"
+                        },
+                        new
+                        {
+                            ResultName = "Orokin Cell",
+                            ComponentName = "Nano Spores",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 50000,
+                            ResultCategory = "Resource"
+                        },
+                        new
+                        {
+                            ResultName = "Orokin Cell",
+                            ComponentName = "Salvage",
+                            ComponentCategory = "Resource",
+                            ComponentCount = 25000,
+                            ResultCategory = "Resource"
+                        },
+                        new
+                        {
                             ResultName = "Ash Neuroptics",
                             ComponentName = "Credits",
                             ComponentCategory = "Resource",
@@ -856,7 +882,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ResultName = "Atlas",
                             ComponentName = "Atlas Neuroptics",
-                            ComponentCategory = "Component",
+                            ComponentCategory = "Resource",
                             ComponentCount = 1,
                             ResultCategory = "Warframe"
                         },
@@ -864,7 +890,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ResultName = "Atlas",
                             ComponentName = "Atlas Chassis",
-                            ComponentCategory = "Component",
+                            ComponentCategory = "Resource",
                             ComponentCount = 1,
                             ResultCategory = "Warframe"
                         },
@@ -872,7 +898,7 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ResultName = "Atlas",
                             ComponentName = "Atlas Systems",
-                            ComponentCategory = "Component",
+                            ComponentCategory = "Resource",
                             ComponentCount = 1,
                             ResultCategory = "Warframe"
                         },

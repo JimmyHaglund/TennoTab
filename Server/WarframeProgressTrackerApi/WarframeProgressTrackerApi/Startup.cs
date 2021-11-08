@@ -66,6 +66,7 @@ namespace WarframeProgressTrackerApi {
             services.AddDbContext<WarframeProgressTrackerContext>(options =>
                 // options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
                 options.UseSqlite("Data Source=WarframeProgressTracker.db"));
+
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarframeProgressTrackerContext>()
                 .AddDefaultTokenProviders();
@@ -98,6 +99,17 @@ namespace WarframeProgressTrackerApi {
                 endpoints.MapControllers()
                     .RequireCors(MyAllowSpecificOrigins);
             });
+
+            EnsureDbCreated(app);
+        }
+
+        private void EnsureDbCreated(IApplicationBuilder applicationBuilder) {
+            var serviceScopeFactory = applicationBuilder.ApplicationServices.GetRequiredService<IServiceScopeFactory>();
+
+            using (var serviceScope = serviceScopeFactory.CreateScope()) {
+                var dbContext = serviceScope.ServiceProvider.GetService<WarframeProgressTrackerContext>();
+                dbContext.Database.EnsureCreated();
+            }
         }
     }
 }

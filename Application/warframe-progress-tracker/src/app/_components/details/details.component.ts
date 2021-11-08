@@ -9,6 +9,8 @@ interface BlueprintComponent {
   source: ISource[];
   resource: IBlueprintResource;
   cost: IResource[];
+  category: string;
+  detailsHtml: string;
 }
 
 @Component({
@@ -95,11 +97,18 @@ export class DetailsComponent implements OnInit {
 
   private getComponents(): void {
     const name = this.name;
+    let me = this;
     this.blueprintService.getBlueprintsWithResult(name)
       .subscribe(blueprint => {
         this.blueprint = blueprint
         .map<BlueprintComponent>(component => {
-          return { resource: component, cost: [], source: []};
+          return { 
+            resource: component, 
+            cost: [], 
+            source: [], 
+            category: component.componentCategory,
+            detailsHtml: ""
+          };
         });
         this.blueprint.forEach(component => {
           this.getCostOfComponent(component);
@@ -111,23 +120,90 @@ export class DetailsComponent implements OnInit {
   private getCost(): void {
     const name = this.name;
     this.blueprintService.getTotalResourceCost(name)
-      .subscribe(cost => this.cost = cost);
+      .subscribe(cost => this.summarizeCost(cost));
+  }
+
+  private summarizeCost(cost: IResource[]): void {
+    let result: IResource[] = [];
+    for(let n = 0; n < cost.length; n++) {
+      let resource = cost[n];
+      let matchFound = false;
+      result.forEach(element => {
+        if (element.id === resource.id) {
+          element.amount += resource.amount;
+          matchFound = true;
+        }
+      });
+      if (matchFound) continue;
+      result.push({id: cost[n].id, name: cost[n].name, amount: cost[n].amount});
+    }
+    this.cost = result;
   }
 
   private getCostOfComponent(component: BlueprintComponent):void {
     this.blueprintService
-      .getTotalResourceCost(component.resource.componentName)
-      .subscribe(cost => component.cost = cost);
+      .getComponents(component.resource.componentName)
+      .subscribe(cost => {
+        component.cost = cost;
+        component.detailsHtml = this.getDetailsHtml(component);
+      });
   }
 
   private getComponentSource(component: BlueprintComponent) {
     this.blueprintService
       .getSource(component.resource.componentName + " Blueprint")
-      .subscribe(source => component.source = source);
+      .subscribe(source => {
+        component.source = source;
+        component.detailsHtml = this.getDetailsHtml(component);
+      });
   }
 
   private updateCollectible(): void {
     this.collectibleService.updateCollectible(this.collectible)
     .subscribe(()=>{});
+  }
+
+  public getDetailsHtml(component: BlueprintComponent): string {
+    let title = component.resource.componentName;
+    let result = "<h4>" + title;
+
+    if (component.category == "Resource")  {
+      let amount = component.resource.componentCount;
+      return result + ` (${amount})` + "</h4>"
+    }
+
+    result += "</h4>";
+    
+    return result + this.getBuildCostHtml(component) + this.getSourceHtml(component);
+  }
+
+  private getBuildCostHtml(component: BlueprintComponent): string {
+    if (component.cost.length == 0) return "";
+    let result = "<div> <h5>Build Cost</h5>";
+
+    let cost = component.cost.map<string>(resource => {
+      let name = resource.name;
+      let amount = resource.amount;
+      return `${name} (${amount})`;
+    });
+
+    cost.forEach(costString => {
+      result += `<div>${costString}</div>`;
+    });
+    
+    return result + "</div>";
+  }
+
+  private getSourceHtml(component: BlueprintComponent): string {
+    let sources = component.source.map(source => {
+      return source.sourceName + "(" + source.sourceType + ", " + source.value + ")";
+    });
+    if (sources.length == 0) return "";
+    let title = sources.length > 1 ? "Sources" : "Sources";
+    let result = `<div> <h5>${title}</h5>`;
+    sources.forEach(sourceHtml => {
+      result += "<div>" + sourceHtml + "</div>";
+    });
+    return result + "</div>";
   }
 }

@@ -38,6 +38,31 @@ namespace WarframeProgressTrackerApi.Controllers {
             return GetResourceCost(result.ResultName);
         }
 
+        [HttpPut]
+        public IEnumerable<ResourceStack> ComponentCost([FromBody] BlueprintResource blueprintResult) {
+            var components = GetComponents(blueprintResult.ResultName);
+            var result = new List<ResourceStack>();
+            foreach(var component in components) {
+                var newStack = _context.Resources
+                    .Where(dbResource => dbResource.Name == component.ComponentName)
+                    .Select(dbResource => new ResourceStack() {
+                        Id = dbResource.Id,
+                        Name = dbResource.Name,
+                        Amount = component.ComponentCount
+                    })
+                    .FirstOrDefault();
+                if (newStack == null) {
+                    newStack = new ResourceStack() {
+                        Name = component.ComponentName,
+                        Amount = component.ComponentCount,
+                        Id = -1
+                    };
+                }
+                result.Add(newStack);
+            }
+            return result;
+        }
+
         private IEnumerable<ResourceStack> GetResourceCost(string resultName, int resultCount = 1) {
             var components = GetComponents(resultName);
             if (components.Count == 0) {
@@ -52,10 +77,6 @@ namespace WarframeProgressTrackerApi.Controllers {
             foreach(var component in components) {
                 var componentCost = GetResourceCost(component.ComponentName, component.ComponentCount);
                 result.AddRange(componentCost);
-                /*
-                foreach (var stack in componentCost) {
-                    
-                }/**/
             }
             return result;
         }

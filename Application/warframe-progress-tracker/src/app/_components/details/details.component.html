@@ -28,6 +28,8 @@
    <h2 class="card-title">Components</h2>
    <ul class="list-group list-group-flush">
       <div class="list-group-item" *ngFor="let component of blueprint">
+         <span [innerHTML]="component.detailsHtml"></span>
+         <!--
          <h4>{{component.resource.componentName}}</h4>
          <h5>Build cost</h5>
          <div *ngFor="let resource of component.cost">
@@ -37,6 +39,7 @@
          <div *ngFor="let source of component.source">
             {{source.sourceName}} ({{source.sourceType}}, {{source.value}})
          </div>
+         -->
       </div>
    </ul>
 </div>

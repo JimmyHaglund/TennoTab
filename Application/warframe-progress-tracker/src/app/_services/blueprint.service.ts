@@ -58,7 +58,13 @@ export class BlueprintService {
       .pipe(catchError(this.handleError<IResource[]>('getTotalResourceCost')));
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
+  getComponents(resultName: string): Observable<IResource[]> {
+    let data = {ResultName: resultName};
+    return this.http.put<IResource[]>(this._apiAddress + "/componentcost", data)
+      .pipe(catchError(this.handleError<IResource[]>('getComponents')));
+  }
+
+  private handleError<T>(operation = 'operation', result?: T): any {
     return (error: any): Observable<T> => {
 
       console.error(error); // log to console instead
@@ -67,7 +73,7 @@ export class BlueprintService {
     };
   }
 
-  private log(message: string) {
+  private log(message: string): void {
     this.messageService.add(`FrameService: ${message}`);
   }
 }

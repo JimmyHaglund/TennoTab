@@ -567,6 +567,11 @@ class BlueprintService {
         return this.http.put(this._apiAddress + "/totalresourcecost", data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError('getTotalResourceCost')));
     }
+    getComponents(resultName) {
+        let data = { ResultName: resultName };
+        return this.http.put(this._apiAddress + "/componentcost", data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(this.handleError('getComponents')));
+    }
     handleError(operation = 'operation', result) {
         return (error) => {
             console.error(error); // log to console instead
@@ -989,6 +994,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
+    //apiUrl: 'http://192.168.1.5:80'
+    // apiUrl: 'http://localhost:12129'
     apiUrl: 'https://wfprogresstracker.duckdns.org/'
 };
 /*
@@ -2305,51 +2312,14 @@ function DetailsComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.cost);
 } }
-function DetailsComponent_div_5_div_5_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const resource_r12 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", resource_r12.name, " (", resource_r12.amount, ") ");
-} }
-function DetailsComponent_div_5_h5_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h5");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Location");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} }
-function DetailsComponent_div_5_div_7_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const source_r13 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate3"](" ", source_r13.sourceName, " (", source_r13.sourceType, ", ", source_r13.value, ") ");
-} }
 function DetailsComponent_div_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h4");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h5");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Build cost");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, DetailsComponent_div_5_div_5_Template, 2, 2, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, DetailsComponent_div_5_h5_6_Template, 2, 0, "h5", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, DetailsComponent_div_5_div_7_Template, 2, 3, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const component_r8 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](component_r8.resource.componentName);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", component_r8.cost);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", component_r8.source.length > 0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", component_r8.source);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", component_r8.detailsHtml, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
 } }
 class DetailsComponent {
     constructor(route, location, collectibleService, blueprintService) {
@@ -2425,11 +2395,18 @@ class DetailsComponent {
     }
     getComponents() {
         const name = this.name;
+        let me = this;
         this.blueprintService.getBlueprintsWithResult(name)
             .subscribe(blueprint => {
             this.blueprint = blueprint
                 .map(component => {
-                return { resource: component, cost: [], source: [] };
+                return {
+                    resource: component,
+                    cost: [],
+                    source: [],
+                    category: component.componentCategory,
+                    detailsHtml: ""
+                };
             });
             this.blueprint.forEach(component => {
                 this.getCostOfComponent(component);
@@ -2440,32 +2417,92 @@ class DetailsComponent {
     getCost() {
         const name = this.name;
         this.blueprintService.getTotalResourceCost(name)
-            .subscribe(cost => this.cost = cost);
+            .subscribe(cost => this.summarizeCost(cost));
+    }
+    summarizeCost(cost) {
+        let result = [];
+        for (let n = 0; n < cost.length; n++) {
+            let resource = cost[n];
+            let matchFound = false;
+            result.forEach(element => {
+                if (element.id === resource.id) {
+                    element.amount += resource.amount;
+                    matchFound = true;
+                }
+            });
+            if (matchFound)
+                continue;
+            result.push({ id: cost[n].id, name: cost[n].name, amount: cost[n].amount });
+        }
+        this.cost = result;
     }
     getCostOfComponent(component) {
         this.blueprintService
-            .getTotalResourceCost(component.resource.componentName)
-            .subscribe(cost => component.cost = cost);
+            .getComponents(component.resource.componentName)
+            .subscribe(cost => {
+            component.cost = cost;
+            component.detailsHtml = this.getDetailsHtml(component);
+        });
     }
     getComponentSource(component) {
         this.blueprintService
             .getSource(component.resource.componentName + " Blueprint")
-            .subscribe(source => component.source = source);
+            .subscribe(source => {
+            component.source = source;
+            component.detailsHtml = this.getDetailsHtml(component);
+        });
     }
     updateCollectible() {
         this.collectibleService.updateCollectible(this.collectible)
             .subscribe(() => { });
     }
+    getDetailsHtml(component) {
+        let title = component.resource.componentName;
+        let result = "<h4>" + title;
+        if (component.category == "Resource") {
+            let amount = component.resource.componentCount;
+            return result + ` (${amount})` + "</h4>";
+        }
+        result += "</h4>";
+        return result + this.getBuildCostHtml(component) + this.getSourceHtml(component);
+    }
+    getBuildCostHtml(component) {
+        if (component.cost.length == 0)
+            return "";
+        let result = "<div> <h5>Build Cost</h5>";
+        let cost = component.cost.map(resource => {
+            let name = resource.name;
+            let amount = resource.amount;
+            return `${name} (${amount})`;
+        });
+        cost.forEach(costString => {
+            result += `<div>${costString}</div>`;
+        });
+        return result + "</div>";
+    }
+    getSourceHtml(component) {
+        let sources = component.source.map(source => {
+            return source.sourceName + "(" + source.sourceType + ", " + source.value + ")";
+        });
+        if (sources.length == 0)
+            return "";
+        let title = sources.length > 1 ? "Sources" : "Sources";
+        let result = `<div> <h5>${title}</h5>`;
+        sources.forEach(sourceHtml => {
+            result += "<div>" + sourceHtml + "</div>";
+        });
+        return result + "</div>";
+    }
 }
 DetailsComponent.ɵfac = function DetailsComponent_Factory(t) { return new (t || DetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services__WEBPACK_IMPORTED_MODULE_3__["CollectibleService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services__WEBPACK_IMPORTED_MODULE_3__["BlueprintService"])); };
-DetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DetailsComponent, selectors: [["app-details"]], decls: 6, vars: 2, consts: [["class", "d-flex info-box m-3", 4, "ngIf"], [1, "card", "p-2", "m-3"], [1, "card-title"], [1, "list-group", "list-group-flush"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "d-flex", "info-box", "m-3"], [1, "card", "p-2"], [1, "btn", "btn-warning", 3, "click"], [1, "d-flex"], [1, "btn", "btn-primary", "large-text", "m-1", 3, "click"], [4, "ngFor", "ngForOf"], [1, "list-group-item"], [4, "ngIf"]], template: function DetailsComponent_Template(rf, ctx) { if (rf & 1) {
+DetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DetailsComponent, selectors: [["app-details"]], decls: 6, vars: 2, consts: [["class", "d-flex info-box m-3", 4, "ngIf"], [1, "card", "p-2", "m-3"], [1, "card-title"], [1, "list-group", "list-group-flush"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "d-flex", "info-box", "m-3"], [1, "card", "p-2"], [1, "btn", "btn-warning", 3, "click"], [1, "d-flex"], [1, "btn", "btn-primary", "large-text", "m-1", 3, "click"], [4, "ngFor", "ngForOf"], [1, "list-group-item"], [3, "innerHTML"]], template: function DetailsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, DetailsComponent_div_0_Template, 23, 5, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Components");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, DetailsComponent_div_5_Template, 8, 4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, DetailsComponent_div_5_Template, 2, 1, "div", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {

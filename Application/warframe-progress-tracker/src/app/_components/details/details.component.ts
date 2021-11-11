@@ -97,7 +97,6 @@ export class DetailsComponent implements OnInit {
 
   private getComponents(): void {
     const name = this.name;
-    let me = this;
     this.blueprintService.getBlueprintsWithResult(name)
       .subscribe(blueprint => {
         this.blueprint = blueprint
@@ -164,6 +163,7 @@ export class DetailsComponent implements OnInit {
   }
 
   public getDetailsHtml(component: BlueprintComponent): string {
+    console.log(component);
     let title = component.resource.componentName;
     let result = "<h4>" + title;
 
@@ -180,16 +180,18 @@ export class DetailsComponent implements OnInit {
   private getBuildCostHtml(component: BlueprintComponent): string {
     if (component.cost.length == 0) return "";
     let result = "<div> <h5>Build Cost</h5>";
-
+    
     let cost = component.cost.map<string>(resource => {
       let name = resource.name;
       let amount = resource.amount;
       return `${name} (${amount})`;
     });
-
+    
+    console.log(cost);
     cost.forEach(costString => {
       result += `<div>${costString}</div>`;
     });
+    console.log(cost);
     
     return result + "</div>";
   }

@@ -2,6 +2,8 @@ def extract_warframe_components_row_data(row):
    name = row[0]
    data = row[1]
 
+   print(name)
+
    if "Manufacturing" not in data:
       print("Manufacturing keyword not found: " + name)
       return []

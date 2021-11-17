@@ -1,290 +1,290 @@
 PlanetName,MissionName,MissionType
-Ceres,Thon,Sabotage
-Ceres,Gabii,Survival
-Ceres,Ludi,Hijack
-Ceres,Seimeni,Defense
-Ceres,Ker,Sabotage
+Neptune,The Index: Endurance,Arena
 Ceres,Exta,Assassination
-Ceres,Cinxia,Interception
-Ceres,Draco,Survival
-Ceres,Pallas,Exterminate
-Ceres,Lex,Capture
-Ceres,Nuovo,Rescue
-Ceres,Jupiter Junction,Solar Rail Junction
-Ceres,Bode,Spy
-Ceres,Kiste,Mobile Defense
-Ceres,Casta,Defense
-Deimos,Terrorem,Survival
-Deimos,Horend,Capture
-Deimos,Phlegyas,Exterminate
-Deimos,Formido,Sabotage
-Deimos,Dirus,Mobile Defense
-Deimos,Hyf,Defense
 Deimos,Magnacidium,Assassination
-Deimos,Cambion Drift,Free Roam
-Deimos,Terrorem,Survival
 Deimos,Exequias,Assassination
-Earth,Mariana,Exterminate
-Earth,E Prime,Exterminate
-Earth,Venus Junction,Solar Rail Junction
-Earth,Cervantes,Sabotage
-Earth,Plains of Eidolon,Free Roam
-Earth,Cambria,Spy
-Earth,Everest,Excavation
-Earth,Lith,Defense
 Earth,Oro,Assassination
-Earth,Mantle,Capture
-Earth,Erpo,Mobile Defense
-Earth,Mars Junction,Solar Rail Junction
-Earth,Gaia,Interception
-Earth,Pacific,Rescue
-Earth,Coba,Defense
-Earth,Tikal,Excavation
-Earth,Eurasia,Mobile Defense
-Eris,Mutalist Alad V Assassinate,Assassination
-Eris,Kala-azar,Defense
-Eris,Jordas Golem Assassinate,Assassination
-Eris,Brugia,Rescue
-Eris,Oestrus,Infested Salvage
-Eris,Solium,Mobile Defense
-Eris,Naeglar,Sabotage
-Eris,Akkad,Defense
-Eris,Isos,Capture
-Eris,Xini,Interception
-Eris,Nimus,Survival
-Eris,Zabala,Survival
-Eris,Saxis,Exterminate
-Europa,Valefor,Excavation
-Europa,Valac,Spy
-Europa,Baal,Exterminate
-Europa,Armaros,Exterminate
-Europa,Morax,Mobile Defense
-Europa,Ose,Interception
-Europa,Kokabiel,Sabotage
-Europa,Orias,Rescue
+Eris,Mutalist Alad V,Assassination
+Eris,Jordas Golem,Assassination
 Europa,Naamah,Assassination
-Europa,Cholistan,Excavation
+Jupiter,Themisto,Assassination
+Jupiter,The Ropalolyst,Assassination
+Mars,War,Assassination
+Mercury,Tolstoj,Assassination
+Neptune,Psamathe,Assassination
+Phobos,Iliad,Assassination
+Pluto,Hades,Assassination
+Saturn,Tethys,Assassination
+Sedna,Merrow,Assassination
+Uranus,Titania,Assassination
+Venus,Fossa,Assassination
+Kuva Fortress,Koro,Assault
+Ceres,Lex,Capture
+Deimos,Horend,Capture
+Earth,Mantle,Capture
+Eris,Isos,Capture
+Europa,Abaddon,Capture
+Jupiter,Ananke,Capture
+Lua,Copernicus,Capture
+Mars,Ara,Capture
+Mercury,Elion,Capture
+Neptune,Galatea,Capture
+Phobos,Skyresh,Capture
+Pluto,Hydra,Capture
+Saturn,Cassini,Capture
+Uranus,Ariel,Capture
+Venus,Venera,Capture
+Void,Hepit,Capture
+Void,Ukko,Capture
+Neptune,Yursa,Defection
+Phobos,Memphis,Defection
+Saturn,Caracol,Defection
+Ceres,Seimeni,Defense
+Ceres,Casta,Defense
+Deimos,Hyf,Defense
+Earth,Lith,Defense
+Earth,Coba,Defense
+Eris,Kala-azar,Defense
+Eris,Akkad,Defense
 Europa,Paimon,Defense
 Europa,Larzac,Defense
-Europa,Abaddon,Capture
-Europa,Sorath,Hijack
-Jupiter,Cameria,Survival
-Jupiter,Galilea,Sabotage
 Jupiter,Io,Defense
-Jupiter,Carpo,Exterminate
-Jupiter,Ananke,Capture
-Jupiter,Callisto,Interception
-Jupiter,Saturn Junction,Solar Rail Junction
 Jupiter,Sinai,Defense
-Jupiter,Adrastea,Sabotage
-Jupiter,Thebe,Sabotage
-Jupiter,Metis,Rescue
-Jupiter,Carme,Mobile Defense
-Jupiter,Themisto,Assassination
-Jupiter,Ganymede,Disruption
-Jupiter,The Ropalolyst,Assassination
-Jupiter,Europa Junction,Solar Rail Junction
-Jupiter,Elara,Survival
-Jupiter,Amalthea,Spy
-Kuva Fortress,Garus,Rescue
-Kuva Fortress,Tamu,Disruption
-Kuva Fortress,Taveuni,Survival
-Kuva Fortress,Dakata,Exterminate
-Kuva Fortress,Koro,Assault
 Kuva Fortress,Nabuk,Defense
-Kuva Fortress,Pago,Spy
-Kuva Fortress,Rotuma,Mobile Defense
-Lua,Pavlov,Spy
-Lua,Grimaldi,Mobile Defense
 Lua,Stöfler,Defense
-Lua,Zeipel,Rescue
-Lua,Copernicus,Capture
-Lua,Tycho,Survival
-Lua,Apollo,Disruption
-Lua,Plato,Exterminate
-Mars,Augustus,Excavation
-Mars,Arval,Spy
-Mars,Gradivus,Sabotage
-Mars,Olympus,Disruption
 Mars,Spear,Defense
-Mars,War,Assassination
-Mars,Ultor,Exterminate
 Mars,Kadesh,Defense
-Mars,Tharsis,Mobile Defense
-Mars,Martialis,Rescue
-Mars,Syrtis,Exterminate
-Mars,Ara,Capture
-Mars,Wahiba,Survival
-Mars,Hellas,Exterminate
-Mars,Vallis,Mobile Defense
-Mars,Alator,Interception
-Mars,Ceres Junction,Solar Rail Junction
-Mars,Phobos Junction,Solar Rail Junction
-Mars,Ares,Sabotage
-Mercury,Tolstoj,Assassination
-Mercury,Boethius,Mobile Defense
-Mercury,Caloris,Rescue
-Mercury,Terminus,Sabotage
-Mercury,Suisei,Spy
 Mercury,Lares,Defense
+Neptune,Proteus,Defense
+Phobos,Gulliver,Defense
+Pluto,Outer Terminus,Defense
+Pluto,Sechura,Defense
+Saturn,Helene,Defense
+Sedna,Hydron,Defense
+Sedna,Sangeru,Defense
+Uranus,Stephano,Defense
+Venus,Romula,Defense
+Venus,Tessera,Defense
+Void,Taranis,Defense
+Void,Belenus,Defense
+Venus Proxima,Falling Glory,Defense
+Pluto Proxima,Obol Crossing,Defense
+Neptune Proxima,Arva Vector,Defense
+Veil Proxima,Arc Silver,Defense
+Jupiter,Ganymede,Disruption
+Kuva Fortress,Tamu,Disruption
+Lua,Apollo,Disruption
+Mars,Olympus,Disruption
+Neptune,Laomedeia,Disruption
+Sedna,Kappa,Disruption
+Uranus,Ur,Disruption
+Earth,Everest,Excavation
+Earth,Tikal,Excavation
+Europa,Valefor,Excavation
+Europa,Cholistan,Excavation
+Mars,Augustus,Excavation
+Neptune,Despina,Excavation
+Pluto,Hieracon,Excavation
+Venus,Kiliken,Excavation
+Ceres,Pallas,Exterminate
+Deimos,Phlegyas,Exterminate
+Earth,Mariana,Exterminate
+Earth,E Prime,Exterminate
+Eris,Saxis,Exterminate
+Europa,Baal,Exterminate
+Europa,Armaros,Exterminate
+Jupiter,Carpo,Exterminate
+Kuva Fortress,Dakata,Exterminate
+Lua,Plato,Exterminate
+Mars,Ultor,Exterminate
+Mars,Syrtis,Exterminate
+Mars,Hellas,Exterminate
 Mercury,M Prime,Exterminate
 Mercury,Pantheon,Exterminate
-Mercury,Elion,Capture
-Mercury,Apollodorus,Survival
-Mercury,Odin,Interception
-Neptune,The Index: Endurance,Arena
-Neptune,Pluto Junction,Solar Rail Junction
-Neptune,Yursa,Defection
-Neptune,Triton,Rescue
-Neptune,Psamathe,Assassination
-Neptune,Proteus,Defense
 Neptune,Neso,Exterminate
-Neptune,Sao,Sabotage
-Neptune,Kelashin,Survival
-Neptune,Despina,Excavation
-Neptune,Laomedeia,Disruption
-Neptune,Nereid,Spy
-Neptune,Salacia,Mobile Defense
-Neptune,Larissa,Mobile Defense
-Neptune,Galatea,Capture
-Phobos,Memphis,Defection
 Phobos,Roche,Exterminate
-Phobos,Sharpless,Mobile Defense
-Phobos,Skyresh,Capture
-Phobos,Zeugma,Survival
-Phobos,Monolith,Rescue
-Phobos,Iliad,Assassination
-Phobos,Shklovsky,Spy
-Phobos,Stickney,Survival
-Phobos,Gulliver,Defense
-Phobos,Kepler,Rush
-Pluto,Hades,Assassination
-Pluto,Hydra,Capture
-Pluto,Minthe,Mobile Defense
-Pluto,Outer Terminus,Defense
-Pluto,Cypress,Sabotage
-Pluto,Regna,Rescue
-Pluto,Oceanum,Spy
-Pluto,Palus,Survival
 Pluto,Acheron,Exterminate
 Pluto,Narcissus,Exterminate
-Pluto,Sechura,Defense
-Pluto,Hieracon,Excavation
-Pluto,Cerberus,Interception
-Pluto,Eris Junction,Solar Rail Junction
-Pluto,Sedna Junction,Solar Rail Junction
-Saturn,Enceladus,Sabotage
-Saturn,Pandora,Pursuit
-Saturn,Keeler,Mobile Defense
-Saturn,Numa,Rescue
-Saturn,Uranus Junction,Solar Rail Junction
-Saturn,Rhea,Interception
-Saturn,Piscinas,Survival
-Saturn,Tethys,Assassination
-Saturn,Anthe,Rescue
-Saturn,Caracol,Defection
-Saturn,Calypso,Sabotage
-Saturn,Helene,Defense
-Saturn,Titan,Survival
 Saturn,Telesto,Exterminate
-Saturn,Dione,Spy
-Saturn,Cassini,Capture
-Sedna,Rusalka,Sabotage
-Sedna,Kelpie,Spy
-Sedna,Marid,Hijack
-Sedna,Kappa,Disruption
-Sedna,Vodyanoi,Rathuum
-Sedna,Yam,Rathuum
-Sedna,Hydron,Defense
-Sedna,Berehynia,Interception
-Sedna,Sangeru,Defense
 Sedna,Adaro,Exterminate
-Sedna,Amarna,Survival
-Sedna,Naga,Rescue
-Sedna,Merrow,Assassination
-Sedna,Selkie,Survival
-Sedna,Nakki,Rathuum
-Sedna,Charybdis,Mobile Defense
-Uranus,Ophelia,Survival
-Uranus,Ariel,Capture
-Uranus,Ur,Disruption
-Uranus,Neptune Junction,Solar Rail Junction
-Uranus,Stephano,Defense
-Uranus,Cressida,Mobile Defense
-Uranus,Titania,Assassination
-Uranus,Caliban,Rescue
-Uranus,Assur,Survival
-Uranus,Rosalind,Spy
-Uranus,Desdemona,Sabotage
-Uranus,Umbriel,Interception
 Uranus,Sycorax,Exterminate
 Uranus,Puck,Exterminate
-Uranus,Caelus,Interception
-Venus,Orb Vallis,Free Roam
-Venus,Cytherean,Interception
-Venus,Romula,Defense
 Venus,Montes,Exterminate
 Venus,E Gate,Exterminate
-Venus,Linea,Rescue
-Venus,Unda,Spy
-Venus,Aphrodite,Mobile Defense
-Venus,Venera,Capture
-Venus,Ishtar,Sabotage
-Venus,Malva,Survival
-Venus,Mercury Junction,Solar Rail Junction
-Venus,Kiliken,Excavation
-Venus,Tessera,Defense
-Venus,Fossa,Assassination
-Venus,V Prime,Survival
-Void,Hepit,Capture
-Void,Tiwaz,Mobile Defense
-Void,Taranis,Defense
-Void,Stribog,Sabotage
-Void,Mot,Survival
-Void,Marduk,Sabotage
-Void,Ukko,Capture
 Void,Oxomoco,Exterminate
-Void,Belenus,Defense
-Void,Aten,Mobile Defense
-Void,Mithra,Interception
-Void,Ani,Survival
 Void,Teshub,Exterminate
+Venus Proxima,Bifrost Echo,Exterminate
+Pluto Proxima,Seven Sirens,Exterminate
+Neptune Proxima,Nu-Gua Mines,Exterminate
+Veil Proxima,Calabash,Exterminate
+Deimos,Cambion Drift,Free Roam
+Earth,Plains of Eidolon,Free Roam
+Venus,Orb Vallis,Free Roam
+Earth Proxima,Free Flight,Free Space
+Ceres,Ludi,Hijack
+Europa,Sorath,Hijack
+Sedna,Marid,Hijack
+Eris,Oestrus,Infested Salvage
+Ceres,Cinxia,Interception
+Earth,Gaia,Interception
+Eris,Xini,Interception
+Europa,Ose,Interception
+Jupiter,Callisto,Interception
+Mars,Alator,Interception
+Mercury,Odin,Interception
+Pluto,Cerberus,Interception
+Saturn,Rhea,Interception
+Sedna,Berehynia,Interception
+Uranus,Umbriel,Interception
+Uranus,Caelus,Interception
+Venus,Cytherean,Interception
+Void,Mithra,Interception
+Ceres,Kiste,Mobile Defense
+Deimos,Dirus,Mobile Defense
+Earth,Erpo,Mobile Defense
+Earth,Eurasia,Mobile Defense
+Eris,Solium,Mobile Defense
+Europa,Morax,Mobile Defense
+Jupiter,Carme,Mobile Defense
+Kuva Fortress,Rotuma,Mobile Defense
+Lua,Grimaldi,Mobile Defense
+Mars,Tharsis,Mobile Defense
+Mars,Vallis,Mobile Defense
+Mercury,Boethius,Mobile Defense
+Neptune,Salacia,Mobile Defense
+Neptune,Larissa,Mobile Defense
+Phobos,Sharpless,Mobile Defense
+Pluto,Minthe,Mobile Defense
+Saturn,Keeler,Mobile Defense
+Sedna,Charybdis,Mobile Defense
+Uranus,Cressida,Mobile Defense
+Venus,Aphrodite,Mobile Defense
+Void,Tiwaz,Mobile Defense
+Void,Aten,Mobile Defense
+Venus Proxima,Vesper Strait,Orphix
+Pluto Proxima,Khufu Envoy,Orphix
+Neptune Proxima,Mammon’s Prospect,Orphix
+Veil Proxima,Erato,Orphix
+Saturn,Pandora,Pursuit
+Sedna,Vodyanoi,Rathuum
+Sedna,Yam,Rathuum
+Sedna,Nakki,Rathuum
+Ceres,Nuovo,Rescue
+Earth,Pacific,Rescue
+Eris,Brugia,Rescue
+Europa,Orias,Rescue
+Jupiter,Metis,Rescue
+Kuva Fortress,Garus,Rescue
+Lua,Zeipel,Rescue
+Mars,Martialis,Rescue
+Mercury,Caloris,Rescue
+Neptune,Triton,Rescue
+Phobos,Monolith,Rescue
+Pluto,Regna,Rescue
+Saturn,Numa,Rescue
+Saturn,Anthe,Rescue
+Sedna,Naga,Rescue
+Uranus,Caliban,Rescue
+Venus,Linea,Rescue
+Phobos,Kepler,Rush
+Ceres,Thon,Sabotage
+Ceres,Ker,Sabotage
+Deimos,Formido,Sabotage
+Earth,Cervantes,Sabotage
+Eris,Naeglar,Sabotage
+Europa,Kokabiel,Sabotage
+Jupiter,Galilea,Sabotage
+Jupiter,Adrastea,Sabotage
+Jupiter,Thebe,Sabotage
+Mars,Gradivus,Sabotage
+Mars,Ares,Sabotage
+Mercury,Terminus,Sabotage
+Neptune,Sao,Sabotage
+Pluto,Cypress,Sabotage
+Saturn,Enceladus,Sabotage
+Saturn,Calypso,Sabotage
+Sedna,Rusalka,Sabotage
+Uranus,Desdemona,Sabotage
+Venus,Ishtar,Sabotage
+Void,Stribog,Sabotage
+Void,Marduk,Sabotage
 Saturn Proxima,Mordo Cluster,Skirmish
 Saturn Proxima,Lupal Pass,Skirmish
 Saturn Proxima,Nodo Gap,Skirmish
 Saturn Proxima,Vand Cluster,Skirmish
 Saturn Proxima,Kasio’s Rest,Skirmish
-Venus Proxima,Beacon Shield Ring,Volatile
-Venus Proxima,Vesper Strait,Orphix
-Venus Proxima,Luckless Expanse,Survival
-Venus Proxima,Falling Glory,Defense
-Venus Proxima,Bifrost Echo,Exterminate
-Venus Proxima,Orvin-Haarch,Spy
-Pluto Proxima,Khufu Envoy,Orphix
-Pluto Proxima,Obol Crossing,Defense
-Pluto Proxima,Profit Margin,Volatile
-Pluto Proxima,Peregrine Axis,Spy
-Pluto Proxima,Seven Sirens,Exterminate
-Pluto Proxima,Fenton’s Field,Survival
-Neptune Proxima,Arva Vector,Defense
-Neptune Proxima,Nu-Gua Mines,Exterminate
-Neptune Proxima,Mammon’s Prospect,Orphix
-Neptune Proxima,Brom Cluster,Spy
-Neptune Proxima,Enkidu Ice Drifts,Survival
-Neptune Proxima,Sovereign Grasp,Volatile
-Earth Proxima,Free Flight,Free Space
 Earth Proxima,Sover Strait,Skirmish
 Earth Proxima,Iota Temple,Skirmish
 Earth Proxima,Ogal Cluster,Skirmish
 Earth Proxima,Korm’s Belt,Skirmish
 Earth Proxima,Bendar Cluster,Skirmish
-Veil Proxima,Calabash,Exterminate
-Veil Proxima,Numina,Volatile
-Veil Proxima,Arc Silver,Defense
-Veil Proxima,Erato,Orphix
-Veil Proxima,Lu-Yan,Survival
-Veil Proxima,Sabmir Cloud,Spy
 Veil Proxima,H-2 Cloud,Skirmish
 Veil Proxima,Nsu Grid,Skirmish
 Veil Proxima,Flexa,Skirmish
 Veil Proxima,R-9 Cloud,Skirmish
+Ceres,Jupiter Junction,Solar Rail Junction
+Earth,Venus Junction,Solar Rail Junction
+Earth,Mars Junction,Solar Rail Junction
+Jupiter,Saturn Junction,Solar Rail Junction
+Jupiter,Europa Junction,Solar Rail Junction
+Mars,Ceres Junction,Solar Rail Junction
+Mars,Phobos Junction,Solar Rail Junction
+Neptune,Pluto Junction,Solar Rail Junction
+Pluto,Eris Junction,Solar Rail Junction
+Pluto,Sedna Junction,Solar Rail Junction
+Saturn,Uranus Junction,Solar Rail Junction
+Uranus,Neptune Junction,Solar Rail Junction
+Venus,Mercury Junction,Solar Rail Junction
+Ceres,Bode,Spy
+Earth,Cambria,Spy
+Europa,Valac,Spy
+Jupiter,Amalthea,Spy
+Kuva Fortress,Pago,Spy
+Lua,Pavlov,Spy
+Mars,Arval,Spy
+Mercury,Suisei,Spy
+Neptune,Nereid,Spy
+Phobos,Shklovsky,Spy
+Pluto,Oceanum,Spy
+Saturn,Dione,Spy
+Sedna,Kelpie,Spy
+Uranus,Rosalind,Spy
+Venus,Unda,Spy
+Venus Proxima,Orvin-Haarch,Spy
+Pluto Proxima,Peregrine Axis,Spy
+Neptune Proxima,Brom Cluster,Spy
+Veil Proxima,Sabmir Cloud,Spy
+Ceres,Gabii,Survival
+Ceres,Draco,Survival
+Deimos,Terrorem,Survival
+Deimos,Terrorem,Survival
+Eris,Nimus,Survival
+Eris,Zabala,Survival
+Jupiter,Cameria,Survival
+Jupiter,Elara,Survival
+Kuva Fortress,Taveuni,Survival
+Lua,Tycho,Survival
+Mars,Wahiba,Survival
+Mercury,Apollodorus,Survival
+Neptune,Kelashin,Survival
+Phobos,Zeugma,Survival
+Phobos,Stickney,Survival
+Pluto,Palus,Survival
+Saturn,Piscinas,Survival
+Saturn,Titan,Survival
+Sedna,Amarna,Survival
+Sedna,Selkie,Survival
+Uranus,Ophelia,Survival
+Uranus,Assur,Survival
+Venus,Malva,Survival
+Venus,V Prime,Survival
+Void,Mot,Survival
+Void,Ani,Survival
+Venus Proxima,Luckless Expanse,Survival
+Pluto Proxima,Fenton’s Field,Survival
+Neptune Proxima,Enkidu Ice Drifts,Survival
+Veil Proxima,Lu-Yan,Survival
+Venus Proxima,Beacon Shield Ring,Volatile
+Pluto Proxima,Profit Margin,Volatile
+Neptune Proxima,Sovereign Grasp,Volatile
+Veil Proxima,Numina,Volatile

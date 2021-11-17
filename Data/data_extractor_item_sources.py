@@ -67,34 +67,39 @@ def extract_void_relic_contents_data(source_data):
       body_columns = body_data.split('<td style="text-align:center; font-size:12px;">')
       body_columns.pop(0)
       header_titles = extract_table_header_titles_from_table_row(header_data)
-      # print('len body/headers' + str(len(body_columns)) + '/' + str(len(header_titles)))
       for n in range(0, len(header_titles)):
          title = header_titles[n]
          body = body_columns[n]
          item_name = name + ' ' + title
          source_entries = extract_relic_drop_data_from_table_body_column(item_name, body)
          result += source_entries
-      # result.append([])
-      # result.append(raw_data)
-      # print(prime_data)
-   # Table structure: [RelicName, ItemName, Rarity]
-   # print('void relic extraction not implemented')
    return result
 
-
-
 def extract_market_items_data(source_data):
-   #result = []
-   # for data_row in source_data:
-      
-   # Table structure: [ItemName, CreditsPrice]
-   print('market items data extraction not implemented')
-   return []
+   result = []
+   market_item_names = []
+   for data_row in source_data:
+      name = data_row[0]
+      if name in market_item_names:
+         continue
+      market_info = data_row[5]
+      if 'Market' in market_info:
+         market_item_names.append(name)
+         result.append([name, 6969])
+   return result
 
 def extract_syndicate_offerings_data(source_data):
    # Table structure: [ItemName, SyndicateName, RankRequired, ReputationCost]
-   print('syndicate offerings data extraction not implemented')
-   return []
+   result = []
+   result_names = []
+   for data_row in source_data:
+      name = data_row[0]
+      syndicate = data_row[7]
+      if nullorempty(syndicate) or name in result_names:
+         continue
+      result_names.append(name)
+      result.append([name, 'SYNDICATE', 'SYNDICATERANKREQUIRED', 6969])
+   return result
 
 def extract_quest_rewards_data(source_data):
    # Table structure: [ItemName, QuestName]

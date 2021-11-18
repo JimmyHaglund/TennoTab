@@ -1,8 +1,7 @@
 ﻿namespace WarframeProgressTrackerApi.Models {
-    public class DisruptionMissionReward {
+    public class EnemyItemDrop {
         public string ItemName { get; set; }
-        public string MissionName { get; set; }
-        public char Rotation { get; set; }
+        public string EnemyName { get; set; }
         public float DropChance { get; set; }
     }
 }

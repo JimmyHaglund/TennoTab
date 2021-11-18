@@ -1,4 +1,4 @@
-FishName,Location,Biome,Weather,Bait
+FishName,Location,Biome,Condition,Bait
 Mawfish,Plains of Eidolon,Lake,Day,No
 Charc Eel,Plains of Eidolon,Lake,Any,No
 Khut-Khut,Plains of Eidolon,Pond,Day,No

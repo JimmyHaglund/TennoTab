@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 namespace WarframeProgressTrackerApi.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class ResourceController : ControllerBase {
+    public class ItemSourceController : ControllerBase {
     }
 }

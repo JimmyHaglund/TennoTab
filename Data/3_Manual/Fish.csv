@@ -1,0 +1,42 @@
+FishName,Location,Biome,Weather,Bait
+Mawfish,Plains of Eidolon,Lake,Day,No
+Charc Eel,Plains of Eidolon,Lake,Any,No
+Khut-Khut,Plains of Eidolon,Pond,Day,No
+Yogwun,Plains of Eidolon,Pond,Day,No
+Mortus Lungfish,Plains of Eidolon,Pond,Any,No
+Goopolla,Plains of Eidolon,Ocean,Any,No
+Tralok,Plains of Eidolon,Ocean,Day,No
+Sharrac,Plains of Eidolon,Ocean,Any,Twilight Bait
+Karkina,Plains of Eidolon,Ocean,Any,Twilight Bait
+Murkray,Plains of Eidolon,Ocean,Any,Murkray Bait
+Norg,Plains of Eidolon,Lake,Night,Norg Bait
+Cuthol,Plains of Eidolon,Pond,Night,Cuthol Bait
+Glappid,Plains of Eidolon,Ocean,Night,Glappid Bait
+Eye-Eye,Orb Vallis,Pond,Warm,Narrow-Spectrum Bait
+Scrubber,Orb Vallis,Cave,Any,Broad-Spectrum Bait
+Echowinder,Orb Vallis,Lake,Warm,Broad-Spectrum Bait
+Mirewinder,Orb Vallis,Cave,Any,Mirewinder Bait
+Longwinder,Orb Vallis,Lake,Warm,Longwinder Bait
+Brickie,Orb Vallis,Pond,Warm,Broad-Spectrum Bait
+Brickie,Orb Vallis,River,Warm,Broad-Spectrum Bait
+Tink,Orb Vallis,Pond,Cold,Broad-Spectrum Bait
+Tink,Orb Vallis,River,Cold,Broad-Spectrum Bait
+Sapcaddy,Orb Vallis,Lake,Cold,Broad-Spectrum Bait
+Kriller,Orb Vallis,Lake,Warm,Kriller Bait
+Recaster,Orb Vallis,Pond,Cold,Narrow-Spectrum Bait
+Tromyzon,Orb Vallis,Pond,Cold,Tromyzon Bait
+Charamote,Orb Vallis,Cave,Any,Charamote Bait
+Synathid,Orb Vallis,Cave,Any,Synathid Bait
+Kymaeros,Cambion Drift,Surface,Any,No
+Barbisteo,Cambion Drift,Cave,Any,No
+Cryptosuctus,Cambion Drift,Surface,Fass,No
+Amniophysi,Cambion Drift,Cave,Any,No
+Ostimyr,Cambion Drift,Surface,Fass,Fass Residue
+Glutinox,Cambion Drift,Surface,Vome,Fass Residue
+Vitreospina,Cambion Drift,Cave,Any,Fass Residue
+Duroid,Cambion Drift,Cave,Any,Vome Residue
+Chondricord,Cambion Drift,Cave,Any,Vome Residue
+Lobotriscid,Cambion Drift,Surface,Vome,No
+Myxostomata,Cambion Drift,Cave,Vome,Processed Vome Residue
+Aquapulmo,Cambion Drift,Surface,Vome,Processed Fass Residue
+Flagellocanth,Cambion Drift,Surface,Any,Processed Fass Residue

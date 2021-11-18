@@ -1,4 +1,4 @@
-import os, csv
+import csv
 import datareader, datawriter
 import data_extractor_warframe_blueprints
 import data_extractor_weapon_blueprints
@@ -12,7 +12,7 @@ weapons_raw = datareader.read_weapon_blueprint_files()
 
 result = []
 
-print('processing ' + str(len(weapons_raw)) + ' weapons')
+# print('processing ' + str(len(weapons_raw)) + ' weapons')
 
 for frame in frames_raw:
    data = data_extractor_warframe_blueprints.extract_warframe_components_row_data(frame)
@@ -27,7 +27,7 @@ for weapon in weapons_raw:
    result = result + data
 
 for value in result:
-   value[2] = name_filter.filter(value[2])
-   value[2] = name_filter.add_title_to_specific_component_name(value[2], value[0])
-   print(value)
-# datawriter.write_csv("Blueprints", result)
+   value[1] = name_filter.filter(value[1].strip())
+   value[1] = name_filter.add_title_to_specific_component_name(value[1], value[0])
+   # print(value)
+datawriter.write_csv("Blueprints", result)

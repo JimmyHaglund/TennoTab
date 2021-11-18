@@ -22,20 +22,43 @@ def extract_warframe_components_row_data(row):
    if "Blueprint" in split_data[1]:
       extract = extract_component_data_with_blueprint_in_title
 
+   frame_data = extract_warframe_blueprint_data(name, split_data[0])
    neuroptics_data = extract(name, split_data[1])
    chassis_data = extract(name, split_data[2])
    systems_data = extract(name, split_data[3])
-   result = neuroptics_data + chassis_data + systems_data
+   result = frame_data + neuroptics_data + chassis_data + systems_data
    return result
 
-def extract_component_data(component_name, value):
-   component_rows = value.split('<td rowspan="2" style="')
+def extract_component_data(result_name, raw_data):
+   component_rows = raw_data.split('<td rowspan="2" style="')
    component_rows.pop(0)
    components = []
    for row in component_rows:
-      component = extract_component_row(row)
-      if(len(component) > 1):
-         components.append([component_name, component_category_name, component[0], resource_category_name, component[1]])
+      component_data = extract_component_row(row)
+      if(len(component_data) > 1):
+         component_name = component_data[0]
+         component_amount = component_data[1]
+         components.append([result_name, component_name, component_amount])
+   return components
+
+def extract_warframe_blueprint_data(warframe_name, raw_data):
+   component_rows = raw_data.split('<td rowspan="2" style="')
+   component_rows.pop(0)
+   components = []
+   
+   chassis_name = warframe_name + ' Chassis'
+   neuroptics_name = warframe_name + ' Neuroptics'
+   systems_name = warframe_name + ' Systems'
+   component_names = ['Credits', chassis_name, neuroptics_name, systems_name]
+   
+   for n in range(0, len(component_rows) - 1):
+      row = component_rows[n]
+      component_name = component_names[n]
+      component_data = extract_component_row(row)
+      if(len(component_data) < 2):
+         continue
+      component_amount = component_data[1]
+      components.append([warframe_name, component_name, component_amount])
    return components
 
 # For some reason the wiki has two ways of formatting component display - 
@@ -63,10 +86,13 @@ def extract_component_row(value):
    else:
       name = value.split('img alt="')[1].split('.png')[0]
 
-   amount_string = value.split("<br>")[1].split("</td>")[0]
-   amount_string = amount_string.strip()
-   amount_string = amount_string.replace(',', '')
-   amount = int(amount_string)
+   amount = 1
+   amount_string = value.split('<br>')
+   if len(amount_string) > 1:
+      amount_string = amount_string[1].split("</td>")[0]
+      amount_string = amount_string.strip()
+      amount_string = amount_string.replace(',', '')
+      amount = int(amount_string)
    return [name, amount]
 
 component_category_name = 'Component'

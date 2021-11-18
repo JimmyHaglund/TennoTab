@@ -1,7 +1,8 @@
 name_dictionary = {
    'DENitainExtract': 'Nitain Extract',
    'Forma2': 'Forma',
-   'Tellurium Market': 'Tellurium'
+   'Tellurium Market': 'Tellurium',
+   'TelluriumMarket': 'Tellurium'
 }
 
 def filter(name):

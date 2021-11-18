@@ -18,14 +18,17 @@ def extract_weapon_components_row_data(row):
    # print(name)
    return result
 
-def extract_component_data(component_name, value):
+def extract_component_data(result_name, value):
    component_rows = value.split('<td rowspan="2" style="')
    component_rows.pop(0)
    components = []
    for row in component_rows:
-      component = extract_component_row(row)
-      if(len(component) > 1):
-         components.append([component_name, component_category_name, component[0], resource_category_name, component[1]])
+      component_data = extract_component_row(row)
+      if(len(component_data) < 2):
+         continue
+      component_name = component_data[0]
+      component_amount = component_data[1]
+      components.append([result_name, component_name, component_amount])
    return components
 
 # For some reason the wiki has two ways of formatting component display - 

@@ -1,0 +1,164 @@
+ItemName,Location,Rotation,BountyTier,BountyStage,DropChance
+Stubba Blueprint,Ghoul Purge,A,1,4,5.95
+Stubba Blueprint,Ghoul Purge,A,1,2,4.85
+Stubba Blueprint,Ghoul Purge,A,1,3,4.85
+Quartakk Blueprint,Ghoul Purge,A,2,4,5.95
+Quartakk Blueprint,Ghoul Purge,A,2,2,4.85
+Quartakk Blueprint,Ghoul Purge,A,2,3,4.85
+Arum Spinosa Rivet,Isolation Vault,A,2,1,2
+Arum Spinosa Rivet,Isolation Vault,B,2,1,2
+Arum Spinosa Rivet,Isolation Vault,C,2,1,2
+Arum Spinosa Blueprint,Isolation Vault,A,2,1,6.25
+Arum Spinosa Blueprint,Isolation Vault,B,2,1,6.25
+Arum Spinosa Blueprint,Isolation Vault,C,2,1,6.25
+Sporothrix Barrel,Isolation Vault,A,3,1,3.75
+Sporothrix Receiver,Isolation Vault,B,3,1,3.75
+Sporothrix Stock,Isolation Vault,C,3,1,3.75
+Damaged Necramech Weapon Barrel,Isolation Vault,A,3,1,3
+Damaged Necramech Weapon Receiver,Isolation Vault,B,3,1,3
+Damaged Necramech Weapon Stock,Isolation Vault,C,3,1,3
+Arum Spinosa Guard,Isolation Vault,A,2,1,3.75
+Arum Spinosa Guard,Isolation Vault,B,2,1,3.75
+Arum Spinosa Guard,Isolation Vault,C,2,1,3.75
+Arum Spinosa Guard,Isolation Vault Arcana,A,2,2,4.69
+Arum Spinosa Rivet,Isolation Vault Arcana,A,2,3,4
+Arum Spinosa Rivet,Isolation Vault Arcana,B,2,3,4
+Arum Spinosa Rivet,Isolation Vault Arcana,C,2,3,4
+Arum Spinosa Blueprint,Isolation Vault Arcana,A,2,1,12.5
+Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,1,12.5
+Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,1,12.5
+Arum Spinosa Blueprint,Isolation Vault Arcana,A,2,2,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,A,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,3,7.81
+Arum Spinosa Guard,Isolation Vault Arcana,A,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,B,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,B,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,C,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,C,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,A,2,4,7.5
+Arum Spinosa Guard,Isolation Vault Arcana,B,2,4,7.5
+Arum Spinosa Guard,Isolation Vault Arcana,C,2,4,7.5
+Garuda Chassis Blueprint,Orb Vallis,A,1,3,30.56
+Garuda Chassis Blueprint,Orb Vallis,B,1,3,30.56
+Garuda Chassis Blueprint,Orb Vallis,C,1,3,30.56
+Garuda Chassis Blueprint,Orb Vallis,A,1,2,7.52
+Garuda Chassis Blueprint,Orb Vallis,B,1,2,7.52
+Garuda Chassis Blueprint,Orb Vallis,C,1,2,7.52
+Garuda Systems Blueprint,Orb Vallis,A,2,3,26.67
+Garuda Systems Blueprint,Orb Vallis,B,2,3,26.67
+Garuda Systems Blueprint,Orb Vallis,C,2,3,26.67
+Garuda Systems Blueprint,Orb Vallis,A,2,2,7.84
+Garuda Systems Blueprint,Orb Vallis,B,2,2,7.84
+Garuda Systems Blueprint,Orb Vallis,C,2,2,7.84
+Garuda Neuroptics Blueprint,Orb Vallis,A,3,3,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,A,3,2,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,B,3,2,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,B,3,3,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,C,3,2,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,C,3,3,12.5
+Garuda Neuroptics Blueprint,Orb Vallis,A,3,4,25
+Garuda Neuroptics Blueprint,Orb Vallis,B,3,4,25
+Garuda Neuroptics Blueprint,Orb Vallis,C,3,4,25
+Gara Chassis Blueprint,Plains of Eidolon,C,1,3,30.56
+Gara Chassis Blueprint,Plains of Eidolon,B,1,3,30.56
+Gara Chassis Blueprint,Plains of Eidolon,C,1,2,7.52
+Gara Chassis Blueprint,Plains of Eidolon,B,1,2,7.52
+Gara Chassis Blueprint,Plains of Eidolon,A,1,3,30.56
+Gara Chassis Blueprint,Plains of Eidolon,A,1,2,7.52
+Gara Systems Blueprint,Plains of Eidolon,A,2,3,25
+Gara Systems Blueprint,Plains of Eidolon,B,2,3,25
+Gara Systems Blueprint,Plains of Eidolon,C,2,3,25
+Gara Systems Blueprint,Plains of Eidolon,B,2,2,10.08
+Gara Systems Blueprint,Plains of Eidolon,C,2,2,10.08
+Gara Neuroptics Blueprint,Plains of Eidolon,A,3,2,9.04
+Gara Neuroptics Blueprint,Plains of Eidolon,A,3,3,9.04
+Gara Neuroptics Blueprint,Plains of Eidolon,B,3,2,9.3
+Gara Neuroptics Blueprint,Plains of Eidolon,B,3,3,9.3
+Gara Neuroptics Blueprint,Plains of Eidolon,C,3,2,10.4
+Gara Neuroptics Blueprint,Plains of Eidolon,C,3,3,10.4
+Gara Neuroptics Blueprint,Plains of Eidolon,A,3,4,24.62
+Gara Neuroptics Blueprint,Plains of Eidolon,B,3,4,23.53
+Gara Neuroptics Blueprint,Plains of Eidolon,C,3,4,26.09
+Revenant Systems Blueprint,Plains of Eidolon,A,3,4,24.62
+Revenant Systems Blueprint,Plains of Eidolon,B,3,4,26.47
+Revenant Systems Blueprint,Plains of Eidolon,C,3,4,23.19
+Revenant Systems Blueprint,Plains of Eidolon,B,3,3,10.47
+Revenant Systems Blueprint,Plains of Eidolon,C,3,2,9.25
+Revenant Systems Blueprint,Plains of Eidolon,A,3,3,9.04
+Revenant Systems Blueprint,Plains of Eidolon,B,3,2,10.47
+Revenant Systems Blueprint,Plains of Eidolon,C,3,3,9.25
+Revenant Systems Blueprint,Plains of Eidolon,A,3,2,9.04
+Furax Wraith Right Gauntlet,Plains of Eidolon,B,5,5,8.16
+Furax Wraith Right Gauntlet,Plains of Eidolon,A,5,5,8.16
+Furax Wraith Right Gauntlet,Plains of Eidolon,B,5,4,5.41
+Furax Wraith Left Gauntlet,Plains of Eidolon,A,5,4,5.41
+Furax Wraith Blueprint,Plains of Eidolon,C,5,4,5.41
+Furax Wraith Blueprint,Plains of Eidolon,C,5,5,8.16
+Revenant Neuroptics Blueprint,Plains of Eidolon,A,5,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,B,5,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,C,5,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,A,5,4,6.76
+Revenant Neuroptics Blueprint,Plains of Eidolon,B,5,4,6.76
+Revenant Neuroptics Blueprint,Plains of Eidolon,C,5,4,6.76
+Furax Wraith Blueprint,Plains of Eidolon,C,6,5,8.16
+Furax Wraith Right Gauntlet,Plains of Eidolon,B,6,5,8.16
+Furax Wraith Left Gauntlet,Plains of Eidolon,A,6,5,8.16
+Revenant Neuroptics Blueprint,Plains of Eidolon,A,6,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,B,6,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,C,6,5,10.2
+Revenant Neuroptics Blueprint,Plains of Eidolon,A,6,4,6.76
+Revenant Neuroptics Blueprint,Plains of Eidolon,B,6,4,6.76
+Revenant Neuroptics Blueprint,Plains of Eidolon,C,6,4,6.76
+Furax Wraith Left Gauntlet,Plains of Eidolon,A,6,4,5.41
+Furax Wraith Right Gauntlet,Plains of Eidolon,B,6,4,5.41
+Furax Wraith Blueprint,Plains of Eidolon,C,6,4,5.41
+Xaku Neuroptics Blueprint,Cambion Drift,A,2,2,8.82
+Xaku Neuroptics Blueprint,Cambion Drift,B,2,2,8.82
+Xaku Neuroptics Blueprint,Cambion Drift,C,2,2,8.82
+Xaku Neuroptics Blueprint,Cambion Drift,A,2,3,12
+Xaku Neuroptics Blueprint,Cambion Drift,B,2,3,12
+Xaku Neuroptics Blueprint,Cambion Drift,C,2,3,12
+Xaku Systems Blueprint,Cambion Drift,A,4,2,8.22
+Xaku Systems Blueprint,Cambion Drift,A,4,3,8.22
+Xaku Systems Blueprint,Cambion Drift,B,4,2,8.22
+Xaku Systems Blueprint,Cambion Drift,B,4,3,8.22
+Xaku Systems Blueprint,Cambion Drift,A,4,4,6.45
+Xaku Systems Blueprint,Cambion Drift,B,4,4,6.45
+Xaku Systems Blueprint,Cambion Drift,A,4,4,11.32
+Xaku Systems Blueprint,Cambion Drift,B,4,4,11.32
+Xaku Chassis Blueprint,Cambion Drift,A,5,2,8.57
+Xaku Chassis Blueprint,Cambion Drift,A,5,3,8.57
+Xaku Chassis Blueprint,Cambion Drift,A,5,4,6.67
+Xaku Chassis Blueprint,Cambion Drift,A,5,5,13.04
+Xaku Chassis Blueprint,Cambion Drift,A,6,2,8.57
+Xaku Chassis Blueprint,Cambion Drift,A,6,3,8.57
+Xaku Chassis Blueprint,Cambion Drift,A,6,4,6.67
+Xaku Chassis Blueprint,Cambion Drift,A,6,5,13.04
+Sporothrix Barrel,Isolation Vault Arcana,A,3,2,4.69
+Sporothrix Barrel,Isolation Vault Arcana,A,3,3,4.69
+Sporothrix Receiver,Isolation Vault Arcana,B,3,2,4.69
+Sporothrix Receiver,Isolation Vault Arcana,B,3,3,4.69
+Sporothrix Stock,Isolation Vault Arcana,C,3,2,4.69
+Sporothrix Stock,Isolation Vault Arcana,C,3,3,4.69
+Sporothrix Barrel,Isolation Vault Arcana,A,3,4,7.5
+Sporothrix Receiver,Isolation Vault Arcana,B,3,4,7.5
+Sporothrix Stock,Isolation Vault Arcana,C,3,4,7.5
+Quassus Blueprint,Cambion Drift,A,5,4,22.22
+Quassus Blueprint,Cambion Drift,A,5,5,43.48
+Quassus Blueprint,Cambion Drift,A,6,4,22.22
+Quassus Blueprint,Cambion Drift,A,6,5,43.48
+Revenant Chassis Blueprint,Plains of Eidolon,A,4,2,8.99
+Revenant Chassis Blueprint,Plains of Eidolon,A,4,3,8.99
+Revenant Chassis Blueprint,Plains of Eidolon,B,4,2,8.99
+Revenant Chassis Blueprint,Plains of Eidolon,B,4,3,8.99
+Revenant Chassis Blueprint,Plains of Eidolon,C,4,2,8.7
+Revenant Chassis Blueprint,Plains of Eidolon,C,4,3,8.7
+Revenant Chassis Blueprint,Plains of Eidolon,A,4,4,8.79
+Revenant Chassis Blueprint,Plains of Eidolon,B,4,4,8.79
+Revenant Chassis Blueprint,Plains of Eidolon,C,4,4,8.51
+Revenant Chassis Blueprint,Plains of Eidolon,A,4,4,21.62
+Revenant Chassis Blueprint,Plains of Eidolon,B,4,4,21.62
+Revenant Chassis Blueprint,Plains of Eidolon,C,4,4,22.22

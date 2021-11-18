@@ -1,7 +1,3 @@
-Gauss,Credits,25000
-Gauss,Gauss Chassis,1
-Gauss,Gauss Neuroptics,1
-Gauss,Gauss Systems,1
 Gauss Neuroptics ,Credits,15000
 Gauss Neuroptics ,Argon Crystal,1
 Gauss Neuroptics ,Rubedo,1600
@@ -14,10 +10,6 @@ Gauss Systems ,Credits,15000
 Gauss Systems ,Radiant Zodian,3
 Gauss Systems ,Marquise Thyst,3
 Gauss Systems ,Mytocardia Spore,70
-Mirage,Credits,25000
-Mirage,Mirage Chassis,1
-Mirage,Mirage Neuroptics,1
-Mirage,Mirage Systems,1
 Mirage Neuroptics,Credits,15000
 Mirage Neuroptics,Alloy Plate,250
 Mirage Neuroptics,Polymer Bundle,400
@@ -30,10 +22,6 @@ Mirage Systems,Credits,15000
 Mirage Systems,Circuits,250
 Mirage Systems,Polymer Bundle,650
 Mirage Systems,Control Module,1
-Inaros,Credits,25000
-Inaros,Inaros Chassis,1
-Inaros,Inaros Neuroptics,1
-Inaros,Inaros Systems,1
 Inaros Neuroptics,Credits,15000
 Inaros Neuroptics,Alloy Plate,1500
 Inaros Neuroptics,Polymer Bundle,350
@@ -46,10 +34,6 @@ Inaros Systems,Credits,15000
 Inaros Systems,Argon Crystal,2
 Inaros Systems,Polymer Bundle,300
 Inaros Systems,Nano Spores,1600
-Nezha,Credits,25000
-Nezha,Nezha Chassis,1
-Nezha,Nezha Neuroptics,1
-Nezha,Nezha Systems,1
 Nezha Neuroptics,Credits,15000
 Nezha Neuroptics,Argon Crystal,1
 Nezha Neuroptics,Neural Sensors,1
@@ -62,10 +46,6 @@ Nezha Systems,Credits,15000
 Nezha Systems,Control Module,1
 Nezha Systems,Morphics,1
 Nezha Systems,Ferrite,5000
-Garuda,Credits,25000
-Garuda,Garuda Chassis,1
-Garuda,Garuda Neuroptics,1
-Garuda,Garuda Systems,1
 Garuda Neuroptics,Credits,15000
 Garuda Neuroptics,Vega Toroid,2
 Garuda Neuroptics,Star Amarast,6
@@ -78,10 +58,6 @@ Garuda Systems,Credits,15000
 Garuda Systems,Sola Toroid,2
 Garuda Systems,Marquise Thyst,3
 Garuda Systems,Venerdo Alloy,40
-Volt,Credits,25000
-Volt,Volt Chassis,1
-Volt,Volt Neuroptics,1
-Volt,Volt Systems,1
 Volt Neuroptics,Credits,15000
 Volt Neuroptics,Alloy Plate,150
 Volt Neuroptics,Neural Sensors,1
@@ -94,10 +70,6 @@ Volt Systems,Credits,15000
 Volt Systems,Control Module,1
 Volt Systems,Morphics,1
 Volt Systems,Salvage,500
-Mag,Credits,25000
-Mag,Mag Chassis,1
-Mag,Mag Neuroptics,1
-Mag,Mag Systems,1
 Mag Neuroptics,Credits,15000
 Mag Neuroptics,Alloy Plate,150
 Mag Neuroptics,Neural Sensors,1
@@ -110,10 +82,6 @@ Mag Systems,Credits,15000
 Mag Systems,Control Module,1
 Mag Systems,Morphics,1
 Mag Systems,Salvage,500
-Baruuk,Credits,25000
-Baruuk,Baruuk Chassis,1
-Baruuk,Baruuk Neuroptics,1
-Baruuk,Baruuk Systems,1
 Baruuk Neuroptics ,Credits,15000
 Baruuk Neuroptics ,Sola Toroid,3
 Baruuk Neuroptics ,Alloy Plate,2850
@@ -126,10 +94,6 @@ Baruuk Systems ,Credits,15000
 Baruuk Systems ,Calda Toroid,3
 Baruuk Systems ,Ferrite,2500
 Baruuk Systems ,Entroplasma,10
-Loki,Credits,25000
-Loki,Loki Chassis,1
-Loki,Loki Neuroptics,1
-Loki,Loki Systems,1
 Loki Neuroptics,Credits,15000
 Loki Neuroptics,Alloy Plate,150
 Loki Neuroptics,Neural Sensors,1
@@ -142,10 +106,6 @@ Loki Systems,Credits,15000
 Loki Systems,Control Module,1
 Loki Systems,Morphics,1
 Loki Systems,Salvage,500
-Saryn,Credits,25000
-Saryn,Saryn Chassis,1
-Saryn,Saryn Neuroptics,1
-Saryn,Saryn Systems,1
 Saryn Neuroptics,Credits,15000
 Saryn Neuroptics,Circuits,150
 Saryn Neuroptics,Neural Sensors,1
@@ -158,10 +118,6 @@ Saryn Systems,Credits,15000
 Saryn Systems,Control Module,1
 Saryn Systems,Morphics,1
 Saryn Systems,Salvage,550
-Protea,Credits,25000
-Protea,Protea Chassis,1
-Protea,Protea Neuroptics,1
-Protea,Protea Systems,1
 Protea Neuroptics,Credits,15000
 Protea Neuroptics,Salvage,11500
 Protea Neuroptics,Polymer Bundle,5150
@@ -174,10 +130,6 @@ Protea Systems,Credits,15000
 Protea Systems,Ferrite,13400
 Protea Systems,Cryotic,1000
 Protea Systems,Titanium,1750
-Atlas,Credits,30000
-Atlas,Atlas Chassis,1
-Atlas,Atlas Neuroptics,1
-Atlas,Atlas Systems,1
 Atlas Neuroptics ,Credits,15000
 Atlas Neuroptics ,Polymer Bundle,1400
 Atlas Neuroptics ,Alloy Plate,1100
@@ -190,10 +142,6 @@ Atlas Systems ,Credits,15000
 Atlas Systems ,Ferrite,4600
 Atlas Systems ,Polymer Bundle,1700
 Atlas Systems ,Morphics,5
-Wukong,Credits,25000
-Wukong,Wukong Chassis,1
-Wukong,Wukong Neuroptics,1
-Wukong,Wukong Systems,1
 Wukong Neuroptics,Credits,15000
 Wukong Neuroptics,Circuits,1400
 Wukong Neuroptics,Neural Sensors,1
@@ -206,10 +154,6 @@ Wukong Systems,Credits,15000
 Wukong Systems,Argon Crystal,2
 Wukong Systems,Neurodes,2
 Wukong Systems,Salvage,8000
-Banshee,Credits,25000
-Banshee,Banshee Chassis,1
-Banshee,Banshee Neuroptics,1
-Banshee,Banshee Systems,1
 Banshee Neuroptics ,Credits,15000
 Banshee Neuroptics ,Circuits,150
 Banshee Neuroptics ,Neural Sensors,1
@@ -222,10 +166,6 @@ Banshee Systems ,Credits,15000
 Banshee Systems ,Control Module,1
 Banshee Systems ,Morphics,1
 Banshee Systems ,Salvage,500
-Lavos,Credits,25000
-Lavos,Lavos Chassis,1
-Lavos,Lavos Neuroptics,1
-Lavos,Lavos Systems,1
 Lavos Neuroptics ,Credits,15000
 Lavos Neuroptics ,Trapezium Xenorhast,6
 Lavos Neuroptics ,Titanium,2000
@@ -238,10 +178,6 @@ Lavos Systems ,Credits,15000
 Lavos Systems ,Cabochon Embolos,6
 Lavos Systems ,Nano Spores,5500
 Lavos Systems ,Hexenon,550
-Nova,Credits,25000
-Nova,Nova Chassis,1
-Nova,Nova Neuroptics,1
-Nova,Nova Systems,1
 Nova Neuroptics,Credits,15000
 Nova Neuroptics,Alloy Plate,150
 Nova Neuroptics,Neural Sensors,1
@@ -256,10 +192,6 @@ Nova Systems,Control Module,1
 Nova Systems,Morphics,1
 Nova Systems,Salvage,500
 Nova Systems,Plastids,600
-Ember,Credits,25000
-Ember,Ember Chassis,1
-Ember,Ember Neuroptics,1
-Ember,Ember Systems,1
 Ember Neuroptics,Credits,15000
 Ember Neuroptics,Alloy Plate,150
 Ember Neuroptics,Neural Sensors,1
@@ -272,10 +204,6 @@ Ember Systems,Credits,15000
 Ember Systems,Control Module,1
 Ember Systems,Morphics,1
 Ember Systems,Salvage,500
-Khora,Credits,25000
-Khora,Khora Chassis,1
-Khora,Khora Neuroptics,1
-Khora,Khora Systems,1
 Khora Neuroptics,Credits,15000
 Khora Neuroptics,Kavat Gene Strain,2
 Khora Neuroptics,Forest Rodent Spine,35
@@ -288,10 +216,6 @@ Khora Systems,Credits,15000
 Khora Systems,Kavat Gene Strain,2
 Khora Systems,Plastids,1000
 Khora Systems,Circuits,2600
-Valkyr,Credits,25000
-Valkyr,Valkyr Chassis,1
-Valkyr,Valkyr Neuroptics,1
-Valkyr,Valkyr Systems,1
 Valkyr Neuroptics,Credits,15000
 Valkyr Neuroptics,Circuits,150
 Valkyr Neuroptics,Neural Sensors,1
@@ -304,10 +228,6 @@ Valkyr Systems,Credits,15000
 Valkyr Systems,Control Module,1
 Valkyr Systems,Morphics,1
 Valkyr Systems,Salvage,500
-Mesa,Credits,25000
-Mesa,Mesa Chassis,1
-Mesa,Mesa Neuroptics,1
-Mesa,Mesa Systems,1
 Mesa Neuroptics,Credits,15000
 Mesa Neuroptics,Alloy Plate,1500
 Mesa Neuroptics,Neural Sensors,2
@@ -320,10 +240,6 @@ Mesa Systems,Credits,15000
 Mesa Systems,Argon Crystal,1
 Mesa Systems,Nano Spores,1600
 Mesa Systems,Polymer Bundle,300
-Titania,Credits,25000
-Titania,Titania Chassis,1
-Titania,Titania Neuroptics,1
-Titania,Titania Systems,1
 Titania Neuroptics,Credits,15000
 Titania Neuroptics,Alloy Plate,1500
 Titania Neuroptics,Neurodes,2
@@ -336,10 +252,6 @@ Titania Systems,Credits,15000
 Titania Systems,Control Module,1
 Titania Systems,Plastids,800
 Titania Systems,Cryotic,2200
-Nidus,Credits,25000
-Nidus,Nidus Chassis,1
-Nidus,Nidus Neuroptics,1
-Nidus,Nidus Systems,1
 Nidus Neuroptics,Credits,15000
 Nidus Neuroptics,Mutagen Sample,10
 Nidus Neuroptics,Plastids,1000
@@ -352,10 +264,6 @@ Nidus Systems,Credits,15000
 Nidus Systems,Nano Spores,6000
 Nidus Systems,Circuits,3500
 Nidus Systems,Morphics,14
-Ivara,Credits,25000
-Ivara,Ivara Chassis,1
-Ivara,Ivara Neuroptics,1
-Ivara,Ivara Systems,1
 Ivara Neuroptics,Credits,15000
 Ivara Neuroptics,Neurodes,5
 Ivara Neuroptics,Plastids,800
@@ -368,10 +276,6 @@ Ivara Systems,Credits,15000
 Ivara Systems,Control Module,5
 Ivara Systems,Rubedo,1000
 Ivara Systems,Nitain Extract,5
-Octavia,Credits,25000
-Octavia,Octavia Chassis,1
-Octavia,Octavia Neuroptics,1
-Octavia,Octavia Systems,1
 Octavia Neuroptics,Credits,15000
 Octavia Neuroptics,Oxium,1000
 Octavia Neuroptics,Plastids,2600
@@ -384,10 +288,6 @@ Octavia Systems,Credits,15000
 Octavia Systems,Kuva,2000
 Octavia Systems,Morphics,20
 Octavia Systems,Circuits,3000
-Excalibur,Credits,25000
-Excalibur,Excalibur Chassis,1
-Excalibur,Excalibur Neuroptics,1
-Excalibur,Excalibur Systems,1
 Excalibur Neuroptics,Credits,15000
 Excalibur Neuroptics,Alloy Plate,150
 Excalibur Neuroptics,Neural Sensors,1
@@ -400,10 +300,6 @@ Excalibur Systems,Credits,15000
 Excalibur Systems,Control Module,1
 Excalibur Systems,Morphics,1
 Excalibur Systems,Salvage,500
-Sevagoth,Credits,25000
-Sevagoth,Sevagoth Chassis,1
-Sevagoth,Sevagoth Neuroptics,1
-Sevagoth,Sevagoth Systems,1
 Sevagoth Neuroptics ,Credits,15000
 Sevagoth Neuroptics ,Neural Sensors,6
 Sevagoth Neuroptics ,Titanium,1200
@@ -416,10 +312,6 @@ Sevagoth Systems ,Credits,15000
 Sevagoth Systems ,Argon Crystal,2
 Sevagoth Systems ,Oxium,250
 Sevagoth Systems ,Asterite,15
-Nekros,Credits,25000
-Nekros,Nekros Chassis,1
-Nekros,Nekros Neuroptics,1
-Nekros,Nekros Systems,1
 Nekros Neuroptics,Credits,15000
 Nekros Neuroptics,Alloy Plate,150
 Nekros Neuroptics,Neural Sensors,1
@@ -432,10 +324,6 @@ Nekros Systems,Credits,15000
 Nekros Systems,Control Module,1
 Nekros Systems,Morphics,1
 Nekros Systems,Salvage,500
-Ash,Credits,25000
-Ash,Ash Chassis,1
-Ash,Ash Neuroptics,1
-Ash,Ash Systems,1
 Ash Neuroptics ,Credits,15000
 Ash Neuroptics ,Alloy Plate,150
 Ash Neuroptics ,Neural Sensors,1
@@ -448,10 +336,6 @@ Ash Systems ,Credits,15000
 Ash Systems ,Control Module,1
 Ash Systems ,Morphics,1
 Ash Systems ,Salvage,500
-Xaku,Credits,25000
-Xaku,Xaku Chassis,1
-Xaku,Xaku Neuroptics,1
-Xaku,Xaku Systems,1
 Xaku Neuroptics,Credits,15000
 Xaku Neuroptics,Neural Sensors,10
 Xaku Neuroptics,Thaumic Distillate,60
@@ -464,10 +348,6 @@ Xaku Systems,Credits,15000
 Xaku Systems,Breath Of The Eidolon,10
 Xaku Systems,Scintillant,5
 Xaku Systems,Pustulite,45
-Rhino,Credits,25000
-Rhino,Rhino Chassis,1
-Rhino,Rhino Neuroptics,1
-Rhino,Rhino Systems,1
 Rhino Neuroptics,Credits,15000
 Rhino Neuroptics,Alloy Plate,150
 Rhino Neuroptics,Morphics,1
@@ -480,10 +360,6 @@ Rhino Systems,Credits,15000
 Rhino Systems,Gallium,1
 Rhino Systems,Morphics,1
 Rhino Systems,Salvage,500
-Grendel,Credits,35000
-Grendel,Grendel Chassis,1
-Grendel,Grendel Neuroptics,1
-Grendel,Grendel Systems,1
 Grendel Neuroptics ,Credits,15000
 Grendel Neuroptics ,Argon Crystal,2
 Grendel Neuroptics ,Control Module,5
@@ -496,10 +372,6 @@ Grendel Systems ,Credits,15000
 Grendel Systems ,Circuits,1125
 Grendel Systems ,Morphics,10
 Grendel Systems ,Icon Fish Meat,125
-Zephyr,Credits,25000
-Zephyr,Zephyr Chassis,1
-Zephyr,Zephyr Neuroptics,1
-Zephyr,Zephyr Systems,1
 Zephyr Neuroptics ,Credits,15000
 Zephyr Neuroptics ,Circuits,150
 Zephyr Neuroptics ,Oxium,200
@@ -512,13 +384,9 @@ Zephyr Systems ,Credits,15000
 Zephyr Systems ,Control Module,1
 Zephyr Systems ,Oxium,200
 Zephyr Systems ,Polymer Bundle,500
-Wisp,Credits,25000
-Wisp,Wisp Chassis,1
-Wisp,Wisp Neuroptics,1
-Wisp,Wisp Systems,1
 Wisp Neuroptics,Credits,15000
 Wisp Neuroptics,Hexenon,300
-Wisp Neuroptics,Tellurium,2
+Wisp Neuroptics,Tellurium Market,2
 Wisp Neuroptics,Plastids,950
 Wisp Chassis,Credits,15000
 Wisp Chassis,Hexenon,500
@@ -528,26 +396,18 @@ Wisp Systems,Credits,15000
 Wisp Systems,Hexenon,400
 Wisp Systems,Nitain Extract,2
 Wisp Systems,Rubedo,950
-Yareli,Credits,25000
-Yareli,Yareli Chassis,1
-Yareli,Yareli Neuroptics,1
-Yareli,Yareli Systems,1
 Yareli Neuroptics ,Credits,15000
 Yareli Neuroptics ,Argon Crystal,2
 Yareli Neuroptics ,Plastids,150
 Yareli Neuroptics ,Salvage,875
 Yareli Chassis ,Credits,15000
-Yareli Chassis ,Tellurium,2
+Yareli Chassis ,Tellurium Market,2
 Yareli Chassis ,Venerdo Alloy,20
 Yareli Chassis ,Circuits,350
 Yareli Systems ,Credits,15000
 Yareli Systems ,Nitain Extract,2
 Yareli Systems ,Cryotic,350
 Yareli Systems ,Exa Brain,5
-Gara,Credits,25000
-Gara,Gara Chassis,1
-Gara,Gara Neuroptics,1
-Gara,Gara Systems,1
 Gara Neuroptics,Credits,15000
 Gara Neuroptics,Pyrotic Alloy,90
 Gara Neuroptics,Grokdrul,65
@@ -560,10 +420,6 @@ Gara Systems,Credits,15000
 Gara Systems,Morphics,2
 Gara Systems,Charc Electroplax,35
 Gara Systems,Esher Devar,25
-Hildryn,Credits,25000
-Hildryn,Hildryn Chassis,1
-Hildryn,Hildryn Neuroptics,1
-Hildryn,Hildryn Systems,1
 Hildryn Neuroptics,Credits,15000
 Hildryn Neuroptics,Lazulite Toroid,2
 Hildryn Neuroptics,Argon Crystal,1
@@ -574,12 +430,8 @@ Hildryn Chassis,Nitain Extract,2
 Hildryn Chassis,Thermal Sludge,90
 Hildryn Systems,Credits,15000
 Hildryn Systems,Lazulite Toroid,2
-Hildryn Systems,Tellurium,2
+Hildryn Systems,Tellurium Market,2
 Hildryn Systems,Gorgaricus Spore,95
-Vauban,Credits,25000
-Vauban,Vauban Chassis,1
-Vauban,Vauban Neuroptics,1
-Vauban,Vauban Systems,1
 Vauban Neuroptics,Credits,15000
 Vauban Neuroptics,Alloy Plate,150
 Vauban Neuroptics,Neural Sensors,1
@@ -592,10 +444,6 @@ Vauban Systems,Credits,15000
 Vauban Systems,Control Module,1
 Vauban Systems,Morphics,1
 Vauban Systems,Salvage,500
-Hydroid,Credits,25000
-Hydroid,Hydroid Chassis,1
-Hydroid,Hydroid Neuroptics,1
-Hydroid,Hydroid Systems,1
 Hydroid Neuroptics,Credits,15000
 Hydroid Neuroptics,Alloy Plate,150
 Hydroid Neuroptics,Control Module,1
@@ -608,10 +456,6 @@ Hydroid Systems,Credits,15000
 Hydroid Systems,Orokin Cell,1
 Hydroid Systems,Gallium,4
 Hydroid Systems,Polymer Bundle,500
-Oberon,Credits,25000
-Oberon,Oberon Chassis,1
-Oberon,Oberon Neuroptics,1
-Oberon,Oberon Systems,1
 Oberon Neuroptics ,Credits,15000
 Oberon Neuroptics ,Alloy Plate,150
 Oberon Neuroptics ,Control Module,1
@@ -624,10 +468,6 @@ Oberon Systems ,Credits,15000
 Oberon Systems ,Orokin Cell,1
 Oberon Systems ,Gallium,1
 Oberon Systems ,Polymer Bundle,500
-Frost,Credits,25000
-Frost,Frost Chassis,1
-Frost,Frost Neuroptics,1
-Frost,Frost Systems,1
 Frost Neuroptics,Credits,15000
 Frost Neuroptics,Alloy Plate,150
 Frost Neuroptics,Neural Sensors,1
@@ -640,10 +480,6 @@ Frost Systems,Credits,15000
 Frost Systems,Control Module,1
 Frost Systems,Morphics,1
 Frost Systems,Salvage,500
-Limbo,Credits,25000
-Limbo,Limbo Chassis,1
-Limbo,Limbo Neuroptics,1
-Limbo,Limbo Systems,1
 Limbo Neuroptics,Credits,15000
 Limbo Neuroptics,Alloy Plate,150
 Limbo Neuroptics,Polymer Bundle,150
@@ -656,10 +492,6 @@ Limbo Systems,Credits,15000
 Limbo Systems,Control Module,1
 Limbo Systems,Morphics,3
 Limbo Systems,Salvage,500
-Trinity,Credits,25000
-Trinity,Trinity Chassis,1
-Trinity,Trinity Neuroptics,1
-Trinity,Trinity Systems,1
 Trinity Neuroptics,Credits,15000
 Trinity Neuroptics,Alloy Plate,150
 Trinity Neuroptics,Neural Sensors,1
@@ -672,10 +504,6 @@ Trinity Systems,Credits,15000
 Trinity Systems,Control Module,1
 Trinity Systems,Morphics,1
 Trinity Systems,Salvage,500
-Nyx,Credits,25000
-Nyx,Nyx Chassis,1
-Nyx,Nyx Neuroptics,1
-Nyx,Nyx Systems,1
 Nyx Neuroptics,Credits,15000
 Nyx Neuroptics,Alloy Plate,150
 Nyx Neuroptics,Neural Sensors,1
@@ -688,10 +516,6 @@ Nyx Systems,Credits,15000
 Nyx Systems,Control Module,1
 Nyx Systems,Morphics,1
 Nyx Systems,Salvage,500
-Harrow,Credits,25000
-Harrow,Harrow Chassis,1
-Harrow,Harrow Neuroptics,1
-Harrow,Harrow Systems,1
 Harrow Neuroptics,Credits,15000
 Harrow Neuroptics,Rubedo,1500
 Harrow Neuroptics,Polymer Bundle,4000
@@ -704,10 +528,6 @@ Harrow Systems,Credits,15000
 Harrow Systems,Circuits,2500
 Harrow Systems,Cryotic,1000
 Harrow Systems,Ferrite,25000
-Revenant,Credits,25000
-Revenant,Revenant Chassis,1
-Revenant,Revenant Neuroptics,1
-Revenant,Revenant Systems,1
 Revenant Neuroptics,Credits,15000
 Revenant Neuroptics,Neural Sensors,3
 Revenant Neuroptics,Sentient Core,15
@@ -723,10 +543,6 @@ Revenant Systems,Control Module,3
 Revenant Systems,Cetus Wisp,3
 Revenant Systems,Salvage,8000
 Revenant Systems,Polymer Bundle,3000
-Hydroid Prime,Credits,25000
-Hydroid Prime,Hydroid Prime Chassis,1
-Hydroid Prime,Hydroid Prime Neuroptics,1
-Hydroid Prime,Hydroid Prime Systems,1
 Hydroid Prime Neuroptics,Credits,15000
 Hydroid Prime Neuroptics,Neural Sensors,5
 Hydroid Prime Neuroptics,Plastids,1100
@@ -739,10 +555,6 @@ Hydroid Prime Systems,Credits,15000
 Hydroid Prime Systems,Nitain Extract,2
 Hydroid Prime Systems,Control Module,10
 Hydroid Prime Systems,Circuits,1300
-Nova Prime,Credits,25000
-Nova Prime,Nova Prime Chassis,1
-Nova Prime,Nova Prime Neuroptics,1
-Nova Prime,Nova Prime Systems,1
 Nova Prime Neuroptics,Credits,15000
 Nova Prime Neuroptics,Rubedo,200
 Nova Prime Neuroptics,Neural Sensors,1
@@ -755,10 +567,6 @@ Nova Prime Systems,Credits,15000
 Nova Prime Systems,Control Module,1
 Nova Prime Systems,Morphics,1
 Nova Prime Systems,Ferrite,600
-Chroma Prime,Credits,25000
-Chroma Prime,Chroma Prime Chassis,1
-Chroma Prime,Chroma Prime Neuroptics,1
-Chroma Prime,Chroma Prime Systems,1
 Chroma Prime Neuroptics,Credits,15000
 Chroma Prime Neuroptics,Neurodes,4
 Chroma Prime Neuroptics,Circuits,1750
@@ -771,10 +579,6 @@ Chroma Prime Systems,Credits,15000
 Chroma Prime Systems,Argon Crystal,2
 Chroma Prime Systems,Neural Sensors,5
 Chroma Prime Systems,Polymer Bundle,1775
-Nyx Prime,Credits,25000
-Nyx Prime,Nyx Prime Chassis,1
-Nyx Prime,Nyx Prime Neuroptics,1
-Nyx Prime,Nyx Prime Systems,1
 Nyx Prime Neuroptics,Credits,15000
 Nyx Prime Neuroptics,Alloy Plate,150
 Nyx Prime Neuroptics,Neural Sensors,2
@@ -787,10 +591,6 @@ Nyx Prime Systems,Credits,15000
 Nyx Prime Systems,Control Module,3
 Nyx Prime Systems,Orokin Cell,1
 Nyx Prime Systems,Salvage,1000
-Loki Prime,Credits,25000
-Loki Prime,Loki Prime Chassis,1
-Loki Prime,Loki Prime Neuroptics,1
-Loki Prime,Loki Prime Systems,1
 Loki Prime Neuroptics,Credits,15000
 Loki Prime Neuroptics,Alloy Plate,150
 Loki Prime Neuroptics,Neural Sensors,2
@@ -803,10 +603,6 @@ Loki Prime Systems,Credits,15000
 Loki Prime Systems,Control Module,3
 Loki Prime Systems,Orokin Cell,1
 Loki Prime Systems,Ferrite,1000
-Limbo Prime,Credits,25000
-Limbo Prime,Limbo Prime Chassis,1
-Limbo Prime,Limbo Prime Neuroptics,1
-Limbo Prime,Limbo Prime Systems,1
 Limbo Prime Neuroptics,Credits,15000
 Limbo Prime Neuroptics,Neural Sensors,2
 Limbo Prime Neuroptics,Cryotic,300
@@ -817,12 +613,8 @@ Limbo Prime Chassis,Morphics,6
 Limbo Prime Chassis,Alloy Plate,1675
 Limbo Prime Systems,Credits,15000
 Limbo Prime Systems,Nitain Extract,2
-Limbo Prime Systems,Tellurium,2
+Limbo Prime Systems,Tellurium Market,2
 Limbo Prime Systems,Salvage,3000
-Nekros Prime,Credits,25000
-Nekros Prime,Nekros Prime Chassis,1
-Nekros Prime,Nekros Prime Neuroptics,1
-Nekros Prime,Nekros Prime Systems,1
 Nekros Prime Neuroptics,Credits,15000
 Nekros Prime Neuroptics,Alloy Plate,15000
 Nekros Prime Neuroptics,Neural Sensors,3
@@ -833,14 +625,10 @@ Nekros Prime Chassis,Ferrite,18000
 Nekros Prime Chassis,Rubedo,6000
 Nekros Prime Systems,Credits,15000
 Nekros Prime Systems,Control Module,3
-Nekros Prime Systems,Tellurium,3
+Nekros Prime Systems,Tellurium Market,3
 Nekros Prime Systems,Salvage,15000
-Equinox Prime,Credits,25000
-Equinox Prime,Equinox Prime Chassis,1
-Equinox Prime,Equinox Prime Neuroptics,1
-Equinox Prime,Equinox Prime Systems,1
 Equinox Prime Neuroptics,Credits,15000
-Equinox Prime Neuroptics,Tellurium,2
+Equinox Prime Neuroptics,Tellurium Market,2
 Equinox Prime Neuroptics,Circuits,1000
 Equinox Prime Neuroptics,Polymer Bundle,1275
 Equinox Prime Chassis,Credits,15000
@@ -851,10 +639,6 @@ Equinox Prime Systems,Credits,15000
 Equinox Prime Systems,Argon Crystal,2
 Equinox Prime Systems,Cryotic,575
 Equinox Prime Systems,Plastids,225
-Saryn Prime,Credits,25000
-Saryn Prime,Saryn Prime Chassis,1
-Saryn Prime,Saryn Prime Neuroptics,1
-Saryn Prime,Saryn Prime Systems,1
 Saryn Prime Neuroptics,Credits,15000
 Saryn Prime Neuroptics,Alloy Plate,1500
 Saryn Prime Neuroptics,Neural Sensors,2
@@ -867,10 +651,6 @@ Saryn Prime Systems,Credits,15000
 Saryn Prime Systems,Nitain Extract,3
 Saryn Prime Systems,Orokin Cell,1
 Saryn Prime Systems,Ferrite,4000
-Frost Prime,Credits,25000
-Frost Prime,Frost Prime Chassis,1
-Frost Prime,Frost Prime Neuroptics,1
-Frost Prime,Frost Prime Systems,1
 Frost Prime Neuroptics,Credits,15000
 Frost Prime Neuroptics,Alloy Plate,150
 Frost Prime Neuroptics,Neural Sensors,1
@@ -883,26 +663,18 @@ Frost Prime Systems,Credits,15000
 Frost Prime Systems,Control Module,1
 Frost Prime Systems,Morphics,1
 Frost Prime Systems,Salvage,500
-Nidus Prime,Credits,25000
-Nidus Prime,Nidus Prime Chassis,1
-Nidus Prime,Nidus Prime Neuroptics,1
-Nidus Prime,Nidus Prime Systems,1
 Nidus Prime Neuroptics ,Credits,15000
 Nidus Prime Neuroptics ,Argon Crystal,2
 Nidus Prime Neuroptics ,Cryotic,600
 Nidus Prime Neuroptics ,Circuits,1100
 Nidus Prime Chassis ,Credits,15000
-Nidus Prime Chassis ,Tellurium,2
+Nidus Prime Chassis ,Tellurium Market,2
 Nidus Prime Chassis ,Plastids,450
 Nidus Prime Chassis ,Polymer Bundle,1425
 Nidus Prime Systems ,Credits,15000
 Nidus Prime Systems ,Nitain Extract,2
 Nidus Prime Systems ,Neurodes,3
 Nidus Prime Systems ,Rubedo,1250
-Ember Prime,Credits,25000
-Ember Prime,Ember Prime Chassis,1
-Ember Prime,Ember Prime Neuroptics,1
-Ember Prime,Ember Prime Systems,1
 Ember Prime Neuroptics,Credits,15000
 Ember Prime Neuroptics,Alloy Plate,150
 Ember Prime Neuroptics,Neural Sensors,2
@@ -915,10 +687,6 @@ Ember Prime Systems,Credits,15000
 Ember Prime Systems,Control Module,1
 Ember Prime Systems,Morphics,1
 Ember Prime Systems,Nano Spores,1200
-Mirage Prime,Credits,25000
-Mirage Prime,Mirage Prime Chassis,1
-Mirage Prime,Mirage Prime Neuroptics,1
-Mirage Prime,Mirage Prime Systems,1
 Mirage Prime Neuroptics,Credits,15000
 Mirage Prime Neuroptics,Neurodes,5
 Mirage Prime Neuroptics,Cryotic,2000
@@ -931,10 +699,6 @@ Mirage Prime Systems,Credits,15000
 Mirage Prime Systems,Argon Crystal,2
 Mirage Prime Systems,Control Module,10
 Mirage Prime Systems,Rubedo,4500
-Titania Prime,Credits,25000
-Titania Prime,Titania Prime Chassis,1
-Titania Prime,Titania Prime Neuroptics,1
-Titania Prime,Titania Prime Systems,1
 Titania Prime Neuroptics,Credits,15000
 Titania Prime Neuroptics,Alloy Plate,5500
 Titania Prime Neuroptics,Neural Sensors,6
@@ -945,12 +709,8 @@ Titania Prime Chassis,Nano Spores,4750
 Titania Prime Chassis,Rubedo,1400
 Titania Prime Systems,Credits,15000
 Titania Prime Systems,Control Module,10
-Titania Prime Systems,Tellurium,3
+Titania Prime Systems,Tellurium Market,3
 Titania Prime Systems,Ferrite,4300
-Inaros Prime,Credits,25000
-Inaros Prime,Inaros Prime Chassis,1
-Inaros Prime,Inaros Prime Neuroptics,1
-Inaros Prime,Inaros Prime Systems,1
 Inaros Prime Neuroptics,Credits,15000
 Inaros Prime Neuroptics,Alloy Plate,5500
 Inaros Prime Neuroptics,Neural Sensors,6
@@ -961,12 +721,8 @@ Inaros Prime Chassis,Nano Spores,4750
 Inaros Prime Chassis,Rubedo,1400
 Inaros Prime Systems,Credits,15000
 Inaros Prime Systems,Control Module,10
-Inaros Prime Systems,Tellurium,3
+Inaros Prime Systems,Tellurium Market,3
 Inaros Prime Systems,Ferrite,4300
-Valkyr Prime,Credits,25000
-Valkyr Prime,Valkyr Prime Chassis,1
-Valkyr Prime,Valkyr Prime Neuroptics,1
-Valkyr Prime,Valkyr Prime Systems,1
 Valkyr Prime Neuroptics,Credits,15000
 Valkyr Prime Neuroptics,Salvage,15000
 Valkyr Prime Neuroptics,Neural Sensors,3
@@ -977,12 +733,8 @@ Valkyr Prime Chassis,Ferrite,18000
 Valkyr Prime Chassis,Rubedo,6000
 Valkyr Prime Systems,Credits,15000
 Valkyr Prime Systems,Control Module,3
-Valkyr Prime Systems,Tellurium,3
+Valkyr Prime Systems,Tellurium Market,3
 Valkyr Prime Systems,Polymer Bundle,15000
-Oberon Prime,Credits,25000
-Oberon Prime,Oberon Prime Chassis,1
-Oberon Prime,Oberon Prime Neuroptics,1
-Oberon Prime,Oberon Prime Systems,1
 Oberon Prime Neuroptics,Credits,15000
 Oberon Prime Neuroptics,Control Module,10
 Oberon Prime Neuroptics,Alloy Plate,4000
@@ -995,10 +747,6 @@ Oberon Prime Systems,Credits,15000
 Oberon Prime Systems,Argon Crystal,2
 Oberon Prime Systems,Plastids,250
 Oberon Prime Systems,Nano Spores,6000
-Mag Prime,Credits,25000
-Mag Prime,Mag Prime Chassis,1
-Mag Prime,Mag Prime Neuroptics,1
-Mag Prime,Mag Prime Systems,1
 Mag Prime Neuroptics,Credits,15000
 Mag Prime Neuroptics,Alloy Plate,150
 Mag Prime Neuroptics,Neural Sensors,2
@@ -1011,10 +759,6 @@ Mag Prime Systems,Credits,15000
 Mag Prime Systems,Control Module,3
 Mag Prime Systems,Morphics,1
 Mag Prime Systems,Salvage,500
-Rhino Prime,Credits,25000
-Rhino Prime,Rhino Prime Chassis,1
-Rhino Prime,Rhino Prime Neuroptics,1
-Rhino Prime,Rhino Prime Systems,1
 Rhino Prime Neuroptics,Credits,15000
 Rhino Prime Neuroptics,Alloy Plate,150
 Rhino Prime Neuroptics,Neural Sensors,2
@@ -1027,10 +771,6 @@ Rhino Prime Systems,Credits,15000
 Rhino Prime Systems,Control Module,3
 Rhino Prime Systems,Morphics,1
 Rhino Prime Systems,Ferrite,500
-Volt Prime,Credits,25000
-Volt Prime,Volt Prime Chassis,1
-Volt Prime,Volt Prime Neuroptics,1
-Volt Prime,Volt Prime Systems,1
 Volt Prime Neuroptics,Credits,15000
 Volt Prime Neuroptics,Alloy Plate,150
 Volt Prime Neuroptics,Neurodes,2
@@ -1043,10 +783,6 @@ Volt Prime Systems,Credits,15000
 Volt Prime Systems,Control Module,3
 Volt Prime Systems,Orokin Cell,1
 Volt Prime Systems,Salvage,1000
-Vauban Prime,Credits,25000
-Vauban Prime,Vauban Prime Chassis,1
-Vauban Prime,Vauban Prime Neuroptics,1
-Vauban Prime,Vauban Prime Systems,1
 Vauban Prime Neuroptics,Credits,15000
 Vauban Prime Neuroptics,Nitain Extract,5
 Vauban Prime Neuroptics,Salvage,16000
@@ -1059,10 +795,6 @@ Vauban Prime Systems,Credits,15000
 Vauban Prime Systems,Nitain Extract,5
 Vauban Prime Systems,Cryotic,9000
 Vauban Prime Systems,Orokin Cell,1
-Trinity Prime,Credits,25000
-Trinity Prime,Trinity Prime Chassis,1
-Trinity Prime,Trinity Prime Neuroptics,1
-Trinity Prime,Trinity Prime Systems,1
 Trinity Prime Neuroptics,Credits,15000
 Trinity Prime Neuroptics,Oxium,450
 Trinity Prime Neuroptics,Neural Sensors,2
@@ -1075,26 +807,18 @@ Trinity Prime Systems,Credits,15000
 Trinity Prime Systems,Control Module,3
 Trinity Prime Systems,Orokin Cell,1
 Trinity Prime Systems,Cryotic,9000
-Zephyr Prime,Credits,25000
-Zephyr Prime,Zephyr Prime Chassis,1
-Zephyr Prime,Zephyr Prime Neuroptics,1
-Zephyr Prime,Zephyr Prime Systems,1
 Zephyr Prime Neuroptics ,Credits,15000
 Zephyr Prime Neuroptics ,Neural Sensors,3
 Zephyr Prime Neuroptics ,Oxium,250
 Zephyr Prime Neuroptics ,Plastids,350
 Zephyr Prime Chassis ,Credits,15000
 Zephyr Prime Chassis ,Nitain Extract,2
-Zephyr Prime Chassis ,Tellurium,2
+Zephyr Prime Chassis ,Tellurium Market,2
 Zephyr Prime Chassis ,Ferrite,3600
 Zephyr Prime Systems ,Credits,15000
 Zephyr Prime Systems ,Argon Crystal,2
 Zephyr Prime Systems ,Neurodes,3
 Zephyr Prime Systems ,Cryotic,550
-Octavia Prime,Credits,25000
-Octavia Prime,Octavia Prime Chassis,1
-Octavia Prime,Octavia Prime Neuroptics,1
-Octavia Prime,Octavia Prime Systems,1
 Octavia Prime Neuroptics ,Credits,15000
 Octavia Prime Neuroptics ,Neural Sensors,8
 Octavia Prime Neuroptics ,Control Module,10
@@ -1107,10 +831,6 @@ Octavia Prime Systems ,Credits,15000
 Octavia Prime Systems ,Nitain Extract,2
 Octavia Prime Systems ,Cryotic,370
 Octavia Prime Systems ,Circuits,875
-Ash Prime,Credits,25000
-Ash Prime,Ash Prime Chassis,1
-Ash Prime,Ash Prime Neuroptics,1
-Ash Prime,Ash Prime Systems,1
 Ash Prime Neuroptics ,Credits,15000
 Ash Prime Neuroptics ,Alloy Plate,150
 Ash Prime Neuroptics ,Neural Sensors,2
@@ -1123,10 +843,6 @@ Ash Prime Systems ,Credits,15000
 Ash Prime Systems ,Control Module,3
 Ash Prime Systems ,Orokin Cell,1
 Ash Prime Systems ,Ferrite,1000
-Banshee Prime,Credits,25000
-Banshee Prime,Banshee Prime Chassis,1
-Banshee Prime,Banshee Prime Neuroptics,1
-Banshee Prime,Banshee Prime Systems,1
 Banshee Prime Neuroptics ,Credits,15000
 Banshee Prime Neuroptics ,Neural Sensors,2
 Banshee Prime Neuroptics ,Alloy Plate,6000
@@ -1139,26 +855,18 @@ Banshee Prime Systems ,Credits,15000
 Banshee Prime Systems ,Argon Crystal,2
 Banshee Prime Systems ,Control Module,10
 Banshee Prime Systems ,Oxium,300
-Atlas Prime,Credits,25000
-Atlas Prime,Atlas Prime Chassis,1
-Atlas Prime,Atlas Prime Neuroptics,1
-Atlas Prime,Atlas Prime Systems,1
 Atlas Prime Neuroptics ,Credits,15000
 Atlas Prime Neuroptics ,Neural Sensors,2
 Atlas Prime Neuroptics ,Cryotic,525
 Atlas Prime Neuroptics ,Salvage,4700
 Atlas Prime Chassis ,Credits,15000
-Atlas Prime Chassis ,Tellurium,2
+Atlas Prime Chassis ,Tellurium Market,2
 Atlas Prime Chassis ,Nitain Extract,2
 Atlas Prime Chassis ,Rubedo,725
 Atlas Prime Systems ,Credits,15000
 Atlas Prime Systems ,Argon Crystal,2
 Atlas Prime Systems ,Gallium,4
 Atlas Prime Systems ,Polymer Bundle,1200
-Nezha Prime,Credits,25000
-Nezha Prime,Nezha Prime Chassis,1
-Nezha Prime,Nezha Prime Neuroptics,1
-Nezha Prime,Nezha Prime Systems,1
 Nezha Prime Neuroptics,Credits,15000
 Nezha Prime Neuroptics,Alloy Plate,5500
 Nezha Prime Neuroptics,Neural Sensors,6
@@ -1169,12 +877,8 @@ Nezha Prime Chassis,Nano Spores,4750
 Nezha Prime Chassis,Rubedo,1400
 Nezha Prime Systems,Credits,15000
 Nezha Prime Systems,Control Module,10
-Nezha Prime Systems,Tellurium,3
+Nezha Prime Systems,Tellurium Market,3
 Nezha Prime Systems,Ferrite,4300
-Ivara Prime,Credits,25000
-Ivara Prime,Ivara Prime Chassis,1
-Ivara Prime,Ivara Prime Neuroptics,1
-Ivara Prime,Ivara Prime Systems,1
 Ivara Prime Neuroptics,Credits,15000
 Ivara Prime Neuroptics,Argon Crystal,2
 Ivara Prime Neuroptics,Cryotic,600
@@ -1187,10 +891,6 @@ Ivara Prime Systems,Credits,15000
 Ivara Prime Systems,Neurodes,4
 Ivara Prime Systems,Morphics,9
 Ivara Prime Systems,Oxium,175
-Wukong Prime,Credits,25000
-Wukong Prime,Wukong Prime Chassis,1
-Wukong Prime,Wukong Prime Neuroptics,1
-Wukong Prime,Wukong Prime Systems,1
 Wukong Prime Neuroptics,Credits,15000
 Wukong Prime Neuroptics,Neurodes,4
 Wukong Prime Neuroptics,Rubedo,750
@@ -1203,10 +903,6 @@ Wukong Prime Systems,Credits,15000
 Wukong Prime Systems,Nitain Extract,2
 Wukong Prime Systems,Morphics,7
 Wukong Prime Systems,Polymer Bundle,1150
-Mesa Prime,Credits,25000
-Mesa Prime,Mesa Prime Chassis,1
-Mesa Prime,Mesa Prime Neuroptics,1
-Mesa Prime,Mesa Prime Systems,1
 Mesa Prime Neuroptics,Credits,15000
 Mesa Prime Neuroptics,Argon Crystal,2
 Mesa Prime Neuroptics,Neural Sensors,2
@@ -1219,10 +915,6 @@ Mesa Prime Systems,Credits,15000
 Mesa Prime Systems,Morphics,5
 Mesa Prime Systems,Control Module,3
 Mesa Prime Systems,Circuits,275
-Gara Prime,Credits,25000
-Gara Prime,Gara Prime Chassis,1
-Gara Prime,Gara Prime Neuroptics,1
-Gara Prime,Gara Prime Systems,1
 Gara Prime Neuroptics,Credits,15000
 Gara Prime Neuroptics,Neurodes,10
 Gara Prime Neuroptics,Argon Crystal,2
@@ -1233,7 +925,7 @@ Gara Prime Chassis,Polymer Bundle,2150
 Gara Prime Chassis,Oxium,250
 Gara Prime Systems,Credits,15000
 Gara Prime Systems,Nitain Extract,2
-Gara Prime Systems,Tellurium,2
+Gara Prime Systems,Tellurium Market,2
 Gara Prime Systems,Circuits,1350
 Bubonico,Credits,20000
 Bubonico,Mutagen Mass,10
@@ -1325,7 +1017,7 @@ Komorex,Fieldron,5
 Komorex,Ferrite,6200
 Komorex,Hexenon,300
 Astilla,Credits,20000
-Astilla,Tellurium,4
+Astilla,Tellurium Market,4
 Astilla,Plastids,875
 Astilla,Oxium,175
 Wraith,Credits,25000
@@ -1353,7 +1045,7 @@ Astilla Prime,Astilla Prime Barrel,1
 Astilla Prime,Astilla Prime Receiver,1
 Astilla Prime,Astilla Prime Stock,1
 Quellor,Credits,30000
-Quellor,Tellurium,4
+Quellor,Tellurium Market,4
 Quellor,Rubedo,6250
 Quellor,Circuits,3600
 Drakgoon,Credits,30000
@@ -1904,7 +1596,7 @@ Twin Gremlins,Circuits,900
 Twin Gremlins,Salvage,1500
 Kulstar,Credits,30000
 Kulstar,Kraken,1
-Kulstar,Tellurium,2
+Kulstar,Tellurium Market,2
 Kulstar,Cryotic,4800
 Kulstar,Market,3600
 Vasto Prime,Credits,15000
@@ -2295,7 +1987,7 @@ Zenistar,Market,2750
 Ripkas,Credits,40000
 Ripkas,Ankyros,1
 Ripkas,Dual Cleavers,1
-Ripkas,Tellurium,2
+Ripkas,Tellurium Market,2
 Ripkas,Forma,1
 Broken Scepter,Credits,25000
 Broken Scepter,Kuva,5000
@@ -2311,7 +2003,7 @@ Dual Keres,Argon Crystal,2
 Dual Keres,Oxium,230
 Dual Keres,Salvage,13250
 Krohkur,Credits,20000
-Krohkur,Tellurium,5
+Krohkur,Tellurium Market,5
 Krohkur,Morphics,8
 Krohkur,Oxium,125
 Venka,Credits,20000
@@ -2348,7 +2040,7 @@ Caustacyst,Mutagen Mass,10
 Caustacyst,Ferrite,15000
 Caustacyst,Plastids,4000
 Okina,Credits,20000
-Okina,Tellurium,2
+Okina,Tellurium Market,2
 Okina,Alloy Plate,4200
 Okina,Polymer Bundle,3400
 Dark Split-Sword (Dual Swords),Credits,20000
@@ -2468,7 +2160,7 @@ Dragon,Oxium,75
 Dragon,Nikana,1
 Gunsen,Credits,20000
 Gunsen,Oxium,200
-Gunsen,Tellurium,3
+Gunsen,Tellurium Market,3
 Gunsen,Plastids,1150
 Scindo,Credits,30000
 Scindo,Gallium,3
@@ -2569,7 +2261,7 @@ Machete,Gallium,4
 Machete,Salvage,750
 Machete,Plastids,800
 Pennant,Credits,30000
-Pennant,Tellurium,2
+Pennant,Tellurium Market,2
 Pennant,Rubedo,2100
 Pennant,Polymer Bundle,1550
 Redeemer,Credits,20000

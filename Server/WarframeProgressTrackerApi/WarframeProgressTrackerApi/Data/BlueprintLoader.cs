@@ -13,9 +13,9 @@ namespace WarframeProgressTrackerApi.Data {
         public static void LoadBlueprints(ModelBuilder builder, WarframeProgressTrackerContext context) {
             var assembly = Assembly.GetExecutingAssembly();
             var fileName = GetSeedResourceName("Blueprints");
-            var blueprintSeed = CsvSeedHelper.ReadFromCsv<BlueprintResource>(assembly, fileName);
+            var blueprintSeed = CsvSeedHelper.ReadFromCsv<BlueprintComponent>(assembly, fileName);
             foreach (var seedRow in blueprintSeed) {
-                builder.Entity<BlueprintResource>().HasData(seedRow);
+                builder.Entity<BlueprintComponent>().HasData(seedRow);
             }
         }
 

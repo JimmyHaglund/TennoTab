@@ -43,7 +43,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         private IEnumerable<Collectible> Grab(
                 IEnumerable<WarframeItem> items,
-                IEnumerable<UserItem> userItems,
+                IEnumerable<UserCollectible> userItems,
                 string category, string link,
                 CollectibleSearchForm form
                 ) {

@@ -164,7 +164,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 var weapons = _context.SecondaryWeapons.ToArray();
                 var userWeapons = _context.UserSecondaryWeapons
                     .Where(uw => uw.UserId == userId)
-                    .Cast<UserItem>();
+                    .Cast<UserCollectible>();
                 return Grab(weapons, userWeapons, "Secondary Weapon", "secondaryweapon", form);
             }
             return new Collectible[0];
@@ -242,7 +242,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         private IEnumerable<Collectible> Grab(
             IEnumerable<WarframeItem> items,
-            IEnumerable<UserItem> userItems,
+            IEnumerable<UserCollectible> userItems,
             string category, string link,
             CollectibleSearchForm form
             ) {
@@ -267,7 +267,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                 });
         }
 
-        private bool Update(IEnumerable<UserItem> items, Collectible collectible, string userId) {
+        private bool Update(IEnumerable<UserCollectible> items, Collectible collectible, string userId) {
             var userItem = items
                         .Where(userItem => userItem.ItemId == collectible.Id && userItem.UserId == userId)
                         .FirstOrDefault();
@@ -279,8 +279,8 @@ namespace WarframeProgressTrackerApi.Controllers {
             return true;
         }
 
-        private UserItem Create(Collectible collectible, string userId) {
-            UserItem newItem = null;
+        private UserCollectible Create(Collectible collectible, string userId) {
+            UserCollectible newItem = null;
             switch (collectible.Category) {
                 case Categories.Warframe:
                     var newFrame = CreateUserItem<UserFrame>(userId, collectible);
@@ -338,7 +338,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             return newItem;
         }
 
-        private T CreateUserItem<T>(string userId, Collectible collectbile) where T : UserItem, new() {
+        private T CreateUserItem<T>(string userId, Collectible collectbile) where T : UserCollectible, new() {
             return new T() {
                 UserId = userId,
                 ItemId = collectbile.Id,
@@ -348,7 +348,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             };
         }
 
-        private IEnumerable<UserItem> GetCategoryCollection(string category) {
+        private IEnumerable<UserCollectible> GetCategoryCollection(string category) {
             switch (category) {
                 case Categories.Warframe: return _context.UserFrames;
                 case Categories.PrimaryWeapon: return _context.UserPrimaryWeapons;

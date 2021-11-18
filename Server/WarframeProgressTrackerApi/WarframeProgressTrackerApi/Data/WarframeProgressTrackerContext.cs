@@ -37,7 +37,7 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<UserArchwing> UserArchwings { get; set; }
         public DbSet<UserArchGun> UserArchGuns { get; set; }
         public DbSet<UserArchMelee> UserArchMeleeWeapons { get; set; }
-        public DbSet<BlueprintResource> BlueprintResources { get; set; }
+        public DbSet<BlueprintComponent> BlueprintResources { get; set; }
         public DbSet<Source> Sources { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
@@ -107,7 +107,7 @@ namespace WarframeProgressTrackerApi.Data {
             builder.Entity<UserArchMelee>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserRoboGun>().HasKey(userItem => new { userItem.UserId, userItem.ItemId });
             builder.Entity<UserAmp>().HasKey(userAmp => new { userAmp.UserId, userAmp.ItemId });
-            builder.Entity<BlueprintResource>().HasKey(blueprint => new { blueprint.ResultName, blueprint.ComponentName });
+            builder.Entity<BlueprintComponent>().HasKey(blueprint => new { blueprint.ResultName, blueprint.ComponentName });
         }
 
         private int SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName, int lastId) 

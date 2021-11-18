@@ -28,18 +28,18 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpPut]
-        public IEnumerable<BlueprintResource> Components([FromBody]BlueprintResource result) {
+        public IEnumerable<BlueprintComponent> Components([FromBody]BlueprintComponent result) {
             return _context.BlueprintResources
                 .Where(blueprint => blueprint.ResultName == result.ResultName);
         }
 
         [HttpPut]
-        public IEnumerable<ResourceStack> TotalResourceCost([FromBody] BlueprintResource result) {
+        public IEnumerable<ResourceStack> TotalResourceCost([FromBody] BlueprintComponent result) {
             return GetResourceCost(result.ResultName);
         }
 
         [HttpPut]
-        public IEnumerable<ResourceStack> ComponentCost([FromBody] BlueprintResource blueprintResult) {
+        public IEnumerable<ResourceStack> ComponentCost([FromBody] BlueprintComponent blueprintResult) {
             var components = GetComponents(blueprintResult.ResultName);
             var result = new List<ResourceStack>();
             foreach(var component in components) {
@@ -81,7 +81,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             return result;
         }
 
-        private ICollection<BlueprintResource> GetComponents(string resultName) {
+        private ICollection<BlueprintComponent> GetComponents(string resultName) {
             return _context.BlueprintResources
                 .Where(blueprint => blueprint.ResultName == resultName)
                 .ToList();

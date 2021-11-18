@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WarframeProgressTrackerApi.Data;
 using WarframeProgressTrackerApi.Models;
+using WarframeProgressTrackerApi.ViewModels;
 using Microsoft.AspNetCore.Cors;
 using WarframeProgressTrackerApi.Services;
 
@@ -36,7 +37,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
 
         [HttpPost]
-        public async Task<User> Login(Login login) {
+        public async Task<User> Login(LoginInfo login) {
             var user = await _userManager.FindByNameAsync(login.UserName);
             if (user == null) return null;
 
@@ -59,7 +60,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpPost]
-        public async Task<User> Register(Login login) {
+        public async Task<User> Register(LoginInfo login) {
             var user = new User() { UserName = login.UserName };
             var createUserResult = await _userManager.CreateAsync(user, login.Password);
             // return _dataContext.Frames.FirstOrDefault();

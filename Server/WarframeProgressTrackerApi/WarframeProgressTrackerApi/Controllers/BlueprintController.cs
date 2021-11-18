@@ -1,90 +1,86 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
-
 using WarframeProgressTrackerApi.Data;
-using WarframeProgressTrackerApi.Models;
-using WarframeProgressTrackerApi.Services;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
-    public class ResourceStack {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Amount { get; set; }
-    }
-
     [Route("[controller]/[action]")]
     [ApiController]
     [EnableCors]
     public class BlueprintController : ControllerBase {
+#region Endpoints
+        [HttpGet]
+        public Blueprint GetBlueprint([FromQuery] string resultName) {
+            var blueprint = new Blueprint() { ResultName = resultName };
+            blueprint.Components = Components(resultName);
+            return blueprint;
+        }
+
+        [HttpGet]
+        public IEnumerable<ComponentStack> TotalResourceCost([FromQuery] string resultName) {
+            return GetTotalForgingResourceCost(resultName);
+        }
+#endregion
+
+#region Body
         private WarframeProgressTrackerContext _context;
         public BlueprintController(WarframeProgressTrackerContext context) {
             _context = context;
         }
+        /// <summary>
+        /// Recursive function for getting total resource cost for an item.
+        /// Will go down through any forgeable components until only non-forgeable items remain, and return those.
+        /// </summary>
+        /// <param name="itemName"></param>
+        /// <param name="itemAmount"></param>
+        /// <returns></returns>
+        private List<ComponentStack> GetTotalForgingResourceCost(string itemName, int itemAmount = 1) {
+            if (!IsForgeable(itemName)) {
+                return new List<ComponentStack>() {
+                    new ComponentStack() {
+                        ComponentName = itemName,
+                        ComponentCount = itemAmount
+                    }
+                };
+            }
 
-        [HttpPut]
-        public IEnumerable<BlueprintComponent> Components([FromBody]BlueprintComponent result) {
-            return _context.BlueprintResources
-                .Where(blueprint => blueprint.ResultName == result.ResultName);
+            var result = new List<ComponentStack>();
+            var componentStacks = Components(itemName);
+            foreach (var componentStack in componentStacks) {
+                var name = componentStack.ComponentName;
+                var amount = componentStack.ComponentCount;
+                var resources = GetTotalForgingResourceCost(name, amount);
+                AddComponentStacksToList(result, resources);
+            }
+            return result;
         }
 
-        [HttpPut]
-        public IEnumerable<ResourceStack> TotalResourceCost([FromBody] BlueprintComponent result) {
-            return GetResourceCost(result.ResultName);
-        }
-
-        [HttpPut]
-        public IEnumerable<ResourceStack> ComponentCost([FromBody] BlueprintComponent blueprintResult) {
-            var components = GetComponents(blueprintResult.ResultName);
-            var result = new List<ResourceStack>();
-            foreach(var component in components) {
-                var newStack = _context.Resources
-                    .Where(dbResource => dbResource.Name == component.ComponentName)
-                    .Select(dbResource => new ResourceStack() {
-                        Id = dbResource.Id,
-                        Name = dbResource.Name,
-                        Amount = component.ComponentCount
-                    })
+        private void AddComponentStacksToList(List<ComponentStack> stackList, IEnumerable<ComponentStack> components) {
+            foreach(var componentStack in components) {
+                var componentsInList = stackList
+                    .Where(stack => stack.ComponentName == componentStack.ComponentName)
                     .FirstOrDefault();
-                if (newStack == null) {
-                    newStack = new ResourceStack() {
-                        Name = component.ComponentName,
-                        Amount = component.ComponentCount,
-                        Id = -1
-                    };
+                if (componentsInList == default) {
+                    stackList.Add(componentStack);
+                    return;
                 }
-                result.Add(newStack);
+                componentsInList.ComponentCount += componentStack.ComponentCount;
             }
-            return result;
         }
 
-        private IEnumerable<ResourceStack> GetResourceCost(string resultName, int resultCount = 1) {
-            var components = GetComponents(resultName);
-            if (components.Count == 0) {
-                return _context.Resources
-                    .Where(resource => resource.Name == resultName)
-                    .Select(resource => new ResourceStack() { 
-                        Id = resource.Id,
-                        Name = resource.Name, 
-                        Amount = resultCount });
-            }
-            var result = new List<ResourceStack>();
-            foreach(var component in components) {
-                var componentCost = GetResourceCost(component.ComponentName, component.ComponentCount);
-                result.AddRange(componentCost);
-            }
-            return result;
+        private bool IsForgeable(string itemName) => Components(itemName).Count() > 0;
+        
+        private IEnumerable<ComponentStack> Components(string resultName) {
+            return from blueprintResource in _context.BlueprintResources
+                   where blueprintResource.ResultName == resultName
+                   select new ComponentStack() {
+                       ComponentName = blueprintResource.ComponentName,
+                       ComponentCount = blueprintResource.ComponentCount
+                   };
         }
 
-        private ICollection<BlueprintComponent> GetComponents(string resultName) {
-            return _context.BlueprintResources
-                .Where(blueprint => blueprint.ResultName == resultName)
-                .ToList();
-        }
+        #endregion
     }
 }

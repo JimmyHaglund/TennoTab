@@ -22,31 +22,146 @@
     <None Remove="Data\Seed\ArchGuns.csv" />
     <None Remove="Data\Seed\ArchMeleeWeapons.csv" />
     <None Remove="Data\Seed\Archwings.csv" />
+    <None Remove="Data\Seed\AssassinationRewards.csv" />
+    <None Remove="Data\Seed\BaroKiteerTradeHistory.csv" />
     <None Remove="Data\Seed\Blueprints.csv" />
+    <None Remove="Data\Seed\BlueprintsComponents.csv" />
+    <None Remove="Data\Seed\BountyRewards.csv" />
+    <None Remove="Data\Seed\Collectibles.csv" />
+    <None Remove="Data\Seed\DailyTributeMilestoneRewards.csv" />
+    <None Remove="Data\Seed\DefectionMissionRewards.csv" />
+    <None Remove="Data\Seed\DefenseMissionRewards.csv" />
+    <None Remove="Data\Seed\DerelictCacheDrops.csv" />
+    <None Remove="Data\Seed\DisruptionMissionRewards.csv" />
+    <None Remove="Data\Seed\EnemyItemDrops.csv" />
+    <None Remove="Data\Seed\EnemyMissions.csv" />
+    <None Remove="Data\Seed\EnemyTilesets.csv" />
+    <None Remove="Data\Seed\ExterminateMissionRewards.csv" />
+    <None Remove="Data\Seed\ExterminateResourceCacheRewards.csv" />
+    <None Remove="Data\Seed\Fish.csv" />
+    <None Remove="Data\Seed\GranumVoidRewards.csv" />
+    <None Remove="Data\Seed\InfestedSalvageMissionRewards.csv" />
+    <None Remove="Data\Seed\InvasionRewards.csv" />
+    <None Remove="Data\Seed\KuvaItems.csv" />
+    <None Remove="Data\Seed\MarketItems.csv" />
     <None Remove="Data\Seed\MeleeWeapons.csv" />
+    <None Remove="Data\Seed\Missions.csv" />
+    <None Remove="Data\Seed\NightwaveOfferings_NorasChoice.csv" />
     <None Remove="Data\Seed\Pets.csv" />
     <None Remove="Data\Seed\PrimaryWeapons.csv" />
+    <None Remove="Data\Seed\QuestRewards.csv" />
     <None Remove="Data\Seed\Resources.csv" />
     <None Remove="Data\Seed\RoboGuns.csv" />
+    <None Remove="Data\Seed\SabotageMissionRewards.csv" />
+    <None Remove="Data\Seed\SanctuaryOnslaughtEliteRewards.csv" />
+    <None Remove="Data\Seed\SanctuaryOnslaughtRewards.csv" />
     <None Remove="Data\Seed\SecondaryWeapons.csv" />
     <None Remove="Data\Seed\Sources.csv" />
+    <None Remove="Data\Seed\SpyMissionRewards.csv" />
+    <None Remove="Data\Seed\SurvivalMissionRewards.csv" />
+    <None Remove="Data\Seed\SyndicateOfferings.csv" />
+    <None Remove="Data\Seed\VoidFissureMissionRewards.csv" />
+    <None Remove="Data\Seed\VoidRelicDrops.csv" />
     <None Remove="Data\Seed\Warframes.csv" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Data\Seed\Amps.csv" />
-    <EmbeddedResource Include="Data\Seed\ArchGuns.csv" />
-    <EmbeddedResource Include="Data\Seed\ArchMeleeWeapons.csv" />
-    <EmbeddedResource Include="Data\Seed\Archwings.csv" />
-    <EmbeddedResource Include="Data\Seed\Blueprints.csv" />
-    <EmbeddedResource Include="Data\Seed\MeleeWeapons.csv" />
-    <EmbeddedResource Include="Data\Seed\Pets.csv" />
-    <EmbeddedResource Include="Data\Seed\PrimaryWeapons.csv" />
-    <EmbeddedResource Include="Data\Seed\Resources.csv" />
-    <EmbeddedResource Include="Data\Seed\RoboGuns.csv" />
-    <EmbeddedResource Include="Data\Seed\SecondaryWeapons.csv" />
-    <EmbeddedResource Include="Data\Seed\Sources.csv" />
-    <EmbeddedResource Include="Data\Seed\Warframes.csv" />
+    <EmbeddedResource Include="Data\Seed\AssassinationRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\BaroKiteerTradeHistory.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\BlueprintsComponents.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\BountyRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\Collectibles.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\DailyTributeMilestoneRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\DefectionMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\DefenseMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\DerelictCacheDrops.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\DisruptionMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\EnemyItemDrops.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\EnemyMissions.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\EnemyTilesets.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\ExterminateMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\ExterminateResourceCacheRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\Fish.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\GranumVoidRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\InfestedSalvageMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\InvasionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\KuvaItems.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\MarketItems.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\Missions.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\NightwaveOfferings_NorasChoice.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\QuestRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SabotageMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SanctuaryOnslaughtEliteRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SanctuaryOnslaughtRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SpyMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SurvivalMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\SyndicateOfferings.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\VoidFissureMissionRewards.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Seed\VoidRelicDrops.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -65,6 +180,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 

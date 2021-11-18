@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class ExterminateResourceCacheRewards {
+    public class ExterminateResourceCacheReward {
         [Key] public string ItemName { get; set; }
         [Key] public string MissionName { get; set; }
         [Key] public byte CacheNumber { get; set; }

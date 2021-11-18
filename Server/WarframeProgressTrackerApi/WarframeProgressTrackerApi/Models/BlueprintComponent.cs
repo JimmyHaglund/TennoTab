@@ -1,7 +1,9 @@
-﻿namespace WarframeProgressTrackerApi.Models {
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WarframeProgressTrackerApi.Models {
     public class BlueprintComponent {
-        public string ResultName { get; set; }
-        public string ComponentName { get; set; }
+        [Key] public string ResultName { get; set; }
+        [Key] public string ComponentName { get; set; }
         public int ComponentCount { get; set; }
     }
 }

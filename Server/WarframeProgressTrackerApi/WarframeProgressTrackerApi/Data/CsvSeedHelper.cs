@@ -6,18 +6,14 @@ using System.Globalization;
 using System.Collections.Generic;
 using CsvHelper;
 using CsvHelper.Configuration;
-using WarframeProgressTrackerApi.Models;
 
 namespace WarframeProgressTrackerApi.Data {
     public static class CsvSeedHelper {
-        public static ICollection<DataType> GetDataFromSeed<DataType>(string seedFileName, int lastId) 
-            where DataType : WarframeItem {
-            var id = lastId;
+        public static ICollection<DataType> GetDataFromSeed<DataType>(string seedFileName) {
             var assembly = Assembly.GetExecutingAssembly();
             var resourceName = GetSeedResourceName(seedFileName);
             var results = ReadFromCsv<DataType>(assembly, resourceName);
             
-            foreach (var result in results) result.Id = ++id;
             return results;
         }
 

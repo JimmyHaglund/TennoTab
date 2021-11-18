@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class InfestedSalvageReward {
+    public class InfestedSalvageMissionReward {
         [Key] public string ItemName { get; set; }
         [Key] public char Rotation { get; set; }
         public string MissionName { get; set; }

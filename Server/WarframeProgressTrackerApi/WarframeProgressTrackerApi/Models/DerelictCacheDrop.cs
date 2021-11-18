@@ -1,9 +1,11 @@
-﻿namespace WarframeProgressTrackerApi.Models {
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WarframeProgressTrackerApi.Models {
     public class DerelictCacheDrop {
-        public string ItemName { get; set; }
-        public string System { get; set; }
-        public string Faction { get; set; }
-        public char Rotation { get; set; }
+        [Key] public string ItemName { get; set; }
+        [Key] public string System { get; set; }
+        [Key] public char Rotation { get; set; }
+        [Key] public string Faction { get; set; }
         public float DropChance { get; set; }
     }
 }

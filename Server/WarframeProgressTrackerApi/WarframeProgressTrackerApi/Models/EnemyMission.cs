@@ -1,6 +1,8 @@
-﻿namespace WarframeProgressTrackerApi.Models {
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WarframeProgressTrackerApi.Models {
     public class EnemyMission {
-        public string EnemyName { get; set; }
-        public string MissionName { get; set; }
+        [Key] public string EnemyName { get; set; }
+        [Key] public string MissionName { get; set; }
     }
 }

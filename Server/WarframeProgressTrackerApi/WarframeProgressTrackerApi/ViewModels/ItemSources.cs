@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using WarframeProgressTrackerApi.Models;
 
 namespace WarframeProgressTrackerApi.ViewModels {
     public class ItemSources {

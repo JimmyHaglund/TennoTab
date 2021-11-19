@@ -15,6 +15,6 @@
         public bool IncludeOwned { get; set; } = true;
         public bool IncludeMastered { get; set; } = true;
 
-        public string SearchText { get; set; }
+        public string SearchText { get; set; } = "";
     }
 }

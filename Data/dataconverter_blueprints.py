@@ -10,7 +10,7 @@ resource_category_name = 'Resource'
 frames_raw = datareader.read_frame_blueprint_files()
 weapons_raw = datareader.read_weapon_blueprint_files()
 
-result = []
+result = [['ItemName', 'ComponentName', 'ComponentAmount']]
 
 # print('processing ' + str(len(weapons_raw)) + ' weapons')
 

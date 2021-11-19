@@ -1,6 +1,6 @@
 def extract_weapon_components_row_data(raw_data_row):
    result = []
-   weapon_name = raw_data_row[0]
+   weapon_name = raw_data_row[0].strip()
    raw_data = raw_data_row[1]
    # print(name)
    if 'Research' in raw_data:

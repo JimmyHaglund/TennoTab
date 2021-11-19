@@ -6,20 +6,20 @@ using WarframeProgressTrackerApi.Data;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
-    [Route("[controller]/[action]")]
+    
     [ApiController]
     [EnableCors]
     public class BlueprintController : ControllerBase {
-#region Endpoints
-        [HttpGet]
-        public Blueprint GetBlueprint([FromQuery] string resultName) {
+        #region Endpoints
+        [HttpGet, Route("[controller]/[action]/{resultName}")]
+        public Blueprint Get(string resultName) {
             var blueprint = new Blueprint() { ResultName = resultName };
             blueprint.Components = Components(resultName);
             return blueprint;
         }
 
-        [HttpGet]
-        public IEnumerable<ComponentStack> TotalResourceCost([FromQuery] string resultName) {
+        [HttpGet, Route("[controller]/[action]/{resultName}")]
+        public IEnumerable<ComponentStack> TotalResourceCost(string resultName) {
             return GetTotalForgingResourceCost(resultName);
         }
 #endregion
@@ -64,7 +64,7 @@ namespace WarframeProgressTrackerApi.Controllers {
                     .FirstOrDefault();
                 if (componentsInList == default) {
                     stackList.Add(componentStack);
-                    return;
+                    continue;
                 }
                 componentsInList.ComponentCount += componentStack.ComponentCount;
             }

@@ -1,5 +1,5 @@
 def extract_warframe_components_row_data(row):
-   name = row[0]
+   name = row[0].strip()
    data = row[1]
 
    print(name)
@@ -69,11 +69,11 @@ def extract_warframe_blueprint_data(warframe_name, raw_data):
 def extract_component_data_without_blueprint_in_title(result_name, value):
    component_name = value.split('title="')[1].split('"')[0]
    component_name = component_name.split('Warframe')[1]
-   component_name = result_name + component_name
+   component_name = (result_name + component_name).strip()
    return extract_component_data(component_name, value)
 
 def extract_component_data_with_blueprint_in_title(result_name, value):
-   component_name = value.split("Blueprint")[0]
+   component_name = value.split("Blueprint")[0].strip()
    return extract_component_data(component_name, value)
 
 def extract_component_row(value):

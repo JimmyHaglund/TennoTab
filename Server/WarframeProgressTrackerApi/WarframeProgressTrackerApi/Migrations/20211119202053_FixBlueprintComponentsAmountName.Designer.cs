@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WarframeProgressTrackerApi.Data;
 
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    partial class WarframeProgressTrackerContextModelSnapshot : ModelSnapshot
+    [Migration("20211119202053_FixBlueprintComponentsAmountName")]
+    partial class FixBlueprintComponentsAmountName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21627,73 +21629,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Gauss Neuroptics",
+                            ItemName = "Gauss Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Gauss Neuroptics",
+                            ItemName = "Gauss Neuroptics ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Gauss Neuroptics",
+                            ItemName = "Gauss Neuroptics ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 1600
                         },
                         new
                         {
-                            ItemName = "Gauss Neuroptics",
+                            ItemName = "Gauss Neuroptics ",
                             ComponentName = "Salvage",
                             ComponentAmount = 6200
                         },
                         new
                         {
-                            ItemName = "Gauss Chassis",
+                            ItemName = "Gauss Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Gauss Chassis",
+                            ItemName = "Gauss Chassis ",
                             ComponentName = "Radian Sentirum",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Gauss Chassis",
+                            ItemName = "Gauss Chassis ",
                             ComponentName = "Heart Nyth",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Gauss Chassis",
+                            ItemName = "Gauss Chassis ",
                             ComponentName = "Star Crimzian",
                             ComponentAmount = 6
                         },
                         new
                         {
-                            ItemName = "Gauss Systems",
+                            ItemName = "Gauss Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Gauss Systems",
+                            ItemName = "Gauss Systems ",
                             ComponentName = "Radiant Zodian",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Gauss Systems",
+                            ItemName = "Gauss Systems ",
                             ComponentName = "Marquise Thyst",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Gauss Systems",
+                            ItemName = "Gauss Systems ",
                             ComponentName = "Mytocardia Spore",
                             ComponentAmount = 70
                         },
@@ -22299,73 +22301,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Baruuk Neuroptics",
+                            ItemName = "Baruuk Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Baruuk Neuroptics",
+                            ItemName = "Baruuk Neuroptics ",
                             ComponentName = "Sola Toroid",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Baruuk Neuroptics",
+                            ItemName = "Baruuk Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 2850
                         },
                         new
                         {
-                            ItemName = "Baruuk Neuroptics",
+                            ItemName = "Baruuk Neuroptics ",
                             ComponentName = "Hespazym Alloy",
                             ComponentAmount = 50
                         },
                         new
                         {
-                            ItemName = "Baruuk Chassis",
+                            ItemName = "Baruuk Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Baruuk Chassis",
+                            ItemName = "Baruuk Chassis ",
                             ComponentName = "Vega Toroid",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Baruuk Chassis",
+                            ItemName = "Baruuk Chassis ",
                             ComponentName = "Salvage",
                             ComponentAmount = 3250
                         },
                         new
                         {
-                            ItemName = "Baruuk Chassis",
+                            ItemName = "Baruuk Chassis ",
                             ComponentName = "Hespazym Alloy",
                             ComponentAmount = 100
                         },
                         new
                         {
-                            ItemName = "Baruuk Systems",
+                            ItemName = "Baruuk Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Baruuk Systems",
+                            ItemName = "Baruuk Systems ",
                             ComponentName = "Calda Toroid",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Baruuk Systems",
+                            ItemName = "Baruuk Systems ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 2500
                         },
                         new
                         {
-                            ItemName = "Baruuk Systems",
+                            ItemName = "Baruuk Systems ",
                             ComponentName = "Entroplasma",
                             ComponentAmount = 10
                         },
@@ -22683,73 +22685,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Atlas Neuroptics",
+                            ItemName = "Atlas Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Neuroptics",
+                            ItemName = "Atlas Neuroptics ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1400
                         },
                         new
                         {
-                            ItemName = "Atlas Neuroptics",
+                            ItemName = "Atlas Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 1100
                         },
                         new
                         {
-                            ItemName = "Atlas Neuroptics",
+                            ItemName = "Atlas Neuroptics ",
                             ComponentName = "Circuits",
                             ComponentAmount = 800
                         },
                         new
                         {
-                            ItemName = "Atlas Chassis",
+                            ItemName = "Atlas Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Chassis",
+                            ItemName = "Atlas Chassis ",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 1800
                         },
                         new
                         {
-                            ItemName = "Atlas Chassis",
+                            ItemName = "Atlas Chassis ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 1300
                         },
                         new
                         {
-                            ItemName = "Atlas Chassis",
+                            ItemName = "Atlas Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 700
                         },
                         new
                         {
-                            ItemName = "Atlas Systems",
+                            ItemName = "Atlas Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Systems",
+                            ItemName = "Atlas Systems ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 4600
                         },
                         new
                         {
-                            ItemName = "Atlas Systems",
+                            ItemName = "Atlas Systems ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1700
                         },
                         new
                         {
-                            ItemName = "Atlas Systems",
+                            ItemName = "Atlas Systems ",
                             ComponentName = "Morphics",
                             ComponentAmount = 5
                         },
@@ -22875,73 +22877,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Banshee Neuroptics",
+                            ItemName = "Banshee Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Neuroptics",
+                            ItemName = "Banshee Neuroptics ",
                             ComponentName = "Circuits",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Banshee Neuroptics",
+                            ItemName = "Banshee Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Banshee Neuroptics",
+                            ItemName = "Banshee Neuroptics ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 200
                         },
                         new
                         {
-                            ItemName = "Banshee Chassis",
+                            ItemName = "Banshee Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Chassis",
+                            ItemName = "Banshee Chassis ",
                             ComponentName = "Morphics",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Banshee Chassis",
+                            ItemName = "Banshee Chassis ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 900
                         },
                         new
                         {
-                            ItemName = "Banshee Chassis",
+                            ItemName = "Banshee Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 50
                         },
                         new
                         {
-                            ItemName = "Banshee Systems",
+                            ItemName = "Banshee Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Systems",
+                            ItemName = "Banshee Systems ",
                             ComponentName = "Control Module",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Banshee Systems",
+                            ItemName = "Banshee Systems ",
                             ComponentName = "Morphics",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Banshee Systems",
+                            ItemName = "Banshee Systems ",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
                         },
@@ -22971,73 +22973,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Lavos Neuroptics",
+                            ItemName = "Lavos Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Lavos Neuroptics",
+                            ItemName = "Lavos Neuroptics ",
                             ComponentName = "Trapezium Xenorhast",
                             ComponentAmount = 6
                         },
                         new
                         {
-                            ItemName = "Lavos Neuroptics",
+                            ItemName = "Lavos Neuroptics ",
                             ComponentName = "Titanium",
                             ComponentAmount = 2000
                         },
                         new
                         {
-                            ItemName = "Lavos Neuroptics",
+                            ItemName = "Lavos Neuroptics ",
                             ComponentName = "Oxium",
                             ComponentAmount = 750
                         },
                         new
                         {
-                            ItemName = "Lavos Chassis",
+                            ItemName = "Lavos Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Lavos Chassis",
+                            ItemName = "Lavos Chassis ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Lavos Chassis",
+                            ItemName = "Lavos Chassis ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 5
                         },
                         new
                         {
-                            ItemName = "Lavos Chassis",
+                            ItemName = "Lavos Chassis ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 1500
                         },
                         new
                         {
-                            ItemName = "Lavos Systems",
+                            ItemName = "Lavos Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Lavos Systems",
+                            ItemName = "Lavos Systems ",
                             ComponentName = "Cabochon Embolos",
                             ComponentAmount = 6
                         },
                         new
                         {
-                            ItemName = "Lavos Systems",
+                            ItemName = "Lavos Systems ",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 5500
                         },
                         new
                         {
-                            ItemName = "Lavos Systems",
+                            ItemName = "Lavos Systems ",
                             ComponentName = "Hexenon",
                             ComponentAmount = 550
                         },
@@ -24039,73 +24041,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Sevagoth Neuroptics",
+                            ItemName = "Sevagoth Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Sevagoth Neuroptics",
+                            ItemName = "Sevagoth Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 6
                         },
                         new
                         {
-                            ItemName = "Sevagoth Neuroptics",
+                            ItemName = "Sevagoth Neuroptics ",
                             ComponentName = "Titanium",
                             ComponentAmount = 1200
                         },
                         new
                         {
-                            ItemName = "Sevagoth Neuroptics",
+                            ItemName = "Sevagoth Neuroptics ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 750
                         },
                         new
                         {
-                            ItemName = "Sevagoth Chassis",
+                            ItemName = "Sevagoth Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Sevagoth Chassis",
+                            ItemName = "Sevagoth Chassis ",
                             ComponentName = "Morphics",
                             ComponentAmount = 8
                         },
                         new
                         {
-                            ItemName = "Sevagoth Chassis",
+                            ItemName = "Sevagoth Chassis ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 650
                         },
                         new
                         {
-                            ItemName = "Sevagoth Chassis",
+                            ItemName = "Sevagoth Chassis ",
                             ComponentName = "Nullstones",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Sevagoth Systems",
+                            ItemName = "Sevagoth Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Sevagoth Systems",
+                            ItemName = "Sevagoth Systems ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Sevagoth Systems",
+                            ItemName = "Sevagoth Systems ",
                             ComponentName = "Oxium",
                             ComponentAmount = 250
                         },
                         new
                         {
-                            ItemName = "Sevagoth Systems",
+                            ItemName = "Sevagoth Systems ",
                             ComponentName = "Asterite",
                             ComponentAmount = 15
                         },
@@ -24231,73 +24233,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Ash Neuroptics",
+                            ItemName = "Ash Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Neuroptics",
+                            ItemName = "Ash Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Ash Neuroptics",
+                            ItemName = "Ash Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Ash Neuroptics",
+                            ItemName = "Ash Neuroptics ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Ash Chassis",
+                            ItemName = "Ash Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Chassis",
+                            ItemName = "Ash Chassis ",
                             ComponentName = "Morphics",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Ash Chassis",
+                            ItemName = "Ash Chassis ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 1000
                         },
                         new
                         {
-                            ItemName = "Ash Chassis",
+                            ItemName = "Ash Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 300
                         },
                         new
                         {
-                            ItemName = "Ash Systems",
+                            ItemName = "Ash Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Systems",
+                            ItemName = "Ash Systems ",
                             ComponentName = "Control Module",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Ash Systems",
+                            ItemName = "Ash Systems ",
                             ComponentName = "Morphics",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Ash Systems",
+                            ItemName = "Ash Systems ",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
                         },
@@ -24519,73 +24521,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Grendel Neuroptics",
+                            ItemName = "Grendel Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Grendel Neuroptics",
+                            ItemName = "Grendel Neuroptics ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Grendel Neuroptics",
+                            ItemName = "Grendel Neuroptics ",
                             ComponentName = "Control Module",
                             ComponentAmount = 5
                         },
                         new
                         {
-                            ItemName = "Grendel Neuroptics",
+                            ItemName = "Grendel Neuroptics ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 3500
                         },
                         new
                         {
-                            ItemName = "Grendel Chassis",
+                            ItemName = "Grendel Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Grendel Chassis",
+                            ItemName = "Grendel Chassis ",
                             ComponentName = "Icon Condroc Wing",
                             ComponentAmount = 25
                         },
                         new
                         {
-                            ItemName = "Grendel Chassis",
+                            ItemName = "Grendel Chassis ",
                             ComponentName = "Forest Rodent Spine",
                             ComponentAmount = 30
                         },
                         new
                         {
-                            ItemName = "Grendel Chassis",
+                            ItemName = "Grendel Chassis ",
                             ComponentName = "Tralok Eyes",
                             ComponentAmount = 20
                         },
                         new
                         {
-                            ItemName = "Grendel Systems",
+                            ItemName = "Grendel Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Grendel Systems",
+                            ItemName = "Grendel Systems ",
                             ComponentName = "Circuits",
                             ComponentAmount = 1125
                         },
                         new
                         {
-                            ItemName = "Grendel Systems",
+                            ItemName = "Grendel Systems ",
                             ComponentName = "Morphics",
                             ComponentAmount = 10
                         },
                         new
                         {
-                            ItemName = "Grendel Systems",
+                            ItemName = "Grendel Systems ",
                             ComponentName = "Icon Fish Meat",
                             ComponentAmount = 125
                         },
@@ -24615,73 +24617,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Zephyr Neuroptics",
+                            ItemName = "Zephyr Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Neuroptics",
+                            ItemName = "Zephyr Neuroptics ",
                             ComponentName = "Circuits",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Zephyr Neuroptics",
+                            ItemName = "Zephyr Neuroptics ",
                             ComponentName = "Oxium",
                             ComponentAmount = 200
                         },
                         new
                         {
-                            ItemName = "Zephyr Neuroptics",
+                            ItemName = "Zephyr Neuroptics ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 200
                         },
                         new
                         {
-                            ItemName = "Zephyr Chassis",
+                            ItemName = "Zephyr Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Chassis",
+                            ItemName = "Zephyr Chassis ",
                             ComponentName = "Oxium",
                             ComponentAmount = 200
                         },
                         new
                         {
-                            ItemName = "Zephyr Chassis",
+                            ItemName = "Zephyr Chassis ",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 900
                         },
                         new
                         {
-                            ItemName = "Zephyr Chassis",
+                            ItemName = "Zephyr Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 50
                         },
                         new
                         {
-                            ItemName = "Zephyr Systems",
+                            ItemName = "Zephyr Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Systems",
+                            ItemName = "Zephyr Systems ",
                             ComponentName = "Control Module",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Zephyr Systems",
+                            ItemName = "Zephyr Systems ",
                             ComponentName = "Oxium",
                             ComponentAmount = 200
                         },
                         new
                         {
-                            ItemName = "Zephyr Systems",
+                            ItemName = "Zephyr Systems ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 500
                         },
@@ -24807,73 +24809,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Yareli Neuroptics",
+                            ItemName = "Yareli Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Yareli Neuroptics",
+                            ItemName = "Yareli Neuroptics ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Yareli Neuroptics",
+                            ItemName = "Yareli Neuroptics ",
                             ComponentName = "Plastids",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Yareli Neuroptics",
+                            ItemName = "Yareli Neuroptics ",
                             ComponentName = "Salvage",
                             ComponentAmount = 875
                         },
                         new
                         {
-                            ItemName = "Yareli Chassis",
+                            ItemName = "Yareli Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Yareli Chassis",
+                            ItemName = "Yareli Chassis ",
                             ComponentName = "Tellurium",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Yareli Chassis",
+                            ItemName = "Yareli Chassis ",
                             ComponentName = "Venerdo Alloy",
                             ComponentAmount = 20
                         },
                         new
                         {
-                            ItemName = "Yareli Chassis",
+                            ItemName = "Yareli Chassis ",
                             ComponentName = "Circuits",
                             ComponentAmount = 350
                         },
                         new
                         {
-                            ItemName = "Yareli Systems",
+                            ItemName = "Yareli Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Yareli Systems",
+                            ItemName = "Yareli Systems ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Yareli Systems",
+                            ItemName = "Yareli Systems ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 350
                         },
                         new
                         {
-                            ItemName = "Yareli Systems",
+                            ItemName = "Yareli Systems ",
                             ComponentName = "Exa Brain",
                             ComponentAmount = 5
                         },
@@ -25287,73 +25289,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Oberon Neuroptics",
+                            ItemName = "Oberon Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Oberon Neuroptics",
+                            ItemName = "Oberon Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Oberon Neuroptics",
+                            ItemName = "Oberon Neuroptics ",
                             ComponentName = "Control Module",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Oberon Neuroptics",
+                            ItemName = "Oberon Neuroptics ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Oberon Chassis",
+                            ItemName = "Oberon Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Oberon Chassis",
+                            ItemName = "Oberon Chassis ",
                             ComponentName = "Gallium",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Oberon Chassis",
+                            ItemName = "Oberon Chassis ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1000
                         },
                         new
                         {
-                            ItemName = "Oberon Chassis",
+                            ItemName = "Oberon Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 300
                         },
                         new
                         {
-                            ItemName = "Oberon Systems",
+                            ItemName = "Oberon Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Oberon Systems",
+                            ItemName = "Oberon Systems ",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Oberon Systems",
+                            ItemName = "Oberon Systems ",
                             ComponentName = "Gallium",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Oberon Systems",
+                            ItemName = "Oberon Systems ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 500
                         },
@@ -26937,73 +26939,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Neuroptics",
+                            ItemName = "Nidus Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Neuroptics",
+                            ItemName = "Nidus Prime Neuroptics ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Neuroptics",
+                            ItemName = "Nidus Prime Neuroptics ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 600
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Neuroptics",
+                            ItemName = "Nidus Prime Neuroptics ",
                             ComponentName = "Circuits",
                             ComponentAmount = 1100
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Chassis",
+                            ItemName = "Nidus Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Chassis",
+                            ItemName = "Nidus Prime Chassis ",
                             ComponentName = "Tellurium",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Chassis",
+                            ItemName = "Nidus Prime Chassis ",
                             ComponentName = "Plastids",
                             ComponentAmount = 450
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Chassis",
+                            ItemName = "Nidus Prime Chassis ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1425
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Systems",
+                            ItemName = "Nidus Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Systems",
+                            ItemName = "Nidus Prime Systems ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Systems",
+                            ItemName = "Nidus Prime Systems ",
                             ComponentName = "Neurodes",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Nidus Prime Systems",
+                            ItemName = "Nidus Prime Systems ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 1250
                         },
@@ -28089,73 +28091,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Neuroptics",
+                            ItemName = "Zephyr Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Neuroptics",
+                            ItemName = "Zephyr Prime Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Neuroptics",
+                            ItemName = "Zephyr Prime Neuroptics ",
                             ComponentName = "Oxium",
                             ComponentAmount = 250
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Neuroptics",
+                            ItemName = "Zephyr Prime Neuroptics ",
                             ComponentName = "Plastids",
                             ComponentAmount = 350
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Chassis",
+                            ItemName = "Zephyr Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Chassis",
+                            ItemName = "Zephyr Prime Chassis ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Chassis",
+                            ItemName = "Zephyr Prime Chassis ",
                             ComponentName = "Tellurium",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Chassis",
+                            ItemName = "Zephyr Prime Chassis ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 3600
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Systems",
+                            ItemName = "Zephyr Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Systems",
+                            ItemName = "Zephyr Prime Systems ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Systems",
+                            ItemName = "Zephyr Prime Systems ",
                             ComponentName = "Neurodes",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Zephyr Prime Systems",
+                            ItemName = "Zephyr Prime Systems ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 550
                         },
@@ -28185,73 +28187,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Neuroptics",
+                            ItemName = "Octavia Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Neuroptics",
+                            ItemName = "Octavia Prime Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 8
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Neuroptics",
+                            ItemName = "Octavia Prime Neuroptics ",
                             ComponentName = "Control Module",
                             ComponentAmount = 10
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Neuroptics",
+                            ItemName = "Octavia Prime Neuroptics ",
                             ComponentName = "Oxium",
                             ComponentAmount = 250
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Chassis",
+                            ItemName = "Octavia Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Chassis",
+                            ItemName = "Octavia Prime Chassis ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Chassis",
+                            ItemName = "Octavia Prime Chassis ",
                             ComponentName = "Morphics",
                             ComponentAmount = 8
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Chassis",
+                            ItemName = "Octavia Prime Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 1200
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Systems",
+                            ItemName = "Octavia Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Systems",
+                            ItemName = "Octavia Prime Systems ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Systems",
+                            ItemName = "Octavia Prime Systems ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 370
                         },
                         new
                         {
-                            ItemName = "Octavia Prime Systems",
+                            ItemName = "Octavia Prime Systems ",
                             ComponentName = "Circuits",
                             ComponentAmount = 875
                         },
@@ -28281,73 +28283,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Ash Prime Neuroptics",
+                            ItemName = "Ash Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Prime Neuroptics",
+                            ItemName = "Ash Prime Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 150
                         },
                         new
                         {
-                            ItemName = "Ash Prime Neuroptics",
+                            ItemName = "Ash Prime Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Ash Prime Neuroptics",
+                            ItemName = "Ash Prime Neuroptics ",
                             ComponentName = "Salvage",
                             ComponentAmount = 1000
                         },
                         new
                         {
-                            ItemName = "Ash Prime Chassis",
+                            ItemName = "Ash Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Prime Chassis",
+                            ItemName = "Ash Prime Chassis ",
                             ComponentName = "Gallium",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Ash Prime Chassis",
+                            ItemName = "Ash Prime Chassis ",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 1000
                         },
                         new
                         {
-                            ItemName = "Ash Prime Chassis",
+                            ItemName = "Ash Prime Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 400
                         },
                         new
                         {
-                            ItemName = "Ash Prime Systems",
+                            ItemName = "Ash Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Ash Prime Systems",
+                            ItemName = "Ash Prime Systems ",
                             ComponentName = "Control Module",
                             ComponentAmount = 3
                         },
                         new
                         {
-                            ItemName = "Ash Prime Systems",
+                            ItemName = "Ash Prime Systems ",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 1
                         },
                         new
                         {
-                            ItemName = "Ash Prime Systems",
+                            ItemName = "Ash Prime Systems ",
                             ComponentName = "Ferrite",
                             ComponentAmount = 1000
                         },
@@ -28377,73 +28379,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Neuroptics",
+                            ItemName = "Banshee Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Neuroptics",
+                            ItemName = "Banshee Prime Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Neuroptics",
+                            ItemName = "Banshee Prime Neuroptics ",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 6000
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Neuroptics",
+                            ItemName = "Banshee Prime Neuroptics ",
                             ComponentName = "Circuits",
                             ComponentAmount = 1500
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Chassis",
+                            ItemName = "Banshee Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Chassis",
+                            ItemName = "Banshee Prime Chassis ",
                             ComponentName = "Morphics",
                             ComponentAmount = 10
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Chassis",
+                            ItemName = "Banshee Prime Chassis ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 1500
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Chassis",
+                            ItemName = "Banshee Prime Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 2000
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Systems",
+                            ItemName = "Banshee Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Systems",
+                            ItemName = "Banshee Prime Systems ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Systems",
+                            ItemName = "Banshee Prime Systems ",
                             ComponentName = "Control Module",
                             ComponentAmount = 10
                         },
                         new
                         {
-                            ItemName = "Banshee Prime Systems",
+                            ItemName = "Banshee Prime Systems ",
                             ComponentName = "Oxium",
                             ComponentAmount = 300
                         },
@@ -28473,73 +28475,73 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Neuroptics",
+                            ItemName = "Atlas Prime Neuroptics ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Neuroptics",
+                            ItemName = "Atlas Prime Neuroptics ",
                             ComponentName = "Neural Sensors",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Neuroptics",
+                            ItemName = "Atlas Prime Neuroptics ",
                             ComponentName = "Cryotic",
                             ComponentAmount = 525
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Neuroptics",
+                            ItemName = "Atlas Prime Neuroptics ",
                             ComponentName = "Salvage",
                             ComponentAmount = 4700
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Chassis",
+                            ItemName = "Atlas Prime Chassis ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Chassis",
+                            ItemName = "Atlas Prime Chassis ",
                             ComponentName = "Tellurium",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Chassis",
+                            ItemName = "Atlas Prime Chassis ",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Chassis",
+                            ItemName = "Atlas Prime Chassis ",
                             ComponentName = "Rubedo",
                             ComponentAmount = 725
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Systems",
+                            ItemName = "Atlas Prime Systems ",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Systems",
+                            ItemName = "Atlas Prime Systems ",
                             ComponentName = "Argon Crystal",
                             ComponentAmount = 2
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Systems",
+                            ItemName = "Atlas Prime Systems ",
                             ComponentName = "Gallium",
                             ComponentAmount = 4
                         },
                         new
                         {
-                            ItemName = "Atlas Prime Systems",
+                            ItemName = "Atlas Prime Systems ",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1200
                         },

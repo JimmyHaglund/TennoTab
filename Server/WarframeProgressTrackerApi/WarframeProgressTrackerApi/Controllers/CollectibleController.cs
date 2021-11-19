@@ -12,15 +12,6 @@ using WarframeProgressTrackerApi.Services;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
-    public class CollectibleInfo {
-        public string Name { get; set; }
-        public string Category { get; set; }
-    }
-
-    public class Label {
-        public string Name { get; set; }
-    }
-
     [Route("[controller]/[action]")]
     [ApiController]
     [EnableCors]
@@ -52,11 +43,13 @@ namespace WarframeProgressTrackerApi.Controllers {
         public IEnumerable<CollectibleView> All() {
             var userId = _sessionUser.IdFromRequest(Request);
             var collectibles = GetCollectibles(GetInclusiveSearchForm());
-            return from collectible in collectibles
-                   select new CollectibleView() {
-                       Name = collectible.ItemName,
-                       Category = collectible.Category
-                   };
+            var collectibleView = from collectible in collectibles
+                                  select new CollectibleView() {
+                                      Name = collectible.ItemName,
+                                      Category = collectible.Category
+                                  };
+            var result = collectibleView.ToList();
+            return result;//new List<CollectibleView>();//collectibleView.ToList();
         }
 
         [HttpPut]
@@ -76,7 +69,16 @@ namespace WarframeProgressTrackerApi.Controllers {
         private IEnumerable<Collectible> GetCollectibles(CollectibleSearchForm searchForm) {
             return from collectible in _context.Collectibles
                    where collectible.ItemName.Contains(searchForm.SearchText)
-                   where AllowedCategory(collectible, searchForm)
+                   where collectible.Category == Categories.Warframe && searchForm.IncludeFrames
+                        || collectible.Category == Categories.PrimaryWeapon && searchForm.IncludePrimaryWeapons
+                        || collectible.Category == Categories.SecondaryWeapon && searchForm.IncludeSecondaryWeapons
+                        || collectible.Category == Categories.MeleeWeapon && searchForm.IncludeMeleeWeapons
+                        || collectible.Category == Categories.Pet && searchForm.IncludePets
+                        || collectible.Category == Categories.RoboGun && searchForm.IncludeRoboWeapons
+                        || collectible.Category == Categories.Amp && searchForm.IncludeOperatorAmps
+                        || collectible.Category == Categories.Archwing && searchForm.IncludeArchwings
+                        || collectible.Category == Categories.ArchGun && searchForm.IncludeArchGuns
+                        || collectible.Category == Categories.ArchMelee && searchForm.IncludeArchMeleeWeapons
                    select collectible;
         }
 

@@ -42,6 +42,7 @@ datareader.remove_first_columns(data_raw, 2)
 
 out_data = []
 for row in data_raw:
-   out_data += process_row_data(row)
+   processed_row = process_row_data(row)
+   out_data += processed_row_data
 
 datawriter.write_csv('BaroKiteerTradeHistory', out_data)

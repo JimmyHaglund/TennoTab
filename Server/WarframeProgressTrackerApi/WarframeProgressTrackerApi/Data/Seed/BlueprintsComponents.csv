@@ -1,3 +1,8 @@
+ItemName,ComponentName,ItemAmount
+Gauss,Credits,25000
+Gauss,Gauss Chassis,1
+Gauss,Gauss Neuroptics,1
+Gauss,Gauss Systems,1
 Gauss Neuroptics ,Credits,15000
 Gauss Neuroptics ,Argon Crystal,1
 Gauss Neuroptics ,Rubedo,1600
@@ -10,6 +15,10 @@ Gauss Systems ,Credits,15000
 Gauss Systems ,Radiant Zodian,3
 Gauss Systems ,Marquise Thyst,3
 Gauss Systems ,Mytocardia Spore,70
+Mirage,Credits,25000
+Mirage,Mirage Chassis,1
+Mirage,Mirage Neuroptics,1
+Mirage,Mirage Systems,1
 Mirage Neuroptics,Credits,15000
 Mirage Neuroptics,Alloy Plate,250
 Mirage Neuroptics,Polymer Bundle,400
@@ -22,6 +31,10 @@ Mirage Systems,Credits,15000
 Mirage Systems,Circuits,250
 Mirage Systems,Polymer Bundle,650
 Mirage Systems,Control Module,1
+Inaros,Credits,25000
+Inaros,Inaros Chassis,1
+Inaros,Inaros Neuroptics,1
+Inaros,Inaros Systems,1
 Inaros Neuroptics,Credits,15000
 Inaros Neuroptics,Alloy Plate,1500
 Inaros Neuroptics,Polymer Bundle,350
@@ -34,6 +47,10 @@ Inaros Systems,Credits,15000
 Inaros Systems,Argon Crystal,2
 Inaros Systems,Polymer Bundle,300
 Inaros Systems,Nano Spores,1600
+Nezha,Credits,25000
+Nezha,Nezha Chassis,1
+Nezha,Nezha Neuroptics,1
+Nezha,Nezha Systems,1
 Nezha Neuroptics,Credits,15000
 Nezha Neuroptics,Argon Crystal,1
 Nezha Neuroptics,Neural Sensors,1
@@ -46,6 +63,10 @@ Nezha Systems,Credits,15000
 Nezha Systems,Control Module,1
 Nezha Systems,Morphics,1
 Nezha Systems,Ferrite,5000
+Garuda,Credits,25000
+Garuda,Garuda Chassis,1
+Garuda,Garuda Neuroptics,1
+Garuda,Garuda Systems,1
 Garuda Neuroptics,Credits,15000
 Garuda Neuroptics,Vega Toroid,2
 Garuda Neuroptics,Star Amarast,6
@@ -58,6 +79,10 @@ Garuda Systems,Credits,15000
 Garuda Systems,Sola Toroid,2
 Garuda Systems,Marquise Thyst,3
 Garuda Systems,Venerdo Alloy,40
+Volt,Credits,25000
+Volt,Volt Chassis,1
+Volt,Volt Neuroptics,1
+Volt,Volt Systems,1
 Volt Neuroptics,Credits,15000
 Volt Neuroptics,Alloy Plate,150
 Volt Neuroptics,Neural Sensors,1
@@ -70,6 +95,10 @@ Volt Systems,Credits,15000
 Volt Systems,Control Module,1
 Volt Systems,Morphics,1
 Volt Systems,Salvage,500
+Mag,Credits,25000
+Mag,Mag Chassis,1
+Mag,Mag Neuroptics,1
+Mag,Mag Systems,1
 Mag Neuroptics,Credits,15000
 Mag Neuroptics,Alloy Plate,150
 Mag Neuroptics,Neural Sensors,1
@@ -82,6 +111,10 @@ Mag Systems,Credits,15000
 Mag Systems,Control Module,1
 Mag Systems,Morphics,1
 Mag Systems,Salvage,500
+Baruuk,Credits,25000
+Baruuk,Baruuk Chassis,1
+Baruuk,Baruuk Neuroptics,1
+Baruuk,Baruuk Systems,1
 Baruuk Neuroptics ,Credits,15000
 Baruuk Neuroptics ,Sola Toroid,3
 Baruuk Neuroptics ,Alloy Plate,2850
@@ -94,6 +127,10 @@ Baruuk Systems ,Credits,15000
 Baruuk Systems ,Calda Toroid,3
 Baruuk Systems ,Ferrite,2500
 Baruuk Systems ,Entroplasma,10
+Loki,Credits,25000
+Loki,Loki Chassis,1
+Loki,Loki Neuroptics,1
+Loki,Loki Systems,1
 Loki Neuroptics,Credits,15000
 Loki Neuroptics,Alloy Plate,150
 Loki Neuroptics,Neural Sensors,1
@@ -106,6 +143,10 @@ Loki Systems,Credits,15000
 Loki Systems,Control Module,1
 Loki Systems,Morphics,1
 Loki Systems,Salvage,500
+Saryn,Credits,25000
+Saryn,Saryn Chassis,1
+Saryn,Saryn Neuroptics,1
+Saryn,Saryn Systems,1
 Saryn Neuroptics,Credits,15000
 Saryn Neuroptics,Circuits,150
 Saryn Neuroptics,Neural Sensors,1
@@ -118,6 +159,10 @@ Saryn Systems,Credits,15000
 Saryn Systems,Control Module,1
 Saryn Systems,Morphics,1
 Saryn Systems,Salvage,550
+Protea,Credits,25000
+Protea,Protea Chassis,1
+Protea,Protea Neuroptics,1
+Protea,Protea Systems,1
 Protea Neuroptics,Credits,15000
 Protea Neuroptics,Salvage,11500
 Protea Neuroptics,Polymer Bundle,5150
@@ -130,6 +175,10 @@ Protea Systems,Credits,15000
 Protea Systems,Ferrite,13400
 Protea Systems,Cryotic,1000
 Protea Systems,Titanium,1750
+Atlas,Credits,30000
+Atlas,Atlas Chassis,1
+Atlas,Atlas Neuroptics,1
+Atlas,Atlas Systems,1
 Atlas Neuroptics ,Credits,15000
 Atlas Neuroptics ,Polymer Bundle,1400
 Atlas Neuroptics ,Alloy Plate,1100
@@ -142,6 +191,10 @@ Atlas Systems ,Credits,15000
 Atlas Systems ,Ferrite,4600
 Atlas Systems ,Polymer Bundle,1700
 Atlas Systems ,Morphics,5
+Wukong,Credits,25000
+Wukong,Wukong Chassis,1
+Wukong,Wukong Neuroptics,1
+Wukong,Wukong Systems,1
 Wukong Neuroptics,Credits,15000
 Wukong Neuroptics,Circuits,1400
 Wukong Neuroptics,Neural Sensors,1
@@ -154,6 +207,10 @@ Wukong Systems,Credits,15000
 Wukong Systems,Argon Crystal,2
 Wukong Systems,Neurodes,2
 Wukong Systems,Salvage,8000
+Banshee,Credits,25000
+Banshee,Banshee Chassis,1
+Banshee,Banshee Neuroptics,1
+Banshee,Banshee Systems,1
 Banshee Neuroptics ,Credits,15000
 Banshee Neuroptics ,Circuits,150
 Banshee Neuroptics ,Neural Sensors,1
@@ -166,6 +223,10 @@ Banshee Systems ,Credits,15000
 Banshee Systems ,Control Module,1
 Banshee Systems ,Morphics,1
 Banshee Systems ,Salvage,500
+Lavos,Credits,25000
+Lavos,Lavos Chassis,1
+Lavos,Lavos Neuroptics,1
+Lavos,Lavos Systems,1
 Lavos Neuroptics ,Credits,15000
 Lavos Neuroptics ,Trapezium Xenorhast,6
 Lavos Neuroptics ,Titanium,2000
@@ -178,6 +239,10 @@ Lavos Systems ,Credits,15000
 Lavos Systems ,Cabochon Embolos,6
 Lavos Systems ,Nano Spores,5500
 Lavos Systems ,Hexenon,550
+Nova,Credits,25000
+Nova,Nova Chassis,1
+Nova,Nova Neuroptics,1
+Nova,Nova Systems,1
 Nova Neuroptics,Credits,15000
 Nova Neuroptics,Alloy Plate,150
 Nova Neuroptics,Neural Sensors,1
@@ -192,6 +257,10 @@ Nova Systems,Control Module,1
 Nova Systems,Morphics,1
 Nova Systems,Salvage,500
 Nova Systems,Plastids,600
+Ember,Credits,25000
+Ember,Ember Chassis,1
+Ember,Ember Neuroptics,1
+Ember,Ember Systems,1
 Ember Neuroptics,Credits,15000
 Ember Neuroptics,Alloy Plate,150
 Ember Neuroptics,Neural Sensors,1
@@ -204,6 +273,10 @@ Ember Systems,Credits,15000
 Ember Systems,Control Module,1
 Ember Systems,Morphics,1
 Ember Systems,Salvage,500
+Khora,Credits,25000
+Khora,Khora Chassis,1
+Khora,Khora Neuroptics,1
+Khora,Khora Systems,1
 Khora Neuroptics,Credits,15000
 Khora Neuroptics,Kavat Gene Strain,2
 Khora Neuroptics,Forest Rodent Spine,35
@@ -216,6 +289,10 @@ Khora Systems,Credits,15000
 Khora Systems,Kavat Gene Strain,2
 Khora Systems,Plastids,1000
 Khora Systems,Circuits,2600
+Valkyr,Credits,25000
+Valkyr,Valkyr Chassis,1
+Valkyr,Valkyr Neuroptics,1
+Valkyr,Valkyr Systems,1
 Valkyr Neuroptics,Credits,15000
 Valkyr Neuroptics,Circuits,150
 Valkyr Neuroptics,Neural Sensors,1
@@ -228,6 +305,10 @@ Valkyr Systems,Credits,15000
 Valkyr Systems,Control Module,1
 Valkyr Systems,Morphics,1
 Valkyr Systems,Salvage,500
+Mesa,Credits,25000
+Mesa,Mesa Chassis,1
+Mesa,Mesa Neuroptics,1
+Mesa,Mesa Systems,1
 Mesa Neuroptics,Credits,15000
 Mesa Neuroptics,Alloy Plate,1500
 Mesa Neuroptics,Neural Sensors,2
@@ -240,6 +321,10 @@ Mesa Systems,Credits,15000
 Mesa Systems,Argon Crystal,1
 Mesa Systems,Nano Spores,1600
 Mesa Systems,Polymer Bundle,300
+Titania,Credits,25000
+Titania,Titania Chassis,1
+Titania,Titania Neuroptics,1
+Titania,Titania Systems,1
 Titania Neuroptics,Credits,15000
 Titania Neuroptics,Alloy Plate,1500
 Titania Neuroptics,Neurodes,2
@@ -252,6 +337,10 @@ Titania Systems,Credits,15000
 Titania Systems,Control Module,1
 Titania Systems,Plastids,800
 Titania Systems,Cryotic,2200
+Nidus,Credits,25000
+Nidus,Nidus Chassis,1
+Nidus,Nidus Neuroptics,1
+Nidus,Nidus Systems,1
 Nidus Neuroptics,Credits,15000
 Nidus Neuroptics,Mutagen Sample,10
 Nidus Neuroptics,Plastids,1000
@@ -264,6 +353,10 @@ Nidus Systems,Credits,15000
 Nidus Systems,Nano Spores,6000
 Nidus Systems,Circuits,3500
 Nidus Systems,Morphics,14
+Ivara,Credits,25000
+Ivara,Ivara Chassis,1
+Ivara,Ivara Neuroptics,1
+Ivara,Ivara Systems,1
 Ivara Neuroptics,Credits,15000
 Ivara Neuroptics,Neurodes,5
 Ivara Neuroptics,Plastids,800
@@ -276,6 +369,10 @@ Ivara Systems,Credits,15000
 Ivara Systems,Control Module,5
 Ivara Systems,Rubedo,1000
 Ivara Systems,Nitain Extract,5
+Octavia,Credits,25000
+Octavia,Octavia Chassis,1
+Octavia,Octavia Neuroptics,1
+Octavia,Octavia Systems,1
 Octavia Neuroptics,Credits,15000
 Octavia Neuroptics,Oxium,1000
 Octavia Neuroptics,Plastids,2600
@@ -288,6 +385,10 @@ Octavia Systems,Credits,15000
 Octavia Systems,Kuva,2000
 Octavia Systems,Morphics,20
 Octavia Systems,Circuits,3000
+Excalibur,Credits,25000
+Excalibur,Excalibur Chassis,1
+Excalibur,Excalibur Neuroptics,1
+Excalibur,Excalibur Systems,1
 Excalibur Neuroptics,Credits,15000
 Excalibur Neuroptics,Alloy Plate,150
 Excalibur Neuroptics,Neural Sensors,1
@@ -300,6 +401,10 @@ Excalibur Systems,Credits,15000
 Excalibur Systems,Control Module,1
 Excalibur Systems,Morphics,1
 Excalibur Systems,Salvage,500
+Sevagoth,Credits,25000
+Sevagoth,Sevagoth Chassis,1
+Sevagoth,Sevagoth Neuroptics,1
+Sevagoth,Sevagoth Systems,1
 Sevagoth Neuroptics ,Credits,15000
 Sevagoth Neuroptics ,Neural Sensors,6
 Sevagoth Neuroptics ,Titanium,1200
@@ -312,6 +417,10 @@ Sevagoth Systems ,Credits,15000
 Sevagoth Systems ,Argon Crystal,2
 Sevagoth Systems ,Oxium,250
 Sevagoth Systems ,Asterite,15
+Nekros,Credits,25000
+Nekros,Nekros Chassis,1
+Nekros,Nekros Neuroptics,1
+Nekros,Nekros Systems,1
 Nekros Neuroptics,Credits,15000
 Nekros Neuroptics,Alloy Plate,150
 Nekros Neuroptics,Neural Sensors,1
@@ -324,6 +433,10 @@ Nekros Systems,Credits,15000
 Nekros Systems,Control Module,1
 Nekros Systems,Morphics,1
 Nekros Systems,Salvage,500
+Ash,Credits,25000
+Ash,Ash Chassis,1
+Ash,Ash Neuroptics,1
+Ash,Ash Systems,1
 Ash Neuroptics ,Credits,15000
 Ash Neuroptics ,Alloy Plate,150
 Ash Neuroptics ,Neural Sensors,1
@@ -336,6 +449,10 @@ Ash Systems ,Credits,15000
 Ash Systems ,Control Module,1
 Ash Systems ,Morphics,1
 Ash Systems ,Salvage,500
+Xaku,Credits,25000
+Xaku,Xaku Chassis,1
+Xaku,Xaku Neuroptics,1
+Xaku,Xaku Systems,1
 Xaku Neuroptics,Credits,15000
 Xaku Neuroptics,Neural Sensors,10
 Xaku Neuroptics,Thaumic Distillate,60
@@ -348,6 +465,10 @@ Xaku Systems,Credits,15000
 Xaku Systems,Breath Of The Eidolon,10
 Xaku Systems,Scintillant,5
 Xaku Systems,Pustulite,45
+Rhino,Credits,25000
+Rhino,Rhino Chassis,1
+Rhino,Rhino Neuroptics,1
+Rhino,Rhino Systems,1
 Rhino Neuroptics,Credits,15000
 Rhino Neuroptics,Alloy Plate,150
 Rhino Neuroptics,Morphics,1
@@ -360,6 +481,10 @@ Rhino Systems,Credits,15000
 Rhino Systems,Gallium,1
 Rhino Systems,Morphics,1
 Rhino Systems,Salvage,500
+Grendel,Credits,35000
+Grendel,Grendel Chassis,1
+Grendel,Grendel Neuroptics,1
+Grendel,Grendel Systems,1
 Grendel Neuroptics ,Credits,15000
 Grendel Neuroptics ,Argon Crystal,2
 Grendel Neuroptics ,Control Module,5
@@ -372,6 +497,10 @@ Grendel Systems ,Credits,15000
 Grendel Systems ,Circuits,1125
 Grendel Systems ,Morphics,10
 Grendel Systems ,Icon Fish Meat,125
+Zephyr,Credits,25000
+Zephyr,Zephyr Chassis,1
+Zephyr,Zephyr Neuroptics,1
+Zephyr,Zephyr Systems,1
 Zephyr Neuroptics ,Credits,15000
 Zephyr Neuroptics ,Circuits,150
 Zephyr Neuroptics ,Oxium,200
@@ -384,9 +513,13 @@ Zephyr Systems ,Credits,15000
 Zephyr Systems ,Control Module,1
 Zephyr Systems ,Oxium,200
 Zephyr Systems ,Polymer Bundle,500
+Wisp,Credits,25000
+Wisp,Wisp Chassis,1
+Wisp,Wisp Neuroptics,1
+Wisp,Wisp Systems,1
 Wisp Neuroptics,Credits,15000
 Wisp Neuroptics,Hexenon,300
-Wisp Neuroptics,Tellurium Market,2
+Wisp Neuroptics,Tellurium,2
 Wisp Neuroptics,Plastids,950
 Wisp Chassis,Credits,15000
 Wisp Chassis,Hexenon,500
@@ -396,18 +529,26 @@ Wisp Systems,Credits,15000
 Wisp Systems,Hexenon,400
 Wisp Systems,Nitain Extract,2
 Wisp Systems,Rubedo,950
+Yareli,Credits,25000
+Yareli,Yareli Chassis,1
+Yareli,Yareli Neuroptics,1
+Yareli,Yareli Systems,1
 Yareli Neuroptics ,Credits,15000
 Yareli Neuroptics ,Argon Crystal,2
 Yareli Neuroptics ,Plastids,150
 Yareli Neuroptics ,Salvage,875
 Yareli Chassis ,Credits,15000
-Yareli Chassis ,Tellurium Market,2
+Yareli Chassis ,Tellurium,2
 Yareli Chassis ,Venerdo Alloy,20
 Yareli Chassis ,Circuits,350
 Yareli Systems ,Credits,15000
 Yareli Systems ,Nitain Extract,2
 Yareli Systems ,Cryotic,350
 Yareli Systems ,Exa Brain,5
+Gara,Credits,25000
+Gara,Gara Chassis,1
+Gara,Gara Neuroptics,1
+Gara,Gara Systems,1
 Gara Neuroptics,Credits,15000
 Gara Neuroptics,Pyrotic Alloy,90
 Gara Neuroptics,Grokdrul,65
@@ -420,6 +561,10 @@ Gara Systems,Credits,15000
 Gara Systems,Morphics,2
 Gara Systems,Charc Electroplax,35
 Gara Systems,Esher Devar,25
+Hildryn,Credits,25000
+Hildryn,Hildryn Chassis,1
+Hildryn,Hildryn Neuroptics,1
+Hildryn,Hildryn Systems,1
 Hildryn Neuroptics,Credits,15000
 Hildryn Neuroptics,Lazulite Toroid,2
 Hildryn Neuroptics,Argon Crystal,1
@@ -430,8 +575,12 @@ Hildryn Chassis,Nitain Extract,2
 Hildryn Chassis,Thermal Sludge,90
 Hildryn Systems,Credits,15000
 Hildryn Systems,Lazulite Toroid,2
-Hildryn Systems,Tellurium Market,2
+Hildryn Systems,Tellurium,2
 Hildryn Systems,Gorgaricus Spore,95
+Vauban,Credits,25000
+Vauban,Vauban Chassis,1
+Vauban,Vauban Neuroptics,1
+Vauban,Vauban Systems,1
 Vauban Neuroptics,Credits,15000
 Vauban Neuroptics,Alloy Plate,150
 Vauban Neuroptics,Neural Sensors,1
@@ -444,6 +593,10 @@ Vauban Systems,Credits,15000
 Vauban Systems,Control Module,1
 Vauban Systems,Morphics,1
 Vauban Systems,Salvage,500
+Hydroid,Credits,25000
+Hydroid,Hydroid Chassis,1
+Hydroid,Hydroid Neuroptics,1
+Hydroid,Hydroid Systems,1
 Hydroid Neuroptics,Credits,15000
 Hydroid Neuroptics,Alloy Plate,150
 Hydroid Neuroptics,Control Module,1
@@ -456,6 +609,10 @@ Hydroid Systems,Credits,15000
 Hydroid Systems,Orokin Cell,1
 Hydroid Systems,Gallium,4
 Hydroid Systems,Polymer Bundle,500
+Oberon,Credits,25000
+Oberon,Oberon Chassis,1
+Oberon,Oberon Neuroptics,1
+Oberon,Oberon Systems,1
 Oberon Neuroptics ,Credits,15000
 Oberon Neuroptics ,Alloy Plate,150
 Oberon Neuroptics ,Control Module,1
@@ -468,6 +625,10 @@ Oberon Systems ,Credits,15000
 Oberon Systems ,Orokin Cell,1
 Oberon Systems ,Gallium,1
 Oberon Systems ,Polymer Bundle,500
+Frost,Credits,25000
+Frost,Frost Chassis,1
+Frost,Frost Neuroptics,1
+Frost,Frost Systems,1
 Frost Neuroptics,Credits,15000
 Frost Neuroptics,Alloy Plate,150
 Frost Neuroptics,Neural Sensors,1
@@ -480,6 +641,10 @@ Frost Systems,Credits,15000
 Frost Systems,Control Module,1
 Frost Systems,Morphics,1
 Frost Systems,Salvage,500
+Limbo,Credits,25000
+Limbo,Limbo Chassis,1
+Limbo,Limbo Neuroptics,1
+Limbo,Limbo Systems,1
 Limbo Neuroptics,Credits,15000
 Limbo Neuroptics,Alloy Plate,150
 Limbo Neuroptics,Polymer Bundle,150
@@ -492,6 +657,10 @@ Limbo Systems,Credits,15000
 Limbo Systems,Control Module,1
 Limbo Systems,Morphics,3
 Limbo Systems,Salvage,500
+Trinity,Credits,25000
+Trinity,Trinity Chassis,1
+Trinity,Trinity Neuroptics,1
+Trinity,Trinity Systems,1
 Trinity Neuroptics,Credits,15000
 Trinity Neuroptics,Alloy Plate,150
 Trinity Neuroptics,Neural Sensors,1
@@ -504,6 +673,10 @@ Trinity Systems,Credits,15000
 Trinity Systems,Control Module,1
 Trinity Systems,Morphics,1
 Trinity Systems,Salvage,500
+Nyx,Credits,25000
+Nyx,Nyx Chassis,1
+Nyx,Nyx Neuroptics,1
+Nyx,Nyx Systems,1
 Nyx Neuroptics,Credits,15000
 Nyx Neuroptics,Alloy Plate,150
 Nyx Neuroptics,Neural Sensors,1
@@ -516,6 +689,10 @@ Nyx Systems,Credits,15000
 Nyx Systems,Control Module,1
 Nyx Systems,Morphics,1
 Nyx Systems,Salvage,500
+Harrow,Credits,25000
+Harrow,Harrow Chassis,1
+Harrow,Harrow Neuroptics,1
+Harrow,Harrow Systems,1
 Harrow Neuroptics,Credits,15000
 Harrow Neuroptics,Rubedo,1500
 Harrow Neuroptics,Polymer Bundle,4000
@@ -528,6 +705,10 @@ Harrow Systems,Credits,15000
 Harrow Systems,Circuits,2500
 Harrow Systems,Cryotic,1000
 Harrow Systems,Ferrite,25000
+Revenant,Credits,25000
+Revenant,Revenant Chassis,1
+Revenant,Revenant Neuroptics,1
+Revenant,Revenant Systems,1
 Revenant Neuroptics,Credits,15000
 Revenant Neuroptics,Neural Sensors,3
 Revenant Neuroptics,Sentient Core,15
@@ -543,6 +724,10 @@ Revenant Systems,Control Module,3
 Revenant Systems,Cetus Wisp,3
 Revenant Systems,Salvage,8000
 Revenant Systems,Polymer Bundle,3000
+Hydroid Prime,Credits,25000
+Hydroid Prime,Hydroid Prime Chassis,1
+Hydroid Prime,Hydroid Prime Neuroptics,1
+Hydroid Prime,Hydroid Prime Systems,1
 Hydroid Prime Neuroptics,Credits,15000
 Hydroid Prime Neuroptics,Neural Sensors,5
 Hydroid Prime Neuroptics,Plastids,1100
@@ -555,6 +740,10 @@ Hydroid Prime Systems,Credits,15000
 Hydroid Prime Systems,Nitain Extract,2
 Hydroid Prime Systems,Control Module,10
 Hydroid Prime Systems,Circuits,1300
+Nova Prime,Credits,25000
+Nova Prime,Nova Prime Chassis,1
+Nova Prime,Nova Prime Neuroptics,1
+Nova Prime,Nova Prime Systems,1
 Nova Prime Neuroptics,Credits,15000
 Nova Prime Neuroptics,Rubedo,200
 Nova Prime Neuroptics,Neural Sensors,1
@@ -567,6 +756,10 @@ Nova Prime Systems,Credits,15000
 Nova Prime Systems,Control Module,1
 Nova Prime Systems,Morphics,1
 Nova Prime Systems,Ferrite,600
+Chroma Prime,Credits,25000
+Chroma Prime,Chroma Prime Chassis,1
+Chroma Prime,Chroma Prime Neuroptics,1
+Chroma Prime,Chroma Prime Systems,1
 Chroma Prime Neuroptics,Credits,15000
 Chroma Prime Neuroptics,Neurodes,4
 Chroma Prime Neuroptics,Circuits,1750
@@ -579,6 +772,10 @@ Chroma Prime Systems,Credits,15000
 Chroma Prime Systems,Argon Crystal,2
 Chroma Prime Systems,Neural Sensors,5
 Chroma Prime Systems,Polymer Bundle,1775
+Nyx Prime,Credits,25000
+Nyx Prime,Nyx Prime Chassis,1
+Nyx Prime,Nyx Prime Neuroptics,1
+Nyx Prime,Nyx Prime Systems,1
 Nyx Prime Neuroptics,Credits,15000
 Nyx Prime Neuroptics,Alloy Plate,150
 Nyx Prime Neuroptics,Neural Sensors,2
@@ -591,6 +788,10 @@ Nyx Prime Systems,Credits,15000
 Nyx Prime Systems,Control Module,3
 Nyx Prime Systems,Orokin Cell,1
 Nyx Prime Systems,Salvage,1000
+Loki Prime,Credits,25000
+Loki Prime,Loki Prime Chassis,1
+Loki Prime,Loki Prime Neuroptics,1
+Loki Prime,Loki Prime Systems,1
 Loki Prime Neuroptics,Credits,15000
 Loki Prime Neuroptics,Alloy Plate,150
 Loki Prime Neuroptics,Neural Sensors,2
@@ -603,6 +804,10 @@ Loki Prime Systems,Credits,15000
 Loki Prime Systems,Control Module,3
 Loki Prime Systems,Orokin Cell,1
 Loki Prime Systems,Ferrite,1000
+Limbo Prime,Credits,25000
+Limbo Prime,Limbo Prime Chassis,1
+Limbo Prime,Limbo Prime Neuroptics,1
+Limbo Prime,Limbo Prime Systems,1
 Limbo Prime Neuroptics,Credits,15000
 Limbo Prime Neuroptics,Neural Sensors,2
 Limbo Prime Neuroptics,Cryotic,300
@@ -613,8 +818,12 @@ Limbo Prime Chassis,Morphics,6
 Limbo Prime Chassis,Alloy Plate,1675
 Limbo Prime Systems,Credits,15000
 Limbo Prime Systems,Nitain Extract,2
-Limbo Prime Systems,Tellurium Market,2
+Limbo Prime Systems,Tellurium,2
 Limbo Prime Systems,Salvage,3000
+Nekros Prime,Credits,25000
+Nekros Prime,Nekros Prime Chassis,1
+Nekros Prime,Nekros Prime Neuroptics,1
+Nekros Prime,Nekros Prime Systems,1
 Nekros Prime Neuroptics,Credits,15000
 Nekros Prime Neuroptics,Alloy Plate,15000
 Nekros Prime Neuroptics,Neural Sensors,3
@@ -625,10 +834,14 @@ Nekros Prime Chassis,Ferrite,18000
 Nekros Prime Chassis,Rubedo,6000
 Nekros Prime Systems,Credits,15000
 Nekros Prime Systems,Control Module,3
-Nekros Prime Systems,Tellurium Market,3
+Nekros Prime Systems,Tellurium,3
 Nekros Prime Systems,Salvage,15000
+Equinox Prime,Credits,25000
+Equinox Prime,Equinox Prime Chassis,1
+Equinox Prime,Equinox Prime Neuroptics,1
+Equinox Prime,Equinox Prime Systems,1
 Equinox Prime Neuroptics,Credits,15000
-Equinox Prime Neuroptics,Tellurium Market,2
+Equinox Prime Neuroptics,Tellurium,2
 Equinox Prime Neuroptics,Circuits,1000
 Equinox Prime Neuroptics,Polymer Bundle,1275
 Equinox Prime Chassis,Credits,15000
@@ -639,6 +852,10 @@ Equinox Prime Systems,Credits,15000
 Equinox Prime Systems,Argon Crystal,2
 Equinox Prime Systems,Cryotic,575
 Equinox Prime Systems,Plastids,225
+Saryn Prime,Credits,25000
+Saryn Prime,Saryn Prime Chassis,1
+Saryn Prime,Saryn Prime Neuroptics,1
+Saryn Prime,Saryn Prime Systems,1
 Saryn Prime Neuroptics,Credits,15000
 Saryn Prime Neuroptics,Alloy Plate,1500
 Saryn Prime Neuroptics,Neural Sensors,2
@@ -651,6 +868,10 @@ Saryn Prime Systems,Credits,15000
 Saryn Prime Systems,Nitain Extract,3
 Saryn Prime Systems,Orokin Cell,1
 Saryn Prime Systems,Ferrite,4000
+Frost Prime,Credits,25000
+Frost Prime,Frost Prime Chassis,1
+Frost Prime,Frost Prime Neuroptics,1
+Frost Prime,Frost Prime Systems,1
 Frost Prime Neuroptics,Credits,15000
 Frost Prime Neuroptics,Alloy Plate,150
 Frost Prime Neuroptics,Neural Sensors,1
@@ -663,18 +884,26 @@ Frost Prime Systems,Credits,15000
 Frost Prime Systems,Control Module,1
 Frost Prime Systems,Morphics,1
 Frost Prime Systems,Salvage,500
+Nidus Prime,Credits,25000
+Nidus Prime,Nidus Prime Chassis,1
+Nidus Prime,Nidus Prime Neuroptics,1
+Nidus Prime,Nidus Prime Systems,1
 Nidus Prime Neuroptics ,Credits,15000
 Nidus Prime Neuroptics ,Argon Crystal,2
 Nidus Prime Neuroptics ,Cryotic,600
 Nidus Prime Neuroptics ,Circuits,1100
 Nidus Prime Chassis ,Credits,15000
-Nidus Prime Chassis ,Tellurium Market,2
+Nidus Prime Chassis ,Tellurium,2
 Nidus Prime Chassis ,Plastids,450
 Nidus Prime Chassis ,Polymer Bundle,1425
 Nidus Prime Systems ,Credits,15000
 Nidus Prime Systems ,Nitain Extract,2
 Nidus Prime Systems ,Neurodes,3
 Nidus Prime Systems ,Rubedo,1250
+Ember Prime,Credits,25000
+Ember Prime,Ember Prime Chassis,1
+Ember Prime,Ember Prime Neuroptics,1
+Ember Prime,Ember Prime Systems,1
 Ember Prime Neuroptics,Credits,15000
 Ember Prime Neuroptics,Alloy Plate,150
 Ember Prime Neuroptics,Neural Sensors,2
@@ -687,6 +916,10 @@ Ember Prime Systems,Credits,15000
 Ember Prime Systems,Control Module,1
 Ember Prime Systems,Morphics,1
 Ember Prime Systems,Nano Spores,1200
+Mirage Prime,Credits,25000
+Mirage Prime,Mirage Prime Chassis,1
+Mirage Prime,Mirage Prime Neuroptics,1
+Mirage Prime,Mirage Prime Systems,1
 Mirage Prime Neuroptics,Credits,15000
 Mirage Prime Neuroptics,Neurodes,5
 Mirage Prime Neuroptics,Cryotic,2000
@@ -699,6 +932,10 @@ Mirage Prime Systems,Credits,15000
 Mirage Prime Systems,Argon Crystal,2
 Mirage Prime Systems,Control Module,10
 Mirage Prime Systems,Rubedo,4500
+Titania Prime,Credits,25000
+Titania Prime,Titania Prime Chassis,1
+Titania Prime,Titania Prime Neuroptics,1
+Titania Prime,Titania Prime Systems,1
 Titania Prime Neuroptics,Credits,15000
 Titania Prime Neuroptics,Alloy Plate,5500
 Titania Prime Neuroptics,Neural Sensors,6
@@ -709,8 +946,12 @@ Titania Prime Chassis,Nano Spores,4750
 Titania Prime Chassis,Rubedo,1400
 Titania Prime Systems,Credits,15000
 Titania Prime Systems,Control Module,10
-Titania Prime Systems,Tellurium Market,3
+Titania Prime Systems,Tellurium,3
 Titania Prime Systems,Ferrite,4300
+Inaros Prime,Credits,25000
+Inaros Prime,Inaros Prime Chassis,1
+Inaros Prime,Inaros Prime Neuroptics,1
+Inaros Prime,Inaros Prime Systems,1
 Inaros Prime Neuroptics,Credits,15000
 Inaros Prime Neuroptics,Alloy Plate,5500
 Inaros Prime Neuroptics,Neural Sensors,6
@@ -721,8 +962,12 @@ Inaros Prime Chassis,Nano Spores,4750
 Inaros Prime Chassis,Rubedo,1400
 Inaros Prime Systems,Credits,15000
 Inaros Prime Systems,Control Module,10
-Inaros Prime Systems,Tellurium Market,3
+Inaros Prime Systems,Tellurium,3
 Inaros Prime Systems,Ferrite,4300
+Valkyr Prime,Credits,25000
+Valkyr Prime,Valkyr Prime Chassis,1
+Valkyr Prime,Valkyr Prime Neuroptics,1
+Valkyr Prime,Valkyr Prime Systems,1
 Valkyr Prime Neuroptics,Credits,15000
 Valkyr Prime Neuroptics,Salvage,15000
 Valkyr Prime Neuroptics,Neural Sensors,3
@@ -733,8 +978,12 @@ Valkyr Prime Chassis,Ferrite,18000
 Valkyr Prime Chassis,Rubedo,6000
 Valkyr Prime Systems,Credits,15000
 Valkyr Prime Systems,Control Module,3
-Valkyr Prime Systems,Tellurium Market,3
+Valkyr Prime Systems,Tellurium,3
 Valkyr Prime Systems,Polymer Bundle,15000
+Oberon Prime,Credits,25000
+Oberon Prime,Oberon Prime Chassis,1
+Oberon Prime,Oberon Prime Neuroptics,1
+Oberon Prime,Oberon Prime Systems,1
 Oberon Prime Neuroptics,Credits,15000
 Oberon Prime Neuroptics,Control Module,10
 Oberon Prime Neuroptics,Alloy Plate,4000
@@ -747,6 +996,10 @@ Oberon Prime Systems,Credits,15000
 Oberon Prime Systems,Argon Crystal,2
 Oberon Prime Systems,Plastids,250
 Oberon Prime Systems,Nano Spores,6000
+Mag Prime,Credits,25000
+Mag Prime,Mag Prime Chassis,1
+Mag Prime,Mag Prime Neuroptics,1
+Mag Prime,Mag Prime Systems,1
 Mag Prime Neuroptics,Credits,15000
 Mag Prime Neuroptics,Alloy Plate,150
 Mag Prime Neuroptics,Neural Sensors,2
@@ -759,6 +1012,10 @@ Mag Prime Systems,Credits,15000
 Mag Prime Systems,Control Module,3
 Mag Prime Systems,Morphics,1
 Mag Prime Systems,Salvage,500
+Rhino Prime,Credits,25000
+Rhino Prime,Rhino Prime Chassis,1
+Rhino Prime,Rhino Prime Neuroptics,1
+Rhino Prime,Rhino Prime Systems,1
 Rhino Prime Neuroptics,Credits,15000
 Rhino Prime Neuroptics,Alloy Plate,150
 Rhino Prime Neuroptics,Neural Sensors,2
@@ -771,6 +1028,10 @@ Rhino Prime Systems,Credits,15000
 Rhino Prime Systems,Control Module,3
 Rhino Prime Systems,Morphics,1
 Rhino Prime Systems,Ferrite,500
+Volt Prime,Credits,25000
+Volt Prime,Volt Prime Chassis,1
+Volt Prime,Volt Prime Neuroptics,1
+Volt Prime,Volt Prime Systems,1
 Volt Prime Neuroptics,Credits,15000
 Volt Prime Neuroptics,Alloy Plate,150
 Volt Prime Neuroptics,Neurodes,2
@@ -783,6 +1044,10 @@ Volt Prime Systems,Credits,15000
 Volt Prime Systems,Control Module,3
 Volt Prime Systems,Orokin Cell,1
 Volt Prime Systems,Salvage,1000
+Vauban Prime,Credits,25000
+Vauban Prime,Vauban Prime Chassis,1
+Vauban Prime,Vauban Prime Neuroptics,1
+Vauban Prime,Vauban Prime Systems,1
 Vauban Prime Neuroptics,Credits,15000
 Vauban Prime Neuroptics,Nitain Extract,5
 Vauban Prime Neuroptics,Salvage,16000
@@ -795,6 +1060,10 @@ Vauban Prime Systems,Credits,15000
 Vauban Prime Systems,Nitain Extract,5
 Vauban Prime Systems,Cryotic,9000
 Vauban Prime Systems,Orokin Cell,1
+Trinity Prime,Credits,25000
+Trinity Prime,Trinity Prime Chassis,1
+Trinity Prime,Trinity Prime Neuroptics,1
+Trinity Prime,Trinity Prime Systems,1
 Trinity Prime Neuroptics,Credits,15000
 Trinity Prime Neuroptics,Oxium,450
 Trinity Prime Neuroptics,Neural Sensors,2
@@ -807,18 +1076,26 @@ Trinity Prime Systems,Credits,15000
 Trinity Prime Systems,Control Module,3
 Trinity Prime Systems,Orokin Cell,1
 Trinity Prime Systems,Cryotic,9000
+Zephyr Prime,Credits,25000
+Zephyr Prime,Zephyr Prime Chassis,1
+Zephyr Prime,Zephyr Prime Neuroptics,1
+Zephyr Prime,Zephyr Prime Systems,1
 Zephyr Prime Neuroptics ,Credits,15000
 Zephyr Prime Neuroptics ,Neural Sensors,3
 Zephyr Prime Neuroptics ,Oxium,250
 Zephyr Prime Neuroptics ,Plastids,350
 Zephyr Prime Chassis ,Credits,15000
 Zephyr Prime Chassis ,Nitain Extract,2
-Zephyr Prime Chassis ,Tellurium Market,2
+Zephyr Prime Chassis ,Tellurium,2
 Zephyr Prime Chassis ,Ferrite,3600
 Zephyr Prime Systems ,Credits,15000
 Zephyr Prime Systems ,Argon Crystal,2
 Zephyr Prime Systems ,Neurodes,3
 Zephyr Prime Systems ,Cryotic,550
+Octavia Prime,Credits,25000
+Octavia Prime,Octavia Prime Chassis,1
+Octavia Prime,Octavia Prime Neuroptics,1
+Octavia Prime,Octavia Prime Systems,1
 Octavia Prime Neuroptics ,Credits,15000
 Octavia Prime Neuroptics ,Neural Sensors,8
 Octavia Prime Neuroptics ,Control Module,10
@@ -831,6 +1108,10 @@ Octavia Prime Systems ,Credits,15000
 Octavia Prime Systems ,Nitain Extract,2
 Octavia Prime Systems ,Cryotic,370
 Octavia Prime Systems ,Circuits,875
+Ash Prime,Credits,25000
+Ash Prime,Ash Prime Chassis,1
+Ash Prime,Ash Prime Neuroptics,1
+Ash Prime,Ash Prime Systems,1
 Ash Prime Neuroptics ,Credits,15000
 Ash Prime Neuroptics ,Alloy Plate,150
 Ash Prime Neuroptics ,Neural Sensors,2
@@ -843,6 +1124,10 @@ Ash Prime Systems ,Credits,15000
 Ash Prime Systems ,Control Module,3
 Ash Prime Systems ,Orokin Cell,1
 Ash Prime Systems ,Ferrite,1000
+Banshee Prime,Credits,25000
+Banshee Prime,Banshee Prime Chassis,1
+Banshee Prime,Banshee Prime Neuroptics,1
+Banshee Prime,Banshee Prime Systems,1
 Banshee Prime Neuroptics ,Credits,15000
 Banshee Prime Neuroptics ,Neural Sensors,2
 Banshee Prime Neuroptics ,Alloy Plate,6000
@@ -855,18 +1140,26 @@ Banshee Prime Systems ,Credits,15000
 Banshee Prime Systems ,Argon Crystal,2
 Banshee Prime Systems ,Control Module,10
 Banshee Prime Systems ,Oxium,300
+Atlas Prime,Credits,25000
+Atlas Prime,Atlas Prime Chassis,1
+Atlas Prime,Atlas Prime Neuroptics,1
+Atlas Prime,Atlas Prime Systems,1
 Atlas Prime Neuroptics ,Credits,15000
 Atlas Prime Neuroptics ,Neural Sensors,2
 Atlas Prime Neuroptics ,Cryotic,525
 Atlas Prime Neuroptics ,Salvage,4700
 Atlas Prime Chassis ,Credits,15000
-Atlas Prime Chassis ,Tellurium Market,2
+Atlas Prime Chassis ,Tellurium,2
 Atlas Prime Chassis ,Nitain Extract,2
 Atlas Prime Chassis ,Rubedo,725
 Atlas Prime Systems ,Credits,15000
 Atlas Prime Systems ,Argon Crystal,2
 Atlas Prime Systems ,Gallium,4
 Atlas Prime Systems ,Polymer Bundle,1200
+Nezha Prime,Credits,25000
+Nezha Prime,Nezha Prime Chassis,1
+Nezha Prime,Nezha Prime Neuroptics,1
+Nezha Prime,Nezha Prime Systems,1
 Nezha Prime Neuroptics,Credits,15000
 Nezha Prime Neuroptics,Alloy Plate,5500
 Nezha Prime Neuroptics,Neural Sensors,6
@@ -877,8 +1170,12 @@ Nezha Prime Chassis,Nano Spores,4750
 Nezha Prime Chassis,Rubedo,1400
 Nezha Prime Systems,Credits,15000
 Nezha Prime Systems,Control Module,10
-Nezha Prime Systems,Tellurium Market,3
+Nezha Prime Systems,Tellurium,3
 Nezha Prime Systems,Ferrite,4300
+Ivara Prime,Credits,25000
+Ivara Prime,Ivara Prime Chassis,1
+Ivara Prime,Ivara Prime Neuroptics,1
+Ivara Prime,Ivara Prime Systems,1
 Ivara Prime Neuroptics,Credits,15000
 Ivara Prime Neuroptics,Argon Crystal,2
 Ivara Prime Neuroptics,Cryotic,600
@@ -891,6 +1188,10 @@ Ivara Prime Systems,Credits,15000
 Ivara Prime Systems,Neurodes,4
 Ivara Prime Systems,Morphics,9
 Ivara Prime Systems,Oxium,175
+Wukong Prime,Credits,25000
+Wukong Prime,Wukong Prime Chassis,1
+Wukong Prime,Wukong Prime Neuroptics,1
+Wukong Prime,Wukong Prime Systems,1
 Wukong Prime Neuroptics,Credits,15000
 Wukong Prime Neuroptics,Neurodes,4
 Wukong Prime Neuroptics,Rubedo,750
@@ -903,6 +1204,10 @@ Wukong Prime Systems,Credits,15000
 Wukong Prime Systems,Nitain Extract,2
 Wukong Prime Systems,Morphics,7
 Wukong Prime Systems,Polymer Bundle,1150
+Mesa Prime,Credits,25000
+Mesa Prime,Mesa Prime Chassis,1
+Mesa Prime,Mesa Prime Neuroptics,1
+Mesa Prime,Mesa Prime Systems,1
 Mesa Prime Neuroptics,Credits,15000
 Mesa Prime Neuroptics,Argon Crystal,2
 Mesa Prime Neuroptics,Neural Sensors,2
@@ -915,6 +1220,10 @@ Mesa Prime Systems,Credits,15000
 Mesa Prime Systems,Morphics,5
 Mesa Prime Systems,Control Module,3
 Mesa Prime Systems,Circuits,275
+Gara Prime,Credits,25000
+Gara Prime,Gara Prime Chassis,1
+Gara Prime,Gara Prime Neuroptics,1
+Gara Prime,Gara Prime Systems,1
 Gara Prime Neuroptics,Credits,15000
 Gara Prime Neuroptics,Neurodes,10
 Gara Prime Neuroptics,Argon Crystal,2
@@ -925,16 +1234,18 @@ Gara Prime Chassis,Polymer Bundle,2150
 Gara Prime Chassis,Oxium,250
 Gara Prime Systems,Credits,15000
 Gara Prime Systems,Nitain Extract,2
-Gara Prime Systems,Tellurium Market,2
+Gara Prime Systems,Tellurium,2
 Gara Prime Systems,Circuits,1350
 Bubonico,Credits,20000
 Bubonico,Mutagen Mass,10
 Bubonico,Argon Crystal,3
 Bubonico,Plastids,1200
+Bubonico,Nano Spores,22000
 Rubico Prime,Credits,15000
 Rubico Prime,Rubico Prime Stock,1
 Rubico Prime,Rubico Prime Receiver,1
 Rubico Prime,Rubico Prime Barrel,1
+Rubico Prime,Orokin Cell,10
 Zhuge Prime,Credits,15000
 Zhuge Prime,Zhuge Prime Grip,1
 Zhuge Prime,Zhuge Prime String,1
@@ -944,139 +1255,170 @@ Battacor,Credits,25000
 Battacor,Fieldron,10
 Battacor,Tepa Nodule,40
 Battacor,Heart Noctrul,25
+Battacor,Entroplasma,20
 Ferrox,Credits,30000
 Ferrox,Fieldron,5
 Ferrox,Alloy Plate,30000
 Ferrox,Salvage,35000
+Ferrox,Forma,1
 Opticor,Credits,30000
 Opticor,Fieldron,5
 Opticor,Gallium,20
 Opticor,Cryotic,600
+Opticor,Forma,1
 Basmu,Credits,25000
 Basmu,Titanium,1500
 Basmu,Carbides,800
 Basmu,Isos,450
+Basmu,Nullstones,1
 Karak,Credits,30000
 Karak,Neurodes,2
 Karak,Alloy Plate,400
 Karak,Salvage,900
+Karak,Polymer Bundle,100
 Lanka,Credits,30000
 Lanka,Fieldron,5
 Lanka,Gallium,20
 Lanka,Alloy Plate,600
-Mutalist,Credits,15000
-Mutalist,Cernos,1
-Mutalist,Plastids,1400
-Mutalist,Cryotic,1200
+Lanka,Forma,1
+Mutalist Cernos,Credits,15000
+Mutalist Cernos,Cernos,1
+Mutalist Cernos,Plastids,1400
+Mutalist Cernos,Cryotic,1200
+Mutalist Cernos,Nano Spores,2300
 Phantasma,Credits,20000
 Phantasma,Argon Crystal,2
 Phantasma,Quills Common Pickup,10
 Phantasma,Plastids,650
+Phantasma,Nano Spores,12500
 Hind,Credits,25000
 Hind,Neurodes,6
 Hind,Circuits,700
 Hind,Salvage,1000
+Hind,Rubedo,1200
 Vulkar,Credits,20000
 Vulkar,Morphics,5
 Vulkar,Circuits,800
 Vulkar,Salvage,1200
+Vulkar,Plastids,800
 Hek,Credits,25000
 Hek,Neurodes,5
 Hek,Circuits,900
 Hek,Salvage,1200
+Hek,Rubedo,1000
 Phage,Credits,30000
 Phage,Mutagen Mass,4
 Phage,Circuits,1500
 Phage,Nano Spores,6000
+Phage,Forma,1
 Ambassador,Credits,25000
 Ambassador,Ambassador Barrel,1
 Ambassador,Ambassador Receiver,1
 Ambassador,Ambassador Stock,1
-Ambassador,Credits,15000
-Ambassador,Cubic Diodes,200
-Ambassador,Isos,5
-Ambassador,Morphics,1
-Ambassador,Credits,15000
-Ambassador,Carbides,200
-Ambassador,Gallos Rods,5
-Ambassador,Morphics,1
-Ambassador,Credits,15000
-Ambassador,Morphics,5
-Ambassador,Ferrite,200
-Ambassador,Alloy Plate,1100
+Ambassador Barrel,Credits,15000
+Ambassador Barrel,Cubic Diodes,200
+Ambassador Barrel,Isos,5
+Ambassador Barrel,Morphics,1
+Ambassador Barrel,Oxium,500
+Ambassador Receiver,Credits,15000
+Ambassador Receiver,Carbides,200
+Ambassador Receiver,Gallos Rods,5
+Ambassador Receiver,Morphics,1
+Ambassador Receiver,Cryotic,600
+Ambassador Stock,Credits,15000
+Ambassador Stock,Morphics,5
+Ambassador Stock,Ferrite,200
+Ambassador Stock,Alloy Plate,1100
+Ambassador Stock,Hexenon,10
 Acceltra,Credits,25000
 Acceltra,Neurodes,4
 Acceltra,Hexenon,200
 Acceltra,Plastids,925
+Acceltra,Nano Spores,8000
 Attica,Credits,20000
 Attica,Morphics,2
 Attica,Ferrite,800
 Attica,Rubedo,200
+Attica,Forma,1
 Komorex,Credits,20000
 Komorex,Fieldron,5
 Komorex,Ferrite,6200
 Komorex,Hexenon,300
+Komorex,Forma,1
 Astilla,Credits,20000
-Astilla,Tellurium Market,4
+Astilla,Tellurium,4
 Astilla,Plastids,875
 Astilla,Oxium,175
-Wraith,Credits,25000
-Wraith,Wraith Barrel,1
-Wraith,Wraith Receiver,1
-Wraith,Wraith Stock,1
+Astilla,Ferrite,7500
+Strun Wraith,Credits,25000
+Strun Wraith,Strun Wraith Barrel,1
+Strun Wraith,Strun Wraith Receiver,1
+Strun Wraith,Strun Wraith Stock,1
 Buzlok,Credits,30000
 Buzlok,Detonite Injector,2
 Buzlok,Salvage,5000
 Buzlok,Circuits,600
+Buzlok,Forma,1
 Grakata,Credits,25000
 Grakata,Neurodes,2
 Grakata,Alloy Plate,400
 Grakata,Salvage,900
+Grakata,Polymer Bundle,100
 Soma Prime,Credits,15000
 Soma Prime,Soma Prime Barrel,1
 Soma Prime,Soma Prime Receiver,1
 Soma Prime,Soma Prime Stock,1
+Soma Prime,Orokin Cell,10
 Baza Prime,Credits,15000
 Baza Prime,Baza Prime Barrel,1
 Baza Prime,Baza Prime Receiver,1
 Baza Prime,Baza Prime Stock,1
+Baza Prime,Orokin Cell,10
 Astilla Prime,Credits,20000
 Astilla Prime,Astilla Prime Barrel,1
 Astilla Prime,Astilla Prime Receiver,1
 Astilla Prime,Astilla Prime Stock,1
+Astilla Prime,Orokin Cell,10
 Quellor,Credits,30000
-Quellor,Tellurium Market,4
+Quellor,Tellurium,4
 Quellor,Rubedo,6250
 Quellor,Circuits,3600
+Quellor,Alloy Plate,15350
 Drakgoon,Credits,30000
 Drakgoon,Morphics,5
 Drakgoon,Alloy Plate,950
 Drakgoon,Nano Spores,5500
+Drakgoon,Circuits,1100
 Zenith,Credits,30000
 Zenith,Morphics,4
 Zenith,Circuits,450
 Zenith,Polymer Bundle,500
-Zenith,Market,2750
+Zenith,Salvage,2750
 Synapse,Credits,30000
 Synapse,Mutagen Mass,5
 Synapse,Salvage,30000
 Synapse,Circuits,3500
+Synapse,Forma,2
 Sybaris,Credits,20000
 Sybaris,Morphics,2
 Sybaris,Salvage,800
 Sybaris,Rubedo,200
+Sybaris,Forma,1
 Hema,Credits,30000
 Hema,Mutagen Mass,5
 Hema,Salvage,50000
 Hema,Circuits,5000
+Hema,Forma,1
 Braton Prime,Credits,15000
 Braton Prime,Braton Prime Barrel,1
 Braton Prime,Braton Prime Receiver,1
 Braton Prime,Braton Prime Stock,1
+Braton Prime,Orokin Cell,10
 Boltor Prime,Credits,15000
 Boltor Prime,Boltor Prime Barrel,1
 Boltor Prime,Boltor Prime Receiver,1
 Boltor Prime,Boltor Prime Stock,1
+Boltor Prime,Orokin Cell,10
 Cernos Prime,Credits,15000
 Cernos Prime,Cernos Prime Upper Limb,1
 Cernos Prime,Cernos Prime Lower Limb,1
@@ -1086,18 +1428,22 @@ Zhuge,Credits,20000
 Zhuge,Cryotic,2800
 Zhuge,Polymer Bundle,900
 Zhuge,Nitain Extract,2
+Zhuge,Argon Crystal,2
 Flux Rifle,Credits,25000
 Flux Rifle,Fieldron,5
 Flux Rifle,Circuits,900
 Flux Rifle,Ferrite,6000
+Flux Rifle,Forma,1
 Latron Prime,Credits,15000
 Latron Prime,Latron Prime Barrel,1
 Latron Prime,Latron Prime Receiver,1
 Latron Prime,Latron Prime Stock,1
+Latron Prime,Orokin Cell,10
 Cernos,Credits,15000
 Cernos,Gallium,3
 Cernos,Plastids,700
 Cernos,Polymer Bundle,600
+Cernos,Ferrite,1750
 Shedu,Credits,30000
 Shedu,Shedu Barrel,1
 Shedu,Shedu Chassis,1
@@ -1107,6 +1453,7 @@ Burston,Credits,25000
 Burston,Morphics,1
 Burston,Polymer Bundle,400
 Burston,Alloy Plate,150
+Burston,Ferrite,600
 Veldt,Credits,20000
 Veldt,Morphics,10
 Veldt,Cryotic,600
@@ -1116,6 +1463,7 @@ Harpak,Credits,30000
 Harpak,Argon Crystal,2
 Harpak,Gallium,5
 Harpak,Nano Spores,6000
+Harpak,Rubedo,3600
 Paris Prime,Credits,15000
 Paris Prime,Paris Prime Upper Limb,1
 Paris Prime,Paris Prime Lower Limb,1
@@ -1125,6 +1473,7 @@ Amprex,Credits,25000
 Amprex,Fieldron,8
 Amprex,Plastids,600
 Amprex,Ferrite,9000
+Amprex,Argon Crystal,3
 Tetra,Credits,30000
 Tetra,Control Module,2
 Tetra,Alloy Plate,400
@@ -1134,54 +1483,67 @@ Boar,Credits,15000
 Boar,Morphics,6
 Boar,Alloy Plate,900
 Boar,Salvage,750
+Boar,Plastids,900
 Paracyst,Credits,30000
 Paracyst,Mutagen Mass,5
 Paracyst,Nano Spores,15000
 Paracyst,Circuits,1200
+Paracyst,Forma,1
 Javlok,Credits,30000
 Javlok,Detonite Injector,5
 Javlok,Alloy Plate,10000
 Javlok,Nitain Extract,5
+Javlok,Javlok Capacitor,6
 Cedo,Credits,20000
 Cedo,Cedo Barrel,1
 Cedo,Cedo Stock,1
 Cedo,Cedo Receiver,1
+Cedo,Forma,1
 Quartakk,Credits,20000
 Quartakk,Grokdrul,75
 Quartakk,Fersteel Alloy,15
 Quartakk,Salvage,12450
+Quartakk,Neural Sensors,5
 Rubico,Credits,20000
 Rubico,Salvage,3800
 Rubico,Polymer Bundle,1300
 Rubico,Rubedo,900
+Rubico,Argon Crystal,2
 Grinlok,Credits,30000
 Grinlok,Detonite Injector,2
 Grinlok,Polymer Bundle,5000
 Grinlok,Ferrite,5000
+Grinlok,Forma,1
 Penta,Credits,25000
 Penta,Control Module,3
 Penta,Circuits,1000
 Penta,Ferrite,1200
+Penta,Alloy Plate,400
 Tigris Prime,Credits,15000
 Tigris Prime,Tigris Prime Barrel,1
 Tigris Prime,Tigris Prime Receiver,1
 Tigris Prime,Tigris Prime Stock,1
+Tigris Prime,Orokin Cell,10
 Lenz,Credits,25000
 Lenz,Fieldron,10
 Lenz,Alloy Plate,8200
 Lenz,Cryotic,2400
+Lenz,Nitain Extract,3
 Vectis Prime,Credits,15000
 Vectis Prime,Vectis Prime Barrel,1
 Vectis Prime,Vectis Prime Receiver,1
 Vectis Prime,Vectis Prime Stock,1
+Vectis Prime,Orokin Cell,10
 Gorgon,Credits,25000
 Gorgon,Morphics,5
 Gorgon,Ferrite,5000
 Gorgon,Salvage,6000
+Gorgon,Circuits,1000
 Tonkor,Credits,60000
 Tonkor,Salvage,1500
 Tonkor,Oxium,200
 Tonkor,Cryotic,800
+Tonkor,Argon Crystal,2
 Dera Vandal,Credits,25000
 Dera Vandal,Dera Vandal Barrel,1
 Dera Vandal,Dera Vandal Receiver,1
@@ -1190,22 +1552,26 @@ Ignis,Credits,30000
 Ignis,Detonite Injector,2
 Ignis,Nano Spores,5000
 Ignis,Ferrite,5000
-Carmine,Credits,20000
-Carmine,Carmine Barrel,1
-Carmine,Carmine Receiver,1
-Carmine,Carmine Stock,1
+Ignis,Forma,1
+Carmine Penta,Credits,20000
+Carmine Penta,Carmine Penta Barrel,1
+Carmine Penta,Carmine Penta Receiver,1
+Carmine Penta,Carmine Penta Stock,1
 Scourge,Credits,15000
 Scourge,Nitain Extract,2
 Scourge,Circuits,2500
 Scourge,Oxium,350
+Scourge,Polymer Bundle,2500
 Vectis,Credits,25000
 Vectis,Neurodes,4
 Vectis,Orokin Cell,4
 Vectis,Nano Spores,3000
+Vectis,Rubedo,2500
 Sporothrix,Credits,20000
 Sporothrix,Sporothrix Barrel,1
 Sporothrix,Sporothrix Receiver,1
 Sporothrix,Sporothrix Stock,1
+Sporothrix,Cranial Foremount,2
 Glaxion,Credits,20000
 Glaxion,Fieldron,1
 Glaxion,Circuits,550
@@ -1215,50 +1581,61 @@ Snipetron,Credits,20000
 Snipetron,Morphics,5
 Snipetron,Plastids,900
 Snipetron,Salvage,1200
+Snipetron,Alloy Plate,900
 Boar Prime,Credits,15000
 Boar Prime,Boar Prime Barrel,1
 Boar Prime,Boar Prime Receiver,1
 Boar Prime,Boar Prime Stock,1
+Boar Prime,Orokin Cell,10
 Exergis,Credits,20000
 Exergis,Argon Crystal,2
 Exergis,Repeller Systems,2
 Exergis,Oxium,175
+Exergis,Salvage,8500
 Argonak,Credits,30000
 Argonak,Detonite Injector,5
 Argonak,Plastids,700
 Argonak,Alloy Plate,9950
-Vandal,Credits,25000
-Vandal,Vandal Barrel,1
-Vandal,Vandal Receiver,1
-Vandal,Vandal Stock,1
+Argonak,Forma,1
+Snipetron Vandal,Credits,25000
+Snipetron Vandal,Snipetron Vandal Barrel,1
+Snipetron Vandal,Snipetron Vandal Receiver,1
+Snipetron Vandal,Snipetron Vandal Stock,1
 Daikyu,Credits,20000
 Daikyu,Neurodes,2
 Daikyu,Forma,1
 Daikyu,Rubedo,300
+Daikyu,Salvage,1200
 Stradavar Prime,Credits,20000
 Stradavar Prime,Stradavar Prime Barrel,1
 Stradavar Prime,Stradavar Prime Receiver,1
 Stradavar Prime,Stradavar Prime Stock,1
+Stradavar Prime,Orokin Cell,10
 Corinth Prime,Credits,20000
 Corinth Prime,Corinth Prime Barrel,1
 Corinth Prime,Corinth Prime Receiver,1
 Corinth Prime,Corinth Prime Stock,1
+Corinth Prime,Orokin Cell,10
 Sybaris Prime,Credits,15000
 Sybaris Prime,Sybaris Prime Barrel,1
 Sybaris Prime,Sybaris Prime Receiver,1
 Sybaris Prime,Sybaris Prime Stock,1
+Sybaris Prime,Orokin Cell,10
 Kohm,Credits,20000
 Kohm,Salvage,2500
 Kohm,Oxium,500
 Kohm,Cryotic,500
+Kohm,Argon Crystal,2
 Tigris,Credits,25000
 Tigris,Orokin Cell,3
 Tigris,Circuits,900
 Tigris,Salvage,1200
+Tigris,Rubedo,1200
 Arca Plasmor,Credits,25000
 Arca Plasmor,Fieldron,5
 Arca Plasmor,Control Module,25
 Arca Plasmor,Cryotic,925
+Arca Plasmor,Forma,1
 Torid,Credits,30000
 Torid,Mutagen Mass,2
 Torid,Salvage,4500
@@ -1268,50 +1645,61 @@ Convectrix,Credits,30000
 Convectrix,Fieldron,5
 Convectrix,Control Module,10
 Convectrix,Oxium,900
-Proboscis,Credits,15000
-Proboscis,Mutalist Cernos,1
-Proboscis,Polymer Bundle,1600
-Proboscis,Nitain Extract,5
+Convectrix,Forma,1
+Proboscis Cernos,Credits,15000
+Proboscis Cernos,Mutalist Cernos,1
+Proboscis Cernos,Polymer Bundle,1600
+Proboscis Cernos,Nitain Extract,5
+Proboscis Cernos,Nano Spores,25000
 Tenora Prime,Credits,20000
 Tenora Prime,Tenora Prime Barrel,1
 Tenora Prime,Tenora Prime Receiver,1
 Tenora Prime,Tenora Prime Stock,1
-Wraith,Credits,25000
-Wraith,Wraith Barrel,1
-Wraith,Wraith Receiver,1
-Wraith,Wraith Stock,1
+Tenora Prime,Orokin Cell,10
+Karak Wraith,Credits,25000
+Karak Wraith,Karak Wraith Barrel,1
+Karak Wraith,Karak Wraith Receiver,1
+Karak Wraith,Karak Wraith Stock,1
 Dread,Credits,15000
 Dread,Morphics,6
 Dread,Circuits,900
 Dread,Polymer Bundle,750
+Dread,Plastids,900
 Mutalist Quanta,Credits,30000
 Mutalist Quanta,Mutagen Mass,5
 Mutalist Quanta,Nano Spores,15000
 Mutalist Quanta,Circuits,1200
+Mutalist Quanta,Forma,1
 Corinth,Credits,20000
 Corinth,Nitain Extract,2
 Corinth,Alloy Plate,13000
 Corinth,Gallium,6
+Corinth,Cryotic,725
 Panthera Prime,Credits,20000
 Panthera Prime,Panthera Prime Barrel,1
 Panthera Prime,Panthera Prime Receiver,1
 Panthera Prime,Panthera Prime Stock,1
+Panthera Prime,Orokin Cell,10
 Tiberon Prime,Credits,20000
 Tiberon Prime,Tiberon Prime Barrel,1
 Tiberon Prime,Tiberon Prime Receiver,1
 Tiberon Prime,Tiberon Prime Stock,1
+Tiberon Prime,Orokin Cell,10
 Stradavar,Credits,20000
 Stradavar,Ferrite,15000
 Stradavar,Polymer Bundle,8000
 Stradavar,Neural Sensors,3
-Wraith,Credits,30000
-Wraith,Detonite Injector,5
-Wraith,Ferrite,10000
-Wraith,Rubedo,5000
+Stradavar,Argon Crystal,2
+Ignis Wraith,Credits,30000
+Ignis Wraith,Detonite Injector,5
+Ignis Wraith,Ferrite,10000
+Ignis Wraith,Rubedo,5000
+Ignis Wraith,Argon Crystal,3
 Ogris,Credits,30000
 Ogris,Detonite Injector,5
 Ogris,Salvage,5000
 Ogris,Alloy Plate,600
+Ogris,Forma,1
 Miter,Credits,15000
 Miter,Miter Barrel,1
 Miter,Miter Blade,1
@@ -1321,6 +1709,7 @@ Supra,Credits,25000
 Supra,Fieldron,7
 Supra,Alloy Plate,1000
 Supra,Salvage,7000
+Supra,Forma,1
 Panthera,Credits,20000
 Panthera,Orokin Cell,1
 Panthera,Polymer Bundle,600
@@ -1330,6 +1719,7 @@ Quanta,Credits,25000
 Quanta,Fieldron,7
 Quanta,Circuits,1000
 Quanta,Salvage,7000
+Quanta,Forma,1
 Tiberon,Credits,20000
 Tiberon,Latron,1
 Tiberon,Plastids,650
@@ -1343,39 +1733,46 @@ Fulmin,Credits,25000
 Fulmin,Rubedo,2100
 Fulmin,Nano Spores,7500
 Fulmin,Argon Crystal,2
+Fulmin,Hexenon,350
 Trumna,Credits,20000
 Trumna,Seriglass Shard,1
 Trumna,Trumna Barrel,1
 Trumna,Trumna Receiver,1
 Trumna,Trumna Stock,1
-Trumna,Credits,20000
-Trumna,Adramal Alloy,45
-Trumna,Marquise Veridos,15
-Trumna,Sporulate Sac,20
-Trumna,Credits,20000
-Trumna,Tempered Bapholite,30
-Trumna,Purified Heciphron,15
-Trumna,Waxen Sebum Deposit,10
-Trumna,Credits,20000
-Trumna,Auroxium Alloy,45
-Trumna,Lucent Teroglobe,30
-Trumna,Saturated Muscle Mass,20
+Trumna Barrel,Credits,20000
+Trumna Barrel,Adramal Alloy,45
+Trumna Barrel,Marquise Veridos,15
+Trumna Barrel,Sporulate Sac,20
+Trumna Barrel,Orokin Cell,5
+Trumna Receiver,Credits,20000
+Trumna Receiver,Tempered Bapholite,30
+Trumna Receiver,Purified Heciphron,15
+Trumna Receiver,Waxen Sebum Deposit,10
+Trumna Receiver,Argon Crystal,1
+Trumna Stock,Credits,20000
+Trumna Stock,Auroxium Alloy,45
+Trumna Stock,Lucent Teroglobe,30
+Trumna Stock,Saturated Muscle Mass,20
+Trumna Stock,Cabochon Embolos,2
 Nagantaka,Credits,25000
 Nagantaka,Neurodes,3
 Nagantaka,Gallium,4
 Nagantaka,Nano Spores,3000
+Nagantaka,Rubedo,1200
 Sobek,Credits,25000
 Sobek,Neurodes,5
 Sobek,Circuits,500
 Sobek,Salvage,900
+Sobek,Polymer Bundle,400
 Tenora,Credits,20000
 Tenora,Neurodes,5
 Tenora,Salvage,15000
 Tenora,Rubedo,4000
-Wraith,Credits,25000
-Wraith,Wraith Barrel,1
-Wraith,Wraith Receiver,1
-Wraith,Wraith Stock,1
+Tenora,Forma,1
+Latron Wraith,Credits,25000
+Latron Wraith,Latron Wraith Barrel,1
+Latron Wraith,Latron Wraith Receiver,1
+Latron Wraith,Latron Wraith Stock,1
 Zarr,Credits,30000
 Zarr,Kuva,1800
 Zarr,Alloy Plate,2400
@@ -1385,42 +1782,50 @@ Simulor,Credits,20000
 Simulor,Ferrite,1200
 Simulor,Polymer Bundle,850
 Simulor,Orokin Cell,1
+Simulor,Argon Crystal,1
 Paris,Credits,15000
 Paris,Morphics,3
 Paris,Plastids,600
 Paris,Polymer Bundle,700
+Paris,Nano Spores,2000
 Baza,Credits,20000
 Baza,Ferrite,3500
 Baza,Alloy Plate,4300
 Baza,Cryotic,575
-Wraith,Credits,25000
-Wraith,Wraith Barrel,1
-Wraith,Wraith Receiver,1
-Wraith,Wraith Stock,1
+Baza,Forma,1
+Gorgon Wraith,Credits,25000
+Gorgon Wraith,Gorgon Wraith Barrel,1
+Gorgon Wraith,Gorgon Wraith Receiver,1
+Gorgon Wraith,Gorgon Wraith Stock,1
 Latron,Credits,20000
 Latron,Morphics,5
 Latron,Plastids,800
 Latron,Alloy Plate,1000
+Latron,Salvage,900
 Boltor,Credits,25000
 Boltor,Neurodes,2
 Boltor,Alloy Plate,100
 Boltor,Salvage,900
+Boltor,Polymer Bundle,600
 Dera,Credits,25000
 Dera,Fieldron,2
 Dera,Circuits,600
 Dera,Ferrite,4500
-Vandal,Credits,25000
-Vandal,Vandal Barrel,1
-Vandal,Vandal Receiver,1
-Vandal,Vandal Stock,1
+Dera,Forma,1
+Braton Vandal,Credits,25000
+Braton Vandal,Braton Vandal Barrel,1
+Braton Vandal,Braton Vandal Receiver,1
+Braton Vandal,Braton Vandal Stock,1
 Burston Prime,Credits,15000
 Burston Prime,Burston Prime Barrel,1
 Burston Prime,Burston Prime Receiver,1
 Burston Prime,Burston Prime Stock,1
+Burston Prime,Orokin Cell,10
 Soma,Credits,15000
 Soma,Morphics,7
 Soma,Plastids,850
 Soma,Rubedo,1200
+Soma,Salvage,8000
 Aksomati,Credits,20000
 Aksomati,Akstiletto,1
 Aksomati,Cryotic,200
@@ -1433,33 +1838,36 @@ Talons,Credits,20000
 Talons,Control Module,2
 Talons,Ferrite,1500
 Talons,Oxium,1200
+Talons,Forma,1
 Pandero,Credits,20000
 Pandero,Argon Crystal,2
 Pandero,Circuits,4500
 Pandero,Cryotic,5500
+Pandero,Salvage,25000
 Cyanex,Credits,20000
 Cyanex,Fieldron,5
 Cyanex,Nano Spores,8750
 Cyanex,Hexenon,250
+Cyanex,Forma,1
 Akstiletto Prime,Credits,15000
 Akstiletto Prime,Akstiletto Prime Barrel,2
 Akstiletto Prime,Akstiletto Prime Receiver,2
 Akstiletto Prime,Akstiletto Prime Link,1
 Twin Vipers,Credits,20000
-Twin Vipers,Viper,1
-Twin Vipers,Viper,1
+Twin Vipers,Viper,2
 Twin Vipers,Orokin Cell,1
 Kunai,Credits,15000
 Kunai,Morphics,5
 Kunai,Ferrite,3000
 Kunai,Nano Spores,4000
+Kunai,Salvage,4000
 Castanas,Credits,20000
 Castanas,Control Module,2
 Castanas,Salvage,800
 Castanas,Circuits,200
+Castanas,Forma,1
 Afuris,Credits,20000
-Afuris,Furis,1
-Afuris,Furis,1
+Afuris,Furis,2
 Afuris,Orokin Cell,1
 Ballistica Prime,Credits,15000
 Ballistica Prime,Ballistica Prime Upper Limb,1
@@ -1470,13 +1878,13 @@ Embolist,Credits,30000
 Embolist,Mutagen Mass,5
 Embolist,Salvage,15000
 Embolist,Circuits,1200
+Embolist,Forma,1
 Zakti Prime,Credits,20000
 Zakti Prime,Zakti Prime Barrel,1
 Zakti Prime,Zakti Prime Receiver,1
 Zakti Prime,Orokin Cell,10
 Twin Kohmak,Credits,20000
-Twin Kohmak,Kohmak,1
-Twin Kohmak,Kohmak,1
+Twin Kohmak,Kohmak,2
 Twin Kohmak,Forma,1
 Pyrana Prime,Credits,15000
 Pyrana Prime,Pyrana Prime Barrel,1
@@ -1486,18 +1894,20 @@ Pox,Credits,30000
 Pox,Mutagen Mass,4
 Pox,Nano Spores,6500
 Pox,Rubedo,1200
+Pox,Nitain Extract,2
 Twin Grakatas,Credits,30000
-Twin Grakatas,Grakata,1
-Twin Grakatas,Grakata,1
+Twin Grakatas,Grakata,2
 Twin Grakatas,Forma,1
 Ballistica,Credits,25000
 Ballistica,Neurodes,3
 Ballistica,Gallium,4
 Ballistica,Nano Spores,3000
+Ballistica,Rubedo,1200
 Furis,Credits,20000
 Furis,Ferrite,750
 Furis,Alloy Plate,300
 Furis,Salvage,400
+Furis,Neurodes,4
 Hikou Prime,Credits,15000
 Hikou Prime,Hikou Prime Pouch,2
 Hikou Prime,Hikou Prime Stars,2
@@ -1507,8 +1917,7 @@ Spira Prime,Spira Prime Pouch,2
 Spira Prime,Spira Prime Blade,2
 Spira Prime,Orokin Cell,8
 Akbronco,Credits,20000
-Akbronco,Bronco,1
-Akbronco,Bronco,1
+Akbronco,Bronco,2
 Akbronco,Orokin Cell,1
 Spectra Vandal,Credits,25000
 Spectra Vandal,Spectra Vandal Barrel,1
@@ -1519,8 +1928,7 @@ Sicarus Prime,Sicarus Prime Barrel,1
 Sicarus Prime,Sicarus Prime Receiver,1
 Sicarus Prime,Orokin Cell,10
 Akbolto,Credits,20000
-Akbolto,Bolto,1
-Akbolto,Bolto,1
+Akbolto,Bolto,2
 Akbolto,Orokin Cell,1
 Akjagara,Credits,20000
 Akjagara,Akbolto,1
@@ -1530,18 +1938,21 @@ Vasto,Credits,30000
 Vasto,Neurodes,4
 Vasto,Alloy Plate,1200
 Vasto,Ferrite,700
+Vasto,Polymer Bundle,1000
 Sepulcrum,Credits,20000
 Sepulcrum,Seriglass Shard,1
 Sepulcrum,Sepulcrum Barrel,1
 Sepulcrum,Sepulcrum Receiver,1
-Sepulcrum,Credits,20000
-Sepulcrum,Travocyte Alloy,30
-Sepulcrum,Purified Heciphron,5
-Sepulcrum,Pustulent Cognitive Nodule,20
-Sepulcrum,Credits,20000
-Sepulcrum,Coprite Alloy,40
-Sepulcrum,Purified Heciphron,5
-Sepulcrum,Dendrite Blastoma,20
+Sepulcrum Barrel,Credits,20000
+Sepulcrum Barrel,Travocyte Alloy,30
+Sepulcrum Barrel,Purified Heciphron,5
+Sepulcrum Barrel,Pustulent Cognitive Nodule,20
+Sepulcrum Barrel,Morphics,5
+Sepulcrum Receiver,Credits,20000
+Sepulcrum Receiver,Coprite Alloy,40
+Sepulcrum Receiver,Purified Heciphron,5
+Sepulcrum Receiver,Dendrite Blastoma,20
+Sepulcrum Receiver,Trapezium Xenorhast,2
 Bronco Prime,Credits,15000
 Bronco Prime,Bronco Prime Barrel,1
 Bronco Prime,Bronco Prime Receiver,1
@@ -1554,29 +1965,34 @@ Kraken,Credits,25000
 Kraken,Neurodes,2
 Kraken,Alloy Plate,200
 Kraken,Salvage,750
+Kraken,Polymer Bundle,120
 Hystrix,Credits,20000
 Hystrix,Bolto,1
 Hystrix,Viper,1
 Hystrix,Ferrite,9750
+Hystrix,Control Module,15
 Spectra,Credits,25000
 Spectra,Fieldron,3
 Spectra,Circuits,700
 Spectra,Ferrite,5000
+Spectra,Forma,1
 Cycron,Credits,25000
 Cycron,Fieldron,4
 Cycron,Ferrite,9000
 Cycron,Circuits,1500
+Cycron,Forma,1
 Akzani,Credits,20000
 Akzani,Salvage,1500
 Akzani,Polymer Bundle,1000
 Akzani,Morphics,2
+Akzani,Argon Crystal,2
 Zakti,Credits,15000
 Zakti,Control Module,8
 Zakti,Plastids,350
 Zakti,Alloy Plate,6500
+Zakti,Nano Spores,5000
 Akvasto Prime,Credits,15000
-Akvasto Prime,Vasto Prime,1
-Akvasto Prime,Vasto Prime,1
+Akvasto Prime,Vasto Prime,2
 Akvasto Prime,Akvasto Prime Link,1
 Epitaph,Credits,20000
 Epitaph,Epitaph Barrel,1
@@ -1586,19 +2002,21 @@ Nukor,Credits,30000
 Nukor,Detonite Injector,2
 Nukor,Morphics,2
 Nukor,Salvage,5500
-Wraith,Credits,25000
-Wraith,Wraith Barrel,1
-Wraith,Wraith Receiver,1
-Wraith,Wraith Link,1
+Nukor,Forma,1
+Twin Vipers Wraith,Credits,25000
+Twin Vipers Wraith,Twin Vipers Wraith Barrel,1
+Twin Vipers Wraith,Twin Vipers Wraith Receiver,1
+Twin Vipers Wraith,Twin Vipers Wraith Link,1
 Twin Gremlins,Credits,25000
 Twin Gremlins,Neurodes,5
 Twin Gremlins,Circuits,900
 Twin Gremlins,Salvage,1500
+Twin Gremlins,Rubedo,1200
 Kulstar,Credits,30000
 Kulstar,Kraken,1
-Kulstar,Tellurium Market,2
+Kulstar,Tellurium,2
 Kulstar,Cryotic,4800
-Kulstar,Market,3600
+Kulstar,Plastids,3600
 Vasto Prime,Credits,15000
 Vasto Prime,Vasto Prime Barrel,1
 Vasto Prime,Vasto Prime Receiver,1
@@ -1615,45 +2033,55 @@ Viper,Credits,20000
 Viper,Salvage,300
 Viper,Ferrite,600
 Viper,Nano Spores,900
+Viper,Morphics,1
 Plinx,Credits,20000
 Plinx,Argon Crystal,2
 Plinx,Alloy Plate,4375
 Plinx,Cryotic,575
+Plinx,Gyromag Systems,10
 Quatz,Credits,30000
 Quatz,Argon Crystal,2
 Quatz,Neurodes,5
 Quatz,Rubedo,4200
+Quatz,Salvage,12750
 Spira,Credits,15000
 Spira,Gallium,5
 Spira,Ferrite,2500
 Spira,Plastids,800
+Spira,Salvage,4000
 Knell,Credits,15000
 Knell,Argon Crystal,2
 Knell,Rubedo,5200
 Knell,Cryotic,3800
+Knell,Salvage,20000
 Zymos,Credits,20000
 Zymos,Zymos Barrel,1
 Zymos,Zymos Receiver,1
-Zymos,Credits,20000
-Zymos,Tempered Bapholite,20
-Zymos,Purified Heciphron,5
-Zymos,Dendrite Blastoma,8
-Zymos,Credits,20000
-Zymos,Adramal Alloy,20
-Zymos,Purified Heciphron,5
-Zymos,Pustulent Cognitive Nodule,8
+Zymos Barrel,Credits,20000
+Zymos Barrel,Tempered Bapholite,20
+Zymos Barrel,Purified Heciphron,5
+Zymos Barrel,Dendrite Blastoma,8
+Zymos Barrel,Neurodes,4
+Zymos Receiver,Credits,20000
+Zymos Receiver,Adramal Alloy,20
+Zymos Receiver,Purified Heciphron,5
+Zymos Receiver,Pustulent Cognitive Nodule,8
+Zymos Receiver,Morphics,5
 Akstiletto,Credits,20000
 Akstiletto,Gallium,2
 Akstiletto,Salvage,800
 Akstiletto,Alloy Plate,200
+Akstiletto,Forma,1
 Tysis,Credits,30000
 Tysis,Neurodes,2
 Tysis,Plastids,400
 Tysis,Nano Spores,900
+Tysis,Polymer Bundle,100
 Dual Toxocyst,Credits,30000
 Dual Toxocyst,Mutagen Mass,4
 Dual Toxocyst,Nano Spores,6500
 Dual Toxocyst,Plastids,1100
+Dual Toxocyst,Forma,1
 Brakk,Credits,15000
 Brakk,Brakk Barrel,1
 Brakk,Brakk Receiver,1
@@ -1662,10 +2090,12 @@ Staticor,Credits,25000
 Staticor,Fieldron,10
 Staticor,Alloy Plate,6000
 Staticor,Ferrite,9000
+Staticor,Nitain Extract,3
 Fusilai,Credits,20000
 Fusilai,Rubedo,2950
 Fusilai,Salvage,10000
 Fusilai,Polymer Bundle,1350
+Fusilai,Nitain Extract,2
 Pandero Prime,Credits,20000
 Pandero Prime,Pandero Prime Barrel,1
 Pandero Prime,Pandero Prime Receiver,1
@@ -1674,26 +2104,30 @@ Ocucor,Credits,25000
 Ocucor,Fieldron,10
 Ocucor,Thermal Sludge,40
 Ocucor,Venerdo Alloy,55
+Ocucor,Sagan Module,20
 Bolto,Credits,20000
 Bolto,Lato,1
 Bolto,Polymer Bundle,800
 Bolto,Orokin Cell,2
+Bolto,Neurodes,2
 Arca Scisco,Credits,25000
 Arca Scisco,Fieldron,5
 Arca Scisco,Oxium,250
 Arca Scisco,Salvage,12500
+Arca Scisco,Forma,1
 Stug,Credits,20000
 Stug,Neurodes,3
 Stug,Gallium,4
 Stug,Salvage,3000
+Stug,Alloy Plate,1200
 Akmagnus,Credits,20000
-Akmagnus,Magnus,1
-Akmagnus,Magnus,1
+Akmagnus,Magnus,2
 Akmagnus,Orokin Cell,2
 Pyrana,Credits,20000
 Pyrana,Control Module,2
 Pyrana,Salvage,800
 Pyrana,Alloy Plate,200
+Pyrana,Forma,1
 Marelok,Credits,30000
 Marelok,Detonite Injector,2
 Marelok,Polymer Bundle,5000
@@ -1707,11 +2141,12 @@ Atomos,Credits,60000
 Atomos,Salvage,1500
 Atomos,Polymer Bundle,1300
 Atomos,Rubedo,800
+Atomos,Argon Crystal,2
 Azima,Credits,30000
 Azima,Morphics,4
 Azima,Circuits,450
 Azima,Polymer Bundle,500
-Azima,Market,2750
+Azima,Salvage,2750
 Euphona Prime,Credits,15000
 Euphona Prime,Euphona Prime Barrel,1
 Euphona Prime,Euphona Prime Receiver,1
@@ -1720,22 +2155,25 @@ Akarius,Credits,20000
 Akarius,Neurodes,3
 Akarius,Hexenon,150
 Akarius,Polymer Bundle,1600
+Akarius,Nano Spores,7500
 Akvasto,Credits,20000
-Akvasto,Vasto,1
-Akvasto,Vasto,1
+Akvasto,Vasto,2
 Akvasto,Orokin Cell,2
 Gammacor,Credits,20000
 Gammacor,Alloy Plate,2500
 Gammacor,Plastids,650
 Gammacor,Circuits,400
+Gammacor,Argon Crystal,2
 Bronco,Credits,20000
 Bronco,Neurodes,2
 Bronco,Alloy Plate,1200
 Bronco,Ferrite,700
+Bronco,Polymer Bundle,800
 Catabolyst,Credits,30000
 Catabolyst,Scintillant,5
 Catabolyst,Ocular Stem - Root,4
 Catabolyst,Mutagen Mass,7
+Catabolyst,Stellated Necrathene,10
 Stubba,Credits,20000
 Stubba,Grokdrul,45
 Stubba,Coprite Alloy,25
@@ -1745,18 +2183,22 @@ Twin Rogga,Credits,30000
 Twin Rogga,Argon Crystal,2
 Twin Rogga,Kuva,1600
 Twin Rogga,Alloy Plate,2600
+Twin Rogga,Ferrite,15000
 Sonicor,Credits,20000
 Sonicor,Alloy Plate,6500
 Sonicor,Oxium,600
 Sonicor,Plastids,2600
+Sonicor,Argon Crystal,2
 Cestra,Credits,25000
 Cestra,Nano Spores,3000
 Cestra,Rubedo,1200
 Cestra,Gallium,4
+Cestra,Neurodes,2
 Akjagara Prime,Credits,15000
 Akjagara Prime,Akjagara Prime Barrel,2
 Akjagara Prime,Akjagara Prime Receiver,2
 Akjagara Prime,Akjagara Prime Link,1
+Akjagara Prime,Orokin Cell,10
 Acrid,Credits,30000
 Acrid,Mutagen Mass,5
 Acrid,Salvage,6000
@@ -1766,17 +2208,19 @@ Angstrum,Credits,25000
 Angstrum,Alloy Plate,600
 Angstrum,Circuits,400
 Angstrum,Salvage,900
+Angstrum,Argon Crystal,2
 Magnus,Credits,25000
 Magnus,Orokin Cell,2
 Magnus,Alloy Plate,400
 Magnus,Salvage,900
-Vandal,Credits,25000
-Vandal,Vandal Barrel,1
-Vandal,Vandal Receiver,1
+Magnus,Ferrite,100
+Lato Vandal,Credits,25000
+Lato Vandal,Lato Vandal Barrel,1
+Lato Vandal,Lato Vandal Receiver,1
 Dual Cestra,Credits,25000
-Dual Cestra,Cestra,1
-Dual Cestra,Cestra,1
+Dual Cestra,Cestra,2
 Dual Cestra,Fieldron,2
+Dual Cestra,Forma,1
 Velox,Credits,20000
 Velox,Velox Barrel,1
 Velox,Velox Receiver,1
@@ -1785,17 +2229,17 @@ Hikou,Credits,15000
 Hikou,Morphics,5
 Hikou,Plastids,500
 Hikou,Rubedo,600
+Hikou,Salvage,4000
 Aklex Prime,Credits,15000
-Aklex Prime,Lex Prime,1
-Aklex Prime,Lex Prime,1
+Aklex Prime,Lex Prime,2
 Aklex Prime,Aklex Prime Link,1
 Kohmak,Credits,30000
 Kohmak,Detonite Injector,2
 Kohmak,Ferrite,5000
 Kohmak,Plastids,5000
+Kohmak,Forma,1
 Aklex,Credits,15000
-Aklex,Lex,1
-Aklex,Lex,1
+Aklex,Lex,2
 Aklex,Orokin Cell,1
 Seer,Credits,15000
 Seer,Seer Barrel,1
@@ -1805,63 +2249,69 @@ Kompressa,Credits,25000
 Kompressa,Orokin Cell,3
 Kompressa,Kompressa Barrel,1
 Kompressa,Kompressa Receiver,1
-Kompressa,Credits,15000
-Kompressa,Hespazym Alloy,10
-Kompressa,Goblite Tears,10
-Kompressa,Lathe Coagulant,20
-Kompressa,Credits,15000
-Kompressa,Axidrol Alloy,20
-Kompressa,Star Amarast,6
-Kompressa,Tink Dissipator Coil,10
+Kompressa Barrel,Credits,15000
+Kompressa Barrel,Hespazym Alloy,10
+Kompressa Barrel,Goblite Tears,10
+Kompressa Barrel,Lathe Coagulant,20
+Kompressa Barrel,Tepa Nodule,35
+Kompressa Receiver,Credits,15000
+Kompressa Receiver,Axidrol Alloy,20
+Kompressa Receiver,Star Amarast,6
+Kompressa Receiver,Tink Dissipator Coil,10
+Kompressa Receiver,Mytocardia Spore,40
 Akbronco Prime,Credits,15000
-Akbronco Prime,Bronco Prime,1
-Akbronco Prime,Bronco Prime,1
+Akbronco Prime,Bronco Prime,2
 Akbronco Prime,Akbronco Prime Link,1
 Despair,Credits,15000
 Despair,Morphics,10
 Despair,Ferrite,5000
 Despair,Alloy Plate,800
+Despair,Salvage,4500
 Karyst,Credits,20000
 Karyst,Salvage,1500
 Karyst,Polymer Bundle,800
 Karyst,Oxium,100
+Karyst,Argon Crystal,1
 Quassus,Credits,20000
 Quassus,Devolved Namalon,60
 Quassus,Spinal Core Section,15
 Quassus,Scintillant,5
+Quassus,Seriglass Shard,1
 Ghoulsaw,Credits,30000
 Ghoulsaw,Ghoulsaw Blade,1
 Ghoulsaw,Ghoulsaw Chassis,1
 Ghoulsaw,Ghoulsaw Engine,1
 Ghoulsaw,Ghoulsaw Grip,1
-Ghoulsaw,Credits,30000
-Ghoulsaw,Tellurium,1
-Ghoulsaw,Sharrac Teeth,15
-Ghoulsaw,Rubedo,675
-Ghoulsaw,Alloy Plate,2875
-Ghoulsaw,Credits,30000
-Ghoulsaw,Morphics,5
-Ghoulsaw,Oxium,120
-Ghoulsaw,Coprite Alloy,40
-Ghoulsaw,Salvage,1825
-Ghoulsaw,Credits,30000
-Ghoulsaw,Control Module,5
-Ghoulsaw,Circuits,450
-Ghoulsaw,Grokdrul,55
-Ghoulsaw,Ferrite,3150
-Ghoulsaw,Credits,30000
-Ghoulsaw,Gallium,3
-Ghoulsaw,Kuaka Spinal Claw,20
-Ghoulsaw,Polymer Bundle,925
-Ghoulsaw,Nano Spores,1700
+Ghoulsaw Blade,Credits,30000
+Ghoulsaw Blade,Tellurium,1
+Ghoulsaw Blade,Sharrac Teeth,15
+Ghoulsaw Blade,Rubedo,675
+Ghoulsaw Blade,Alloy Plate,2875
+Ghoulsaw Chassis,Credits,30000
+Ghoulsaw Chassis,Morphics,5
+Ghoulsaw Chassis,Oxium,120
+Ghoulsaw Chassis,Coprite Alloy,40
+Ghoulsaw Chassis,Salvage,1825
+Ghoulsaw Engine,Credits,30000
+Ghoulsaw Engine,Control Module,5
+Ghoulsaw Engine,Circuits,450
+Ghoulsaw Engine,Grokdrul,55
+Ghoulsaw Engine,Ferrite,3150
+Ghoulsaw Grip,Credits,30000
+Ghoulsaw Grip,Gallium,3
+Ghoulsaw Grip,Kuaka Spinal Claw,20
+Ghoulsaw Grip,Polymer Bundle,925
+Ghoulsaw Grip,Nano Spores,1700
 Lesion,Credits,15000
 Lesion,Tipedo,1
 Lesion,Plastids,1400
 Lesion,Neurodes,4
+Lesion,Nano Spores,2300
 Fragor,Credits,30000
 Fragor,Gallium,3
 Fragor,Salvage,750
 Fragor,Rubedo,300
+Fragor,Alloy Plate,80
 Pathocyst,Credits,30000
 Pathocyst,Pathocyst Blade,2
 Pathocyst,Pathocyst Subcortex,1
@@ -1873,20 +2323,22 @@ Reaper Prime,Orokin Cell,10
 Twin Krohkur,Credits,20000
 Twin Krohkur,Detonite Injector,5
 Twin Krohkur,Forma,1
-Twin Krohkur,Krohkur,1
-Twin Krohkur,Krohkur,1
+Twin Krohkur,Krohkur,2
 Gazal Machete,Credits,20000
 Gazal Machete,Argon Crystal,2
 Gazal Machete,Salvage,2600
 Gazal Machete,Alloy Plate,1900
+Gazal Machete,Plastids,1400
 Dark Sword,Credits,20000
 Dark Sword,Neurodes,2
 Dark Sword,Ferrite,800
 Dark Sword,Plastids,200
+Dark Sword,Polymer Bundle,75
 Plasma Sword,Credits,20000
 Plasma Sword,Orokin Cell,1
 Plasma Sword,Ferrite,500
 Plasma Sword,Salvage,450
+Plasma Sword,Polymer Bundle,50
 Sheev,Credits,20000
 Sheev,Sheev Blade,1
 Sheev,Sheev Heatsink,1
@@ -1895,15 +2347,17 @@ Dual Heat Swords,Credits,20000
 Dual Heat Swords,Morphics,2
 Dual Heat Swords,Salvage,900
 Dual Heat Swords,Ferrite,1000
+Dual Heat Swords,Polymer Bundle,700
 Jat Kusar,Credits,15000
 Jat Kusar,Detonite Injector,7
 Jat Kusar,Salvage,7500
 Jat Kusar,Rubedo,2000
-Sigma & Octantis,Credits,30000
-Sigma & Octantis,Morphics,4
-Sigma & Octantis,Circuits,450
-Sigma & Octantis,Polymer Bundle,500
-Sigma & Octantis,Market,2750
+Jat Kusar,Forma,1
+Sigma %26 Octantis,Credits,30000
+Sigma %26 Octantis,Morphics,4
+Sigma %26 Octantis,Circuits,450
+Sigma %26 Octantis,Polymer Bundle,500
+Sigma %26 Octantis,Salvage,2750
 Guandao Prime,Credits,5000
 Guandao Prime,Guandao Prime Blade,2
 Guandao Prime,Guandao Prime Handle,1
@@ -1912,14 +2366,17 @@ Nami Skyla,Credits,20000
 Nami Skyla,Neurodes,2
 Nami Skyla,Polymer Bundle,800
 Nami Skyla,Rubedo,200
+Nami Skyla,Gallium,10
 Korrudo,Credits,30000
 Korrudo,Auroxium Alloy,25
 Korrudo,Esher Devar,15
 Korrudo,Breath Of The Eidolon,5
+Korrudo,Mawfish Bones,20
 Serro,Credits,20000
 Serro,Fieldron,1
 Serro,Circuits,400
 Serro,Salvage,1000
+Serro,Neural Sensors,3
 Scindo Prime,Credits,15000
 Scindo Prime,Scindo Prime Blade,1
 Scindo Prime,Scindo Prime Handle,1
@@ -1933,14 +2390,17 @@ Lecta,Credits,20000
 Lecta,Morphics,2
 Lecta,Salvage,900
 Lecta,Ferrite,1000
+Lecta,Neural Sensors,3
 Jaw Sword,Credits,15000
 Jaw Sword,Ferrite,500
 Jaw Sword,Morphics,1
 Jaw Sword,Polymer Bundle,75
+Jaw Sword,Rubedo,300
 Magistar,Credits,25000
 Magistar,Gallium,3
 Magistar,Ferrite,750
 Magistar,Rubedo,300
+Magistar,Alloy Plate,80
 War,Credits,20000
 War,Polymer Bundle,2300
 War,Rubedo,1400
@@ -1954,10 +2414,12 @@ Arca Titron,Credits,20000
 Arca Titron,Argon Crystal,2
 Arca Titron,Gallium,6
 Arca Titron,Circuits,2150
+Arca Titron,Polymer Bundle,1200
 Endura,Credits,20000
 Endura,Alloy Plate,12000
 Endura,Plastids,1200
 Endura,Gallium,2
+Endura,Argon Crystal,2
 Cronus,Credits,15000
 Cronus,Morphics,1
 Cronus,Ferrite,500
@@ -1971,6 +2433,7 @@ Kreska,Credits,25000
 Kreska,Fieldron,10
 Kreska,Mytocardia Spore,40
 Kreska,Star Amarast,25
+Kreska,Lathe Coagulant,20
 Tipedo Prime,Credits,20000
 Tipedo Prime,Tipedo Prime Handle,1
 Tipedo Prime,Tipedo Prime Ornament,2
@@ -1979,37 +2442,42 @@ Ninkondi,Credits,20000
 Ninkondi,Ferrite,4000
 Ninkondi,Polymer Bundle,1200
 Ninkondi,Plastids,800
+Ninkondi,Argon Crystal,2
 Zenistar,Credits,30000
 Zenistar,Morphics,4
 Zenistar,Circuits,450
 Zenistar,Polymer Bundle,500
-Zenistar,Market,2750
+Zenistar,Salvage,2750
 Ripkas,Credits,40000
 Ripkas,Ankyros,1
 Ripkas,Dual Cleavers,1
-Ripkas,Tellurium Market,2
+Ripkas,Tellurium,2
 Ripkas,Forma,1
 Broken Scepter,Credits,25000
 Broken Scepter,Kuva,5000
 Broken Scepter,Morphics,2
 Broken Scepter,Rubedo,300
-Broken Scepter,Market,2500
+Broken Scepter,Salvage,2500
 Kesheg,Credits,20000
 Kesheg,Detonite Injector,5
 Kesheg,Kuva,1400
 Kesheg,Ferrite,6000
+Kesheg,Alloy Plate,8000
 Dual Keres,Credits,20000
 Dual Keres,Argon Crystal,2
 Dual Keres,Oxium,230
 Dual Keres,Salvage,13250
+Dual Keres,Tellurium,3
 Krohkur,Credits,20000
-Krohkur,Tellurium Market,5
+Krohkur,Tellurium,5
 Krohkur,Morphics,8
 Krohkur,Oxium,125
+Krohkur,Alloy Plate,4375
 Venka,Credits,20000
 Venka,Gallium,4
 Venka,Salvage,1000
 Venka,Plastids,500
+Venka,Forma,1
 Nami Solo,Credits,20000
 Nami Solo,Ferrite,1500
 Nami Solo,Polymer Bundle,800
@@ -2019,34 +2487,42 @@ Dual Ether,Credits,20000
 Dual Ether,Morphics,3
 Dual Ether,Salvage,900
 Dual Ether,Ferrite,850
+Dual Ether,Polymer Bundle,800
 Prova,Credits,20000
 Prova,Fieldron,1
 Prova,Alloy Plate,300
 Prova,Salvage,1000
+Prova,Forma,1
 Orthos,Credits,20000
 Orthos,Morphics,4
 Orthos,Polymer Bundle,500
 Orthos,Ferrite,850
+Orthos,Alloy Plate,700
 Hate,Credits,15000
 Hate,Morphics,10
 Hate,Ferrite,5000
 Hate,Nano Spores,6000
+Hate,Salvage,4500
 Kestrel,Credits,15000
 Kestrel,Morphics,8
 Kestrel,Ferrite,4800
 Kestrel,Nano Spores,5000
+Kestrel,Salvage,4000
 Caustacyst,Credits,30000
 Caustacyst,Mutagen Mass,10
 Caustacyst,Ferrite,15000
 Caustacyst,Plastids,4000
+Caustacyst,Nitain Extract,5
 Okina,Credits,20000
-Okina,Tellurium Market,2
+Okina,Tellurium,2
 Okina,Alloy Plate,4200
 Okina,Polymer Bundle,3400
+Okina,Oxium,1800
 Dark Split-Sword (Dual Swords),Credits,20000
 Dark Split-Sword (Dual Swords),Dual Skana,1
 Dark Split-Sword (Dual Swords),Forma,1
 Dark Split-Sword (Dual Swords),Rubedo,1200
+Dark Split-Sword (Dual Swords),Mutagen Mass,10
 Tekko,Credits,20000
 Tekko,Gallium,5
 Tekko,Rubedo,700
@@ -2056,18 +2532,21 @@ Dual Raza,Credits,20000
 Dual Raza,Dual Kamas,1
 Dual Raza,Cryotic,200
 Dual Raza,Alloy Plate,200
+Dual Raza,Orokin Cell,1
 Twin Basolk,Credits,30000
 Twin Basolk,Dual Zoren,1
 Twin Basolk,Atomos,1
 Twin Basolk,Control Module,2
-Ceti,Credits,25000
-Ceti,Salvage,8150
-Ceti,Oxium,400
-Ceti,Rubedo,5950
+Ceti Lacera,Credits,25000
+Ceti Lacera,Salvage,8150
+Ceti Lacera,Oxium,400
+Ceti Lacera,Rubedo,5950
+Ceti Lacera,Morphics,15
 Tatsu,Credits,5000
 Tatsu,Argon Crystal,2
 Tatsu,Kuva,1200
 Tatsu,Auroxium Alloy,100
+Tatsu,Hespazym Alloy,100
 Gram Prime,Credits,15000
 Gram Prime,Gram Prime Blade,1
 Gram Prime,Gram Prime Handle,1
@@ -2076,6 +2555,7 @@ Ether Daggers,Credits,20000
 Ether Daggers,Morphics,5
 Ether Daggers,Polymer Bundle,600
 Ether Daggers,Ferrite,600
+Ether Daggers,Nano Spores,1200
 Galatine Prime,Credits,15000
 Galatine Prime,Galatine Prime Blade,1
 Galatine Prime,Galatine Prime Handle,1
@@ -2089,27 +2569,32 @@ Fang,Credits,20000
 Fang,Polymer Bundle,600
 Fang,Ferrite,600
 Fang,Nano Spores,900
+Fang,Morphics,1
 Sydon,Credits,20000
 Sydon,Detonite Injector,5
 Sydon,Circuits,1100
 Sydon,Salvage,4000
 Sydon,Amphis,1
-Cobra & Crane,Credits,20000
-Cobra & Crane,Argon Crystal,2
-Cobra & Crane,Rubedo,4000
-Cobra & Crane,Plastids,875
+Cobra %26 Crane,Credits,20000
+Cobra %26 Crane,Argon Crystal,2
+Cobra %26 Crane,Rubedo,4000
+Cobra %26 Crane,Plastids,875
+Cobra %26 Crane,Nano Spores,18750
 Hirudo,Credits,30000
 Hirudo,Kogake,1
 Hirudo,Nitain Extract,3
 Hirudo,Plastids,1100
+Hirudo,Nano Spores,4600
 Atterax,Credits,20000
 Atterax,Salvage,1500
 Atterax,Polymer Bundle,800
 Atterax,Rubedo,200
+Atterax,Argon Crystal,2
 Pulmonars,Credits,15000
 Pulmonars,Argon Crystal,2
 Pulmonars,Parasitic Tethermaw,24
 Pulmonars,Devolved Namalon,60
+Pulmonars,Nano Spores,24000
 Destreza Prime,Credits,15000
 Destreza Prime,Destreza Prime Blade,1
 Destreza Prime,Destreza Prime Handle,1
@@ -2118,22 +2603,27 @@ Orvius,Credits,15000
 Orvius,Orvius Blade,2
 Orvius,Orvius Disc,1
 Orvius,Orokin Cell,10
+Orvius,Kuva,4000
 Paracesis,Credits,30000
 Paracesis,Ducats,1000
 Paracesis,Galatine,1
 Paracesis,Sentient Shard Common,5
+Paracesis,Orokin Cell,15
 Obex,Credits,30000
 Obex,Circuits,650
 Obex,Salvage,900
 Obex,Ferrite,700
+Obex,Alloy Plate,300
 Glaive,Credits,15000
 Glaive,Morphics,10
 Glaive,Ferrite,5000
 Glaive,Nano Spores,6000
+Glaive,Salvage,4500
 Pangolin Sword,Credits,20000
 Pangolin Sword,Control Module,1
 Pangolin Sword,Ferrite,750
 Pangolin Sword,Circuits,300
+Pangolin Sword,Alloy Plate,80
 Venka Prime,Credits,15000
 Venka Prime,Venka Prime Blades,2
 Venka Prime,Venka Prime Gauntlet,2
@@ -2142,78 +2632,96 @@ Gram,Credits,30000
 Gram,Gallium,3
 Gram,Salvage,750
 Gram,Rubedo,300
+Gram,Alloy Plate,80
 Heat Dagger,Credits,15000
 Heat Dagger,Ferrite,500
 Heat Dagger,Circuits,150
 Heat Dagger,Polymer Bundle,75
+Heat Dagger,Neural Sensors,1
 Mios,Credits,30000
 Mios,Mutagen Mass,4
 Mios,Nano Spores,15000
 Mios,Plastids,1200
+Mios,Forma,1
 Dual Skana,Credits,20000
 Dual Skana,Morphics,2
 Dual Skana,Polymer Bundle,300
 Dual Skana,Ferrite,850
-Dragon,Credits,5000
-Dragon,Argon Crystal,1
-Dragon,Oxium,75
-Dragon,Nikana,1
+Dual Skana,Alloy Plate,300
+Dragon Nikana,Credits,5000
+Dragon Nikana,Argon Crystal,1
+Dragon Nikana,Oxium,75
+Dragon Nikana,Nikana,1
 Gunsen,Credits,20000
 Gunsen,Oxium,200
-Gunsen,Tellurium Market,3
+Gunsen,Tellurium,3
 Gunsen,Plastids,1150
+Gunsen,Nano Spores,19750
 Scindo,Credits,30000
 Scindo,Gallium,3
 Scindo,Salvage,750
 Scindo,Circuits,300
-Silva & Aegis,Credits,20000
-Silva & Aegis,Gallium,3
-Silva & Aegis,Alloy Plate,600
-Silva & Aegis,Ferrite,1200
+Scindo,Alloy Plate,500
+Silva %26 Aegis,Credits,20000
+Silva %26 Aegis,Gallium,3
+Silva %26 Aegis,Alloy Plate,600
+Silva %26 Aegis,Ferrite,1200
+Silva %26 Aegis,Forma,1
 Kogake,Credits,30000
 Kogake,Rubedo,400
 Kogake,Morphics,3
 Kogake,Ferrite,1200
+Kogake,Alloy Plate,500
 Sarpa,Credits,20000
 Sarpa,Akstiletto,1
 Sarpa,Cryotic,3300
 Sarpa,Plastids,1000
+Sarpa,Control Module,2
 Ether Sword,Credits,20000
 Ether Sword,Morphics,4
 Ether Sword,Rubedo,700
 Ether Sword,Ferrite,900
+Ether Sword,Alloy Plate,700
 Scoliac,Credits,30000
 Scoliac,Mutagen Mass,4
 Scoliac,Nano Spores,15000
 Scoliac,Plastids,1200
+Scoliac,Forma,1
 Cerata,Credits,30000
 Cerata,Mutagen Mass,4
 Cerata,Cryotic,2500
 Cerata,Plastids,1200
+Cerata,Forma,1
 Cassowar,Credits,20000
 Cassowar,Forma,1
 Cassowar,Rubedo,1000
 Cassowar,Salvage,5700
+Cassowar,Oxium,150
 Dark Dagger,Credits,15000
 Dark Dagger,Neurodes,2
 Dark Dagger,Ferrite,500
 Dark Dagger,Plastids,500
+Dark Dagger,Polymer Bundle,300
 Heat Sword,Credits,20000
 Heat Sword,Neural Sensors,1
 Heat Sword,Ferrite,500
 Heat Sword,Circuits,300
+Heat Sword,Polymer Bundle,300
 Ceramic Dagger,Credits,15000
 Ceramic Dagger,Gallium,4
 Ceramic Dagger,Ferrite,500
 Ceramic Dagger,Alloy Plate,500
+Ceramic Dagger,Polymer Bundle,600
 Volnus,Credits,20000
 Volnus,Oxium,225
 Volnus,Argon Crystal,2
 Volnus,Alloy Plate,11000
-Silva & Aegis Prime,Credits,20000
-Silva & Aegis Prime,Silva & Aegis Prime Blade,1
-Silva & Aegis Prime,Silva & Aegis Prime Guard,1
-Silva & Aegis Prime,Silva & Aegis Prime Hilt,1
+Volnus,Cryotic,875
+Silva %26 Aegis Prime,Credits,20000
+Silva %26 Aegis Prime,Silva %26 Aegis Prime Blade,1
+Silva %26 Aegis Prime,Silva %26 Aegis Prime Guard,1
+Silva %26 Aegis Prime,Silva %26 Aegis Prime Hilt,1
+Silva %26 Aegis Prime,Orokin Cell,10
 Stropha,Credits,30000
 Stropha,Stropha Barrel,1
 Stropha,Stropha Blade,1
@@ -2228,14 +2736,17 @@ Destreza,Credits,20000
 Destreza,Alloy Plate,10000
 Destreza,Plastids,1700
 Destreza,Nitain Extract,5
+Destreza,Argon Crystal,2
 Anku,Credits,20000
 Anku,Gallium,2
 Anku,Salvage,800
 Anku,Circuits,200
+Anku,Morphics,4
 Dual Cleavers,Credits,20000
 Dual Cleavers,Gallium,5
 Dual Cleavers,Salvage,1000
 Dual Cleavers,Polymer Bundle,800
+Dual Cleavers,Alloy Plate,1200
 Boltace,Credits,20000
 Boltace,Boltor,1
 Boltace,Kronen,1
@@ -2252,18 +2763,22 @@ Vitrica,Credits,20000
 Vitrica,Orokin Cell,15
 Vitrica,Oxium,925
 Vitrica,Tempered Bapholite,60
+Vitrica,Purified Heciphron,10
 Ohma,Credits,20000
 Ohma,Nitain Extract,4
 Ohma,Ferrite,15000
 Ohma,Plastids,1400
+Ohma,Argon Crystal,2
 Machete,Credits,15000
 Machete,Gallium,4
 Machete,Salvage,750
 Machete,Plastids,800
+Machete,Alloy Plate,900
 Pennant,Credits,30000
-Pennant,Tellurium Market,2
+Pennant,Tellurium,2
 Pennant,Rubedo,2100
 Pennant,Polymer Bundle,1550
+Pennant,Ferrite,5300
 Redeemer,Credits,20000
 Redeemer,Vasto,1
 Redeemer,Dual Skana,1
@@ -2272,10 +2787,12 @@ Arum Spinosa,Credits,5000
 Arum Spinosa,Arum Spinosa Guard,2
 Arum Spinosa,Arum Spinosa Rivet,1
 Arum Spinosa,Trapezium Xenorhast,1
+Arum Spinosa,Cabochon Embolos,1
 Bo,Credits,15000
 Bo,Orokin Cell,1
 Bo,Salvage,900
 Bo,Ferrite,600
+Bo,Alloy Plate,150
 Volnus Prime,Credits,20000
 Volnus Prime,Volnus Prime Head,1
 Volnus Prime,Volnus Prime Handle,1
@@ -2288,14 +2805,16 @@ Guandao,Credits,15000
 Guandao,Gallium,3
 Guandao,Oxium,65
 Guandao,Polymer Bundle,750
-Nami Prime,Credits,15000
-Nami Prime,Nami Prime Blade,2
-Nami Prime,Nami Prime Handle,2
-Nami Prime,Orokin Cell,15
+Guandao,Ferrite,2500
+Nami Skyla Prime,Credits,15000
+Nami Skyla Prime,Nami Skyla Prime Blade,2
+Nami Skyla Prime,Nami Skyla Prime Handle,2
+Nami Skyla Prime,Orokin Cell,15
 Shaku,Credits,20000
 Shaku,Ninkondi,1
 Shaku,Forma,1
 Shaku,Plastids,1100
+Shaku,Morphics,10
 Pangolin Prime,Credits,15000
 Pangolin Prime,Pangolin Prime Blade,1
 Pangolin Prime,Pangolin Prime Handle,1
@@ -2304,10 +2823,12 @@ Heliocor,Credits,20000
 Heliocor,Gammacor,1
 Heliocor,Polymer Bundle,700
 Heliocor,Rubedo,1200
+Heliocor,Morphics,1
 Ankyros,Credits,30000
 Ankyros,Nano Spores,900
 Ankyros,Salvage,900
 Ankyros,Ferrite,600
+Ankyros,Alloy Plate,450
 Ankyros Prime,Credits,15000
 Ankyros Prime,Ankyros Prime Blade,2
 Ankyros Prime,Ankyros Prime Gauntlet,2
@@ -2327,10 +2848,12 @@ Pupacyst,Credits,30000
 Pupacyst,Mutagen Mass,5
 Pupacyst,Salvage,8750
 Pupacyst,Rubedo,2250
+Pupacyst,Forma,1
 Nikana,Credits,5000
 Nikana,Argon Crystal,3
 Nikana,Oxium,75
 Nikana,Alloy Plate,200
+Nikana,Forma,1
 Fang Prime,Credits,15000
 Fang Prime,Fang Prime Blade,2
 Fang Prime,Fang Prime Handle,2
@@ -2346,50 +2869,58 @@ Dark Split-Sword (Heavy Blade),Credits,20000
 Dark Split-Sword (Heavy Blade),Dual Skana,1
 Dark Split-Sword (Heavy Blade),Forma,1
 Dark Split-Sword (Heavy Blade),Rubedo,1200
+Dark Split-Sword (Heavy Blade),Mutagen Mass,10
 Falcor,Credits,20000
 Falcor,Fieldron,5
 Falcor,Alloy Plate,8500
 Falcor,Circuits,1650
+Falcor,Forma,1
 Tonbo,Credits,20000
 Tonbo,Control Module,2
 Tonbo,Plastids,800
 Tonbo,Ferrite,2000
+Tonbo,Oxium,100
 Skana,Credits,15000
 Skana,Salvage,750
 Skana,Plastids,500
 Skana,Alloy Plate,1100
+Skana,Morphics,3
 Glaive Prime,Credits,15000
 Glaive Prime,Glaive Prime Blade,2
 Glaive Prime,Glaive Prime Disc,1
 Glaive Prime,Orokin Cell,10
-Ack & Brunt,Credits,65000
-Ack & Brunt,Detonite Injector,5
-Ack & Brunt,Salvage,7500
-Ack & Brunt,Cryotic,3300
-Ack & Brunt,Forma,1
+Ack %26 Brunt,Credits,65000
+Ack %26 Brunt,Detonite Injector,5
+Ack %26 Brunt,Salvage,7500
+Ack %26 Brunt,Cryotic,3300
+Ack %26 Brunt,Forma,1
 Lacera,Credits,20000
 Lacera,Morphics,2
 Lacera,Polymer Bundle,4200
 Lacera,Rubedo,1200
+Lacera,Gallium,20
 Galatine,Credits,30000
 Galatine,Gallium,4
 Galatine,Salvage,750
 Galatine,Rubedo,500
+Galatine,Alloy Plate,200
 Masseter,Credits,20000
 Masseter,Argon Crystal,2
 Masseter,Cryotic,650
 Masseter,Oxium,225
+Masseter,Salvage,8600
 Fragor Prime,Credits,15000
 Fragor Prime,Fragor Prime Head,1
 Fragor Prime,Fragor Prime Handle,1
 Fragor Prime,Orokin Cell,10
-Wraith,Credits,25000
-Wraith,Wraith Left Gauntlet,1
-Wraith,Wraith Right Gauntlet,1
+Furax Wraith,Credits,25000
+Furax Wraith,Furax Wraith Left Gauntlet,1
+Furax Wraith,Furax Wraith Right Gauntlet,1
 Jat Kittag,Credits,30000
 Jat Kittag,Detonite Injector,5
 Jat Kittag,Salvage,5000
 Jat Kittag,Rubedo,600
+Jat Kittag,Forma,1
 Orthos Prime,Credits,15000
 Orthos Prime,Orthos Prime Blade,2
 Orthos Prime,Orthos Prime Handle,1
@@ -2407,29 +2938,33 @@ Galvacord,Credits,20000
 Galvacord,Argon Crystal,2
 Galvacord,Atmo Systems,5
 Galvacord,Ferrite,3600
+Galvacord,Circuits,1000
 Mire,Credits,20000
 Mire,Neural Sensors,2
 Mire,Ferrite,1000
 Mire,Nano Spores,1500
+Mire,Alloy Plate,2000
 Furax,Credits,30000
 Furax,Nano Spores,1000
 Furax,Salvage,900
 Furax,Ferrite,600
+Furax,Alloy Plate,500
 Dual Kamas,Credits,20000
-Dual Kamas,Kama,1
-Dual Kamas,Kama,1
+Dual Kamas,Kama,2
 Dual Kamas,Orokin Cell,1
 Kronen,Credits,20000
 Kronen,Ferrite,1500
 Kronen,Nano Spores,2000
 Kronen,Plastids,1000
-Dual Prime,Credits,15000
-Dual Prime,Dual Prime Blade,2
-Dual Prime,Dual Prime Handle,2
+Kronen,Argon Crystal,2
+Dual Kamas Prime,Credits,15000
+Dual Kamas Prime,Dual Kamas Prime Blade,2
+Dual Kamas Prime,Dual Kamas Prime Handle,2
 Kama,Credits,20000
 Kama,Neural Sensors,5
 Kama,Ferrite,1200
 Kama,Circuits,900
+Kama,Polymer Bundle,1200
 Ninkondi Prime,Credits,15000
 Ninkondi Prime,Ninkondi Prime Handle,2
 Ninkondi Prime,Chain,1
@@ -2438,6 +2973,7 @@ Dual Zoren,Credits,30000
 Dual Zoren,Morphics,4
 Dual Zoren,Salvage,900
 Dual Zoren,Ferrite,1100
+Dual Zoren,Alloy Plate,800
 Xoris,Credits,5000
 Xoris,Xoris Core,1
 Xoris,Xoris Handle,1
@@ -2446,11 +2982,14 @@ Ether Reaper,Credits,15000
 Ether Reaper,Polymer Bundle,1000
 Ether Reaper,Rubedo,1000
 Ether Reaper,Morphics,10
+Ether Reaper,Ferrite,1000
 Halikar,Credits,15000
 Halikar,Argon Crystal,2
 Halikar,Ferrite,4800
 Halikar,Nano Spores,5000
+Halikar,Oxium,500
 Amphis,Credits,30000
 Amphis,Neurodes,2
 Amphis,Salvage,500
 Amphis,Circuits,600
+Amphis,Alloy Plate,600

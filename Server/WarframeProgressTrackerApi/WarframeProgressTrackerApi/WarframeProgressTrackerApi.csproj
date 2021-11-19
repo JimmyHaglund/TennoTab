@@ -24,6 +24,7 @@
     <None Remove="Data\Seed\Archwings.csv" />
     <None Remove="Data\Seed\AssassinationRewards.csv" />
     <None Remove="Data\Seed\BaroKiteerTradeHistory.csv" />
+    <None Remove="Data\Seed\BlueprintComponents.csv" />
     <None Remove="Data\Seed\Blueprints.csv" />
     <None Remove="Data\Seed\BlueprintsComponents.csv" />
     <None Remove="Data\Seed\BountyRewards.csv" />
@@ -180,10 +181,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 

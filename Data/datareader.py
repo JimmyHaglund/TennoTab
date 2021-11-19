@@ -69,13 +69,11 @@ def read_weapon_blueprint_files():
    melee_weapons = read_csv(blueprint_file_names.melee_weapons)
    weapons = primary_weapons + secondary_weapons + melee_weapons
    
-   remove_first_columns(weapons, 2)
+   remove_first_columns(weapons, 3)
    
-   for weapon in weapons:
-      if weapon[0] == "Prime":
-         name = weapon[1].split('/').pop().split('_')[0]
-         weapon[0] = name + " Prime"
-      weapon.pop(1)
+   for weapon_row in weapons:
+      weapon_name = weapon_row[0].split('/').pop().replace('_',' ')
+      weapon_row[0] = weapon_name
    return weapons
 
 def read_item_source_files():

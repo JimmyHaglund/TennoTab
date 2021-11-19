@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using WarframeProgressTrackerApi.Models;
+using System.Diagnostics;
 
 namespace WarframeProgressTrackerApi.Data {
     public class WarframeProgressTrackerContext : IdentityDbContext<User> {
@@ -44,9 +45,87 @@ namespace WarframeProgressTrackerApi.Data {
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
 
+            SetupKeys(modelBuilder);
+            SeedData(modelBuilder);
+        }
+
+
+        private void SetupKeys(ModelBuilder modelBuilder) {
+            modelBuilder.Entity<AssassinationMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName });
+            modelBuilder.Entity<BaroKiteerProduct>()
+                .HasKey(entry => new { entry.ItemName, entry.SaleDate });
+            modelBuilder.Entity<BlueprintComponent>()
+                .HasKey(entry => new { entry.ItemName, entry.ComponentName});
+            modelBuilder.Entity<BountyReward>()
+                .HasKey(entry => new { entry.ItemName, entry.Location, entry.Rotation, entry.BountyTier, entry.BountyStage });
+            modelBuilder.Entity<Collectible>()
+                .HasKey(entry => entry.ItemName );
+            modelBuilder.Entity<DailyTributeMilestoneReward>()
+                .HasKey(entry => entry.ItemName);
+            modelBuilder.Entity<DefectionMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.Rotation });
+            modelBuilder.Entity<DefenseMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.Rotation, entry.MissionName });
+            modelBuilder.Entity<DerelictCacheDrop>()
+                .HasKey(entry => new { entry.ItemName, entry.System, entry.Rotation, entry.Faction });
+            modelBuilder.Entity<DisruptionMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.Rotation});
+            modelBuilder.Entity<EnemyItemDrop>()
+                .HasKey(entry => new { entry.ItemName, entry.EnemyName });
+            modelBuilder.Entity<EnemyMission>()
+                .HasKey(entry => new { entry.EnemyName, entry.MissionName });
+            modelBuilder.Entity<EnemyTileset>()
+                .HasKey(entry => new { entry.EnemyName, entry.TilesetName });
+            modelBuilder.Entity<ExterminateMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName });
+            modelBuilder.Entity<ExterminateResourceCacheReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.CacheNumber });
+            modelBuilder.Entity<Fish>()
+                .HasKey(entry => new { entry.FishName, entry.Biome });
+            modelBuilder.Entity<GranumVoidReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionType, entry.Rotation });
+            modelBuilder.Entity<InfestedSalvageMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.Rotation });
+            modelBuilder.Entity<InvasionReward>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<KuvaItem>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<MarketItem>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<Mission>()
+                .HasKey(entry => new { entry.MissionName });
+            modelBuilder.Entity<NorasChoiceNightwaveOffering>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<QuestReward>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<SabotageMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.Rotation });
+            modelBuilder.Entity<SanctuaryOnslaughtEliteReward>()
+                .HasKey(entry => new { entry.ItemName, entry.Rotation });
+            modelBuilder.Entity<SanctuaryOnslaughtReward>()
+                .HasKey(entry => new { entry.ItemName, entry.Rotation });
+            modelBuilder.Entity<SpyMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.UnlockedVaultNumber });
+            modelBuilder.Entity<SurvivalMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.MissionName, entry.Rotation });
+            modelBuilder.Entity<SyndicateOffering>()
+                .HasKey(entry => new { entry.ItemName });
+            modelBuilder.Entity<UserCollectible>()
+                .HasKey(entry => new { entry.ItemName, entry.UserId });
+                
+            modelBuilder.Entity<VoidFissureMissionReward>()
+                .HasKey(entry => new { entry.ItemName, entry.SystemName });
+            modelBuilder.Entity<VoidRelicDrop>()
+                .HasKey(entry => new { entry.ItemName, entry.RelicName });
+
+
+        }
+
+        private void SeedData(ModelBuilder modelBuilder) {
             SeedDataFromCsv<AssassinationMissionReward>(modelBuilder, "AssassinationRewards");
             SeedDataFromCsv<BaroKiteerProduct>(modelBuilder, "BaroKiteerTradeHistory");
-            SeedDataFromCsv<BlueprintComponent>(modelBuilder, "BlueprintComponents");
+            SeedDataFromCsv<BlueprintComponent>(modelBuilder, "BlueprintsComponents");
             SeedDataFromCsv<BountyReward>(modelBuilder, "BountyRewards");
             SeedDataFromCsv<Collectible>(modelBuilder, "Collectibles");
             SeedDataFromCsv<DailyTributeMilestoneReward>(modelBuilder, "DailyTributeMilestoneRewards");
@@ -55,7 +134,6 @@ namespace WarframeProgressTrackerApi.Data {
             SeedDataFromCsv<DerelictCacheDrop>(modelBuilder, "DerelictCacheDrops");
             SeedDataFromCsv<DisruptionMissionReward>(modelBuilder, "DisruptionMissionRewards");
             SeedDataFromCsv<EnemyItemDrop>(modelBuilder, "EnemyItemDrops");
-            SeedDataFromCsv<EnemyMission>(modelBuilder, "EnemyMissions");
             SeedDataFromCsv<EnemyMission>(modelBuilder, "EnemyMissions");
             SeedDataFromCsv<EnemyTileset>(modelBuilder, "EnemyTilesets");
             SeedDataFromCsv<ExterminateMissionReward>(modelBuilder, "ExterminateMissionRewards");
@@ -80,6 +158,7 @@ namespace WarframeProgressTrackerApi.Data {
         }
 
         private void SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName) where T : class {
+            // Debugger.Launch();
             var seedData = CsvSeedHelper.GetDataFromSeed<T>(seedFileName);
             foreach (var item in seedData) {
                 builder.Entity<T>().HasData(item);

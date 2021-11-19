@@ -30,4 +30,4 @@ for value in result:
    value[1] = name_filter.filter(value[1].strip())
    value[1] = name_filter.add_title_to_specific_component_name(value[1], value[0])
    # print(value)
-datawriter.write_csv("Blueprints", result)
+datawriter.write_csv("BlueprintsComponents", result)

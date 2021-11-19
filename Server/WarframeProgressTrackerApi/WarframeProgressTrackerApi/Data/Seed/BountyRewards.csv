@@ -29,14 +29,14 @@ Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,1,12.5
 Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,1,12.5
 Arum Spinosa Blueprint,Isolation Vault Arcana,A,2,2,7.81
 Arum Spinosa Blueprint,Isolation Vault Arcana,A,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,2,7.81
 Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,3,7.81
-Arum Spinosa Blueprint,Isolation Vault Arcana,B,2,3,7.81
-Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,3,7.81
+Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,2,7.81
 Arum Spinosa Blueprint,Isolation Vault Arcana,C,2,3,7.81
 Arum Spinosa Guard,Isolation Vault Arcana,A,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,B,2,2,4.69
 Arum Spinosa Guard,Isolation Vault Arcana,B,2,3,4.69
-Arum Spinosa Guard,Isolation Vault Arcana,B,2,3,4.69
-Arum Spinosa Guard,Isolation Vault Arcana,C,2,3,4.69
+Arum Spinosa Guard,Isolation Vault Arcana,C,2,2,4.69
 Arum Spinosa Guard,Isolation Vault Arcana,C,2,3,4.69
 Arum Spinosa Guard,Isolation Vault Arcana,A,2,4,7.5
 Arum Spinosa Guard,Isolation Vault Arcana,B,2,4,7.5
@@ -127,8 +127,6 @@ Xaku Systems Blueprint,Cambion Drift,B,4,2,8.22
 Xaku Systems Blueprint,Cambion Drift,B,4,3,8.22
 Xaku Systems Blueprint,Cambion Drift,A,4,4,6.45
 Xaku Systems Blueprint,Cambion Drift,B,4,4,6.45
-Xaku Systems Blueprint,Cambion Drift,A,4,4,11.32
-Xaku Systems Blueprint,Cambion Drift,B,4,4,11.32
 Xaku Chassis Blueprint,Cambion Drift,A,5,2,8.57
 Xaku Chassis Blueprint,Cambion Drift,A,5,3,8.57
 Xaku Chassis Blueprint,Cambion Drift,A,5,4,6.67
@@ -159,6 +157,6 @@ Revenant Chassis Blueprint,Plains of Eidolon,C,4,3,8.7
 Revenant Chassis Blueprint,Plains of Eidolon,A,4,4,8.79
 Revenant Chassis Blueprint,Plains of Eidolon,B,4,4,8.79
 Revenant Chassis Blueprint,Plains of Eidolon,C,4,4,8.51
-Revenant Chassis Blueprint,Plains of Eidolon,A,4,4,21.62
-Revenant Chassis Blueprint,Plains of Eidolon,B,4,4,21.62
-Revenant Chassis Blueprint,Plains of Eidolon,C,4,4,22.22
+Revenant Chassis Blueprint,Plains of Eidolon,A,4,5,21.62
+Revenant Chassis Blueprint,Plains of Eidolon,B,4,5,21.62
+Revenant Chassis Blueprint,Plains of Eidolon,C,4,5,22.22

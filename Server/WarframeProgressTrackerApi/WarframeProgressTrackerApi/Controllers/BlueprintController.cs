@@ -74,10 +74,10 @@ namespace WarframeProgressTrackerApi.Controllers {
         
         private IEnumerable<ComponentStack> Components(string resultName) {
             return from blueprintResource in _context.BlueprintResources
-                   where blueprintResource.ResultName == resultName
+                   where blueprintResource.ItemName == resultName
                    select new ComponentStack() {
                        ComponentName = blueprintResource.ComponentName,
-                       ComponentCount = blueprintResource.ComponentCount
+                       ComponentCount = blueprintResource.ComponentAmount
                    };
         }
 

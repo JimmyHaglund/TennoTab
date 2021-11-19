@@ -1,4 +1,4 @@
-ItemName,Enemy,DropChance
+ItemName,EnemyName,DropChance
 Akarius Blueprint,Demolisher Boiler,1.25
 Akarius Blueprint,Demolisher Charger,1.25
 Akarius Blueprint,Demolisher Juggernaut,1.25
@@ -35,7 +35,7 @@ Hildryn Neuroptics Blueprint,Exploiter Orb,38.72
 Hildryn Systems Blueprint,Exploiter Orb,22.56
 Hildryn Chassis Blueprint,Exploiter Orb,38.72
 Korrudo Blueprint,Tusk Thumper Bull,2.5
-Korrudo Blueprint,Tusk Thumper Bull,5
+Korrudo Blueprint,Tusk Thumper Doma,5
 Nyx Chassis Blueprint,Phorid,38.72
 Nyx Neuroptics Blueprint,Phorid,38.72
 Nyx Systems Blueprint,Phorid,22.56

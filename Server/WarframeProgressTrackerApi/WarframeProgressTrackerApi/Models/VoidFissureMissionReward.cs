@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WarframeProgressTrackerApi.Models {
+﻿namespace WarframeProgressTrackerApi.Models {
     public class VoidFissureMissionReward {
-        [Key] public string ItemName { get; set; }
-        [Key] public string SystemName { get; set; }
+        public string ItemName { get; set; }
+        public string SystemName { get; set; }
         public float DropChance { get; set; }
     }
 }

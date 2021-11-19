@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WarframeProgressTrackerApi.Models {
+﻿namespace WarframeProgressTrackerApi.Models {
     public class EnemyItemDrop {
-        [Key] public string ItemName { get; set; }
-        [Key] public string EnemyName { get; set; }
+        public string ItemName { get; set; }
+        public string EnemyName { get; set; }
         public float DropChance { get; set; }
     }
 }

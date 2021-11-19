@@ -63,9 +63,11 @@ namespace WarframeProgressTrackerApi {
         }
 
         private void ConfigureIdentity(IServiceCollection services) {
-            services.AddDbContext<WarframeProgressTrackerContext>(options =>
+            services.AddDbContext<WarframeProgressTrackerContext>(options => {
+                options.EnableSensitiveDataLogging();
                 // options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-                options.UseSqlite("Data Source=WarframeProgressTracker.db"));
+                options.UseSqlite("Data Source=WarframeProgressTracker.db");
+            });
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<WarframeProgressTrackerContext>()

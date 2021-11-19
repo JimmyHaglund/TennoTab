@@ -1,10 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WarframeProgressTrackerApi.Models {
+﻿namespace WarframeProgressTrackerApi.Models {
     public class SabotageMissionReward {
-        [Key] public string ItemName { get; set; }
-        [Key] public string MissionName { get; set; }
-        [Key] public char Rotation { get; set; }
+        public string ItemName { get; set; }
+        public string MissionName { get; set; }
+        public char Rotation { get; set; }
         public float DropChance { get; set; }
     }
 }

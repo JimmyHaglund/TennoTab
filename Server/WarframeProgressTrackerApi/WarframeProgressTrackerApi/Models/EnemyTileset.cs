@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WarframeProgressTrackerApi.Models {
+﻿namespace WarframeProgressTrackerApi.Models {
     public class EnemyTileset {
-        [Key] public string EnemyName { get; set; }
-        [Key] public string TilesetName { get; set; }
+        public string EnemyName { get; set; }
+        public string TilesetName { get; set; }
     }
 }

@@ -1,306 +1,10 @@
-Name,Category
-Raplak,AmpPrism
-Shwaak,AmpPrism
-Granmu,AmpPrism
-Rahn,AmpPrism
-Cantic,AmpPrism
-Lega,AmpPrism
-Klamora,AmpPrism
-Cortege,ArchGun
-Corvas,ArchGun
-Cyngas,ArchGun
-Dual Decurion,ArchGun
-Fluctus,ArchGun
-Grattler,ArchGun
-Imperator,ArchGun
-Imperator Vandal,ArchGun
-Kuva Ayanga,ArchGun
-Kuva Grattler,ArchGun
-Larkspur,ArchGun
-Mausolon,ArchGun
-Morgha,ArchGun
-Phaedra,ArchGun
-Prisma Dual Decurion,ArchGun
-Velocitus,ArchGun
-Agkuza,ArchMelee
-Centaur,ArchMelee
-Ironbridge,ArchMelee
-Kaszas,ArchMelee
-Knux,ArchMelee
-Onorix,ArchMelee
-Prisma Veritux,ArchMelee
-Rathbone,ArchMelee
-Veritux,ArchMelee
-Amesha,ArchWing
-Elytron,ArchWing
-Itzal,ArchWing
-Odonata,ArchWing
-Odonata Prime,ArchWing
-Ack & Brunt,MeleeWeapon
-Amphis,MeleeWeapon
-Anku,MeleeWeapon
-Ankyros,MeleeWeapon
-Ankyros Prime,MeleeWeapon
-Arca Titron,MeleeWeapon
-Arum Spinosa,MeleeWeapon
-Atterax,MeleeWeapon
-Bo,MeleeWeapon
-Bo Prime,MeleeWeapon
-Boltace,MeleeWeapon
-Broken Scepter,MeleeWeapon
-Broken War,MeleeWeapon
-Cadus,MeleeWeapon
-Cassowar,MeleeWeapon
-Cautacyst,MeleeWeapon
-Ceramic Dagger,MeleeWeapon
-Cerata,MeleeWeapon
-Ceti Lacera,MeleeWeapon
-Cobra & Crane,MeleeWeapon
-Cronus,MeleeWeapon
-Dakra Prime,MeleeWeapon
-Dark Dagger,MeleeWeapon
-Dark Split-Sword,MeleeWeapon
-Dark Sword,MeleeWeapon
-Desert Wind,MeleeWeapon
-Destreza,MeleeWeapon
-Destreza Prime,MeleeWeapon
-Dex Dakra,MeleeWeapon
-Diwata,MeleeWeapon
-Dragon Nikana,MeleeWeapon
-Dual Cleavers,MeleeWeapon
-Dual Ether,MeleeWeapon
-Dual Heat Swords,MeleeWeapon
-Dual Ichor,MeleeWeapon
-Dual Kamas,MeleeWeapon
-Dual Kamas Prime,MeleeWeapon
-Dual Keres,MeleeWeapon
-Dual Raza,MeleeWeapon
-Dual Skana,MeleeWeapon
-Dual Zoren,MeleeWeapon
-Endura,MeleeWeapon
-Ether Daggers,MeleeWeapon
-Ether Reaper,MeleeWeapon
-Ether Sword,MeleeWeapon
-Exalted Blade,MeleeWeapon
-Falcor,MeleeWeapon
-Fang,MeleeWeapon
-Fang Prime,MeleeWeapon
-Fragor,MeleeWeapon
-Fragor Prime,MeleeWeapon
-Furax,MeleeWeapon
-Furax Wraith,MeleeWeapon
-Galatine,MeleeWeapon
-Galatine Prime,MeleeWeapon
-Galvacord,MeleeWeapon
-Garuda?s Talons,MeleeWeapon
-Gazal Machete,MeleeWeapon
-Glaive,MeleeWeapon
-Glaive Prime,MeleeWeapon
-Gram,MeleeWeapon
-Gram Prime,MeleeWeapon
-Guandao,MeleeWeapon
-Guandao Prime,MeleeWeapon
-Gunsen,MeleeWeapon
-Halikar,MeleeWeapon
-Halikar Wraith,MeleeWeapon
-Hate,MeleeWeapon
-Heat Dagger,MeleeWeapon
-Heat Sword,MeleeWeapon
-Heliocor,MeleeWeapon
-Hirudo,MeleeWeapon
-Iron Staff,MeleeWeapon
-Jat Kittag,MeleeWeapon
-Jat Kusar,MeleeWeapon
-Jaw Sword,MeleeWeapon
-Kama,MeleeWeapon
-Karyst,MeleeWeapon
-Karyst Prime,MeleeWeapon
-Keratinos,MeleeWeapon
-Kesheg,MeleeWeapon
-Kestrel,MeleeWeapon
-Kogake,MeleeWeapon
-Kogake Prime,MeleeWeapon
-Korrudo,MeleeWeapon
-Kreska,MeleeWeapon
-Krohkur,MeleeWeapon
-Kronen,MeleeWeapon
-Kronen Prime,MeleeWeapon
-Kuva Shildeg,MeleeWeapon
-Lacera,MeleeWeapon
-Lecta,MeleeWeapon
-Lesion,MeleeWeapon
-Machete,MeleeWeapon
-Machete Wraith,MeleeWeapon
-Magistar,MeleeWeapon
-Masseter,MeleeWeapon
-Mios,MeleeWeapon
-Mire,MeleeWeapon
-Huras,Companion
-Raksa,Companion
-Sahasa,Companion
-Sunika,Companion
-Chesa,Companion
-Helminth Charger,Companion
-Vizier Predasite,Companion
-Pharaoh Predasite,Companion
-Medjay Predasite,Companion
-Carrier,Companion
-Carrier Prime,Companion
-Dethcube,Companion
-Diriga,Companion
-Djinn,Companion
-Helios,Companion
-Helios Prime,Companion
-Nautilus,Companion
-Oxylus,Companion
-Shade,Companion
-Prisma Shade,Companion
-Taxon,Companion
-Wyrm Prime,Companion
-Para,Companion
-Lambeo,Companion
-Oloro,Companion
-Nychus,Companion
-Adarza,Companion
-Smeeta,Companion
-Vasca,Companion
-Venari,Companion
-Sly Vulpaphyla,Companion
-Crescent Vulpaphyla,Companion
-Panzer Vulpaphyla,Companion
+ItemName,Category
 Acceltra,PrimaryWeapon
-Corinth,PrimaryWeapon
-Astilla,PrimaryWeapon
-Astilla Prime,PrimaryWeapon
-Attica,PrimaryWeapon
-Ambassador,PrimaryWeapon
-Amprex,PrimaryWeapon
-Arca Plasmor,PrimaryWeapon
-Argonak,PrimaryWeapon
-Artemis Bow,PrimaryWeapon
-Baza,PrimaryWeapon
-Baza Prime,PrimaryWeapon
-Boar,PrimaryWeapon
-Boar Prime,PrimaryWeapon
-Boltor,PrimaryWeapon
-Boltor Prime,PrimaryWeapon
-Braton,PrimaryWeapon
-Braton Prime,PrimaryWeapon
-Braton Vandal,PrimaryWeapon
-Bubunico,PrimaryWeapon
-Burston,PrimaryWeapon
-Burston Prime,PrimaryWeapon
-Buzlok,PrimaryWeapon
-Basmu,PrimaryWeapon
-Battacor,PrimaryWeapon
-Carmine Penta,PrimaryWeapon
-Cedo,PrimaryWeapon
-Cernos,PrimaryWeapon
-Cernos Prime,PrimaryWeapon
-Convectrix,PrimaryWeapon
-Corinth Prime,PrimaryWeapon
-Daikyu,PrimaryWeapon
-Dera,PrimaryWeapon
-Dera Vandal,PrimaryWeapon
-Dex Sybaris,PrimaryWeapon
-Drakgoon,PrimaryWeapon
-Dread,PrimaryWeapon
-Exergis,PrimaryWeapon
-Ferrox,PrimaryWeapon
-Flux Rifle,PrimaryWeapon
-Fulmin,PrimaryWeapon
-Gaxion,PrimaryWeapon
-Glaxion Vandal,PrimaryWeapon
-Gorgon,PrimaryWeapon
-Gorgon Wraith,PrimaryWeapon
-Grakata,PrimaryWeapon
-Grinlok,PrimaryWeapon
-Harpak,PrimaryWeapon
-Hek,PrimaryWeapon
-Hema,PrimaryWeapon
-Hind,PrimaryWeapon
-Ignis,PrimaryWeapon
-Ignis Wraith,PrimaryWeapon
-Javlok,PrimaryWeapon
-Karak,PrimaryWeapon
-Karak Wraith,PrimaryWeapon
-Kohm,PrimaryWeapon
-Komorex,PrimaryWeapon
-Kuva Bramma,PrimaryWeapon
-Kuva Cakkhurr,PrimaryWeapon
-Kuva Drakgoon,PrimaryWeapon
-Kuva Hek,PrimaryWeapon
-Kuva Hind,PrimaryWeapon
-Kuva Karak,PrimaryWeapon
-Kuva Kohm,PrimaryWeapon
-Kuva Ogris,PrimaryWeapon
-Kuva Quartakk,PrimaryWeapon
-Kuva Tonkor,PrimaryWeapon
-Kuva Zarr,PrimaryWeapon
-Lanka,PrimaryWeapon
-Latron,PrimaryWeapon
-Latron Prime,PrimaryWeapon
-Latron Wraith,PrimaryWeapon
-Lenz,PrimaryWeapon
-Miter,PrimaryWeapon
-Mk1-Braton,PrimaryWeapon
-MK1-Paris,PrimaryWeapon
-MK1-Strun,PrimaryWeapon
-Mutalist Cernos,PrimaryWeapon
-Mutalist Quanta,PrimaryWeapon
-Nagantaka,PrimaryWeapon
-Ogris,PrimaryWeapon
-Opticor,PrimaryWeapon
-Opticor Vandal,PrimaryWeapon
-Pathera,PrimaryWeapon
-Panthera Prime,PrimaryWeapon
-Paracyst,PrimaryWeapon
-Paris,PrimaryWeapon
-Paris Prime,PrimaryWeapon
-Penta,PrimaryWeapon
-Phage,PrimaryWeapon
-Phantasma,PrimaryWeapon
-Prisma Gorgon,PrimaryWeapon
-Prisma Grakata,PrimaryWeapon
-Prisma Grinlok,PrimaryWeapon
-Prisma Tetra,PrimaryWeapon
-Proboscis Cernos,PrimaryWeapon
-Quanta,PrimaryWeapon
-Quanta Vandal,PrimaryWeapon
-Quartakk,PrimaryWeapon
-Quellor,PrimaryWeapon
-Rakta Cernos,PrimaryWeapon
-Rubico,PrimaryWeapon
-Rubico Prime,PrimaryWeapon
-Sancti Tigris,PrimaryWeapon
-Scourge,PrimaryWeapon
-Secura Penta,PrimaryWeapon
-Shedu,PrimaryWeapon
-Simulor,PrimaryWeapon
-Snipetron,PrimaryWeapon
-Snipetron Vandal,PrimaryWeapon
-Soaktron,PrimaryWeapon
-Sobek,PrimaryWeapon
-Artax,RoboticWeapon
-Burst Laser,RoboticWeapon
-Cryotra,RoboticWeapon
-Deconstructor,RoboticWeapon
-Deconstructor Prime,RoboticWeapon
-Deth Machine Rifle,RoboticWeapon
-Helstrum,RoboticWeapon
-Multron,RoboticWeapon
-Prime Laser Rifle,RoboticWeapon
-Prisma Burst Laser,RoboticWeapon
-Stinger,RoboticWeapon
-Sweeper,RoboticWeapon
-Sweeper Prime,RoboticWeapon
-Tazicor,RoboticWeapon
-Verglas,RoboticWeapon
-Vulcax,RoboticWeapon
-Laser Rifle,RoboticWeapon
-Vulklok,RoboticWeapon
+Ack & Brunt,MeleeWeapon
 Acrid,SecondaryWeapon
+Adarza,Companion
 Afuris,SecondaryWeapon
+Agkuza,ArchMelee
 Akarius,SecondaryWeapon
 Akbolto,SecondaryWeapon
 Akbolto Prime,SecondaryWeapon
@@ -316,171 +20,466 @@ Aksomati,SecondaryWeapon
 Aksomati Prime,SecondaryWeapon
 Akstiletto,SecondaryWeapon
 Akstiletto Prime,SecondaryWeapon
+Akszani,SecondaryWeapon
 Akvasto,SecondaryWeapon
 Akvasto Prime,SecondaryWeapon
-Akszani,SecondaryWeapon
+Ambassador,PrimaryWeapon
+Amesha,ArchWing
+Amphis,MeleeWeapon
+Amprex,PrimaryWeapon
 Angstrum,SecondaryWeapon
+Anku,MeleeWeapon
+Ankyros,MeleeWeapon
+Ankyros Prime,MeleeWeapon
+Arca Plasmor,PrimaryWeapon
 Arca Scisco,SecondaryWeapon
+Arca Titron,MeleeWeapon
+Argonak,PrimaryWeapon
+Artax,RoboticWeapon
+Artemis Bow,PrimaryWeapon
+Arum Spinosa,MeleeWeapon
+Ash,Warframe
+Ash Prime,Warframe
+Astilla,PrimaryWeapon
+Astilla Prime,PrimaryWeapon
 Athodai,SecondaryWeapon
+Atlas,Warframe
+Atlas Prime,Warframe
 Atomos,SecondaryWeapon
+Atterax,MeleeWeapon
+Attica,PrimaryWeapon
 Azima,SecondaryWeapon
 Balefire Charger,SecondaryWeapon
 Ballistica,SecondaryWeapon
 Ballistica Prime,SecondaryWeapon
+Banshee,Warframe
+Banshee Prime,Warframe
+Baruuk,Warframe
+Basmu,PrimaryWeapon
+Battacor,PrimaryWeapon
+Baza,PrimaryWeapon
+Baza Prime,PrimaryWeapon
+Bo,MeleeWeapon
+Bo Prime,MeleeWeapon
+Boar,PrimaryWeapon
+Boar Prime,PrimaryWeapon
+Boltace,MeleeWeapon
 Bolto,SecondaryWeapon
+Boltor,PrimaryWeapon
+Boltor Prime,PrimaryWeapon
 Brakk,SecondaryWeapon
+Braton,PrimaryWeapon
+Braton Prime,PrimaryWeapon
+Braton Vandal,PrimaryWeapon
+Broken Scepter,MeleeWeapon
+Broken War,MeleeWeapon
 Bronco,SecondaryWeapon
 Bronco Prime,SecondaryWeapon
+Bubunico,PrimaryWeapon
+Burst Laser,RoboticWeapon
+Burston,PrimaryWeapon
+Burston Prime,PrimaryWeapon
+Buzlok,PrimaryWeapon
+Cadus,MeleeWeapon
+Cantic,AmpPrism
+Carmine Penta,PrimaryWeapon
+Carrier,Companion
+Carrier Prime,Companion
+Cassowar,MeleeWeapon
 Castanas,SecondaryWeapon
 Catabolyst,SecondaryWeapon
+Cautacyst,MeleeWeapon
+Cedo,PrimaryWeapon
+Centaur,ArchMelee
+Ceramic Dagger,MeleeWeapon
+Cerata,MeleeWeapon
+Cernos,PrimaryWeapon
+Cernos Prime,PrimaryWeapon
 Cestra,SecondaryWeapon
+Ceti Lacera,MeleeWeapon
+Chesa,Companion
+Chroma,Warframe
+Chroma Prime,Warframe
+Cobra & Crane,MeleeWeapon
+Convectrix,PrimaryWeapon
+Corinth,PrimaryWeapon
+Corinth Prime,PrimaryWeapon
+Cortege,ArchGun
+Corvas,ArchGun
+Crescent Vulpaphyla,Companion
+Cronus,MeleeWeapon
+Cryotra,RoboticWeapon
 Cyanex,SecondaryWeapon
 Cycron,SecondaryWeapon
+Cyngas,ArchGun
+Daikyu,PrimaryWeapon
+Dakra Prime,MeleeWeapon
+Dark Dagger,MeleeWeapon
+Dark Split-Sword,MeleeWeapon
+Dark Sword,MeleeWeapon
+Deconstructor,RoboticWeapon
+Deconstructor Prime,RoboticWeapon
+Dera,PrimaryWeapon
+Dera Vandal,PrimaryWeapon
+Desert Wind,MeleeWeapon
 Despair,SecondaryWeapon
+Destreza,MeleeWeapon
+Destreza Prime,MeleeWeapon
+Deth Machine Rifle,RoboticWeapon
+Dethcube,Companion
 Detron,SecondaryWeapon
+Dex Dakra,MeleeWeapon
 Dex Furis,SecondaryWeapon
 Dex Pixia,SecondaryWeapon
+Dex Sybaris,PrimaryWeapon
+Diriga,Companion
+Diwata,MeleeWeapon
+Djinn,Companion
+Dragon Nikana,MeleeWeapon
+Drakgoon,PrimaryWeapon
+Dread,PrimaryWeapon
 Dual Cestra,SecondaryWeapon
+Dual Cleavers,MeleeWeapon
+Dual Decurion,ArchGun
+Dual Ether,MeleeWeapon
+Dual Heat Swords,MeleeWeapon
+Dual Ichor,MeleeWeapon
+Dual Kamas,MeleeWeapon
+Dual Kamas Prime,MeleeWeapon
+Dual Keres,MeleeWeapon
+Dual Raza,MeleeWeapon
+Dual Skana,MeleeWeapon
 Dual Toxocyst,SecondaryWeapon
+Dual Zoren,MeleeWeapon
+Elytron,ArchWing
+Ember,Warframe
+Ember Prime,Warframe
 Embolist,SecondaryWeapon
+Endura,MeleeWeapon
 Epitaph,SecondaryWeapon
+Equinox,Warframe
+Equinox Prime,Warframe
+Ether Daggers,MeleeWeapon
+Ether Reaper,MeleeWeapon
+Ether Sword,MeleeWeapon
 Euphona Prime,SecondaryWeapon
+Exalted Blade,MeleeWeapon
+Excalibur,Warframe
+Excalibur Prime,Warframe
+Excalibur Umbra,Warframe
+Exergis,PrimaryWeapon
+Falcor,MeleeWeapon
+Fang,MeleeWeapon
+Fang Prime,MeleeWeapon
+Ferrox,PrimaryWeapon
+Fluctus,ArchGun
+Flux Rifle,PrimaryWeapon
+Fragor,MeleeWeapon
+Fragor Prime,MeleeWeapon
+Frost,Warframe
+Frost Prime,Warframe
+Fulmin,PrimaryWeapon
+Furax,MeleeWeapon
+Furax Wraith,MeleeWeapon
 Furis,SecondaryWeapon
 Fusilai,SecondaryWeapon
+Galatine,MeleeWeapon
+Galatine Prime,MeleeWeapon
+Galvacord,MeleeWeapon
 Gammacor,SecondaryWeapon
+Gara,Warframe
+Gara Prime,Warframe
+Garuda,Warframe
+Garuda?s Talons,MeleeWeapon
+Gauss,Warframe
+Gaxion,PrimaryWeapon
+Gazal Machete,MeleeWeapon
+Glaive,MeleeWeapon
+Glaive Prime,MeleeWeapon
+Glaxion Vandal,PrimaryWeapon
+Gorgon,PrimaryWeapon
+Gorgon Wraith,PrimaryWeapon
+Grakata,PrimaryWeapon
+Gram,MeleeWeapon
+Gram Prime,MeleeWeapon
+Granmu,AmpPrism
+Grattler,ArchGun
+Grendel,Warframe
+Grinlok,PrimaryWeapon
+Guandao,MeleeWeapon
+Guandao Prime,MeleeWeapon
+Gunsen,MeleeWeapon
+Halikar,MeleeWeapon
+Halikar Wraith,MeleeWeapon
+Harpak,PrimaryWeapon
+Harrow,Warframe
+Hate,MeleeWeapon
+Heat Dagger,MeleeWeapon
+Heat Sword,MeleeWeapon
+Hek,PrimaryWeapon
+Heliocor,MeleeWeapon
+Helios,Companion
+Helios Prime,Companion
+Helminth Charger,Companion
+Helstrum,RoboticWeapon
+Hema,PrimaryWeapon
 Hikou,SecondaryWeapon
 Hikou Prime,SecondaryWeapon
+Hildryn,Warframe
+Hind,PrimaryWeapon
+Hirudo,MeleeWeapon
+Huras,Companion
+Hydroid,Warframe
+Hydroid Prime,Warframe
 Hystrix,SecondaryWeapon
+Ignis,PrimaryWeapon
+Ignis Wraith,PrimaryWeapon
+Imperator,ArchGun
+Imperator Vandal,ArchGun
+Inaros,Warframe
+Inaros Prime,Warframe
+Iron Staff,MeleeWeapon
+Ironbridge,ArchMelee
+Itzal,ArchWing
+Ivara,Warframe
+Ivara Prime,Warframe
+Jat Kittag,MeleeWeapon
+Jat Kusar,MeleeWeapon
+Javlok,PrimaryWeapon
+Jaw Sword,MeleeWeapon
+Kama,MeleeWeapon
+Karak,PrimaryWeapon
+Karak Wraith,PrimaryWeapon
+Karyst,MeleeWeapon
+Karyst Prime,MeleeWeapon
+Kaszas,ArchMelee
+Keratinos,MeleeWeapon
+Kesheg,MeleeWeapon
+Kestrel,MeleeWeapon
+Khora,Warframe
+Klamora,AmpPrism
 Knell,SecondaryWeapon
+Knux,ArchMelee
+Kogake,MeleeWeapon
+Kogake Prime,MeleeWeapon
+Kohm,PrimaryWeapon
 Kohomak,SecondaryWeapon
+Komorex,PrimaryWeapon
 Kompressa,SecondaryWeapon
+Korrudo,MeleeWeapon
 Kraken,SecondaryWeapon
+Kreska,MeleeWeapon
+Krohkur,MeleeWeapon
+Kronen,MeleeWeapon
+Kronen Prime,MeleeWeapon
 Kulstar,SecondaryWeapon
 Kunai,SecondaryWeapon
+Kuva Ayanga,ArchGun
 Kuva Brakk,SecondaryWeapon
+Kuva Bramma,PrimaryWeapon
+Kuva Cakkhurr,PrimaryWeapon
+Kuva Drakgoon,PrimaryWeapon
+Kuva Grattler,ArchGun
+Kuva Hek,PrimaryWeapon
+Kuva Hind,PrimaryWeapon
+Kuva Karak,PrimaryWeapon
+Kuva Kohm,PrimaryWeapon
 Kuva Kraken,SecondaryWeapon
 Kuva Nukor,SecondaryWeapon
+Kuva Ogris,PrimaryWeapon
+Kuva Quartakk,PrimaryWeapon
 Kuva Seer,SecondaryWeapon
+Kuva Shildeg,MeleeWeapon
+Kuva Tonkor,PrimaryWeapon
 Kuva Twin Stubbas,SecondaryWeapon
+Kuva Zarr,PrimaryWeapon
+Lacera,MeleeWeapon
+Lambeo,Companion
+Lanka,PrimaryWeapon
+Larkspur,ArchGun
+Laser Rifle,RoboticWeapon
 Lato,SecondaryWeapon
 Lato Prime,SecondaryWeapon
 Lato Vandal,SecondaryWeapon
+Latron,PrimaryWeapon
+Latron Prime,PrimaryWeapon
+Latron Wraith,PrimaryWeapon
+Lavos,Warframe
+Lecta,MeleeWeapon
+Lega,AmpPrism
+Lenz,PrimaryWeapon
+Lesion,MeleeWeapon
 Lex,SecondaryWeapon
 Lex Prime,SecondaryWeapon
+Limbo,Warframe
+Limbo Prime,Warframe
+Loki,Warframe
+Loki Prime,Warframe
+Machete,MeleeWeapon
+Machete Wraith,MeleeWeapon
+Mag,Warframe
+Mag Prime,Warframe
+Magistar,MeleeWeapon
 Magnus,SecondaryWeapon
 Mara Detron,SecondaryWeapon
 Marelok,SecondaryWeapon
+Masseter,MeleeWeapon
+Mausolon,ArchGun
+Medjay Predasite,Companion
+Mesa,Warframe
+Mesa Prime,Warframe
+Mios,MeleeWeapon
+Mirage Prime,Warframe
+Mire,MeleeWeapon
+Miter,PrimaryWeapon
+Mk1-Braton,PrimaryWeapon
 MK1-Furis,SecondaryWeapon
 MK1-Kunai,SecondaryWeapon
+MK1-Paris,PrimaryWeapon
+MK1-Strun,PrimaryWeapon
+Morgha,ArchGun
+Multron,RoboticWeapon
+Mutalist Cernos,PrimaryWeapon
+Mutalist Quanta,PrimaryWeapon
+Nagantaka,PrimaryWeapon
+Nautilus,Companion
+Nekros,Warframe
+Nekros Prime,Warframe
+Nezha,Warframe
+Nezha Prime,Warframe
+Nidus,Warframe
+Nova,Warframe
+Nova Prime,Warframe
 Nukor,SecondaryWeapon
+Nychus,Companion
+Nyx,Warframe
+Nyx Prime,Warframe
+Oberon,Warframe
+Oberon Prime,Warframe
+Octavia,Warframe
+Octavia Prime,Warframe
 Ocucor,SecondaryWeapon
+Odonata,ArchWing
+Odonata Prime,ArchWing
+Ogris,PrimaryWeapon
+Oloro,Companion
+Onorix,ArchMelee
+Opticor,PrimaryWeapon
+Opticor Vandal,PrimaryWeapon
+Oxylus,Companion
 Pandero,SecondaryWeapon
 Pandero Prime,SecondaryWeapon
+Panthera Prime,PrimaryWeapon
+Panzer Vulpaphyla,Companion
+Para,Companion
+Paracyst,PrimaryWeapon
+Paris,PrimaryWeapon
+Paris Prime,PrimaryWeapon
+Pathera,PrimaryWeapon
+Penta,PrimaryWeapon
+Phaedra,ArchGun
+Phage,PrimaryWeapon
+Phantasma,PrimaryWeapon
+Pharaoh Predasite,Companion
 Plinx,SecondaryWeapon
 Pox,SecondaryWeapon
+Prime Laser Rifle,RoboticWeapon
 Prisma Angstrum,SecondaryWeapon
+Prisma Burst Laser,RoboticWeapon
+Prisma Dual Decurion,ArchGun
+Prisma Gorgon,PrimaryWeapon
+Prisma Grakata,PrimaryWeapon
+Prisma Grinlok,PrimaryWeapon
+Prisma Shade,Companion
+Prisma Tetra,PrimaryWeapon
 Prisma Twin Gremlins,SecondaryWeapon
+Prisma Veritux,ArchMelee
+Proboscis Cernos,PrimaryWeapon
+Protea,Warframe
 Pyrana,SecondaryWeapon
 Pyrana Prime,SecondaryWeapon
+Quanta,PrimaryWeapon
+Quanta Vandal,PrimaryWeapon
+Quartakk,PrimaryWeapon
 Quatz,SecondaryWeapon
+Quellor,PrimaryWeapon
+Rahn,AmpPrism
+Raksa,Companion
 Rakta Ballistica,SecondaryWeapon
+Rakta Cernos,PrimaryWeapon
+Raplak,AmpPrism
+Rathbone,ArchMelee
 Regulators,SecondaryWeapon
+Revenant,Warframe
+Rhino Prime,Warframe
+Rubico,PrimaryWeapon
+Rubico Prime,PrimaryWeapon
+Sahasa,Companion
 Sancti Castanas,SecondaryWeapon
+Sancti Tigris,PrimaryWeapon
+Saryn,Warframe
+Saryn Prime,Warframe
+Scourge,PrimaryWeapon
 Secura Dual Cestra,SecondaryWeapon
+Secura Penta,PrimaryWeapon
 Seer,SecondaryWeapon
 Sepulcrum,SecondaryWeapon
+Sevagoth,Warframe
+Shade,Companion
+Shedu,PrimaryWeapon
+Shwaak,AmpPrism
 Sicarus,SecondaryWeapon
 Sicarus Prime,SecondaryWeapon
+Simulor,PrimaryWeapon
+Sly Vulpaphyla,Companion
+Smeeta,Companion
+Snipetron,PrimaryWeapon
+Snipetron Vandal,PrimaryWeapon
+Soaktron,PrimaryWeapon
+Sobek,PrimaryWeapon
 Sonicor,SecondaryWeapon
 Spectra,SecondaryWeapon
 Spectra Vandal,SecondaryWeapon
 Spira,SecondaryWeapon
 Spira Prime,SecondaryWeapon
 Staticor,SecondaryWeapon
+Stinger,RoboticWeapon
 Stubba,SecondaryWeapon
 Stug,SecondaryWeapon
+Sunika,Companion
+Sweeper,RoboticWeapon
+Sweeper Prime,RoboticWeapon
 Synoid Gammacor,SecondaryWeapon
 Talons,SecondaryWeapon
+Taxon,Companion
+Tazicor,RoboticWeapon
 Telos Akbolto,SecondaryWeapon
 Tenet Cycron,SecondaryWeapon
 Tenet Detron,SecondaryWeapon
 Tenet Diplos,SecondaryWeapon
 Tenet Spirex,SecondaryWeapon
-Twin Grakatas,SecondaryWeapon
-Excalibur,Warframe
-Ash,Warframe
-Atlas,Warframe
-Banshee,Warframe
-Baruuk,Warframe
-Chroma,Warframe
-Ember,Warframe
-Equinox,Warframe
-Frost,Warframe
-Gara,Warframe
-Garuda,Warframe
-Gauss,Warframe
-Grendel,Warframe
-Harrow,Warframe
-Hildryn,Warframe
-Hydroid,Warframe
-Inaros,Warframe
-Ivara,Warframe
-Khora,Warframe
-Lavos,Warframe
-Limbo,Warframe
-Loki,Warframe
-Mag,Warframe
-Mesa,Warframe
-Nekros,Warframe
-Nezha,Warframe
-Nidus,Warframe
-Nova,Warframe
-Nyx,Warframe
-Oberon,Warframe
-Octavia,Warframe
-Protea,Warframe
-Revenant,Warframe
-Saryn,Warframe
-Sevagoth,Warframe
 Titania,Warframe
+Titania Prime,Warframe
 Trinity,Warframe
+Trinity Prime,Warframe
+Twin Grakatas,SecondaryWeapon
 Valkyr,Warframe
+Valkyr Prime,Warframe
+Vasca,Companion
 Vauban,Warframe
+Vauban Prime,Warframe
+Velocitus,ArchGun
+Venari,Companion
+Verglas,RoboticWeapon
+Veritux,ArchMelee
+Vizier Predasite,Companion
+Volt Prime,Warframe
+Vulcax,RoboticWeapon
+Vulklok,RoboticWeapon
 Wisp,Warframe
 Wukong,Warframe
+Wukong Prime,Warframe
+Wyrm Prime,Companion
 Yareli,Warframe
 Zephyr,Warframe
-Ash Prime,Warframe
-Atlas Prime,Warframe
-Banshee Prime,Warframe
-Chroma Prime,Warframe
-Ember Prime,Warframe
-Equinox Prime,Warframe
-Excalibur Prime,Warframe
-Excalibur Umbra,Warframe
-Frost Prime,Warframe
-Gara Prime,Warframe
-Hydroid Prime,Warframe
-Inaros Prime,Warframe
-Ivara Prime,Warframe
-Limbo Prime,Warframe
-Loki Prime,Warframe
-Mag Prime,Warframe
-Mesa Prime,Warframe
-Mirage Prime,Warframe
-Nekros Prime,Warframe
-Nezha Prime,Warframe
-Nova Prime,Warframe
-Nyx Prime,Warframe
-Oberon Prime,Warframe
-Octavia Prime,Warframe
-Rhino Prime,Warframe
-Saryn Prime,Warframe
-Octavia Prime,Warframe
-Titania Prime,Warframe
-Trinity Prime,Warframe
-Valkyr Prime,Warframe
-Vauban Prime,Warframe
-Volt Prime,Warframe
-Wukong Prime,Warframe
 Zephyr Prime,Warframe

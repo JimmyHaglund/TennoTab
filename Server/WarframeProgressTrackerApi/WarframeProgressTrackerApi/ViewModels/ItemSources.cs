@@ -164,7 +164,7 @@ namespace WarframeProgressTrackerApi.ViewModels {
 
     public class VoidRelicSource {
         public string RelicName { get; set; }
-        public float Rarity { get; set; }
+        public string Rarity { get; set; }
     }
     #endregion
 }

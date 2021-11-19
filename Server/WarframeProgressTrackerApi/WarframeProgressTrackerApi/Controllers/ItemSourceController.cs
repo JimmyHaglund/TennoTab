@@ -62,7 +62,7 @@ namespace WarframeProgressTrackerApi.Controllers {
             return from data in _context.AssassinationMissionRewards
                    where data.ItemName == itemName
                    select new AssassinationMissionSource() {
-                       Mission = data.Mission,
+                       Mission = data.MissionName,
                        DropChance = data.DropChance
                    };
         }

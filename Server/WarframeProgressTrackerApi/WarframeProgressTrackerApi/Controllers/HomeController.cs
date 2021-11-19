@@ -21,51 +21,8 @@ namespace WarframeProgressTrackerApi.Controllers {
             _sessionUser = sessionUser;
         }
 
-        public IEnumerable<Collectible> Index() {
-            var form = new CollectibleSearchForm() {
-                IncludeFrames = true,
-                OnlyOnWishlist = false
-            };
-            var userId = _sessionUser.IdFromRequest(Request);
-
-            return GrabFrames(form, userId);
-        }
-
-        private IEnumerable<Collectible> GrabFrames(CollectibleSearchForm form, string userId) {
-            if (form.IncludeFrames) {
-                var frames = _context.Frames.ToArray();
-                var userItems = _context.UserFrames
-                    .Where(item => item.UserId == userId);
-                return Grab(frames, userItems, "Warframe", "frame", form);
-            }
-            return new Collectible[0];
-        }
-
-        private IEnumerable<Collectible> Grab(
-                IEnumerable<WarframeItem> items,
-                IEnumerable<UserCollectible> userItems,
-                string category, string link,
-                CollectibleSearchForm form
-                ) {
-            return items.
-                Where(item => {
-                    if (!form.OnlyOnWishlist) return true;
-                    var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
-                    if (userItem != null && userItem.OnWishlist) return true;
-                    return false;
-                })
-                .Select(item => {
-                    var userItem = userItems.FirstOrDefault(uItem => uItem.ItemId == item.Id);
-                    return new Collectible() {
-                        Id = item.Id,
-                        Name = item.Name,
-                        Category = category,
-                        DetailsLink = link + "/" + item.Id,
-                        Obtained = userItem != null ? userItem.Obtained : false,
-                        Mastered = userItem != null ? userItem.MasteryRank >= 30 : false,
-                        OnWishlist = userItem != null ? userItem.OnWishlist : false
-                    };
-                });
+        public string Index() {
+            return "Welcome to Warframe Progress Tracker!";
         }
     }
 }

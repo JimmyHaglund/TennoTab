@@ -9,6 +9,7 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<AssassinationMissionReward> AssassinationMissionRewards { get; set; }
         public DbSet<BaroKiteerProduct> BaroKiteerProducts { get; set; }
         public DbSet<BlueprintComponent> BlueprintResources { get; set; }
+        public DbSet<BountyReward> BountyRewards { get; set; }
         public DbSet<Collectible> Collectibles { get; set; }
         public DbSet<DailyTributeMilestoneReward> DailyTributeMilestoneRewards { get; set; }
         public DbSet<DefectionMissionReward> DefectionMissionRewards { get; set; }

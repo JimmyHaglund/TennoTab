@@ -10,7 +10,6 @@ namespace WarframeProgressTrackerApi.Controllers {
     [ApiController]
     [EnableCors]
     public class BlueprintController : ControllerBase {
-        #region Endpoints
         [HttpGet, Route("[controller]/[action]/{resultName}")]
         public Blueprint Get(string resultName) {
             var blueprint = new Blueprint() { ResultName = resultName };
@@ -22,9 +21,8 @@ namespace WarframeProgressTrackerApi.Controllers {
         public IEnumerable<ComponentStack> TotalResourceCost(string resultName) {
             return GetTotalForgingResourceCost(resultName);
         }
-#endregion
 
-#region Body
+        #region Body
         private WarframeProgressTrackerContext _context;
         public BlueprintController(WarframeProgressTrackerContext context) {
             _context = context;

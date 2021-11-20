@@ -9,8 +9,8 @@ using WarframeProgressTrackerApi.Data;
 namespace WarframeProgressTrackerApi.Migrations
 {
     [DbContext(typeof(WarframeProgressTrackerContext))]
-    [Migration("20211119203412_RemoveSpaceAfterSomeComponentNames")]
-    partial class RemoveSpaceAfterSomeComponentNames
+    [Migration("20211120000611_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21653,6 +21653,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gauss Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 2950
+                        },
+                        new
+                        {
                             ItemName = "Gauss Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21677,6 +21683,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gauss Chassis",
+                            ComponentName = "Grokdrul",
+                            ComponentAmount = 55
+                        },
+                        new
+                        {
                             ItemName = "Gauss Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21698,6 +21710,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Gauss Systems",
                             ComponentName = "Mytocardia Spore",
                             ComponentAmount = 70
+                        },
+                        new
+                        {
+                            ItemName = "Gauss Systems",
+                            ComponentName = "Thermal Sludge",
+                            ComponentAmount = 85
                         },
                         new
                         {
@@ -21749,6 +21767,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mirage Neuroptics",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Mirage Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21773,6 +21797,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mirage Chassis",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Mirage Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21793,6 +21823,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Mirage Systems",
                             ComponentName = "Control Module",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Mirage Systems",
+                            ComponentName = "Orokin Cell",
                             ComponentAmount = 1
                         },
                         new
@@ -21845,6 +21881,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Inaros Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Inaros Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21869,6 +21911,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Inaros Chassis",
+                            ComponentName = "Oxium",
+                            ComponentAmount = 100
+                        },
+                        new
+                        {
                             ItemName = "Inaros Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21890,6 +21938,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Inaros Systems",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 1600
+                        },
+                        new
+                        {
+                            ItemName = "Inaros Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -21941,6 +21995,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nezha Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 4500
+                        },
+                        new
+                        {
                             ItemName = "Nezha Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21965,6 +22025,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nezha Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Nezha Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -21986,6 +22052,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nezha Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 5000
+                        },
+                        new
+                        {
+                            ItemName = "Nezha Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 4200
                         },
                         new
                         {
@@ -22037,6 +22109,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Garuda Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 5000
+                        },
+                        new
+                        {
                             ItemName = "Garuda Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22061,6 +22139,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Garuda Chassis",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 2200
+                        },
+                        new
+                        {
                             ItemName = "Garuda Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22082,6 +22166,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Garuda Systems",
                             ComponentName = "Venerdo Alloy",
                             ComponentAmount = 40
+                        },
+                        new
+                        {
+                            ItemName = "Garuda Systems",
+                            ComponentName = "Polymer Bundle",
+                            ComponentAmount = 2400
                         },
                         new
                         {
@@ -22133,6 +22223,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Volt Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Volt Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22178,6 +22274,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Volt Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Volt Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -22229,6 +22331,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mag Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Mag Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22274,6 +22382,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Mag Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Mag Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -22325,6 +22439,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Baruuk Neuroptics",
+                            ComponentName = "Ecosynth Analyzer",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Baruuk Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22349,6 +22469,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Baruuk Chassis",
+                            ComponentName = "Marquise Thyst",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Baruuk Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22370,6 +22496,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Baruuk Systems",
                             ComponentName = "Entroplasma",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Baruuk Systems",
+                            ComponentName = "Radiant Zodian",
+                            ComponentAmount = 5
                         },
                         new
                         {
@@ -22421,6 +22553,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Loki Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Loki Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22466,6 +22604,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Loki Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Loki Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -22517,6 +22661,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Saryn Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 400
+                        },
+                        new
+                        {
                             ItemName = "Saryn Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22562,6 +22712,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Saryn Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 550
+                        },
+                        new
+                        {
+                            ItemName = "Saryn Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 350
                         },
                         new
                         {
@@ -22613,6 +22769,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Protea Neuroptics",
+                            ComponentName = "Neural Sensors",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Protea Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22637,6 +22799,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Protea Chassis",
+                            ComponentName = "Morphics",
+                            ComponentAmount = 12
+                        },
+                        new
+                        {
                             ItemName = "Protea Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22658,6 +22826,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Protea Systems",
                             ComponentName = "Titanium",
                             ComponentAmount = 1750
+                        },
+                        new
+                        {
+                            ItemName = "Protea Systems",
+                            ComponentName = "Control Module",
+                            ComponentAmount = 10
                         },
                         new
                         {
@@ -22709,6 +22883,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Atlas Neuroptics",
+                            ComponentName = "Neurodes",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Atlas Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22733,6 +22913,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Atlas Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Atlas Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22754,6 +22940,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Atlas Systems",
                             ComponentName = "Morphics",
                             ComponentAmount = 5
+                        },
+                        new
+                        {
+                            ItemName = "Atlas Systems",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -22805,6 +22997,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wukong Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Wukong Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22829,6 +23027,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wukong Chassis",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 4
+                        },
+                        new
+                        {
                             ItemName = "Wukong Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22850,6 +23054,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Wukong Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 8000
+                        },
+                        new
+                        {
+                            ItemName = "Wukong Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 4000
                         },
                         new
                         {
@@ -22901,6 +23111,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Banshee Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Banshee Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -22946,6 +23162,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Banshee Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Banshee Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 400
                         },
                         new
                         {
@@ -22997,6 +23219,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Lavos Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 2750
+                        },
+                        new
+                        {
                             ItemName = "Lavos Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23021,6 +23249,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Lavos Chassis",
+                            ComponentName = "Polymer Bundle",
+                            ComponentAmount = 5500
+                        },
+                        new
+                        {
                             ItemName = "Lavos Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23042,6 +23276,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Lavos Systems",
                             ComponentName = "Hexenon",
                             ComponentAmount = 550
+                        },
+                        new
+                        {
+                            ItemName = "Lavos Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 3000
                         },
                         new
                         {
@@ -23201,6 +23441,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ember Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Ember Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23246,6 +23492,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Ember Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Ember Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -23297,6 +23549,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Khora Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 16000
+                        },
+                        new
+                        {
                             ItemName = "Khora Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23321,6 +23579,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Khora Chassis",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 4300
+                        },
+                        new
+                        {
                             ItemName = "Khora Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23342,6 +23606,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Khora Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 2600
+                        },
+                        new
+                        {
+                            ItemName = "Khora Systems",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 11500
                         },
                         new
                         {
@@ -23393,6 +23663,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Valkyr Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Valkyr Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23438,6 +23714,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Valkyr Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Valkyr Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 400
                         },
                         new
                         {
@@ -23489,6 +23771,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mesa Neuroptics",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Mesa Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23513,6 +23801,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mesa Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 1000
+                        },
+                        new
+                        {
                             ItemName = "Mesa Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23534,6 +23828,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Mesa Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 300
+                        },
+                        new
+                        {
+                            ItemName = "Mesa Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -23585,6 +23885,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Titania Neuroptics",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 700
+                        },
+                        new
+                        {
                             ItemName = "Titania Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23609,6 +23915,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Titania Chassis",
+                            ComponentName = "Tellurium",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Titania Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23630,6 +23942,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Titania Systems",
                             ComponentName = "Cryotic",
                             ComponentAmount = 2200
+                        },
+                        new
+                        {
+                            ItemName = "Titania Systems",
+                            ComponentName = "Tellurium",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -23681,6 +23999,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nidus Neuroptics",
+                            ComponentName = "Neural Sensors",
+                            ComponentAmount = 3
+                        },
+                        new
+                        {
                             ItemName = "Nidus Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23705,6 +24029,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nidus Chassis",
+                            ComponentName = "Neurodes",
+                            ComponentAmount = 3
+                        },
+                        new
+                        {
                             ItemName = "Nidus Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23726,6 +24056,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nidus Systems",
                             ComponentName = "Morphics",
                             ComponentAmount = 14
+                        },
+                        new
+                        {
+                            ItemName = "Nidus Systems",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 6
                         },
                         new
                         {
@@ -23777,6 +24113,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ivara Neuroptics",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Ivara Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23801,6 +24143,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ivara Chassis",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 4
+                        },
+                        new
+                        {
                             ItemName = "Ivara Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23822,6 +24170,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Ivara Systems",
                             ComponentName = "Nitain Extract",
                             ComponentAmount = 5
+                        },
+                        new
+                        {
+                            ItemName = "Ivara Systems",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -23873,6 +24227,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Octavia Neuroptics",
+                            ComponentName = "Neural Sensors",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Octavia Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23897,6 +24257,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Octavia Chassis",
+                            ComponentName = "Neurodes",
+                            ComponentAmount = 3
+                        },
+                        new
+                        {
                             ItemName = "Octavia Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -23918,6 +24284,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Octavia Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 3000
+                        },
+                        new
+                        {
+                            ItemName = "Octavia Systems",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 5
                         },
                         new
                         {
@@ -23969,6 +24341,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Excalibur Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Excalibur Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24014,6 +24392,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Excalibur Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Excalibur Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -24065,6 +24449,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Sevagoth Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 2750
+                        },
+                        new
+                        {
                             ItemName = "Sevagoth Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24089,6 +24479,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Sevagoth Chassis",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 3300
+                        },
+                        new
+                        {
                             ItemName = "Sevagoth Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24110,6 +24506,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Sevagoth Systems",
                             ComponentName = "Asterite",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Sevagoth Systems",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 2950
                         },
                         new
                         {
@@ -24161,6 +24563,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nekros Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Nekros Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24206,6 +24614,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nekros Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Nekros Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -24257,6 +24671,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ash Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Ash Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24301,6 +24721,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Ash Systems",
                             ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Ash Systems",
+                            ComponentName = "Plastids",
                             ComponentAmount = 500
                         },
                         new
@@ -24353,6 +24779,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Xaku Neuroptics",
+                            ComponentName = "Esher Devar",
+                            ComponentAmount = 40
+                        },
+                        new
+                        {
                             ItemName = "Xaku Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24373,6 +24805,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Xaku Chassis",
                             ComponentName = "Venerdo Alloy",
+                            ComponentAmount = 50
+                        },
+                        new
+                        {
+                            ItemName = "Xaku Chassis",
+                            ComponentName = "Lucent Teroglobe",
                             ComponentAmount = 50
                         },
                         new
@@ -24398,6 +24836,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Xaku Systems",
                             ComponentName = "Pustulite",
                             ComponentAmount = 45
+                        },
+                        new
+                        {
+                            ItemName = "Xaku Systems",
+                            ComponentName = "Ganglion",
+                            ComponentAmount = 60
                         },
                         new
                         {
@@ -24449,6 +24893,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Rhino Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Rhino Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24494,6 +24944,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Rhino Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Rhino Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 600
                         },
                         new
                         {
@@ -24545,6 +25001,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Grendel Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 3800
+                        },
+                        new
+                        {
                             ItemName = "Grendel Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24569,6 +25031,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Grendel Chassis",
+                            ComponentName = "Murkray Liver",
+                            ComponentAmount = 15
+                        },
+                        new
+                        {
                             ItemName = "Grendel Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24590,6 +25058,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Grendel Systems",
                             ComponentName = "Icon Fish Meat",
                             ComponentAmount = 125
+                        },
+                        new
+                        {
+                            ItemName = "Grendel Systems",
+                            ComponentName = "Icon Fish Oil",
+                            ComponentAmount = 100
                         },
                         new
                         {
@@ -24641,6 +25115,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Zephyr Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Zephyr Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24686,6 +25166,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Zephyr Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Zephyr Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 400
                         },
                         new
                         {
@@ -24737,6 +25223,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wisp Neuroptics",
+                            ComponentName = "Polymer Bundle",
+                            ComponentAmount = 2200
+                        },
+                        new
+                        {
                             ItemName = "Wisp Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24761,6 +25253,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wisp Chassis",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 2750
+                        },
+                        new
+                        {
                             ItemName = "Wisp Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24782,6 +25280,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Wisp Systems",
                             ComponentName = "Rubedo",
                             ComponentAmount = 950
+                        },
+                        new
+                        {
+                            ItemName = "Wisp Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 10000
                         },
                         new
                         {
@@ -24833,6 +25337,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Yareli Neuroptics",
+                            ComponentName = "Heart Noctrul",
+                            ComponentAmount = 10
+                        },
+                        new
+                        {
                             ItemName = "Yareli Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24857,6 +25367,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Yareli Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 1500
+                        },
+                        new
+                        {
                             ItemName = "Yareli Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24878,6 +25394,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Yareli Systems",
                             ComponentName = "Exa Brain",
                             ComponentAmount = 5
+                        },
+                        new
+                        {
+                            ItemName = "Yareli Systems",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 1750
                         },
                         new
                         {
@@ -24929,6 +25451,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gara Neuroptics",
+                            ComponentName = "Neurodes",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Gara Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24953,6 +25481,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gara Chassis",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 800
+                        },
+                        new
+                        {
                             ItemName = "Gara Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -24974,6 +25508,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Gara Systems",
                             ComponentName = "Esher Devar",
                             ComponentAmount = 25
+                        },
+                        new
+                        {
+                            ItemName = "Gara Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 850
                         },
                         new
                         {
@@ -25025,6 +25565,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hildryn Neuroptics",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 1600
+                        },
+                        new
+                        {
                             ItemName = "Hildryn Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25049,6 +25595,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hildryn Chassis",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 2300
+                        },
+                        new
+                        {
                             ItemName = "Hildryn Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25070,6 +25622,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Hildryn Systems",
                             ComponentName = "Gorgaricus Spore",
                             ComponentAmount = 95
+                        },
+                        new
+                        {
+                            ItemName = "Hildryn Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 1500
                         },
                         new
                         {
@@ -25121,6 +25679,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Vauban Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Vauban Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25166,6 +25730,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Vauban Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Vauban Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25217,6 +25787,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hydroid Neuroptics",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Hydroid Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25241,6 +25817,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hydroid Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Hydroid Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25262,6 +25844,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Hydroid Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Hydroid Systems",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25313,6 +25901,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Oberon Neuroptics",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Oberon Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25358,6 +25952,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Oberon Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Oberon Systems",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25409,6 +26009,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Frost Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Frost Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25453,6 +26059,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Frost Systems",
                             ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Frost Systems",
+                            ComponentName = "Plastids",
                             ComponentAmount = 500
                         },
                         new
@@ -25505,6 +26117,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Limbo Neuroptics",
+                            ComponentName = "Neurodes",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Limbo Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25529,6 +26147,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Limbo Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Limbo Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25550,6 +26174,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Limbo Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Limbo Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25601,6 +26231,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Trinity Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Trinity Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25646,6 +26282,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Trinity Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Trinity Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25697,6 +26339,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nyx Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Nyx Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25742,6 +26390,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nyx Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Nyx Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -25793,6 +26447,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Harrow Neuroptics",
+                            ComponentName = "Neural Sensors",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Harrow Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25817,6 +26477,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Harrow Chassis",
+                            ComponentName = "Orokin Cell",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Harrow Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -25838,6 +26504,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Harrow Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 25000
+                        },
+                        new
+                        {
+                            ItemName = "Harrow Systems",
+                            ComponentName = "Control Module",
+                            ComponentAmount = 15
                         },
                         new
                         {
@@ -26003,6 +26675,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hydroid Prime Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 12750
+                        },
+                        new
+                        {
                             ItemName = "Hydroid Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26027,6 +26705,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hydroid Prime Chassis",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 6750
+                        },
+                        new
+                        {
                             ItemName = "Hydroid Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26048,6 +26732,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Hydroid Prime Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 1300
+                        },
+                        new
+                        {
+                            ItemName = "Hydroid Prime Systems",
+                            ComponentName = "Cryotic",
+                            ComponentAmount = 925
                         },
                         new
                         {
@@ -26099,6 +26789,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nova Prime Neuroptics",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Nova Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26144,6 +26840,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nova Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 600
+                        },
+                        new
+                        {
+                            ItemName = "Nova Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 200
                         },
                         new
                         {
@@ -26195,6 +26897,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Chroma Prime Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 4750
+                        },
+                        new
+                        {
                             ItemName = "Chroma Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26219,6 +26927,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Chroma Prime Chassis",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 7800
+                        },
+                        new
+                        {
                             ItemName = "Chroma Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26240,6 +26954,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Chroma Prime Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1775
+                        },
+                        new
+                        {
+                            ItemName = "Chroma Prime Systems",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 4000
                         },
                         new
                         {
@@ -26291,6 +27011,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nyx Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Nyx Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26336,6 +27062,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nyx Prime Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 1000
+                        },
+                        new
+                        {
+                            ItemName = "Nyx Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -26387,6 +27119,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Loki Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Loki Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26432,6 +27170,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Loki Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 1000
+                        },
+                        new
+                        {
+                            ItemName = "Loki Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -26483,6 +27227,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Limbo Prime Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 900
+                        },
+                        new
+                        {
                             ItemName = "Limbo Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26507,6 +27257,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Limbo Prime Chassis",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 550
+                        },
+                        new
+                        {
                             ItemName = "Limbo Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26528,6 +27284,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Limbo Prime Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 3000
+                        },
+                        new
+                        {
+                            ItemName = "Limbo Prime Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 100
                         },
                         new
                         {
@@ -26579,6 +27341,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nekros Prime Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Nekros Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26603,6 +27371,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nekros Prime Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Nekros Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26624,6 +27398,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nekros Prime Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 15000
+                        },
+                        new
+                        {
+                            ItemName = "Nekros Prime Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -26675,6 +27455,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Equinox Prime Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 2350
+                        },
+                        new
+                        {
                             ItemName = "Equinox Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26699,6 +27485,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Equinox Prime Chassis",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 4000
+                        },
+                        new
+                        {
                             ItemName = "Equinox Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26720,6 +27512,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Equinox Prime Systems",
                             ComponentName = "Plastids",
                             ComponentAmount = 225
+                        },
+                        new
+                        {
+                            ItemName = "Equinox Prime Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 5400
                         },
                         new
                         {
@@ -26771,6 +27569,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Saryn Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Saryn Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26816,6 +27620,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Saryn Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 4000
+                        },
+                        new
+                        {
+                            ItemName = "Saryn Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -26867,6 +27677,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Frost Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
                             ItemName = "Frost Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26912,6 +27728,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Frost Prime Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Frost Prime Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 220
                         },
                         new
                         {
@@ -26963,6 +27785,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nidus Prime Neuroptics",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 4975
+                        },
+                        new
+                        {
                             ItemName = "Nidus Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -26987,6 +27815,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nidus Prime Chassis",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 5500
+                        },
+                        new
+                        {
                             ItemName = "Nidus Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27008,6 +27842,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nidus Prime Systems",
                             ComponentName = "Rubedo",
                             ComponentAmount = 1250
+                        },
+                        new
+                        {
+                            ItemName = "Nidus Prime Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 3800
                         },
                         new
                         {
@@ -27059,6 +27899,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ember Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Ember Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27104,6 +27950,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Ember Prime Systems",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 1200
+                        },
+                        new
+                        {
+                            ItemName = "Ember Prime Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 700
                         },
                         new
                         {
@@ -27155,6 +28007,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mirage Prime Neuroptics",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 18000
+                        },
+                        new
+                        {
                             ItemName = "Mirage Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27179,6 +28037,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mirage Prime Chassis",
+                            ComponentName = "Oxium",
+                            ComponentAmount = 350
+                        },
+                        new
+                        {
                             ItemName = "Mirage Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27200,6 +28064,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Mirage Prime Systems",
                             ComponentName = "Rubedo",
                             ComponentAmount = 4500
+                        },
+                        new
+                        {
+                            ItemName = "Mirage Prime Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 23000
                         },
                         new
                         {
@@ -27251,6 +28121,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Titania Prime Neuroptics",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Titania Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27275,6 +28151,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Titania Prime Chassis",
+                            ComponentName = "Morphics",
+                            ComponentAmount = 8
+                        },
+                        new
+                        {
                             ItemName = "Titania Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27296,6 +28178,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Titania Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 4300
+                        },
+                        new
+                        {
+                            ItemName = "Titania Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 1450
                         },
                         new
                         {
@@ -27347,6 +28235,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Inaros Prime Neuroptics",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Inaros Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27371,6 +28265,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Inaros Prime Chassis",
+                            ComponentName = "Morphics",
+                            ComponentAmount = 8
+                        },
+                        new
+                        {
                             ItemName = "Inaros Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27392,6 +28292,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Inaros Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 4300
+                        },
+                        new
+                        {
+                            ItemName = "Inaros Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 1450
                         },
                         new
                         {
@@ -27443,6 +28349,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Valkyr Prime Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 5
+                        },
+                        new
+                        {
                             ItemName = "Valkyr Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27467,6 +28379,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Valkyr Prime Chassis",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Valkyr Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27488,6 +28406,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Valkyr Prime Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 15000
+                        },
+                        new
+                        {
+                            ItemName = "Valkyr Prime Systems",
+                            ComponentName = "Plastids",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -27539,6 +28463,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Oberon Prime Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Oberon Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27563,6 +28493,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Oberon Prime Chassis",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 7500
+                        },
+                        new
+                        {
                             ItemName = "Oberon Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27584,6 +28520,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Oberon Prime Systems",
                             ComponentName = "Nano Spores",
                             ComponentAmount = 6000
+                        },
+                        new
+                        {
+                            ItemName = "Oberon Prime Systems",
+                            ComponentName = "Polymer Bundle",
+                            ComponentAmount = 1250
                         },
                         new
                         {
@@ -27635,6 +28577,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mag Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Mag Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27679,6 +28627,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Mag Prime Systems",
                             ComponentName = "Salvage",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Mag Prime Systems",
+                            ComponentName = "Plastids",
                             ComponentAmount = 500
                         },
                         new
@@ -27731,6 +28685,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Rhino Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Rhino Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27775,6 +28735,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Rhino Prime Systems",
                             ComponentName = "Ferrite",
+                            ComponentAmount = 500
+                        },
+                        new
+                        {
+                            ItemName = "Rhino Prime Systems",
+                            ComponentName = "Plastids",
                             ComponentAmount = 500
                         },
                         new
@@ -27827,6 +28793,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Volt Prime Neuroptics",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Volt Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27872,6 +28844,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Volt Prime Systems",
                             ComponentName = "Salvage",
                             ComponentAmount = 1000
+                        },
+                        new
+                        {
+                            ItemName = "Volt Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -27923,6 +28901,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Vauban Prime Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 18000
+                        },
+                        new
+                        {
                             ItemName = "Vauban Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27947,6 +28931,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Vauban Prime Chassis",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 13000
+                        },
+                        new
+                        {
                             ItemName = "Vauban Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -27968,6 +28958,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Vauban Prime Systems",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Vauban Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 5000
                         },
                         new
                         {
@@ -28019,6 +29015,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Trinity Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 1100
+                        },
+                        new
+                        {
                             ItemName = "Trinity Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28064,6 +29066,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Trinity Prime Systems",
                             ComponentName = "Cryotic",
                             ComponentAmount = 9000
+                        },
+                        new
+                        {
+                            ItemName = "Trinity Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 1350
                         },
                         new
                         {
@@ -28115,6 +29123,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Zephyr Prime Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 4250
+                        },
+                        new
+                        {
                             ItemName = "Zephyr Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28139,6 +29153,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Zephyr Prime Chassis",
+                            ComponentName = "Oxium",
+                            ComponentAmount = 300
+                        },
+                        new
+                        {
                             ItemName = "Zephyr Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28160,6 +29180,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Zephyr Prime Systems",
                             ComponentName = "Cryotic",
                             ComponentAmount = 550
+                        },
+                        new
+                        {
+                            ItemName = "Zephyr Prime Systems",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 3175
                         },
                         new
                         {
@@ -28211,6 +29237,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Octavia Prime Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 3750
+                        },
+                        new
+                        {
                             ItemName = "Octavia Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28235,6 +29267,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Octavia Prime Chassis",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 4250
+                        },
+                        new
+                        {
                             ItemName = "Octavia Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28256,6 +29294,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Octavia Prime Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 875
+                        },
+                        new
+                        {
+                            ItemName = "Octavia Prime Systems",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 4800
                         },
                         new
                         {
@@ -28307,6 +29351,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ash Prime Neuroptics",
+                            ComponentName = "Rubedo",
+                            ComponentAmount = 750
+                        },
+                        new
+                        {
                             ItemName = "Ash Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28352,6 +29402,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Ash Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 1000
+                        },
+                        new
+                        {
+                            ItemName = "Ash Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 500
                         },
                         new
                         {
@@ -28403,6 +29459,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Banshee Prime Neuroptics",
+                            ComponentName = "Nitain Extract",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Banshee Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28427,6 +29489,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Banshee Prime Chassis",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 7000
+                        },
+                        new
+                        {
                             ItemName = "Banshee Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28448,6 +29516,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Banshee Prime Systems",
                             ComponentName = "Oxium",
                             ComponentAmount = 300
+                        },
+                        new
+                        {
+                            ItemName = "Banshee Prime Systems",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 4500
                         },
                         new
                         {
@@ -28499,6 +29573,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Atlas Prime Neuroptics",
+                            ComponentName = "Oxium",
+                            ComponentAmount = 200
+                        },
+                        new
+                        {
                             ItemName = "Atlas Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28523,6 +29603,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Atlas Prime Chassis",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 3600
+                        },
+                        new
+                        {
                             ItemName = "Atlas Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28544,6 +29630,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Atlas Prime Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1200
+                        },
+                        new
+                        {
+                            ItemName = "Atlas Prime Systems",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 3200
                         },
                         new
                         {
@@ -28595,6 +29687,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nezha Prime Neuroptics",
+                            ComponentName = "Argon Crystal",
+                            ComponentAmount = 2
+                        },
+                        new
+                        {
                             ItemName = "Nezha Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28619,6 +29717,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nezha Prime Chassis",
+                            ComponentName = "Morphics",
+                            ComponentAmount = 8
+                        },
+                        new
+                        {
                             ItemName = "Nezha Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28640,6 +29744,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nezha Prime Systems",
                             ComponentName = "Ferrite",
                             ComponentAmount = 4300
+                        },
+                        new
+                        {
+                            ItemName = "Nezha Prime Systems",
+                            ComponentName = "Circuits",
+                            ComponentAmount = 1450
                         },
                         new
                         {
@@ -28691,6 +29801,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ivara Prime Neuroptics",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 4250
+                        },
+                        new
+                        {
                             ItemName = "Ivara Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28715,6 +29831,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ivara Prime Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 1800
+                        },
+                        new
+                        {
                             ItemName = "Ivara Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28736,6 +29858,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Ivara Prime Systems",
                             ComponentName = "Oxium",
                             ComponentAmount = 175
+                        },
+                        new
+                        {
+                            ItemName = "Ivara Prime Systems",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 3200
                         },
                         new
                         {
@@ -28787,6 +29915,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wukong Prime Neuroptics",
+                            ComponentName = "Alloy Plate",
+                            ComponentAmount = 3550
+                        },
+                        new
+                        {
                             ItemName = "Wukong Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28811,6 +29945,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Wukong Prime Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 2200
+                        },
+                        new
+                        {
                             ItemName = "Wukong Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28832,6 +29972,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Wukong Prime Systems",
                             ComponentName = "Polymer Bundle",
                             ComponentAmount = 1150
+                        },
+                        new
+                        {
+                            ItemName = "Wukong Prime Systems",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 3800
                         },
                         new
                         {
@@ -28883,6 +30029,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mesa Prime Neuroptics",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 1250
+                        },
+                        new
+                        {
                             ItemName = "Mesa Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28907,6 +30059,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Mesa Prime Chassis",
+                            ComponentName = "Polymer Bundle",
+                            ComponentAmount = 450
+                        },
+                        new
+                        {
                             ItemName = "Mesa Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -28928,6 +30086,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Mesa Prime Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 275
+                        },
+                        new
+                        {
+                            ItemName = "Mesa Prime Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 625
                         },
                         new
                         {
@@ -28979,6 +30143,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gara Prime Neuroptics",
+                            ComponentName = "Ferrite",
+                            ComponentAmount = 6750
+                        },
+                        new
+                        {
                             ItemName = "Gara Prime Chassis",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -29003,6 +30173,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gara Prime Chassis",
+                            ComponentName = "Nano Spores",
+                            ComponentAmount = 8750
+                        },
+                        new
+                        {
                             ItemName = "Gara Prime Systems",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -29024,6 +30200,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Gara Prime Systems",
                             ComponentName = "Circuits",
                             ComponentAmount = 1350
+                        },
+                        new
+                        {
+                            ItemName = "Gara Prime Systems",
+                            ComponentName = "Salvage",
+                            ComponentAmount = 4375
                         },
                         new
                         {
@@ -29501,6 +30683,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ambassador",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Ambassador Barrel",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -29731,6 +30919,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Strun Wraith",
                             ComponentName = "Strun Wraith Stock",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Strun Wraith",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -30899,6 +32093,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Dera Vandal",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Ignis",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -30949,6 +32149,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Carmine Penta",
                             ComponentName = "Carmine Penta Stock",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Carmine Penta",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -31213,6 +32419,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Snipetron Vandal",
                             ComponentName = "Snipetron Vandal Stock",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Snipetron Vandal",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -31567,6 +32779,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Karak Wraith",
                             ComponentName = "Karak Wraith Stock",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Karak Wraith",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -31985,6 +33203,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Stahlta",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Fulmin",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -32249,6 +33473,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Latron Wraith",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Zarr",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -32393,6 +33623,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gorgon Wraith",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Latron",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -32507,6 +33743,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Braton Vandal",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Burston Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -32591,6 +33833,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Aksomati",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Detron",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -32612,6 +33860,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Detron",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Detron",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -32729,6 +33983,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Akstiletto Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Twin Vipers",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -32743,6 +34003,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Twin Vipers",
                             ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Twin Vipers",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -32821,6 +34087,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Afuris",
                             ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Afuris",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -32909,6 +34181,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Zakti Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Twin Kohmak",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -32923,6 +34201,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Twin Kohmak",
                             ComponentName = "Forma",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Twin Kohmak",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -32948,6 +34232,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Pyrana Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Pyrana Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -32995,6 +34285,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Twin Grakatas",
                             ComponentName = "Forma",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Twin Grakatas",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33083,6 +34379,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Hikou Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Spira Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -33107,6 +34409,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Spira Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Akbronco",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -33121,6 +34429,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Akbronco",
                             ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Akbronco",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33149,6 +34463,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Spectra Vandal",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Sicarus Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -33173,6 +34493,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Sicarus Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Akbolto",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -33187,6 +34513,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Akbolto",
                             ComponentName = "Orokin Cell",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Akbolto",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33212,6 +34544,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Akjagara",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 2
+                        },
+                        new
+                        {
+                            ItemName = "Akjagara",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -33265,6 +34603,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Sepulcrum",
                             ComponentName = "Sepulcrum Receiver",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Sepulcrum",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33353,6 +34697,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Bronco Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Akbolto Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -33373,6 +34723,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Akbolto Prime",
                             ComponentName = "Akbolto Prime Link",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Akbolto Prime",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33575,6 +34931,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Akvasto Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Epitaph",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -33596,6 +34958,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Epitaph",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 7
+                        },
+                        new
+                        {
+                            ItemName = "Epitaph",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -33649,6 +35017,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Twin Vipers Wraith",
                             ComponentName = "Twin Vipers Wraith Link",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Twin Vipers Wraith",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33737,6 +35111,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Vasto Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Athodai",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -33761,6 +35141,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Athodai",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Aksomati Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -33781,6 +35167,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Aksomati Prime",
                             ComponentName = "Aksomati Prime Link",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Aksomati Prime",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -33949,6 +35341,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Zymos",
                             ComponentName = "Zymos Receiver",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Zymos",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -34127,6 +35525,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Brakk",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Staticor",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -34208,6 +35612,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Pandero Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Pandero Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -34349,6 +35759,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Akmagnus",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Pyrana",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -34430,6 +35846,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Lex Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Lex Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -34517,6 +35939,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Euphona Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Akarius",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -34562,6 +35990,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Akvasto",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 2
+                        },
+                        new
+                        {
+                            ItemName = "Akvasto",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -34913,6 +36347,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Lato Vandal",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Dual Cestra",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -34961,6 +36401,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Velox",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Hikou",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -35005,6 +36451,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Aklex Prime",
                             ComponentName = "Aklex Prime Link",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Aklex Prime",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -35057,6 +36509,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Aklex",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Seer",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -35081,6 +36539,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Seer",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Kompressa",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -35101,6 +36565,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Kompressa",
                             ComponentName = "Kompressa Receiver",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Kompressa",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -35179,6 +36649,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Akbronco Prime",
                             ComponentName = "Akbronco Prime Link",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Akbronco Prime",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -35507,6 +36983,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Pathocyst",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Reaper Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -35528,6 +37010,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Reaper Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Reaper Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -35669,6 +37157,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Sheev",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Dual Heat Swords",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -35783,6 +37277,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Guandao Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Nami Skyla",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -35894,6 +37394,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Scindo Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Scindo Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -36071,6 +37577,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Kronen Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Arca Titron",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -36155,6 +37667,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Cronus",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Wolf Sledge",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -36236,6 +37754,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Tipedo Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Tipedo Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -36833,6 +38357,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Twin Basolk",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Ceti Lacera",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -36917,6 +38447,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Gram Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Ether Daggers",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -36968,6 +38504,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Galatine Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Galatine Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -37205,6 +38747,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Destreza Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Orvius",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -37379,6 +38927,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Venka Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Gram",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -37519,6 +39073,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Dragon Nikana",
                             ComponentName = "Nikana",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Dragon Nikana",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -38117,6 +39677,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Boltace",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Redeemer Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -38141,6 +39707,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Redeemer Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Dakra Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -38162,6 +39734,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Dakra Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Dakra Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38309,6 +39887,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Redeemer",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Arum Spinosa",
                             ComponentName = "Credits",
                             ComponentAmount = 5000
@@ -38393,6 +39977,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Volnus Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Sibear",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -38414,6 +40004,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Sibear",
                             ComponentName = "Alloy Plate",
                             ComponentAmount = 50000
+                        },
+                        new
+                        {
+                            ItemName = "Sibear",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38471,6 +40067,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Nami Skyla Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Shaku",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -38522,6 +40124,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Pangolin Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Pangolin Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38609,6 +40217,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ankyros Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Karyst Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -38633,6 +40247,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Karyst Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Keratinos",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -38648,6 +40268,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Keratinos",
                             ComponentName = "Keratinos Gauntlet",
                             ComponentAmount = 2
+                        },
+                        new
+                        {
+                            ItemName = "Keratinos",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38672,6 +40298,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Nikana Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Nikana Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38753,6 +40385,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Fang Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Kogake Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 15000
@@ -38777,6 +40415,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Kogake Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Tekko Prime",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -38798,6 +40442,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Tekko Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 15
+                        },
+                        new
+                        {
+                            ItemName = "Tekko Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -38945,6 +40595,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Glaive Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Ack %26 Brunt",
                             ComponentName = "Credits",
                             ComponentAmount = 65000
@@ -39089,6 +40745,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Fragor Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Furax Wraith",
                             ComponentName = "Credits",
                             ComponentAmount = 25000
@@ -39103,6 +40765,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Furax Wraith",
                             ComponentName = "Furax Wraith Right Gauntlet",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Furax Wraith",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new
@@ -39161,6 +40829,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Orthos Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Broken War",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -39212,6 +40886,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Bo Prime",
                             ComponentName = "Orokin Cell",
                             ComponentAmount = 10
+                        },
+                        new
+                        {
+                            ItemName = "Bo Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -39323,6 +41003,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Dual Kamas",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Kronen",
                             ComponentName = "Credits",
                             ComponentAmount = 20000
@@ -39368,6 +41054,12 @@ namespace WarframeProgressTrackerApi.Migrations
                             ItemName = "Dual Kamas Prime",
                             ComponentName = "Dual Kamas Prime Handle",
                             ComponentAmount = 2
+                        },
+                        new
+                        {
+                            ItemName = "Dual Kamas Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
                         },
                         new
                         {
@@ -39425,6 +41117,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         },
                         new
                         {
+                            ItemName = "Ninkondi Prime",
+                            ComponentName = "Platinum",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
                             ItemName = "Dual Zoren",
                             ComponentName = "Credits",
                             ComponentAmount = 30000
@@ -39475,6 +41173,12 @@ namespace WarframeProgressTrackerApi.Migrations
                         {
                             ItemName = "Xoris",
                             ComponentName = "Xoris Blade",
+                            ComponentAmount = 1
+                        },
+                        new
+                        {
+                            ItemName = "Xoris",
+                            ComponentName = "Platinum",
                             ComponentAmount = 1
                         },
                         new

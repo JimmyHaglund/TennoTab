@@ -69,7 +69,7 @@ def extract_component_data_with_blueprint_in_title(result_name, value):
 def extract_component_row(value):
    name = ""
    amount = 0
-   split_data = value.split('<br>')
+   split_data = value.split('</a>')
    if len(split_data) < 2:
       return ''
 
@@ -78,17 +78,14 @@ def extract_component_row(value):
    if 'title' in name_data_block:
       name = name_data_block.split('title="')[1].split('"')[0]
    elif 'img alt="' in name_data_block:
-      name = name_data_block.split('img alt="')[1].split('.png')[0]
+      name = name_data_block.split('alt="')[1].split('.png')[0]
    else:
       print('no title found')
       return ''
-
-   amount_string = amount_data_block.split("</td>")[0].strip()
-   amount_string = amount_string.strip()
-   amount_string = amount_string.replace(',', '')
-   amount = int(amount_string)
-   # print(name + ',' + amount_string)
+   amount = 1
+   if '<br>' in amount_data_block:
+      amount_string = amount_data_block.split("</td>")[0].split('<br>')[1].strip()
+      amount_string = amount_string.strip()
+      amount_string = amount_string.replace(',', '')
+      amount = int(amount_string)
    return [name, amount]
-
-component_category_name = 'Weapon'
-resource_category_name = 'Resource'

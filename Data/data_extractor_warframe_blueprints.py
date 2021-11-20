@@ -34,7 +34,7 @@ def extract_component_data(result_name, raw_data):
    component_rows.pop(0)
    components = []
    for row in component_rows:
-      component_data = extract_component_row(row)
+      component_data = extract_component_row(row.split('</td>')[0])
       if(len(component_data) > 1):
          component_name = component_data[0]
          component_amount = component_data[1]
@@ -79,21 +79,23 @@ def extract_component_data_with_blueprint_in_title(result_name, value):
 def extract_component_row(value):
    name = ""
    amount = 0
-   if 'title' in value:
-      name = value.split('title="')[1].split('"')[0]
-      if name == 'Platinum':
-         return ''
-   else:
-      name = value.split('img alt="')[1].split('.png')[0]
+   split_data = value.split('</a>')
+   if len(split_data) < 2:
+      return ''
 
+   name_data_block = split_data[0]
+   amount_data_block = split_data[1]
+   if 'title' in name_data_block:
+      name = name_data_block.split('title="')[1].split('"')[0]
+   elif 'img alt="' in name_data_block:
+      name = name_data_block.split('alt="')[1].split('.png')[0]
+   else:
+      print('no title found')
+      return ''
    amount = 1
-   amount_string = value.split('<br>')
-   if len(amount_string) > 1:
-      amount_string = amount_string[1].split("</td>")[0]
+   if '<br>' in amount_data_block:
+      amount_string = amount_data_block.split("</td>")[0].split('<br>')[1].strip()
       amount_string = amount_string.strip()
       amount_string = amount_string.replace(',', '')
       amount = int(amount_string)
    return [name, amount]
-
-component_category_name = 'Component'
-resource_category_name = 'Resource'

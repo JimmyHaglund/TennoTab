@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using WarframeProgressTrackerApi.Models;
 using System.Diagnostics;
+using System.Linq;
 
 namespace WarframeProgressTrackerApi.Data {
     public class WarframeProgressTrackerContext : IdentityDbContext<User> {
@@ -39,8 +40,18 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<SyndicateOffering> SyndicateOfferings { get; set; }
         public DbSet<VoidFissureMissionReward> VoidFissureMissionRewards { get; set; }
         public DbSet<VoidRelicDrop> VoidRelicDrops { get; set; }
-
         public DbSet<UserCollectible> UserCollectibles { get; set; }
+
+
+        public void CreateUserData(string userName) {
+            var userCollectibles = from collectible in Collectibles
+                                   select new UserCollectible() {
+                                       ItemName = collectible.ItemName,
+                                       UserId = userName
+                                   };
+            UserCollectibles.AddRange(userCollectibles);
+            SaveChanges();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
@@ -48,7 +59,6 @@ namespace WarframeProgressTrackerApi.Data {
             SetupKeys(modelBuilder);
             SeedData(modelBuilder);
         }
-
 
         private void SetupKeys(ModelBuilder modelBuilder) {
             modelBuilder.Entity<AssassinationMissionReward>()

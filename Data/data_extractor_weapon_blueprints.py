@@ -32,7 +32,7 @@ def extract_component_data(result_name, value):
    component_rows.pop(0)
    components = []
    for row in component_rows:
-      component_data = extract_component_row(row)
+      component_data = extract_component_row(row.split('</td>')[0])
       if component_data == 'Platinum':
          continue
       if len(component_data) < 2:

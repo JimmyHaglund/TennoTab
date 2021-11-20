@@ -42,31 +42,29 @@ namespace WarframeProgressTrackerApi.Controllers {
         [HttpGet]
         public IEnumerable<CollectibleView> All() {
             var userId = _sessionUser.IdFromRequest(Request);
-            var collectibles = GetCollectibles(GetInclusiveSearchForm());
-            var collectibleView = from collectible in collectibles
-                                  select new CollectibleView() {
-                                      Name = collectible.ItemName,
-                                      Category = collectible.Category
-                                  };
-            var result = collectibleView.ToList();
-            return result;//new List<CollectibleView>();//collectibleView.ToList();
+            var collectibleViews = GetCollectibleViews(GetInclusiveSearchForm());
+            return collectibleViews.ToList();
         }
 
         [HttpPut]
         public IEnumerable<CollectibleView> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
-            if (searchForm == null) searchForm = new CollectibleSearchForm();
-            var userCollectibles = GetUserCollectibles(searchForm, userId);
-            var collectibles = GetCollectibles(searchForm);
-
-            return null;
+            var collectibles = GetCollectibleViews(searchForm);
+            if (userId == "") return collectibles;
+            var result = from userCollectible in _context.UserCollectibles
+                         from collectible in collectibles
+                         where userCollectible.ItemName == collectible.Name
+                         select new CollectibleView() {
+                             Name = collectible.Name,
+                             Category = collectible.Category,
+                             Obtained = userCollectible.Obtained,
+                             Mastered = userCollectible.Mastered,
+                             OnWishlist = userCollectible.OnWishlist
+                         };
+            return result.ToList();
         }
 
-        private IEnumerable<UserCollectible> GetUserCollectibles(CollectibleSearchForm searchForm, string userId) {
-            return null;
-        }
-
-        private IEnumerable<Collectible> GetCollectibles(CollectibleSearchForm searchForm) {
+        private IEnumerable<CollectibleView> GetCollectibleViews(CollectibleSearchForm searchForm) {
             return from collectible in _context.Collectibles
                    where collectible.ItemName.Contains(searchForm.SearchText)
                    where collectible.Category == Categories.Warframe && searchForm.IncludeFrames
@@ -79,20 +77,10 @@ namespace WarframeProgressTrackerApi.Controllers {
                         || collectible.Category == Categories.Archwing && searchForm.IncludeArchwings
                         || collectible.Category == Categories.ArchGun && searchForm.IncludeArchGuns
                         || collectible.Category == Categories.ArchMelee && searchForm.IncludeArchMeleeWeapons
-                   select collectible;
-        }
-
-        private bool AllowedCategory(Collectible collectible, CollectibleSearchForm searchForm) {
-            return collectible.Category == Categories.Warframe && searchForm.IncludeFrames
-                || collectible.Category == Categories.PrimaryWeapon && searchForm.IncludePrimaryWeapons
-                || collectible.Category == Categories.SecondaryWeapon && searchForm.IncludeSecondaryWeapons
-                || collectible.Category == Categories.MeleeWeapon && searchForm.IncludeMeleeWeapons
-                || collectible.Category == Categories.Pet && searchForm.IncludePets
-                || collectible.Category == Categories.RoboGun && searchForm.IncludeRoboWeapons
-                || collectible.Category == Categories.Amp && searchForm.IncludeOperatorAmps
-                || collectible.Category == Categories.Archwing && searchForm.IncludeArchwings
-                || collectible.Category == Categories.ArchGun && searchForm.IncludeArchGuns
-                || collectible.Category == Categories.ArchMelee && searchForm.IncludeArchMeleeWeapons;
+                   select new CollectibleView() {
+                       Name = collectible.ItemName,
+                       Category = collectible.Category
+                   };
         }
 
         private CollectibleSearchForm GetInclusiveSearchForm() {

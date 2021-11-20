@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 namespace WarframeProgressTrackerApi.Services {
     public class SessionUser {
         private static Dictionary<string, string> _users = new Dictionary<string, string>();
+        private static ulong _tempUserId = 0;
 
         public void Add(string cookie, string userId) => _users[cookie] = userId;
         public void Remove(string cookie) => _users.Remove(cookie);

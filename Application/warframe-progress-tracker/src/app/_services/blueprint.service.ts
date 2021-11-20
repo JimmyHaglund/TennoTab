@@ -1,79 +1,56 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MessageService } from '../message.service';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { catchError } from 'rxjs/operators';
-
-export interface IBlueprintResource {
-  resultName: string;
-  resultCategory: string;
-  componentName: string;
-  componentCategory: string;
-  componentCount: number;
-}
-
-export interface IResource {
-  id: number;
-  name: string;
-  amount: number;
-}
-
-export interface ISource {
-  id: number;
-  itemName: string;
-  itemCategory: string;
-  sourceName: string;
-  sourceType: string;
-  value: string;
-}
+import { Blueprint, BlueprintComponentStack } from '../_interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class BlueprintService {
-  private _apiAddress:string = environment.apiUrl + "/blueprint";
+  private _apiAddress: string = environment.apiUrl + '/blueprint';
+  private _endpoints = {
+    get: '/get/',
+    totalresourcecost: '/totalresourcecost/'
+  };
 
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+  constructor(private http: HttpClient) { }
 
-  getSource(itemName: string): Observable<ISource[]> {
-    let data =  { name: itemName };
-    return this.http.put<ISource[]>(environment.apiUrl + "/collectible/getsource", data)
-      .pipe(catchError(this.handleError<ISource[]>('getSource')));
-  }
-    
-  getBlueprintsWithResult(resultName: string): Observable<IBlueprintResource[]> {
-    let data = {ResultName: resultName};
-    return this.http.put<IBlueprintResource[]>(this._apiAddress + "/components", data)
-      .pipe(catchError(this.handleError<IBlueprintResource[]>('getBlueprintWithResult')));
-    // results.subscribe((result => console.log(result)));
+  getBlueprint(resultName: string): Observable<Blueprint> {
+    let url = this.buildUrlGet(resultName);
+    return this.http.get<Blueprint[]>(url)
+      .pipe(catchError(this.handleError<Blueprint>('getBlueprint')));
   }
 
-  getTotalResourceCost(resultName: string): Observable<IResource[]> {
-    let data = {ResultName: resultName};
-    return this.http.put<IResource[]>(this._apiAddress + "/totalresourcecost", data)
-      .pipe(catchError(this.handleError<IResource[]>('getTotalResourceCost')));
+  getTotalResourceCost(resultName: string): Observable<BlueprintComponentStack[]> {
+    let url = this.buildUrlTotalResourceCost(resultName);
+    return this.http.get<BlueprintComponentStack[]>(url)
+      .pipe(catchError(this.handleError<BlueprintComponentStack[]>('getTotalResourceCost')));
   }
 
-  getComponents(resultName: string): Observable<IResource[]> {
-    let data = {ResultName: resultName};
-    return this.http.put<IResource[]>(this._apiAddress + "/componentcost", data)
-      .pipe(catchError(this.handleError<IResource[]>('getComponents')));
+  private buildUrlGet(resultName: string): string {
+    let result = this._apiAddress + this._endpoints.get;
+    result += resultName;
+    return result;
+  }
+
+  private buildUrlTotalResourceCost(resultName: string): string {
+    let result = this._apiAddress + this._endpoints.totalresourcecost;
+    result += resultName;
+    return result;
   }
 
   private handleError<T>(operation = 'operation', result?: T): any {
     return (error: any): Observable<T> => {
-
-      console.error(error); // log to console instead
+      console.error(error);
       this.log(`${operation} failed: ${error.message}`);
       return of(result as T);
     };
   }
 
   private log(message: string): void {
-    this.messageService.add(`FrameService: ${message}`);
+    console.log(message);
   }
 }

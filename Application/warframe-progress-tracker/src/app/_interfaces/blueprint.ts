@@ -1,20 +1,9 @@
-export interface BlueprintComponent {
-   name: string;
-   componentCount: number;
-}
-
 export interface Blueprint {
    resultName: string;
-   components: BlueprintComponent[];
+   components: BlueprintComponentStack[];
 }
 
-export interface ResourceStack {
-   id: number;
+export interface BlueprintComponentStack {
    name: string;
-   amount: number;
-}
-
-export interface BlueprintCost {
-   name: string;
-   cost: ResourceStack[];
+   componentCount: number;
 }

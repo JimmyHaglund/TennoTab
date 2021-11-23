@@ -12,7 +12,7 @@ using WarframeProgressTrackerApi.Services;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
-    [Route("[controller]/[action]")]
+    // [Route("[controller]/[action]")]
     [ApiController]
     [EnableCors]
     public class CollectibleController : ControllerBase {
@@ -21,15 +21,15 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         private static class Categories {
             public const string Warframe = "Warframe";
-            public const string PrimaryWeapon = "Primary Weapon";
-            public const string SecondaryWeapon = "Secondary Weapon";
-            public const string MeleeWeapon = "Melee Weapon";
-            public const string Amp = "Amp Prism";
-            public const string Pet = "Pet";
-            public const string RoboGun = "Robo-Gun";
-            public const string Archwing = "Archwing";
-            public const string ArchGun = "Archgun";
-            public const string ArchMelee = "Arch-Melee";
+            public const string PrimaryWeapon = "PrimaryWeapon";
+            public const string SecondaryWeapon = "SecondaryWeapon";
+            public const string MeleeWeapon = "MeleeWeapon";
+            public const string Amp = "AmpPrism";
+            public const string Pet = "Companion";
+            public const string RoboGun = "RoboticWeapon";
+            public const string Archwing = "ArchWing";
+            public const string ArchGun = "ArchGun";
+            public const string ArchMelee = "ArchMelee";
         }
 
         public CollectibleController(
@@ -40,18 +40,63 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpGet]
+
+        [Route("[controller]/[action]")]
         public IEnumerable<CollectibleView> All() {
-            var userId = _sessionUser.IdFromRequest(Request);
             var collectibleViews = GetCollectibleViews(GetInclusiveSearchForm());
-            return collectibleViews.ToList();
+            var userId = _sessionUser.IdFromRequest(Request);
+            if (string.IsNullOrEmpty(userId)) {
+                return collectibleViews.ToList();
+            }
+
+            var userCollectibles = from userCollectible in _context.UserCollectibles
+                                   where userCollectible.UserId == userId
+                                   select userCollectible;
+
+            return from userCollectible in userCollectibles
+                   from collectible in collectibleViews
+                   where userCollectible.ItemName == collectible.Name
+                   select new CollectibleView() {
+                       Name = collectible.Name,
+                       Category = collectible.Category,
+                       OnWishlist = userCollectible.OnWishlist,
+                       Obtained = userCollectible.Obtained,
+                       Mastered = userCollectible.Mastered
+                   };
+        }
+
+        [HttpGet]
+        [Route("[controller]/[action]/{itemName}")]
+        public CollectibleView Get(string itemName) {
+            var userId = _sessionUser.IdFromRequest(Request);
+            var result = from userCollectible in _context.UserCollectibles
+                         where userCollectible.ItemName == itemName
+                         from collectible in _context.Collectibles
+                         where collectible.ItemName == itemName
+                         select new CollectibleView() {
+                             Name = itemName,
+                             Category = collectible.Category,
+                             Obtained = userCollectible.Obtained,
+                             Mastered = userCollectible.Mastered,
+                             OnWishlist = userCollectible.OnWishlist
+                         };
+            return result.FirstOrDefault();
         }
 
         [HttpPut]
+        [Route("[controller]/[action]")]
         public IEnumerable<CollectibleView> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             var collectibles = GetCollectibleViews(searchForm);
             if (userId == "") return collectibles;
-            var result = from userCollectible in _context.UserCollectibles
+            var userCollectibles = from userCollectible in _context.UserCollectibles
+                                   where userCollectible.UserId == userId
+                                   where !searchForm.OnlyOnWishlist || userCollectible.OnWishlist
+                                   where searchForm.IncludeMastered || !userCollectible.Mastered
+                                   where searchForm.IncludeOwned || !userCollectible.Obtained
+                                   select userCollectible;
+
+            var result = from userCollectible in userCollectibles
                          from collectible in collectibles
                          where userCollectible.ItemName == collectible.Name
                          select new CollectibleView() {
@@ -64,11 +109,28 @@ namespace WarframeProgressTrackerApi.Controllers {
             return result.ToList();
         }
 
+        [HttpPut]
+        [Route("[controller]/[action]")]
+        public void Put([FromBody] CollectibleView collectible) {
+            var userId = _sessionUser.IdFromRequest(Request);
+            var targets = from userCollectible in _context.UserCollectibles
+                          where userCollectible.UserId == userId
+                          where userCollectible.ItemName == collectible.Name
+                          select userCollectible;
+            var target = targets.FirstOrDefault();
+            if (target == default) return;
+            target.Obtained = collectible.Obtained;
+            target.Mastered = collectible.Mastered;
+            target.OnWishlist = collectible.OnWishlist;
+            _context.SaveChanges();
+        }
+
+        #region Body
         private IEnumerable<CollectibleView> GetCollectibleViews(CollectibleSearchForm searchForm) {
             return from collectible in _context.Collectibles
                    where collectible.ItemName.Contains(searchForm.SearchText)
-                   where collectible.Category == Categories.Warframe && searchForm.IncludeFrames
-                        || collectible.Category == Categories.PrimaryWeapon && searchForm.IncludePrimaryWeapons
+                   where (collectible.Category == Categories.Warframe && searchForm.IncludeFrames)
+                        || (collectible.Category == Categories.PrimaryWeapon && searchForm.IncludePrimaryWeapons)
                         || collectible.Category == Categories.SecondaryWeapon && searchForm.IncludeSecondaryWeapons
                         || collectible.Category == Categories.MeleeWeapon && searchForm.IncludeMeleeWeapons
                         || collectible.Category == Categories.Pet && searchForm.IncludePets
@@ -97,5 +159,6 @@ namespace WarframeProgressTrackerApi.Controllers {
                 IncludeArchMeleeWeapons = true
             };
         }
+        #endregion
     }
 }

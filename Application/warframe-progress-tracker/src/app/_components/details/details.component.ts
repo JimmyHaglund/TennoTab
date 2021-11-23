@@ -3,15 +3,9 @@ import { Collectible } from '../../_interfaces';
 import { CollectibleService } from '../../_services';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { BlueprintService, IBlueprintResource, IResource, ISource } from 'src/app/_services';
-
-interface BlueprintComponent {
-  source: ISource[];
-  resource: IBlueprintResource;
-  cost: IResource[];
-  category: string;
-  detailsHtml: string;
-}
+import { BlueprintService } from 'src/app/_services';
+import {Blueprint, BlueprintComponentStack } from '../../_interfaces';
+import { SourceService } from 'src/app/_services/source.service';
 
 @Component({
   selector: 'app-details',
@@ -20,8 +14,9 @@ interface BlueprintComponent {
 })
 export class DetailsComponent implements OnInit {
   public collectible!: Collectible;
-  public blueprint: BlueprintComponent[] = [];
-  public cost: IResource[] = [];
+  public blueprint!: Blueprint;
+  public totalCost: BlueprintComponentStack[] = [];
+  public componentBlueprints: Blueprint[] = [];
   public initialisedCollectible = false;
 
   private get name(): string { return String(this.route.snapshot.paramMap.get('name')); }
@@ -31,13 +26,14 @@ export class DetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private collectibleService: CollectibleService,
-    private blueprintService: BlueprintService
+    private blueprintService: BlueprintService,
+    private sourceService: SourceService
   ) { }
 
   ngOnInit(): void {
     this.getCollectible();
     this.getComponents();
-    this.getCost();
+    this.getCost(this.name);
   }
 
   public get statusText(): string {
@@ -45,6 +41,9 @@ export class DetailsComponent implements OnInit {
     return this.collectible.mastered ? "Mastered" :
       this.collectible.obtained ? "Obtained" : "Not obtained";
   }
+
+  public get components() { return this.blueprint.components }
+
 
   public increaseRank(): void {
     if (!this.collectible.obtained) {
@@ -85,10 +84,9 @@ export class DetailsComponent implements OnInit {
   }
 
   private getCollectible(): void {
-    const category = this.category;
     const name = this.name;
 
-    this.collectibleService.getCollectible(category, name)
+    this.collectibleService.getCollectible(name)
       .subscribe(collectible => {
         this.collectible = collectible;
         this.initialisedCollectible = true;
@@ -97,115 +95,57 @@ export class DetailsComponent implements OnInit {
 
   private getComponents(): void {
     const name = this.name;
-    this.blueprintService.getBlueprintsWithResult(name)
+    this.blueprintService.getBlueprint(name)
       .subscribe(blueprint => {
-        this.blueprint = blueprint
-        .map<BlueprintComponent>(component => {
-          return { 
-            resource: component, 
-            cost: [], 
-            source: [], 
-            category: component.componentCategory,
-            detailsHtml: ""
-          };
-        });
-        this.blueprint.forEach(component => {
-          this.getCostOfComponent(component);
-          this.getComponentSource(component);
+        this.blueprint = blueprint;
+        this.blueprint.components.forEach(component => {
+          this.getComponentBlueprint(component.componentName);
+          this.getComponentSource(component.componentName);
         });
       });
   }
 
-  private getCost(): void {
-    const name = this.name;
-    this.blueprintService.getTotalResourceCost(name)
-      .subscribe(cost => this.summarizeCost(cost));
-  }
-
-  private summarizeCost(cost: IResource[]): void {
-    let result: IResource[] = [];
-    for(let n = 0; n < cost.length; n++) {
-      let resource = cost[n];
-      let matchFound = false;
-      result.forEach(element => {
-        if (element.id === resource.id) {
-          element.amount += resource.amount;
-          matchFound = true;
-        }
-      });
-      if (matchFound) continue;
-      result.push({id: cost[n].id, name: cost[n].name, amount: cost[n].amount});
-    }
-    this.cost = result;
-  }
-
-  private getCostOfComponent(component: BlueprintComponent):void {
-    this.blueprintService
-      .getComponents(component.resource.componentName)
-      .subscribe(cost => {
-        component.cost = cost;
-        component.detailsHtml = this.getDetailsHtml(component);
+  private getComponentBlueprint(componentName: string) {
+    this.blueprintService.getBlueprint(componentName)
+      .subscribe(blueprint =>{ 
+        if (blueprint == null) return;
+        this.componentBlueprints.push(blueprint);
       });
   }
 
-  private getComponentSource(component: BlueprintComponent) {
-    this.blueprintService
-      .getSource(component.resource.componentName + " Blueprint")
-      .subscribe(source => {
-        component.source = source;
-        component.detailsHtml = this.getDetailsHtml(component);
-      });
+  private getComponentSource(componentName: string) {
+    console.log("Get component source not implemented");
+  }
+
+  private getCost(resultName: string): void {
+    this.blueprintService.getTotalResourceCost(resultName)
+      .subscribe(cost => this.totalCost = cost);
   }
 
   private updateCollectible(): void {
     this.collectibleService.updateCollectible(this.collectible)
-    .subscribe(()=>{});
+      .subscribe(()=>{});
   }
 
-  public getDetailsHtml(component: BlueprintComponent): string {
+  public getDetailsHtml(component: BlueprintComponentStack): string {
     console.log(component);
-    let title = component.resource.componentName;
-    let result = "<h4>" + title;
-
-    if (component.category == "Resource")  {
-      let amount = component.resource.componentCount;
-      return result + ` (${amount})` + "</h4>"
-    }
-
-    result += "</h4>";
-    
-    return result + this.getBuildCostHtml(component) + this.getSourceHtml(component);
+    let title = component.componentName;
+    let amount = component.componentCount;
+    return "<h4>" + title + ` (${amount})` + "</h4>"
   }
 
-  private getBuildCostHtml(component: BlueprintComponent): string {
-    if (component.cost.length == 0) return "";
+  private getBuildCostHtml(blueprint: Blueprint): string {
     let result = "<div> <h5>Build Cost</h5>";
-    
-    let cost = component.cost.map<string>(resource => {
-      let name = resource.name;
-      let amount = resource.amount;
-      return `${name} (${amount})`;
+    blueprint.components.forEach(component => {
+      let name = component.componentName;
+      let amount = component.componentCount;
+      let row = `<div>{name} ({amount})</div>`
+      result += row;
     });
-    
-    console.log(cost);
-    cost.forEach(costString => {
-      result += `<div>${costString}</div>`;
-    });
-    console.log(cost);
-    
-    return result + "</div>";
+    return result;
   }
 
-  private getSourceHtml(component: BlueprintComponent): string {
-    let sources = component.source.map(source => {
-      return source.sourceName + "(" + source.sourceType + ", " + source.value + ")";
-    });
-    if (sources.length == 0) return "";
-    let title = sources.length > 1 ? "Sources" : "Sources";
-    let result = `<div> <h5>${title}</h5>`;
-    sources.forEach(sourceHtml => {
-      result += "<div>" + sourceHtml + "</div>";
-    });
-    return result + "</div>";
+  private getSourceHtml(component: any): string {
+    return "<p>Get Source not implemented</p>";
   }
 }

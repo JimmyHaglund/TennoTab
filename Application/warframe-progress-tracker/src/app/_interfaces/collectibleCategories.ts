@@ -14,15 +14,15 @@ export interface CollectibleCategories {
 
 export const collectibleCategories: CollectibleCategories = {
    Warframe: "Warframe",
-   PrimaryWeapon: "Primary Weapon",
-   SecondaryWeapon: "Secondary Weapon",
-   MeleeWeapon: "Melee Weapon",
-   Amp: "Amp Prism",
-   Pet: "Pet",
-   RoboGun: "Robo-Gun",
-   Archwing: "Archwing",
-   ArchGun: "Archgun",
-   ArchMelee: "Arch-Melee"
+   PrimaryWeapon: "PrimaryWeapon",
+   SecondaryWeapon: "SecondaryWeapon",
+   MeleeWeapon: "MeleeWeapon",
+   Amp: "AmpPrism",
+   Pet: "Companion",
+   RoboGun: "RoboticWeapon",
+   Archwing: "ArchWing",
+   ArchGun: "ArchGun",
+   ArchMelee: "ArchMelee"
 };
 
 export const collectibleCategoryKeys = {

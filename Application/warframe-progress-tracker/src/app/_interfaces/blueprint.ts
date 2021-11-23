@@ -4,6 +4,6 @@ export interface Blueprint {
 }
 
 export interface BlueprintComponentStack {
-   name: string;
+   componentName: string;
    componentCount: number;
 }

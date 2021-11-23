@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Collectible, collectibleCategories } from '../../_interfaces';
-import { CollectibleSearchForm } from '../../_interfaces';
 import { CollectibleService } from '../../_services';
-import { startWith } from 'rxjs/operators';
-import { Action } from '../../_tools';
 import { CollectibleFilter } from './collectibleFilter';
 import { CollectibleSorter } from './collectibleSorter';
 
@@ -62,7 +59,7 @@ export class CollectiblesComponent implements OnInit {
   }
 
   private getCollectibles() {
-    this.collectibleService.getCollectibles()
+    this.collectibleService.getAllCollectibles()
       .subscribe(collectibles => this.collectibles = collectibles);
   }
 }

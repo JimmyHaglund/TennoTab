@@ -1,41 +1,19 @@
 <div>
    <h1>Wish list</h1>
+   <!--
+   <div class="d-flex horizontal-list">
+      <h5>Total construction cost:</h5>
+      <div *ngFor='let stack of componentViews.' class="component-card">
+         <span class="card">{{stack.componentName}}: {{stack.componentCount}}</span>
+      </div>
+   </div>
+   -->
    <ul class="list-group">
-      <li *ngFor='let collectible of collectibles' class="list-group-item wish-list-item">
+      <li *ngFor='let view of componentViews' class="list-group-item wish-list-item">
          <app-wish-list-card 
-            [collectible]="collectible"
+            [collectible]="view.collectible"
             [onDelete]="removeItem"
-            ></app-wish-list-card>
-         <!--
-         <app-item-cost-card 
-         [blueprint]="getBlueprint(collectible.name)" 
-         [collectible]="collectible"
-         [cost]="getBlueprintResourceCost(collectible.name)" 
-         [onDelete]="removeItem"></app-item-cost-card>
-         -->
+         ></app-wish-list-card>
       </li>
    </ul>
 </div>
-<!--
-<div class="container" *ngIf='hasResourceCost()'>
-   <h2>Total forging costs:</h2>
-   <ul class="list-group">
-      <li *ngFor = 'let cost of getTotalCost()' class="list-group-item">
-         {{cost.name}} ({{cost.amount}})
-      </li>
-   </ul>
-</div>
-
-<div class="container">
-   <ul class="list-group">
-      <li *ngFor='let collectible of collectibles' class="list-group-item wish-list-item">
-         <app-item-cost-card 
-            [blueprint]="getBlueprint(collectible.name)"
-            [collectible]="collectible"
-            [cost]="getBlueprintResourceCost(collectible.name)"
-            [onDelete]="removeItem"
-            ></app-item-cost-card>
-      </li>
-   </ul>
-</div>
--->

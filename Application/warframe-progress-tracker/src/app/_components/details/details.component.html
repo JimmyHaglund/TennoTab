@@ -15,20 +15,13 @@
          <button class="btn btn-primary large-text m-1" (click)="increaseRank()">+</button>
       </div>
    </div>
-
-   <div class="card p-2">
-      <h5>Build cost</h5>
-         <div *ngFor="let resource of cost">
-            {{resource.name}} ({{resource.amount}})
-         </div>
-   </div>
 </div>
 
 <div class="card p-2 m-3">
    <h2 class="card-title">Components</h2>
    <ul class="list-group list-group-flush">
-      <div class="list-group-item" *ngFor="let component of blueprint">
-         <span [innerHTML]="component.detailsHtml"></span>
+      <div class="list-group-item" *ngFor="let component of components">
+         <span [innerHTML]="getDetailsHtml(component)"></span>
          <!--
          <h4>{{component.resource.componentName}}</h4>
          <h5>Build cost</h5>

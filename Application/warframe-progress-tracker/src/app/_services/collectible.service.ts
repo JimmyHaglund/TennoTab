@@ -1,80 +1,66 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { MessageService } from '../message.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { Collectible, CollectibleSearchForm } from '../_interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CollectibleService {
-  private apiUrl = environment.apiUrl;
-  private collectibleApiUrlGet = environment.apiUrl + "/collectible/get";
-  private collectibleApiGetWithName = environment.apiUrl + "/collectible/getwithname";
-  private collectibleApiSet = environment.apiUrl + "/collectible/set";
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
-    private _defaultSearchForm: CollectibleSearchForm = {
-      includeFrames: true,
-      includePrimaryWeapons: true,
-      includeSecondaryWeapons: true,
-      includeMeleeWeapons: true,
-      includePets: true,
-      includeRoboWeapons: true,
-      includeOperatorAmps: true,
-      includeArchwings: true,
-      includeArchGuns: true,
-      includeArchMeleeWeapons: true,
+  private _apiAddress = environment.apiUrl + '/collectible/'
+  private _endpoints = {
+    all: this._apiAddress + 'all/',
+    get: this._apiAddress + 'get',
+    put: this._apiAddress + 'put'
+  };
+  
+  constructor(private http: HttpClient) { }
 
-      onlyOnWishlist: false,
-      includeOwned: true,
-      includeMastered: true,
-      searchText: "" 
-    };
-
-  getCollectibles(searchForm: CollectibleSearchForm = this._defaultSearchForm
-    ): Observable<Collectible[]> {
-    return this.http.put<Collectible[]>(this.collectibleApiUrlGet, searchForm, { withCredentials: true })
-      .pipe(catchError(this.handleError<Collectible[]>('getCollectibles,', [])));
+  getAllCollectibles(): Observable<Collectible[]> {
+    let url = this._endpoints.all;
+    return this.http.get<Collectible[]>(url, { withCredentials: true })
+      .pipe(catchError(this.handleError<Collectible[]>('getAllCollectibles,', [])));
   }
 
-  getCollectible(category: string, name: string): Observable<Collectible> {
-    let info = { category: category, name: name };
-    return this.http.put<Collectible>(
-      this.collectibleApiGetWithName,
-      info, { withCredentials: true });
+  getCollectibles(searchForm: CollectibleSearchForm): Observable<Collectible[]> {
+    let url = this._endpoints.get;
+    let header = { withCredentials: true }
+    return this.http.put<Collectible[]>(url, searchForm, header)
+      .pipe(catchError(this.handleError<Collectible[]>('getCollectibles', [])));
+  }
+
+  getCollectible(collectibleName: string): Observable<Collectible> {
+    let url = this.buildUrlGetSingle(collectibleName);
+    let header = { withCredentials: true }
+    return this.http.get<Collectible>(url, header)
+      .pipe(catchError(this.handleError<Collectible>('getCollectible')));
   }
 
   updateCollectible(collectible: Collectible): Observable<Collectible> {
-    return this.http.put<Collectible>(
-      this.collectibleApiSet, collectible, { withCredentials: true })
+    let url = this._endpoints.put;
+    let header = { withCredentials: true }
+    return this.http.put<Collectible>( url, collectible, header)
       .pipe(tap(() =>
         this.log(`updated userCollectible:${collectible.name}`)),
         catchError(this.handleError<Collectible>('upgradeCollectibleRank')));
   }
 
-  addToWishlist(collectible: Collectible): Observable<Collectible> {
-    throw "add to wish list not implemented";
-  }
-
-  removeFromWishlist(collectible: Collectible): Observable<Collectible> {
-    throw "remove from wish list not implemented";
-  }
-
-  
-  private log(message: string) {
-    this.messageService.add(`FrameService: ${message}`);
+  private buildUrlGetSingle(collectibleName: string): string {
+    return this._endpoints.get + '/' + collectibleName;
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-
-      console.error(error); // log to console instead
+      console.error(error);
       this.log(`${operation} failed: ${error.message}`);
       return of(result as T);
     };
+  }
+
+  private log(message: string) {
+    console.log(message)
   }
 }

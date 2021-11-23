@@ -33,8 +33,9 @@ namespace WarframeProgressTrackerApi {
             ConfigureIdentity(services);
 
             services.ConfigureApplicationCookie(cookieOptions => {
-                cookieOptions.Cookie.SameSite = SameSiteMode.Lax;
+                cookieOptions.Cookie.SameSite = SameSiteMode.None;
                 cookieOptions.Cookie.Name = "auth_cookie";
+                cookieOptions.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 
                 cookieOptions.Events = new CookieAuthenticationEvents {
                     OnRedirectToLogin = redirectContext => {
@@ -89,6 +90,10 @@ namespace WarframeProgressTrackerApi {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCookiePolicy(new CookiePolicyOptions() { 
+                Secure = CookieSecurePolicy.None
+            });
 
             app.UseRouting();
 

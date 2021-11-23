@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { MessagesComponent } from './_components/messages/messages.component';
 import { LoginComponent } from './_components/login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CollectiblesComponent } from './_components';
@@ -22,7 +21,6 @@ import { WishListCardComponent } from './_components/wish-list/wish-list-card/wi
 @NgModule({
    declarations: [
       AppComponent,
-      MessagesComponent,
       LoginComponent,
       RegisterComponent,
       CollectiblesComponent,

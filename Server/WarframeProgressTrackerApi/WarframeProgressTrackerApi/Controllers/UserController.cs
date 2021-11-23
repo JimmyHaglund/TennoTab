@@ -63,9 +63,11 @@ namespace WarframeProgressTrackerApi.Controllers {
         public async Task<User> Register(LoginInfo login) {
             var user = new User() { UserName = login.UserName };
             var createUserResult = await _userManager.CreateAsync(user, login.Password);
-            _dataContext.CreateUserData(login.UserName);
-            // return _dataContext.Frames.FirstOrDefault();
-            return createUserResult.Succeeded ? user : null;
+            if (createUserResult.Succeeded) {
+                _dataContext.CreateUserData(user.Id);
+                return user;
+            }
+            return null;
         }
 
 

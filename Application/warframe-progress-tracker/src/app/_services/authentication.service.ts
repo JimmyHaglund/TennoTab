@@ -25,10 +25,9 @@ export class AuthenticationService {
       }
    }
 
-   public login(userName: string, password: string): void {
+   public login(userName: string, password: string): Observable<any> {
       var url = environment.apiUrl + "/user/login";
-      this.http.post(url, { userName, password }, {withCredentials: true} )
-      .subscribe(response => {});
+      return this.http.post(url, { userName, password }, {withCredentials: true});
    }
 
    public register(userName: string, password: string): Observable<any> {
@@ -36,10 +35,13 @@ export class AuthenticationService {
       var url = environment.apiUrl + "/user/register";
       return this.http.post<string>(url, {userName, password}, {withCredentials: true})
       .pipe(map(user => {
-         console.log(user);
          localStorage.setItem('currentUser', JSON.stringify(user));
          this.currentUserSubject.next(user);
          return user;
       }));
    }
+
+   public getCurrentUser():any {
+      return localStorage.getItem('currentUser');
+   } 
 }

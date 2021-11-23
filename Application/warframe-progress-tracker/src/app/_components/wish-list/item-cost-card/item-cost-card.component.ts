@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { Blueprint, BlueprintCost, BlueprintComponent, ResourceStack } from '../../../_interfaces/blueprint';
+import { Blueprint, BlueprintComponentStack } from '../../../_interfaces/blueprint';
 import { Collectible } from '../../../_interfaces';
 import { CollectibleService } from '../../../_services';
 
@@ -11,22 +11,22 @@ import { CollectibleService } from '../../../_services';
 export class ItemCostCardComponent implements OnInit {
   @Input() public blueprint!: Blueprint;
   @Input() public collectible!: Collectible;
-  @Input() public cost!: BlueprintCost;
+  @Input() public cost!: BlueprintComponentStack[];
   @Input() public onDelete!: (name: string)=>void;
 
   constructor(private collectibleService: CollectibleService) { }
 
   ngOnInit(): void { }
 
-  getBlueprintComponents(): BlueprintComponent[] {
+  getBlueprintComponents(): BlueprintComponentStack[] {
     if (this.blueprint === undefined) return [];
     let blueprint = this.blueprint;
     return blueprint === undefined ? [] : blueprint.components;
   }
 
-  getBlueprintResourceCost(): ResourceStack[] {
+  getBlueprintResourceCost(): BlueprintComponentStack[] {
     if (this.cost === undefined) return [];
-    return this.cost.cost;
+    return this.cost;
   }
 
   getStatusText(): string {

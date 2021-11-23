@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
   public submitted = false;
   public loading = false;
+  public loginSuccess = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
   public get formFields() : { [key: string]: AbstractControl} {
     return this.loginForm.controls;
   }
+
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -33,10 +35,12 @@ export class LoginComponent implements OnInit {
 
     if (this.loginForm.invalid) return;
     this.loading = true;
+    this.loginSuccess = true;
 
     this.authenticationService.login(
       this.formFields.username.value, 
-      this.formFields.password.value);
+      this.formFields.password.value)
+      .subscribe(result => this.loading = false);
 
     console.log("login submitted");
   }

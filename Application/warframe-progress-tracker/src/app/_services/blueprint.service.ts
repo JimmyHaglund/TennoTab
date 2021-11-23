@@ -10,10 +10,10 @@ import { Blueprint, BlueprintComponentStack } from '../_interfaces';
 })
 
 export class BlueprintService {
-  private _apiAddress: string = environment.apiUrl + '/blueprint';
+  private _apiAddress: string = environment.apiUrl + '/blueprint/';
   private _endpoints = {
-    get: '/get/',
-    totalresourcecost: '/totalresourcecost/'
+    get: 'get/',
+    totalresourcecost: 'totalresourcecost/'
   };
 
   constructor(private http: HttpClient) { }

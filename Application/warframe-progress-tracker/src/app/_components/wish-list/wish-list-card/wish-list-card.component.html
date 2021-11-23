@@ -1,6 +1,6 @@
 
 <div class="d-flex horizontal-list">
-   <a routerLink='/collectible/{{collectible.category}}/{{collectible.name}}'>
+   <a routerLink='/collectible/{{collectible.name}}'>
       <h4 class="title-section btn btn-primary">{{collectible.name}}</h4>
    </a>
    <span class="status-section d-flex">
@@ -17,14 +17,14 @@
 
 <div class="d-flex horizontal-list">
    <h5>Components:</h5>
-   <span *ngFor='let component of componentBlueprints' class="component-card">
-      <span class="card">{{component.resultName}}</span>
+   <span *ngFor='let component of components' class="component-card">
+      <span class="card">{{component.componentName}}</span>
    </span>
 </div>
 
 <div class="d-flex horizontal-list">
    <h5>Construction cost:</h5>
-   <div *ngFor='let resource of getTotalCost()' class="component-card">
-      <span class="card">{{resource.name}}: {{resource.amount}}</span>
+   <div *ngFor='let stack of totalBuildCost' class="component-card">
+      <span class="card">{{stack.componentName}}: {{stack.componentCount}}</span>
    </div>
 </div>

@@ -1,4 +1,4 @@
-# TennoTab
+# Tenno Tab
 
 Tenno Tab is a companion webb-application for the game Warframe. Looking at the game's website, https://www.warframe.com/ it's already apparent that the game has a lot of content, and it can be difficult to choose what to do next. The core forcus of Warframe is collecting items, and this is where Tenno Tab can help.
 

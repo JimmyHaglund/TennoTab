@@ -26,13 +26,13 @@ export class AuthenticationService {
    }
 
    public login(userName: string, password: string): Observable<any> {
-      var url = environment.apiUrl + "/user/login";
+      var url = environment.apiUrl + "user/login";
       return this.http.post(url, { userName, password }, {withCredentials: true});
    }
 
    public register(userName: string, password: string): Observable<any> {
       console.log("Registering", userName);
-      var url = environment.apiUrl + "/user/register";
+      var url = environment.apiUrl + "user/register";
       return this.http.post<string>(url, {userName, password}, {withCredentials: true})
       .pipe(map(user => {
          localStorage.setItem('currentUser', JSON.stringify(user));

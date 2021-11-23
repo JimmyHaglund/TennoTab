@@ -10,7 +10,7 @@ import { Collectible, CollectibleSearchForm } from '../_interfaces';
 })
 
 export class CollectibleService {
-  private _apiAddress = environment.apiUrl + '/collectible/'
+  private _apiAddress = environment.apiUrl + 'collectible/'
   private _endpoints = {
     all: this._apiAddress + 'all/',
     get: this._apiAddress + 'get',

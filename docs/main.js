@@ -424,7 +424,7 @@ __webpack_require__.r(__webpack_exports__);
 class BlueprintService {
     constructor(http) {
         this.http = http;
-        this._apiAddress = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl + '/blueprint/';
+        this._apiAddress = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl + 'blueprint/';
         this._endpoints = {
             get: 'get/',
             totalresourcecost: 'totalresourcecost/'
@@ -1436,7 +1436,7 @@ __webpack_require__.r(__webpack_exports__);
 class CollectibleService {
     constructor(http) {
         this.http = http;
-        this._apiAddress = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl + '/collectible/';
+        this._apiAddress = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl + 'collectible/';
         this._endpoints = {
             all: this._apiAddress + 'all/',
             get: this._apiAddress + 'get',
@@ -1686,12 +1686,12 @@ class AuthenticationService {
         }
     }
     login(userName, password) {
-        var url = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + "/user/login";
+        var url = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + "user/login";
         return this.http.post(url, { userName, password }, { withCredentials: true });
     }
     register(userName, password) {
         console.log("Registering", userName);
-        var url = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + "/user/register";
+        var url = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl + "user/register";
         return this.http.post(url, { userName, password }, { withCredentials: true })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(user => {
             localStorage.setItem('currentUser', JSON.stringify(user));

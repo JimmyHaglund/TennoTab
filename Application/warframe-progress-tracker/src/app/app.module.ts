@@ -7,8 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './_components/login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './_components';
+import { RegisterComponent } from './_components';
 import { CollectiblesComponent } from './_components';
 import { CollectibleCardComponent } from './_components/collectibles/collectible-card/collectible-card.component';
 import { WishListComponent } from './_components/wish-list/wish-list.component';
@@ -17,6 +17,7 @@ import { DetailsComponent } from './_components/details/details.component';
 import { CollectibleFilterComponent } from './_components/collectibles/collectible-filter/collectible-filter.component';
 import { CollectibleSortComponent } from './_components/collectibles/collectible-sort/collectible-sort.component';
 import { WishListCardComponent } from './_components/wish-list/wish-list-card/wish-list-card.component';
+import { AdminComponent } from './_components/admin/admin.component';
 
 @NgModule({
    declarations: [
@@ -30,7 +31,8 @@ import { WishListCardComponent } from './_components/wish-list/wish-list-card/wi
       DetailsComponent,
       CollectibleFilterComponent,
       CollectibleSortComponent,
-      WishListCardComponent
+      WishListCardComponent,
+      AdminComponent
    ],
    imports: [
       BrowserModule,

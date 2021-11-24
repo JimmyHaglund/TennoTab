@@ -58,6 +58,7 @@ namespace WarframeProgressTrackerApi.Data {
 
             SetupKeys(modelBuilder);
             SeedData(modelBuilder);
+            SeedRoles(modelBuilder);
         }
 
         private void SetupKeys(ModelBuilder modelBuilder) {
@@ -165,6 +166,10 @@ namespace WarframeProgressTrackerApi.Data {
             SeedDataFromCsv<SyndicateOffering>(modelBuilder, "SyndicateOfferings");
             SeedDataFromCsv<VoidFissureMissionReward>(modelBuilder, "VoidFissureMissionRewards");
             SeedDataFromCsv<VoidRelicDrop>(modelBuilder, "VoidRelicDrops");
+        }
+
+        private void SeedRoles(ModelBuilder modelBuilder) {
+            var user = IdentRo
         }
 
         private void SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName) where T : class {

@@ -37,7 +37,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
 
         [HttpPost]
-        public async Task<User> Login(LoginInfo login) {
+        public async Task<UserView> Login(LoginInfo login) {
             var user = await _userManager.FindByNameAsync(login.UserName);
             if (user == null) return null;
 
@@ -51,7 +51,8 @@ namespace WarframeProgressTrackerApi.Controllers {
                 _sessionUser.Add(cookie, user.Id);
             }
 
-            return user;    
+            var userRoles = _dataContext.UserRoles.Where(userRole => userRole.UserId == user.Id);
+            return new UserView() { }
         }
 
         private string ExtractResponseCookie(string cookieRaw) {

@@ -6,5 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace WarframeProgressTrackerApi.Models {
-    public class User : IdentityUser { }
+    public class User : IdentityUser {
+        bool IsAdmin { get; set; } = false;
+    }
 }

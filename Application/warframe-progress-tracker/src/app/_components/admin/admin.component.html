@@ -1,1 +1,8 @@
-<p>admin works!</p>
+<h1>Administration</h1>
+
+<div>
+   <div *ngFor = 'let userInfo of UserInfos'>
+      {{userInfo.name}} | {{userInfo.isAdmin}}
+      <button (click)="toggleAdmin(userInfo.name)">Toggle Admin</button>
+   </div>
+</div>

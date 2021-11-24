@@ -23,21 +23,29 @@ namespace WarframeProgressTrackerApi.Controllers {
         private SignInManager<User> _signInManager;
         private UserManager<User> _userManager;
         private SessionUser _sessionUser;
+        private RoleManager<IdentityRole> _roleManager;
+        private static bool _seeded = false;
+        private const string ADMIN = "Administrator";
+        private const string SYSADMIN = "SysAdm";
 
         public UserController(
             WarframeProgressTrackerContext databaseContext,
             SignInManager<User> signInManager,
             UserManager<User> userManager,
-            SessionUser sessionUser) {
+            SessionUser sessionUser,
+            RoleManager<IdentityRole> roleManager
+            ) {
             _dataContext = databaseContext;
             _signInManager = signInManager;
             _userManager = userManager;
             _sessionUser = sessionUser;
+            _roleManager = roleManager;
         }
 
 
         [HttpPost]
         public async Task<UserView> Login(LoginInfo login) {
+            await SeedAdmin();
             var user = await _userManager.FindByNameAsync(login.UserName);
             if (user == null) return null;
 
@@ -51,8 +59,61 @@ namespace WarframeProgressTrackerApi.Controllers {
                 _sessionUser.Add(cookie, user.Id);
             }
 
-            var userRoles = _dataContext.UserRoles.Where(userRole => userRole.UserId == user.Id);
-            return new UserView() { }
+            return new UserView() { 
+                Name = user.UserName, 
+                IsAdmin = await IsAdmin(user)
+            };
+        }
+
+        [HttpPost]
+        public async Task<UserView> Register(LoginInfo login) {
+            var user = new User() { UserName = login.UserName };
+            var createUserResult = await _userManager.CreateAsync(user, login.Password);
+            if (createUserResult.Succeeded) {
+                _dataContext.CreateUserData(user.Id);
+                return new UserView() {
+                    Name = user.UserName,
+                    IsAdmin = await IsAdmin(user)
+                };
+            }
+            return new UserView();
+        }
+
+        [HttpGet]
+        [Authorize(Roles ="Administrator")]
+        public async Task<IEnumerable<UserView>> GetAll() {
+            var users = _dataContext.Users.ToList();
+            var userViews = new List<UserView>(users.Count);
+            foreach (var user in users) {
+                var isAdmin = await IsAdmin(user);
+                userViews.Add(new UserView() {
+                    Name = user.UserName,
+                    IsAdmin = isAdmin
+                });
+            }
+            return userViews;
+        }
+
+        [HttpPost]
+        [Authorize(Roles ="Administrator")]
+        public async Task<UserView> Set([FromBody] UserView userInfo) {
+            var user = await _userManager.FindByNameAsync(userInfo.Name);
+            var senderId = _sessionUser.IdFromRequest(Request);
+            var sender = await _userManager.FindByIdAsync(senderId);
+            if (user.Id == sender.Id) userInfo.IsAdmin = true;
+            if (userInfo.IsAdmin) {
+                await _userManager.AddToRoleAsync(user, ADMIN);
+            } else {
+                await _userManager.RemoveFromRoleAsync(user, ADMIN);
+            }
+            return new UserView() {
+                Name = userInfo.Name,
+                IsAdmin = userInfo.IsAdmin
+            };
+        }
+
+        private async Task<bool> IsAdmin(User user) {
+            return await _userManager.IsInRoleAsync(user, ADMIN);
         }
 
         private string ExtractResponseCookie(string cookieRaw) {
@@ -60,17 +121,19 @@ namespace WarframeProgressTrackerApi.Controllers {
             return result.Substring(0, result.IndexOf(";"));
         }
 
-        [HttpPost]
-        public async Task<User> Register(LoginInfo login) {
-            var user = new User() { UserName = login.UserName };
-            var createUserResult = await _userManager.CreateAsync(user, login.Password);
-            if (createUserResult.Succeeded) {
-                _dataContext.CreateUserData(user.Id);
-                return user;
+        private async Task SeedAdmin() {
+            if (_seeded) return;
+
+            var adminExists = await _roleManager.RoleExistsAsync(ADMIN);
+            if (!adminExists) {
+                await _roleManager.CreateAsync(new IdentityRole(ADMIN));
             }
-            return null;
+
+            var user = await _userManager.FindByNameAsync(SYSADMIN);
+            if (user == null) return;
+            await _userManager.AddToRoleAsync(user, ADMIN);
+
+            _seeded = true;
         }
-
-
     }
 }

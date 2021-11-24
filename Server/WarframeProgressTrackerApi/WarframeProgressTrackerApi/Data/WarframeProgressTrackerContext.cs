@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using WarframeProgressTrackerApi.Models;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace WarframeProgressTrackerApi.Data {
     public class WarframeProgressTrackerContext : IdentityDbContext<User> {
@@ -169,7 +171,10 @@ namespace WarframeProgressTrackerApi.Data {
         }
 
         private void SeedRoles(ModelBuilder modelBuilder) {
-            var user = IdentRo
+            var adminRole = new IdentityRole("Administrator");
+            var userRole = new IdentityRole("User");
+            modelBuilder.Entity<IdentityRole>().HasData(adminRole);
+            modelBuilder.Entity<IdentityRole>().HasData(userRole);
         }
 
         private void SeedDataFromCsv<T>(ModelBuilder builder, string seedFileName) where T : class {

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections;
+﻿using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Authorization;
 using WarframeProgressTrackerApi.Data;
-using WarframeProgressTrackerApi.Models;
 using WarframeProgressTrackerApi.Services;
+using WarframeProgressTrackerApi.Models;
 using WarframeProgressTrackerApi.ViewModels;
 
 namespace WarframeProgressTrackerApi.Controllers {
@@ -123,6 +120,33 @@ namespace WarframeProgressTrackerApi.Controllers {
             target.Mastered = collectible.Mastered;
             target.OnWishlist = collectible.OnWishlist;
             _context.SaveChanges();
+        }
+
+        [HttpPost]
+        [Route("[controller]/[action]")]
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Create([FromBody] CollectibleView inCollectible) {
+            if (string.IsNullOrEmpty(inCollectible.Name)) {
+                return BadRequest("Collectible must have a name.");
+            }
+            if (CollectibleExists(inCollectible.Name)) {
+                return BadRequest("Collectible with name " + inCollectible.Name + " already exists.");
+            }
+            var collectible = new Collectible() {
+                ItemName = inCollectible.Name,
+                Category = inCollectible.Category
+            };
+            
+            _context.CreateCollectibleData(collectible);
+           
+            return Ok();
+        }
+
+        private bool CollectibleExists(string name) {
+            var existingCollectible = (from collectible in _context.Collectibles
+                                       where collectible.ItemName == name
+                                       select collectible).FirstOrDefault();
+            return existingCollectible != default;
         }
 
         #region Body

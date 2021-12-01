@@ -44,14 +44,24 @@ namespace WarframeProgressTrackerApi.Data {
         public DbSet<VoidRelicDrop> VoidRelicDrops { get; set; }
         public DbSet<UserCollectible> UserCollectibles { get; set; }
 
-
-        public void CreateUserData(string userName) {
+        public void CreateUserData(string userId) {
             var userCollectibles = from collectible in Collectibles
                                    select new UserCollectible() {
                                        ItemName = collectible.ItemName,
-                                       UserId = userName
+                                       UserId = userId
                                    };
             UserCollectibles.AddRange(userCollectibles);
+            SaveChanges();
+        }
+
+        public void CreateCollectibleData(Collectible newCollectible) {
+            Collectibles.Add(newCollectible);
+            var newUserCollectibles = from user in Users
+                                      select new UserCollectible() {
+                                          ItemName = newCollectible.ItemName,
+                                          UserId = user.Id
+                                      };
+            UserCollectibles.AddRange(newUserCollectibles);
             SaveChanges();
         }
 

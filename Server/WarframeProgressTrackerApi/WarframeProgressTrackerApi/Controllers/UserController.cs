@@ -1,17 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Security.Principal;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using WarframeProgressTrackerApi.Data;
 using WarframeProgressTrackerApi.Models;
 using WarframeProgressTrackerApi.ViewModels;
-using Microsoft.AspNetCore.Cors;
 using WarframeProgressTrackerApi.Services;
 
 namespace WarframeProgressTrackerApi.Controllers {

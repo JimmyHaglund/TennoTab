@@ -14,9 +14,10 @@ export class CollectibleService {
   private _endpoints = {
     all: this._apiAddress + 'all/',
     get: this._apiAddress + 'get',
-    put: this._apiAddress + 'put'
+    put: this._apiAddress + 'put',
+    create: this._apiAddress + 'create'
   };
-  
+
   constructor(private http: HttpClient) { }
 
   getAllCollectibles(): Observable<Collectible[]> {
@@ -41,11 +42,17 @@ export class CollectibleService {
 
   updateCollectible(collectible: Collectible): Observable<Collectible> {
     let url = this._endpoints.put;
-    let header = { withCredentials: true }
-    return this.http.put<Collectible>( url, collectible, header)
+    let header = { withCredentials: true };
+    return this.http.put<Collectible>(url, collectible, header)
       .pipe(tap(() =>
         this.log(`updated userCollectible:${collectible.name}`)),
         catchError(this.handleError<Collectible>('upgradeCollectibleRank')));
+  }
+
+  createCollectible(collectible: Collectible): void {
+    let url = this._endpoints.create;
+    let header = { withCredentials: true };
+    this.http.put<void>(url, collectible, header).pipe().subscribe();
   }
 
   private buildUrlGetSingle(collectibleName: string): string {

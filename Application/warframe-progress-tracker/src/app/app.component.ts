@@ -7,7 +7,7 @@ import { AuthenticationService } from './_services';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title = 'Warframe Progress Tracker';
+  public title = 'Tenno Tab';
 
   constructor(private _authenticationService: AuthenticationService) {}
   

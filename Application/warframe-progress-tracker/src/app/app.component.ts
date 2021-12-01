@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './_services';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Warframe Progress Tracker';
+  public title = 'Warframe Progress Tracker';
+
+  constructor(private _authenticationService: AuthenticationService) {}
+  
+  getUserIsAdmin():boolean {
+    return this._authenticationService.getCurrentUser().isAdmin;
+  }
+
 }

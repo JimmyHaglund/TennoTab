@@ -1,8 +1,6 @@
 <h1>Administration</h1>
 
 <div>
-   <div *ngFor = 'let userInfo of UserInfos'>
-      {{userInfo.name}} | {{userInfo.isAdmin}}
-      <button (click)="toggleAdmin(userInfo.name)">Toggle Admin</button>
-   </div>
+   <a class="m-1" routerLink="/admin/users">Users</a>
+   <a class="m-1" routerLink="/admin/createcollectible">Create Collectible</a>
 </div>

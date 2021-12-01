@@ -18,6 +18,8 @@ import { CollectibleFilterComponent } from './_components/collectibles/collectib
 import { CollectibleSortComponent } from './_components/collectibles/collectible-sort/collectible-sort.component';
 import { WishListCardComponent } from './_components/wish-list/wish-list-card/wish-list-card.component';
 import { AdminComponent } from './_components/admin/admin.component';
+import { CreateCollectibleComponent } from './_components/admin/create-collectible/create-collectible.component';
+import { UsersComponent } from './_components/admin/users/users.component';
 
 @NgModule({
    declarations: [
@@ -32,7 +34,9 @@ import { AdminComponent } from './_components/admin/admin.component';
       CollectibleFilterComponent,
       CollectibleSortComponent,
       WishListCardComponent,
-      AdminComponent
+      AdminComponent,
+      CreateCollectibleComponent,
+      UsersComponent
    ],
    imports: [
       BrowserModule,

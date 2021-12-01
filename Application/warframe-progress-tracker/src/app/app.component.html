@@ -5,6 +5,7 @@
       <a class="m-1" routerLink="/collectibles">Collectibles</a>
       <a class="m-1" routerLink="/wishlist">Wishlist</a>
       <a class="m-1" routerLink="/login">Login</a>
+      <a *ngIf="getUserIsAdmin()" class="m-1" routerLink="/admin">Admin</a>
     </nav>
     <router-outlet></router-outlet>
   </div>

@@ -85,7 +85,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         public IEnumerable<CollectibleView> Get([FromBody] CollectibleSearchForm searchForm) {
             var userId = _sessionUser.IdFromRequest(Request);
             var collectibles = GetCollectibleViews(searchForm);
-            if (userId == "") return collectibles;
+            if (userId == "") return searchForm.OnlyOnWishlist ? new CollectibleView[0] : collectibles;
             var userCollectibles = from userCollectible in _context.UserCollectibles
                                    where userCollectible.UserId == userId
                                    where !searchForm.OnlyOnWishlist || userCollectible.OnWishlist

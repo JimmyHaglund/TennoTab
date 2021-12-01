@@ -144,6 +144,7 @@ namespace WarframeProgressTrackerApi.Controllers {
 
         [HttpDelete]
         [Route("[controller]/[action]/{itemName}")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(string itemName) {
             if (!CollectibleExists(itemName)) {
                 return BadRequest("Collectible with name " + itemName + " could not be found.");

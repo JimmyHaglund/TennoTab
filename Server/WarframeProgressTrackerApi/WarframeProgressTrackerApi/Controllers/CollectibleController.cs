@@ -142,6 +142,16 @@ namespace WarframeProgressTrackerApi.Controllers {
             return Ok();
         }
 
+        [HttpDelete]
+        [Route("[controller]/[action]/{itemName}")]
+        public ActionResult Delete(string itemName) {
+            if (!CollectibleExists(itemName)) {
+                return BadRequest("Collectible with name " + itemName + " could not be found.");
+            }
+            _context.RemoveCollectibleData(itemName);
+            return Ok();
+        }
+
         private bool CollectibleExists(string name) {
             var existingCollectible = (from collectible in _context.Collectibles
                                        where collectible.ItemName == name

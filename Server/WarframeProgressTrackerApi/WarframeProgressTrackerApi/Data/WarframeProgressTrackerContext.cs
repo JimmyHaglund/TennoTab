@@ -65,6 +65,18 @@ namespace WarframeProgressTrackerApi.Data {
             SaveChanges();
         }
 
+        public void RemoveCollectibleData(string name) {
+            var collectible = (from col in Collectibles
+                               where col.ItemName == name
+                               select col).FirstOrDefault();
+            Collectibles.Remove(collectible);
+            var userCollectibles = from userCollectible in UserCollectibles
+                                   where userCollectible.ItemName == name
+                                   select userCollectible;
+            UserCollectibles.RemoveRange(userCollectibles);
+            SaveChanges();
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
 

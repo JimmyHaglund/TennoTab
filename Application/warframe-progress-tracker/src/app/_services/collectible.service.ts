@@ -52,7 +52,11 @@ export class CollectibleService {
   createCollectible(collectible: Collectible): void {
     let url = this._endpoints.create;
     let header = { withCredentials: true };
-    this.http.put<void>(url, collectible, header).pipe().subscribe();
+    this.http.post<void>(url, collectible, header)
+    .pipe(tap(() => 
+      this.log(`created collectible: ${collectible.name}.`)
+    ))
+    .subscribe();
   }
 
   private buildUrlGetSingle(collectibleName: string): string {

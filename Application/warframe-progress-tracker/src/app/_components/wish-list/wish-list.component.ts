@@ -34,8 +34,7 @@ export class WishListComponent implements OnInit {
   };
   constructor(
     private collectibleService: CollectibleService,
-    private blueprintService: BlueprintService
-  ) { 
+    private blueprintService: BlueprintService) {
     this.removeItem = this.removeItem.bind(this);
   }
 
@@ -46,10 +45,10 @@ export class WishListComponent implements OnInit {
   private getCollectibles() {
     this.collectibleService.getCollectibles(this._searchForm)
       .subscribe(collectibles => {
-        this.componentViews = collectibles.map(collectible => { 
+        this.componentViews = collectibles.map(collectible => {
           let view: ComponentView = {
             collectible: collectible,
-            blueprint: {resultName: '', components: []},
+            blueprint: { resultName: '', components: [] },
             cost: []
           }
           return view;
@@ -70,7 +69,7 @@ export class WishListComponent implements OnInit {
     });
   }
 
-  private updateViewBlueprint(collectible: Collectible, blueprint:Blueprint): void {
+  private updateViewBlueprint(collectible: Collectible, blueprint: Blueprint): void {
     let targetView: ComponentView = {
       collectible: collectible,
       blueprint: blueprint,
@@ -83,10 +82,10 @@ export class WishListComponent implements OnInit {
     targetView.blueprint = blueprint;
   }
 
-  private updateViewCost(collectible: Collectible, cost:BlueprintComponentStack[]): void {
+  private updateViewCost(collectible: Collectible, cost: BlueprintComponentStack[]): void {
     let targetView: ComponentView = {
       collectible: collectible,
-      blueprint: {resultName: '', components: []},
+      blueprint: { resultName: '', components: [] },
       cost: cost
     };
     let itemName = collectible.name;

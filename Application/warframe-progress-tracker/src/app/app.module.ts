@@ -20,6 +20,7 @@ import { WishListCardComponent } from './_components/wish-list/wish-list-card/wi
 import { AdminComponent } from './_components/admin/admin.component';
 import { CreateCollectibleComponent } from './_components/admin/create-collectible/create-collectible.component';
 import { UsersComponent } from './_components/admin/users/users.component';
+import { DeleteCollectibleComponent } from './_components/admin/delete-collectible/delete-collectible.component';
 
 @NgModule({
    declarations: [
@@ -36,7 +37,8 @@ import { UsersComponent } from './_components/admin/users/users.component';
       WishListCardComponent,
       AdminComponent,
       CreateCollectibleComponent,
-      UsersComponent
+      UsersComponent,
+      DeleteCollectibleComponent
    ],
    imports: [
       BrowserModule,

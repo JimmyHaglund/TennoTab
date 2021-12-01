@@ -50,5 +50,4 @@ export class AdminComponent implements OnInit {
     this._authenticationService.getAllUsers()
       .subscribe(userInfos => this._userInfos = userInfos);
   }
-
 }

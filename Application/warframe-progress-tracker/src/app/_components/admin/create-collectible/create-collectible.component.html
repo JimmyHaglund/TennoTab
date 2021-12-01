@@ -1,0 +1,15 @@
+<form>
+   <div>
+      Name: <input type="text" [formControl]="nameControl">
+   </div>
+   <div>
+      Category: <select [formControl]="categoryControl">
+         <option *ngFor="let category of categories">
+            {{category}}
+         </option>
+      </select>
+   </div>
+   <div>
+      <input type="submit" value="Create Collectible" (click)="submit()">
+   </div>
+</form>

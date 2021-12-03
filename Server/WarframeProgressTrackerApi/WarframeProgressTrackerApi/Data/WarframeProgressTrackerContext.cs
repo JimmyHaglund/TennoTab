@@ -66,29 +66,46 @@ namespace WarframeProgressTrackerApi.Data {
         }
 
         public void UpdateCollectibleData(string name, Collectible newCollectible) {
-            var userCollectibles = from userCollectible in UserCollectibles
-                                   where userCollectible.ItemName == name
-                                   select new UserCollectible() {
-                                       UserId = userCollectible.UserId,
-                                       ItemName = newCollectible.ItemName,
-                                       Mastered = userCollectible.Mastered,
-                                       Obtained = userCollectible.Obtained,
-                                       OnWishlist = userCollectible.OnWishlist
-                                   };
-            RemoveCollectibleData(name);
+            var newUserCollectibles = 
+                from userCollectible in UserCollectibles
+                where userCollectible.ItemName == name
+                select new UserCollectible() {
+                    UserId = userCollectible.UserId,
+                    ItemName = newCollectible.ItemName,
+                    Mastered = userCollectible.Mastered,
+                    Obtained = userCollectible.Obtained,
+                    OnWishlist = userCollectible.OnWishlist
+                };
+            var oldCollectible = (
+                from col in Collectibles
+                where col.ItemName == name
+                select col
+                ).FirstOrDefault();
+            var oldUserCollectibles = 
+                from userCollectible in UserCollectibles
+                where userCollectible.ItemName == name
+                select userCollectible;
+            
+            Collectibles.Remove(oldCollectible);
+            UserCollectibles.RemoveRange(oldUserCollectibles);
+            
             Collectibles.Add(newCollectible);
-            UserCollectibles.AddRange(userCollectibles);
+            UserCollectibles.AddRange(newUserCollectibles);
+            
             SaveChanges();
         }
 
         public void RemoveCollectibleData(string name) {
-            var collectible = (from col in Collectibles
-                               where col.ItemName == name
-                               select col).FirstOrDefault();
+            var collectible = (
+                from col in Collectibles
+                where col.ItemName == name
+                select col
+                ).FirstOrDefault();
+            var userCollectibles = 
+                from userCollectible in UserCollectibles
+                where userCollectible.ItemName == name
+                select userCollectible;
             Collectibles.Remove(collectible);
-            var userCollectibles = from userCollectible in UserCollectibles
-                                   where userCollectible.ItemName == name
-                                   select userCollectible;
             UserCollectibles.RemoveRange(userCollectibles);
             SaveChanges();
         }

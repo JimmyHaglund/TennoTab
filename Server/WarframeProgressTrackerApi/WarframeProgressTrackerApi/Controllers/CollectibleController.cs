@@ -133,6 +133,9 @@ namespace WarframeProgressTrackerApi.Controllers {
                 return BadRequest("Cannot change collectible name to " + inCollectible.Name +
                     ": A collectible already exists with that name.");
             }
+            if (string.IsNullOrEmpty(inCollectible.Category)) {
+                return BadRequest("Collectible category must be defined.");
+            }
             var collectible = new Collectible() {
                 ItemName = inCollectible.Name,
                 Category = inCollectible.Category
@@ -151,6 +154,9 @@ namespace WarframeProgressTrackerApi.Controllers {
             }
             if (CollectibleExists(inCollectible.Name)) {
                 return BadRequest("Collectible with name " + inCollectible.Name + " already exists.");
+            }
+            if (string.IsNullOrEmpty(inCollectible.Category)) {
+                return BadRequest("Collectible category must be defined.");
             }
             var collectible = new Collectible() {
                 ItemName = inCollectible.Name,

@@ -21,6 +21,7 @@ import { AdminComponent } from './_components/admin/admin.component';
 import { CreateCollectibleComponent } from './_components/admin/create-collectible/create-collectible.component';
 import { UsersComponent } from './_components/admin/users/users.component';
 import { DeleteCollectibleComponent } from './_components/admin/delete-collectible/delete-collectible.component';
+import { ModifyCollectibleComponent } from './_components/admin/modify-collectible/modify-collectible.component';
 
 @NgModule({
    declarations: [
@@ -38,7 +39,8 @@ import { DeleteCollectibleComponent } from './_components/admin/delete-collectib
       AdminComponent,
       CreateCollectibleComponent,
       UsersComponent,
-      DeleteCollectibleComponent
+      DeleteCollectibleComponent,
+      ModifyCollectibleComponent
    ],
    imports: [
       BrowserModule,

@@ -16,7 +16,8 @@ export class CollectibleService {
     get: this._apiAddress + 'get',
     put: this._apiAddress + 'put',
     create: this._apiAddress + 'create',
-    delete: this._apiAddress + "delete/"
+    delete: this._apiAddress + 'delete/',
+    update: this._apiAddress + 'update/'
   };
 
   constructor(private http: HttpClient) { }
@@ -58,6 +59,13 @@ export class CollectibleService {
       this.log(`created collectible: ${collectible.name}.`)
     ))
     .subscribe();
+  }
+
+  modifyCollectible(name: string, newCollectible: Collectible) {
+    let url = this._endpoints.update + name;
+    let header = { withCredentials: true };
+    this.http.put(url, newCollectible, header)
+    .subscribe()
   }
 
   deleteCollectible(name: string): void {

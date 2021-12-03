@@ -1,0 +1,19 @@
+<h2>Modify Collectible</h2>
+<form>
+   <div>
+      Current Name: <input type="text" [formControl]="existingNameControl">
+   </div>
+   <div>
+      New Name: <input type="text" [formControl]="newNameControl">
+   </div>
+   <div>
+      Category: <select [formControl]="categoryControl">
+         <option *ngFor="let category of categories">
+            {{category}}
+         </option>
+      </select>
+   </div>
+   <div>
+      <input type="submit" value="Modify Collectible" (click)="submit()">
+   </div>
+</form>

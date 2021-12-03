@@ -122,6 +122,26 @@ namespace WarframeProgressTrackerApi.Controllers {
             _context.SaveChanges();
         }
 
+        [HttpPut]
+        [Route("[controller]/[action]/{name}")]
+        [Authorize(Roles = "Administrator")]
+        public ActionResult Update(string name, [FromBody] CollectibleView inCollectible) {
+            if (string.IsNullOrEmpty(name) || !CollectibleExists(name)) {
+                return BadRequest("Collectible with name '" + name + "' not found");
+            }
+            if (name != inCollectible.Name && CollectibleExists(inCollectible.Name)) {
+                return BadRequest("Cannot change collectible name to " + inCollectible.Name +
+                    ": A collectible already exists with that name.");
+            }
+            var collectible = new Collectible() {
+                ItemName = inCollectible.Name,
+                Category = inCollectible.Category
+            };
+            _context.UpdateCollectibleData(name, collectible);
+
+            return Ok();
+        }
+
         [HttpPost]
         [Route("[controller]/[action]")]
         [Authorize(Roles = "Administrator")]

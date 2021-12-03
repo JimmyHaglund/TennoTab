@@ -65,6 +65,22 @@ namespace WarframeProgressTrackerApi.Data {
             SaveChanges();
         }
 
+        public void UpdateCollectibleData(string name, Collectible newCollectible) {
+            var userCollectibles = from userCollectible in UserCollectibles
+                                   where userCollectible.ItemName == name
+                                   select new UserCollectible() {
+                                       UserId = userCollectible.UserId,
+                                       ItemName = newCollectible.ItemName,
+                                       Mastered = userCollectible.Mastered,
+                                       Obtained = userCollectible.Obtained,
+                                       OnWishlist = userCollectible.OnWishlist
+                                   };
+            RemoveCollectibleData(name);
+            Collectibles.Add(newCollectible);
+            UserCollectibles.AddRange(userCollectibles);
+            SaveChanges();
+        }
+
         public void RemoveCollectibleData(string name) {
             var collectible = (from col in Collectibles
                                where col.ItemName == name

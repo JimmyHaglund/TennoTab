@@ -61,7 +61,7 @@ export class AuthenticationService {
 
    public getCurrentUser(): UserInfo {
       var userString = localStorage.getItem('currentUser') ?? '';
-      if (userString == '') return { name: 'Null', isAdmin: false }
+      if (userString == '' || userString == null) return { name: 'Null', isAdmin: false }
       return JSON.parse(userString) as UserInfo;
    }
 

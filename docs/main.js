@@ -748,8 +748,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiUrl: 'http://localhost:12129/'
-    // apiUrl: 'https://wfprogresstracker.duckdns.org/'
+    // apiUrl: 'http://localhost:12129/'
+    apiUrl: 'https://wfprogresstracker.duckdns.org/'
 };
 /*
  * For easier debugging in development mode, you can import the following file

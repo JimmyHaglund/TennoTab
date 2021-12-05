@@ -2112,7 +2112,7 @@ class AuthenticationService {
     getCurrentUser() {
         var _a;
         var userString = (_a = localStorage.getItem('currentUser')) !== null && _a !== void 0 ? _a : '';
-        if (userString == '' || userString == null)
+        if (userString == '' || userString == null || userString == "null")
             return { name: 'Null', isAdmin: false };
         return JSON.parse(userString);
     }

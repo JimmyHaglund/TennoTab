@@ -40,14 +40,14 @@ namespace WarframeProgressTrackerApi.Controllers {
 
 
         [HttpPost]
-        public async Task<UserView> Login(LoginInfo login) {
+        public async Task<ActionResult<UserView>> Login(LoginInfo login) {
             await SeedAdmin();
             var user = await _userManager.FindByNameAsync(login.UserName);
-            if (user == null) return null;
+            if (user == null) return BadRequest("Login failed: User not found.");
 
             var result = await _signInManager
                 .PasswordSignInAsync(user, login.Password, true, false);
-            if (!result.Succeeded) return null;
+            if (!result.Succeeded) return BadRequest("Login failed: Password is incorrect.");
             
             var headers = Response.Headers;
             if (headers.TryGetValue("Set-Cookie", out var cookie)) {
@@ -76,7 +76,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpGet]
-        [Authorize(Roles ="Administrator")]
+        [Authorize(Roles = ADMIN)]
         public async Task<IEnumerable<UserView>> GetAll() {
             var users = _dataContext.Users.ToList();
             var userViews = new List<UserView>(users.Count);
@@ -91,7 +91,7 @@ namespace WarframeProgressTrackerApi.Controllers {
         }
 
         [HttpPost]
-        [Authorize(Roles ="Administrator")]
+        [Authorize(Roles = ADMIN)]
         public async Task<UserView> Set([FromBody] UserView userInfo) {
             var user = await _userManager.FindByNameAsync(userInfo.Name);
             var senderId = _sessionUser.IdFromRequest(Request);

@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Collectible } from '../../_interfaces';
-import { CollectibleService } from '../../_services';
+import { Collectible } from 'src/app/_interfaces';
+import { CollectibleService } from 'src/app/_services';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BlueprintService } from 'src/app/_services';
-import {Blueprint, BlueprintComponentStack } from '../../_interfaces';
+import { Blueprint, BlueprintComponentStack } from 'src/app/_interfaces';
 import { SourceService } from 'src/app/_services/source.service';
 
 @Component({
@@ -18,22 +18,24 @@ export class DetailsComponent implements OnInit {
   public totalCost: BlueprintComponentStack[] = [];
   public componentBlueprints: Blueprint[] = [];
   public initialisedCollectible = false;
+  public sourceHtmlSnippets: string[] = [];
+  private _sourceTemplates: any = {};
 
-  private get name(): string { return String(this.route.snapshot.paramMap.get('name')); }
-  private get category(): string { return String(this.route.snapshot.paramMap.get('category')); }
+  private get _name(): string { return String(this._route.snapshot.paramMap.get('name')); }
+  private get _category(): string { return String(this._route.snapshot.paramMap.get('category')); }
   
   constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-    private collectibleService: CollectibleService,
-    private blueprintService: BlueprintService,
-    private sourceService: SourceService
+    private _route: ActivatedRoute,
+    private _location: Location,
+    private _collectibleService: CollectibleService,
+    private _blueprintService: BlueprintService,
+    private _sourceService: SourceService
   ) { }
 
   ngOnInit(): void {
     this.getCollectible();
     this.getComponents();
-    this.getCost(this.name);
+    this.getCost(this._name);
   }
 
   public get statusText(): string {
@@ -42,7 +44,9 @@ export class DetailsComponent implements OnInit {
       this.collectible.obtained ? "Obtained" : "Not obtained";
   }
 
-  public get components() { return this.blueprint.components }
+  public get components() { 
+    return this.blueprint === undefined ?  undefined : this.blueprint.components 
+  }
 
 
   public increaseRank(): void {
@@ -73,7 +77,7 @@ export class DetailsComponent implements OnInit {
     this.updateCollectible();
   }
 
-  public toggleWishlist():void {
+  public toggleWishlist(): void {
     let onWishlist = this.collectible.onWishlist;
     if (onWishlist) this.removeFromWishlist();
     else this.addToWishlist();
@@ -84,51 +88,56 @@ export class DetailsComponent implements OnInit {
   }
 
   private getCollectible(): void {
-    const name = this.name;
+    const name = this._name;
 
-    this.collectibleService.getCollectible(name)
+    this._collectibleService.getCollectible(name)
       .subscribe(collectible => {
         this.collectible = collectible;
+        this.getComponentSources(name);
         this.initialisedCollectible = true;
       });
   }
 
   private getComponents(): void {
-    const name = this.name;
-    this.blueprintService.getBlueprint(name)
+    const name = this._name;
+    this._blueprintService.getBlueprint(name)
       .subscribe(blueprint => {
+        if (blueprint === undefined) return;
         this.blueprint = blueprint;
         this.blueprint.components.forEach(component => {
           this.getComponentBlueprint(component.componentName);
-          this.getComponentSource(component.componentName);
+          this.getComponentSources(component.componentName);
         });
       });
   }
 
-  private getComponentBlueprint(componentName: string) {
-    this.blueprintService.getBlueprint(componentName)
-      .subscribe(blueprint =>{ 
+  private getComponentBlueprint(componentName: string): void {
+    this._blueprintService.getBlueprint(componentName)
+      .subscribe(blueprint => {
         if (blueprint == null) return;
         this.componentBlueprints.push(blueprint);
       });
   }
 
-  private getComponentSource(componentName: string) {
-    console.log("Get component source not implemented");
+  private getComponentSources(componentName: string): void {
+    this._sourceService.getSources(componentName)
+      .subscribe((sources) => {
+        let sourceHtml = this.getSourceHtml(sources, componentName);
+        this.sourceHtmlSnippets = this.sourceHtmlSnippets.concat(sourceHtml);
+      });
   }
 
   private getCost(resultName: string): void {
-    this.blueprintService.getTotalResourceCost(resultName)
+    this._blueprintService.getTotalResourceCost(resultName)
       .subscribe(cost => this.totalCost = cost);
   }
 
   private updateCollectible(): void {
-    this.collectibleService.updateCollectible(this.collectible)
-      .subscribe(()=>{});
+    this._collectibleService.updateCollectible(this.collectible)
+      .subscribe(() => { });
   }
 
   public getDetailsHtml(component: BlueprintComponentStack): string {
-    console.log(component);
     let title = component.componentName;
     let amount = component.componentCount;
     return "<h4>" + title + ` (${amount})` + "</h4>"
@@ -145,7 +154,20 @@ export class DetailsComponent implements OnInit {
     return result;
   }
 
-  private getSourceHtml(component: any): string {
-    return "<p>Get Source not implemented</p>";
+  private getComponentSourceHtmlSnippets(): string[] {
+    let result:string[] = [];
+    
+    this.components?.forEach((component) => {
+      
+    });
+    
+    return result;
+  }
+
+  private getSourceHtml(templates: string[], componentName: string): string[] {
+    let result: string[] = templates;
+    if (result === undefined) return [];
+    result = result.map((snippet) => `<h4><b>${componentName}</b></h4> ${snippet}`)
+    return result;
   }
 }

@@ -17,22 +17,21 @@
    </div>
 </div>
 
-<div class="card p-2 m-3">
+<div *ngIf="components !== undefined && components.length > 0" class="card p-2 m-3">
    <h2 class="card-title">Components</h2>
    <ul class="list-group list-group-flush">
       <div class="list-group-item" *ngFor="let component of components">
          <span [innerHTML]="getDetailsHtml(component)"></span>
-         <!--
-         <h4>{{component.resource.componentName}}</h4>
-         <h5>Build cost</h5>
-         <div *ngFor="let resource of component.cost">
-            {{resource.name}} ({{resource.amount}})
-         </div>
-         <h5 *ngIf="component.source.length > 0">Location</h5>
-         <div *ngFor="let source of component.source">
-            {{source.sourceName}} ({{source.sourceType}}, {{source.value}})
-         </div>
-         -->
+      </div>
+   </ul>
+</div>
+
+
+<div *ngIf="sourceHtmlSnippets !== undefined && sourceHtmlSnippets.length > 0" class="card p-2 m-3">
+   <h2 class="card-title">Component Sources</h2>
+   <ul class="list-group list-group-flush">
+      <div class="list-group-item" *ngFor="let snippet of sourceHtmlSnippets">
+         <span [innerHTML]="snippet"></span>
       </div>
    </ul>
 </div>

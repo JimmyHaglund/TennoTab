@@ -55,27 +55,27 @@ export class CollectibleService {
     let url = this._endpoints.create;
     let header = { withCredentials: true };
     this.http.post<void>(url, collectible, header)
-    .pipe(tap(() => 
-      this.log(`created collectible: ${collectible.name}.`)
-    ))
-    .subscribe();
+      .pipe(tap(() =>
+        this.log(`created collectible: ${collectible.name}.`)
+      ))
+      .subscribe();
   }
 
   modifyCollectible(name: string, newCollectible: Collectible) {
     let url = this._endpoints.update + name;
     let header = { withCredentials: true };
     this.http.put(url, newCollectible, header)
-    .subscribe()
+      .subscribe()
   }
 
   deleteCollectible(name: string): void {
     let url = this._endpoints.delete + name;
     let header = { withCredentials: true };
     this.http.delete<void>(url, header)
-    .pipe(tap(() => 
-      this.log(`deleted collectible: ${name}`)
-    ))
-    .subscribe();
+      .pipe(tap(() =>
+        this.log(`deleted collectible: ${name}`)
+      ))
+      .subscribe();
   }
 
   private buildUrlGetSingle(collectibleName: string): string {

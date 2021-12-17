@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'http://localhost:12129/'
-  apiUrl: 'https://wfprogresstracker.duckdns.org/'
+  apiUrl: 'http://localhost:12129/'
 };
 
 /*

@@ -120,8 +120,10 @@ export class DetailsComponent implements OnInit {
   }
 
   private getComponentSources(componentName: string): void {
+    if (componentName === "Platinum") return;
     this._sourceService.getSources(componentName)
       .subscribe((sources) => {
+        if (sources.length === 0) return;
         let sourceHtml = this.getSourceHtml(sources, componentName);
         this.sourceHtmlSnippets = this.sourceHtmlSnippets.concat(sourceHtml);
       });
@@ -165,9 +167,8 @@ export class DetailsComponent implements OnInit {
   }
 
   private getSourceHtml(templates: string[], componentName: string): string[] {
-    let result: string[] = templates;
-    if (result === undefined) return [];
-    result = result.map((snippet) => `<h4><b>${componentName}</b></h4> ${snippet}`)
+    let result: string[] = [`<h4><b>${componentName}</b></h4>`];
+    result = result.concat(templates);
     return result;
   }
 }

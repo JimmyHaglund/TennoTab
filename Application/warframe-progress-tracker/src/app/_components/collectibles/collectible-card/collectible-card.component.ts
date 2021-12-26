@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Collectible, collectibleCategories } from '../../../_interfaces';
 import { CollectibleService } from '../../../_services';
 
 @Component({
   selector: 'app-collectible-card',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './collectible-card.component.html',
-  styleUrls: ['./collectible-card.component.scss']
+  styleUrls: ['./collectible-card.component.scss'],
 })
 export class CollectibleCardComponent implements OnInit {
   @Input() public collectible!: Collectible;
